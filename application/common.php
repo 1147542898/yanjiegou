@@ -25,6 +25,7 @@ function savecache($name = '',$id='') {
         }
         cache($name, $data);
     }
+    
     return true;
 }
 
