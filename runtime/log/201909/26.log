@@ -1,0 +1,401 @@
+---------------------------------------------------------------
+[ 2019-09-26T02:14:47+08:00 ] 47.103.90.144 GET svn.yanjiegou.com/explicit_not_exist_path
+[运行时间：0.015282s] [吞吐率：65.44req/s] [内存消耗：1,968.53kb] [文件加载：50]
+[ info ] [ LANG ] /www/wwwroot/svn.yanjiegou.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'explicit_not_exist_path',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'host' => 'svn.yanjiegou.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T02:14:47+08:00 ] 47.103.90.144 GET svn.yanjiegou.com/index.html
+[运行时间：0.014446s] [吞吐率：69.22req/s] [内存消耗：1,849.27kb] [文件加载：49]
+[ info ] [ LANG ] /www/wwwroot/svn.yanjiegou.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'host' => 'svn.yanjiegou.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/svn.yanjiegou.com/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T02:14:47+08:00 ] 47.103.90.144 GET svn.yanjiegou.com/index.jsp
+[运行时间：0.017275s] [吞吐率：57.89req/s] [内存消耗：1,968.26kb] [文件加载：50]
+[ info ] [ LANG ] /www/wwwroot/svn.yanjiegou.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index.jsp',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'host' => 'svn.yanjiegou.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T02:14:49+08:00 ] 47.103.90.144 GET svn.yanjiegou.com/wcm/
+[运行时间：0.016464s] [吞吐率：60.74req/s] [内存消耗：1,968.26kb] [文件加载：50]
+[ info ] [ LANG ] /www/wwwroot/svn.yanjiegou.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'wcm',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'host' => 'svn.yanjiegou.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T02:14:49+08:00 ] 47.103.90.144 GET svn.yanjiegou.com/phpMyAdmin/
+[运行时间：0.016573s] [吞吐率：60.34req/s] [内存消耗：1,968.30kb] [文件加载：50]
+[ info ] [ LANG ] /www/wwwroot/svn.yanjiegou.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'phpMyAdmin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'host' => 'svn.yanjiegou.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T02:14:49+08:00 ] 47.103.90.144 GET svn.yanjiegou.com/phpmyadmin/
+[运行时间：0.015824s] [吞吐率：63.19req/s] [内存消耗：1,968.30kb] [文件加载：50]
+[ info ] [ LANG ] /www/wwwroot/svn.yanjiegou.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'phpmyadmin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'host' => 'svn.yanjiegou.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T06:58:52+08:00 ] 47.100.246.14 GET svn.yanjiegou.com/
+[运行时间：0.017926s] [吞吐率：55.78req/s] [内存消耗：2,270.16kb] [文件加载：60]
+[ info ] [ LANG ] /www/wwwroot/svn.yanjiegou.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+  'host' => 'svn.yanjiegou.com',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/svn.yanjiegou.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T09:27:44+08:00 ] 171.15.61.68 POST svn.yanjiegou.com/api/index/bigshop
+[运行时间：0.077159s] [吞吐率：12.96req/s] [内存消耗：2,974.30kb] [文件加载：59]
+[ info ] [ LANG ] /www/wwwroot/svn.yanjiegou.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'bigshop',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'svn.yanjiegou.com',
+  'connection' => 'close',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://localhost:39648',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'referer' => 'http://localhost:39648/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Index->bigshop[ /www/wwwroot/svn.yanjiegou.com/application/api/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008203s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_bigshop` [ RunTime:0.003335s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`headimg`,`intro` FROM `shy_bigshop` WHERE  `is_home` = 1 ORDER BY `sort` ASC,`id` DESC LIMIT 3 [ RunTime:0.002333s ]
+---------------------------------------------------------------
+[ 2019-09-26T09:27:44+08:00 ] 171.15.61.68 POST svn.yanjiegou.com/api/index/goods
+[运行时间：0.058764s] [吞吐率：17.02req/s] [内存消耗：2,996.52kb] [文件加载：59]
+[ info ] [ LANG ] /www/wwwroot/svn.yanjiegou.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'svn.yanjiegou.com',
+  'connection' => 'close',
+  'content-length' => '16',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://localhost:39648',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'sec-fetch-mode' => 'cors',
+  'content-type' => 'application/json;charset=UTF-8',
+  'sec-fetch-site' => 'same-origin',
+  'referer' => 'http://localhost:39648/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+  'p' => 1,
+  'rows' => 4,
+)
+[ info ] [ RUN ] app\api\controller\Index->goods[ /www/wwwroot/svn.yanjiegou.com/application/api/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001641s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.002857s ]
+[ sql ] [ SQL ] SELECT `g`.`id`,`g`.`headimg`,`g`.`title`,`g`.`price`,s.id as sid,`s`.`name`,`s`.`shoplogo` FROM `shy_goods` `g` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`g`.`shopid` WHERE  `g`.`status` = 1  AND `g`.`check_status` = 1 ORDER BY `g`.`sorts` ASC,`g`.`id` DESC LIMIT 0,4 [ RunTime:0.003430s ]
+---------------------------------------------------------------
+[ 2019-09-26T09:27:44+08:00 ] 171.15.61.68 GET svn.yanjiegou.com/api/index/adv
+[运行时间：0.083301s] [吞吐率：12.00req/s] [内存消耗：2,977.36kb] [文件加载：59]
+[ info ] [ LANG ] /www/wwwroot/svn.yanjiegou.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'adv',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'svn.yanjiegou.com',
+  'connection' => 'close',
+  'accept' => 'application/json, text/plain, */*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'referer' => 'http://localhost:39648/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Index->adv[ /www/wwwroot/svn.yanjiegou.com/application/api/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005452s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_ad` [ RunTime:0.003030s ]
+[ sql ] [ SQL ] SELECT `name`,`ad_id`,`pic`,`url` FROM `shy_ad` WHERE  `type_id` = 1  AND `open` = 1 ORDER BY `sort` DESC,`ad_id` [ RunTime:0.004043s ]
+---------------------------------------------------------------
+[ 2019-09-26T09:27:48+08:00 ] 171.15.61.68 POST svn.yanjiegou.com/api/index/bigshop
+[运行时间：0.033299s] [吞吐率：30.03req/s] [内存消耗：2,974.55kb] [文件加载：59]
+[ info ] [ LANG ] /www/wwwroot/svn.yanjiegou.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'bigshop',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'svn.yanjiegou.com',
+  'connection' => 'close',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://localhost:39648',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'referer' => 'http://localhost:39648/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Index->bigshop[ /www/wwwroot/svn.yanjiegou.com/application/api/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003336s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_bigshop` [ RunTime:0.001710s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`headimg`,`intro` FROM `shy_bigshop` WHERE  `is_home` = 1 ORDER BY `sort` ASC,`id` DESC LIMIT 3 [ RunTime:0.001114s ]
+---------------------------------------------------------------
+[ 2019-09-26T09:27:48+08:00 ] 171.15.61.68 GET svn.yanjiegou.com/api/index/adv
+[运行时间：0.050815s] [吞吐率：19.68req/s] [内存消耗：2,977.36kb] [文件加载：59]
+[ info ] [ LANG ] /www/wwwroot/svn.yanjiegou.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'adv',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'svn.yanjiegou.com',
+  'connection' => 'close',
+  'accept' => 'application/json, text/plain, */*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'referer' => 'http://localhost:39648/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Index->adv[ /www/wwwroot/svn.yanjiegou.com/application/api/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001654s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_ad` [ RunTime:0.001628s ]
+[ sql ] [ SQL ] SELECT `name`,`ad_id`,`pic`,`url` FROM `shy_ad` WHERE  `type_id` = 1  AND `open` = 1 ORDER BY `sort` DESC,`ad_id` [ RunTime:0.001906s ]
+---------------------------------------------------------------
+[ 2019-09-26T09:27:48+08:00 ] 171.15.61.68 POST svn.yanjiegou.com/api/index/goods
+[运行时间：0.028416s] [吞吐率：35.19req/s] [内存消耗：2,996.52kb] [文件加载：59]
+[ info ] [ LANG ] /www/wwwroot/svn.yanjiegou.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'index',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'svn.yanjiegou.com',
+  'connection' => 'close',
+  'content-length' => '16',
+  'accept' => 'application/json, text/plain, */*',
+  'origin' => 'http://localhost:39648',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'sec-fetch-mode' => 'cors',
+  'content-type' => 'application/json;charset=UTF-8',
+  'sec-fetch-site' => 'same-origin',
+  'referer' => 'http://localhost:39648/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+  'p' => 1,
+  'rows' => 4,
+)
+[ info ] [ RUN ] app\api\controller\Index->goods[ /www/wwwroot/svn.yanjiegou.com/application/api/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001278s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.001730s ]
+[ sql ] [ SQL ] SELECT `g`.`id`,`g`.`headimg`,`g`.`title`,`g`.`price`,s.id as sid,`s`.`name`,`s`.`shoplogo` FROM `shy_goods` `g` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`g`.`shopid` WHERE  `g`.`status` = 1  AND `g`.`check_status` = 1 ORDER BY `g`.`sorts` ASC,`g`.`id` DESC LIMIT 0,4 [ RunTime:0.001105s ]
