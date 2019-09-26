@@ -2339,3 +2339,2612 @@
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\admin\controller\Login->verify[ D:\phpstudy_pro\WWW\www.yanjie.com\application\admin\controller\Login.php ]
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:14:46+08:00 ] 127.0.0.1 GET www.yjg.com/admin
+[运行时间：0.037003s] [吞吐率：27.02req/s] [内存消耗：2,344.76kb] [文件加载：60]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:14:46+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/index.html
+[运行时间：0.031002s] [吞吐率：32.26req/s] [内存消耗：2,349.82kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ error ] [8]unserialize(): Error at offset 0 of 408 bytes[D:\phpstudy_pro\WWW\yanjiegou\thinkphp\library\think\cache\driver\File.php:126]
+---------------------------------------------------------------
+[ 2019-09-26T11:15:14+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/index.html
+[运行时间：0.037002s] [吞吐率：27.03req/s] [内存消耗：2,350.34kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ error ] [8]unserialize(): Error at offset 0 of 408 bytes[D:\phpstudy_pro\WWW\yanjiegou\thinkphp\library\think\cache\driver\File.php:126]
+---------------------------------------------------------------
+[ 2019-09-26T11:15:15+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/index.html
+[运行时间：0.036002s] [吞吐率：27.78req/s] [内存消耗：2,350.34kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ error ] [8]unserialize(): Error at offset 0 of 408 bytes[D:\phpstudy_pro\WWW\yanjiegou\thinkphp\library\think\cache\driver\File.php:126]
+---------------------------------------------------------------
+[ 2019-09-26T11:15:15+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/index.html
+[运行时间：0.032002s] [吞吐率：31.25req/s] [内存消耗：2,350.34kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ error ] [8]unserialize(): Error at offset 0 of 408 bytes[D:\phpstudy_pro\WWW\yanjiegou\thinkphp\library\think\cache\driver\File.php:126]
+---------------------------------------------------------------
+[ 2019-09-26T11:15:16+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/index.html
+[运行时间：0.031002s] [吞吐率：32.26req/s] [内存消耗：2,350.34kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ error ] [8]unserialize(): Error at offset 0 of 408 bytes[D:\phpstudy_pro\WWW\yanjiegou\thinkphp\library\think\cache\driver\File.php:126]
+---------------------------------------------------------------
+[ 2019-09-26T11:17:16+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/index.html
+[运行时间：0.054003s] [吞吐率：18.52req/s] [内存消耗：3,313.38kb] [文件加载：70]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\login\index.html [ array (
+  0 => 'system',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_system` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_system` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-26T11:17:16+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/font.css
+[运行时间：0.033002s] [吞吐率：30.30req/s] [内存消耗：2,345.05kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/font_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:17:17+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/login.css
+[运行时间：0.044003s] [吞吐率：22.73req/s] [内存消耗：2,345.07kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/login_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:17:17+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/xadmin.css
+[运行时间：0.048002s] [吞吐率：20.83req/s] [内存消耗：2,345.07kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/xadmin_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:17:17+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/LIB/layui/layui.js
+[运行时间：0.044003s] [吞吐率：22.73req/s] [内存消耗：2,345.14kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'LIB',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/LIB/layui/layui_js' => '',
+  'layui' => 'layui.js',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:17:17+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/verify.html
+[运行时间：0.045002s] [吞吐率：22.22req/s] [内存消耗：2,356.88kb] [文件加载：60]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/verify_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:17:22+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/font.css
+[运行时间：0.030001s] [吞吐率：33.33req/s] [内存消耗：2,346.09kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/font_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:17:22+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/xadmin.css
+[运行时间：0.039002s] [吞吐率：25.64req/s] [内存消耗：2,346.11kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/xadmin_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:17:22+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/login.css
+[运行时间：0.054003s] [吞吐率：18.52req/s] [内存消耗：2,346.11kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/login_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:19:24+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/index.html
+[运行时间：0.042002s] [吞吐率：23.81req/s] [内存消耗：2,361.48kb] [文件加载：61]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\login\index.html [ array (
+  0 => 'system',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:19:24+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/font.css
+[运行时间：0.033002s] [吞吐率：30.30req/s] [内存消耗：2,346.09kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/font_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:19:24+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/login.css
+[运行时间：0.041002s] [吞吐率：24.39req/s] [内存消耗：2,346.11kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/login_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:19:24+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/LIB/layui/layui.js
+[运行时间：0.055003s] [吞吐率：18.18req/s] [内存消耗：2,346.18kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'LIB',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/LIB/layui/layui_js' => '',
+  'layui' => 'layui.js',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:19:24+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/xadmin.css
+[运行时间：0.068004s] [吞吐率：14.70req/s] [内存消耗：2,346.11kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/xadmin_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:19:24+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/LIB/layui/layui.js
+[运行时间：0.038003s] [吞吐率：26.31req/s] [内存消耗：2,346.18kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'LIB',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/LIB/layui/layui_js' => '',
+  'layui' => 'layui.js',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:19:25+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/verify.html
+[运行时间：0.029002s] [吞吐率：34.48req/s] [内存消耗：2,357.03kb] [文件加载：60]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/verify_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:19:27+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/index.html
+[运行时间：0.034002s] [吞吐率：29.41req/s] [内存消耗：2,361.48kb] [文件加载：61]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\login\index.html [ array (
+  0 => 'system',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:19:28+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/xadmin.css
+[运行时间：0.041002s] [吞吐率：24.39req/s] [内存消耗：2,346.11kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/xadmin_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:19:28+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/LIB/layui/layui.js
+[运行时间：0.042003s] [吞吐率：23.81req/s] [内存消耗：2,346.18kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'LIB',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/LIB/layui/layui_js' => '',
+  'layui' => 'layui.js',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:19:28+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/font.css
+[运行时间：0.059003s] [吞吐率：16.95req/s] [内存消耗：2,346.09kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/font_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:19:28+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/login.css
+[运行时间：0.059004s] [吞吐率：16.95req/s] [内存消耗：2,346.11kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/login_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:19:28+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/LIB/layui/layui.js
+[运行时间：0.040002s] [吞吐率：25.00req/s] [内存消耗：2,346.18kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'LIB',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/LIB/layui/layui_js' => '',
+  'layui' => 'layui.js',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:19:29+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/verify.html
+[运行时间：0.036002s] [吞吐率：27.78req/s] [内存消耗：2,357.03kb] [文件加载：60]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/verify_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:20:33+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/index.html
+[运行时间：0.039002s] [吞吐率：25.64req/s] [内存消耗：2,361.48kb] [文件加载：61]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\login\index.html [ array (
+  0 => 'system',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:20:33+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/LIB/layui/layui.js
+[运行时间：0.037002s] [吞吐率：27.03req/s] [内存消耗：2,346.18kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'LIB',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/LIB/layui/layui_js' => '',
+  'layui' => 'layui.js',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:20:33+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/xadmin.css
+[运行时间：0.049003s] [吞吐率：20.41req/s] [内存消耗：2,346.11kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/xadmin_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:20:33+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/font.css
+[运行时间：0.065004s] [吞吐率：15.38req/s] [内存消耗：2,346.09kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/font_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:20:33+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/login.css
+[运行时间：0.070004s] [吞吐率：14.28req/s] [内存消耗：2,346.11kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/login_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:20:33+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/LIB/layui/layui.js
+[运行时间：0.067004s] [吞吐率：14.92req/s] [内存消耗：2,346.18kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'LIB',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/LIB/layui/layui_js' => '',
+  'layui' => 'layui.js',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:20:34+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/verify.html
+[运行时间：0.031001s] [吞吐率：32.26req/s] [内存消耗：2,357.03kb] [文件加载：60]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/verify_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:20:36+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/index.html
+[运行时间：0.036002s] [吞吐率：27.78req/s] [内存消耗：2,361.48kb] [文件加载：61]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\login\index.html [ array (
+  0 => 'system',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:20:36+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/xadmin.css
+[运行时间：0.036002s] [吞吐率：27.78req/s] [内存消耗：2,346.11kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/xadmin_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:20:36+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/login.css
+[运行时间：0.047002s] [吞吐率：21.28req/s] [内存消耗：2,346.11kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/login_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:20:36+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/LIB/layui/layui.js
+[运行时间：0.050003s] [吞吐率：20.00req/s] [内存消耗：2,346.18kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'LIB',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/LIB/layui/layui_js' => '',
+  'layui' => 'layui.js',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:20:36+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/font.css
+[运行时间：0.071004s] [吞吐率：14.08req/s] [内存消耗：2,346.09kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/font_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:20:36+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/LIB/layui/layui.js
+[运行时间：0.045003s] [吞吐率：22.22req/s] [内存消耗：2,346.18kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'LIB',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/LIB/layui/layui_js' => '',
+  'layui' => 'layui.js',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:20:37+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/verify.html
+[运行时间：0.040002s] [吞吐率：25.00req/s] [内存消耗：2,357.03kb] [文件加载：60]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/verify_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:23:14+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/index.html
+[运行时间：0.036002s] [吞吐率：27.78req/s] [内存消耗：2,361.48kb] [文件加载：61]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\login\index.html [ array (
+  0 => 'system',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:23:14+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/font.css
+[运行时间：0.041002s] [吞吐率：24.39req/s] [内存消耗：2,346.09kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/font_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:23:14+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/login.css
+[运行时间：0.048003s] [吞吐率：20.83req/s] [内存消耗：2,346.11kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/login_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:23:14+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/xadmin.css
+[运行时间：0.052003s] [吞吐率：19.23req/s] [内存消耗：2,346.11kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/xadmin_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:23:14+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/LIB/layui/layui.js
+[运行时间：0.046003s] [吞吐率：21.74req/s] [内存消耗：2,346.18kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'LIB',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/LIB/layui/layui_js' => '',
+  'layui' => 'layui.js',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:23:15+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/verify.html
+[运行时间：0.030001s] [吞吐率：33.33req/s] [内存消耗：2,357.03kb] [文件加载：60]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/verify_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:27:22+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/index.html
+[运行时间：0.040002s] [吞吐率：25.00req/s] [内存消耗：2,361.66kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\login\index.html [ array (
+  0 => 'system',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:27:22+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/font.css
+[运行时间：0.043002s] [吞吐率：23.25req/s] [内存消耗：2,345.96kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/font_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:27:22+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/xadmin.css
+[运行时间：0.051003s] [吞吐率：19.61req/s] [内存消耗：2,345.98kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/xadmin_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:27:22+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/login.css
+[运行时间：0.065004s] [吞吐率：15.38req/s] [内存消耗：2,345.98kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/login_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:27:22+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/LIB/layui/layui.js
+[运行时间：0.073005s] [吞吐率：13.70req/s] [内存消耗：2,346.05kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'LIB',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/LIB/layui/layui_js' => '',
+  'layui' => 'layui.js',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:27:23+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/verify.html
+[运行时间：0.029002s] [吞吐率：34.48req/s] [内存消耗：2,356.90kb] [文件加载：61]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/verify_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:27:28+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/index.html
+[运行时间：0.034002s] [吞吐率：29.41req/s] [内存消耗：2,361.66kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\login\index.html [ array (
+  0 => 'system',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:27:28+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/login.css
+[运行时间：0.035002s] [吞吐率：28.57req/s] [内存消耗：2,345.98kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/login_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:27:28+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/font.css
+[运行时间：0.044002s] [吞吐率：22.73req/s] [内存消耗：2,345.96kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/font_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:27:28+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/xadmin.css
+[运行时间：0.048003s] [吞吐率：20.83req/s] [内存消耗：2,345.98kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/xadmin_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:27:28+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/verify.html
+[运行时间：0.054004s] [吞吐率：18.52req/s] [内存消耗：2,356.90kb] [文件加载：61]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/verify_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:27:29+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/LIB/layui/layui.js
+[运行时间：0.030002s] [吞吐率：33.33req/s] [内存消耗：2,346.05kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'LIB',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/LIB/layui/layui_js' => '',
+  'layui' => 'layui.js',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:32:22+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/index.html
+[运行时间：0.037002s] [吞吐率：27.03req/s] [内存消耗：2,361.66kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\login\index.html [ array (
+  0 => 'system',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:32:22+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/xadmin.css
+[运行时间：0.041003s] [吞吐率：24.39req/s] [内存消耗：2,345.98kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/xadmin_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:32:22+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/login.css
+[运行时间：0.050003s] [吞吐率：20.00req/s] [内存消耗：2,345.98kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/login_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:32:22+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/LIB/layui/layui.js
+[运行时间：0.068004s] [吞吐率：14.71req/s] [内存消耗：2,346.05kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'LIB',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/LIB/layui/layui_js' => '',
+  'layui' => 'layui.js',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:32:22+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/CSS/font.css
+[运行时间：0.093005s] [吞吐率：10.75req/s] [内存消耗：2,345.96kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'CSS',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/CSS/font_css' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:32:22+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/LIB/layui/layui.js
+[运行时间：0.034002s] [吞吐率：29.41req/s] [内存消耗：2,346.05kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'LIB',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/LIB/layui/layui_js' => '',
+  'layui' => 'layui.js',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:32:23+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/verify.html
+[运行时间：0.032002s] [吞吐率：31.25req/s] [内存消耗：2,356.90kb] [文件加载：61]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/verify_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-26T11:32:48+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/index.html
+[运行时间：0.055003s] [吞吐率：18.18req/s] [内存消耗：3,314.59kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\login\index.html [ array (
+  0 => 'system',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_system` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_system` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-26T11:32:48+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/verify.html
+[运行时间：0.039002s] [吞吐率：25.64req/s] [内存消耗：2,356.90kb] [文件加载：61]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=07svg1aev7huulbfctni7igam1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/verify_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File

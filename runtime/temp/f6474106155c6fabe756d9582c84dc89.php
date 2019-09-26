@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"/www/wwwroot/svn.yanjiegou.com/public/../application/bigshop/view/login/index.html";i:1561644920;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:79:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\login\index.html";i:1569466684;}*/ ?>
 <!doctype html>
 <html  class="x-admin-sm">
 <head>
@@ -21,21 +21,23 @@
 <body class="login-bg">
     
     <div class="login layui-anim layui-anim-up">
-        <div class="message" style="font-size: 24px; background-color: #f35343">沿街购-商圈端登录</div>
+        <div class="message" style="font-size: 24px">沿街购-管理登录</div>
         <div id="darkbannerwrap"></div>
         
         <form method="post" class="layui-form" >
-            <input name="username" placeholder="用户名" value="" type="text" lay-verify="required" class="layui-input" >
+            <input name="username" placeholder="用户名" value="admin" type="text" lay-verify="required" class="layui-input" >
             <hr class="hr15">
             <input name="password" lay-verify="required" value="123123" placeholder="密码"  type="password" class="layui-input">
             <hr class="hr15">
+            <?php if($system == 'open'): ?>
             <div class="layui-form-item">
                 <input type="text" name="vercode" id="captcha" lay-verify="required" placeholder="验证码" autocomplete="off" class="layui-input">
                 <div class="captcha">
                     <img src="<?php echo url('verify'); ?>" alt="captcha" onclick="this.src='<?php echo url("verify"); ?>?'+'id='+Math.random()"/>
                 </div>
             </div>
-            <input value="登录"  lay-submit id="btn" lay-filter="login" style="width:100%; background-color: #f35343" type='button'>
+            <?php endif; ?>
+            <input value="登录" lay-submit id="btn" lay-filter="login" style="width:100%;" type='button'>
             <hr class="hr20" >
         </form>
     </div>
@@ -50,7 +52,7 @@
                     layer.close(loading);
                     if (res.code > 0) {
                         layer.msg(res.msg, {time: 1800, icon: 1}, function () {
-                            location.href = "<?php echo url('bigshop/index/index'); ?>";
+                            location.href = '<?php echo url("admin/index/index"); ?>';
                         });
                     } else {
                         layer.msg(res.msg, {time: 1800, icon: 2}, function () {
