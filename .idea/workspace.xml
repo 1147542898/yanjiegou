@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b19a6c0d-d1d4-48ef-b0ea-3005fd8288a0" name="默认更改列表" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/api/controller/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/api/controller/Index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -10,7 +11,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -74,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1569464481501</updated>
       <workItem from="1569464484906" duration="1640000" />
-      <workItem from="1569484173608" duration="14000" />
+      <workItem from="1569484173608" duration="92000" />
     </task>
     <servers />
   </component>
