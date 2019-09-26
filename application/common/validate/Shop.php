@@ -8,7 +8,7 @@ class Shop extends Validate
         'shoplogo' => 'require',
         'bshopid'=>'require',
         'content'=>'require',
-        'type' => 'require|in:0,1',
+//        'type' => 'require|in:0,1',
         'province' =>'require|chs',
         'city'=>'require|chs',
         'area'=>'require|chs',

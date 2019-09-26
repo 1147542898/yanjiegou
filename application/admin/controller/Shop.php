@@ -208,7 +208,7 @@ class Shop extends Common{
         $model =db('bigshop');
         $data = input('post.');
         $model->update($data);
-        $result = ['msg' => '排序成功！','url'=>url('Bigshop/index'), 'code' => 1];
+        $result = ['msg' => '排序成功！','url'=>url('shop/index'), 'code' => 1];
         return $result;
     }
     /*
