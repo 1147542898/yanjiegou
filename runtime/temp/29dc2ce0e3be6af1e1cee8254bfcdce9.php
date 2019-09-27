@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\link\form.html";i:1569466684;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:85:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\statistic\good_ph.html";i:1569466684;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
 <!doctype html>
 <html class="x-admin-sm">
 <head>
@@ -58,8 +58,11 @@ layui.use('layer',function(){
 
 </script>
     
+<style type="text/css">
+    .layui-table-body tr{height:50px;}
+    .layui-table-body td .laytable-cell-1-0-2{padding: 0;margin:0;height:50px;}
+</style>
 
-    
 
 </head>
 <body>
@@ -68,43 +71,19 @@ layui.use('layer',function(){
 <div class="layui-row layui-col-space15">
 <div class="layui-col-md12">
 <div class="layui-card">
-<div class="layui-card-body ">
+<div class="layui-card-body">
     <fieldset class="layui-elem-field layui-field-title">
-        <legend><?php echo $title; ?></legend>
+        <legend>商品销售排行</legend>
     </fieldset>
-    <form class="layui-form layui-form-pane">
-        <div class="layui-form-item">
-            <label class="layui-form-label">链接名称</label>
-            <div class="layui-input-inline">
-                <input type="text" name="name" ng-model="field.name" lay-verify="required" placeholder="<?php echo lang('pleaseEnter'); ?>链接名称" class="layui-input">
-            </div>
+    <div class="demoTable">
+        <div class="layui-inline">
+            <input class="layui-input" name="key" id="key" placeholder="<?php echo lang('pleaseEnter'); ?>关键字">
         </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label"><?php echo lang('link'); ?>URL</label>
-            <div class="layui-input-inline">
-                <input type="text" name="url" ng-model="field.url" lay-verify="required" placeholder="<?php echo lang('pleaseEnter'); ?>链接URL" class="layui-input">
-            </div>
-        </div>
-       
-        <div class="layui-form-item">
-            <label class="layui-form-label">联系站长</label>
-            <div class="layui-input-inline">
-                <input type="text" name="qq" ng-model="field.qq" placeholder="输入QQ或其他联系方式" class="layui-input">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label"><?php echo lang('order'); ?></label>
-            <div class="layui-input-inline">
-                <input type="text" name="sort" ng-model="field.sort" value="" placeholder="从小到大排序" class="layui-input">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <div class="layui-input-block">
-                <button type="button" class="layui-btn" lay-submit="" lay-filter="submit"><?php echo lang('submit'); ?></button>
-                <a href="<?php echo url('index'); ?>" class="layui-btn layui-btn-primary"><?php echo lang('back'); ?></a>
-            </div>
-        </div>
-    </form>
+        <button class="layui-btn" id="search" data-type="reload"><?php echo lang('search'); ?></button>
+        <a href="<?php echo url('index',['catid'=>input('catid')]); ?>" class="layui-btn">显示全部</a>
+        <div style="clear: both;"></div>
+    </div>
+    <table class="layui-table" id="list" lay-filter="list" lay-skin="row"></table>
 </div>
 </div>
 </div>
@@ -115,24 +94,34 @@ layui.use('layer',function(){
 
 <!--js结束-->
 
+<script type="text/html" id="order">
+    <input name="{{d.id}}" data-id="{{d.id}}" class="list_order layui-input" value=" {{d.sort}}" size="10"/>
+</script>
+<script type="text/html" id="title">
+   {{d.title}}{{# if(d.title){ }}<img src="/static/admin/images/image.gif" onmouseover="layer.tips('<img src={{d.headimg}}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();" >{{# } }}
+</script>
+
 <script>
-layui.use(['form', 'layer'], function () {
-    var form = layui.form, $ = layui.jquery;
-    form.on('submit(submit)', function (data) {
-        // 提交到方法 默认为本身
-        var loading = layer.load(1, {shade: [0.1, '#fff']});
-        $.post("", data.field, function (res) {
-            layer.close(loading);
-            if (res.code > 0) {
-                layer.msg(res.msg, {time: 1800, icon: 1}, function () {
-                    location.href = res.url;
-                });
-            } else {
-                layer.msg(res.msg, {time: 1800, icon: 2});
-            }
+    layui.use(['table','form','util'], function() {
+        var table = layui.table, $ = layui.jquery,form = layui.form;util = layui.util;
+        var tableIn = table.render({
+            id: 'content',
+            elem: '#list',
+            url: '<?php echo url(""); ?>',
+            method: 'post',
+            toolbar: '#topBtn',
+            page: true,
+            cols: [[
+                {field: 'goodsn', title: '商品编号', width: 150},
+                {field: 'title', title: '商品名称',toolbar: '#title',},
+                {field: 'shopname', title: '所属商家',align:'center', width:150,templet:function(d){
+                    if (d.shopname) {return d.shopname;} else {return '平台自营';}}},
+                {field: 'catname',  title: '商品分类', width: 120},
+                {field: 'sold',  title: '销量', width: 80,templet:function(d){return '<span class="red">'+d.sold+'</span>';}},
+            ]],
+            limit: 10
         });
-    })
-});
+    });    
 </script>
 
 

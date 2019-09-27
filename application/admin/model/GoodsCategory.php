@@ -16,4 +16,5 @@ class GoodsCategory extends Model{
 		$str = "<option value='\$id' \$disabled \$selected>\$spacer\$catname</option>"; //生成的形式
 		return $tree->get_tree(0,$str, $select_id);
     }
+    
 }

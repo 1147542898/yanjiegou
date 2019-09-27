@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:78:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\link\index.html";i:1569466684;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\fsale\share.html";i:1569466684;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
 <!doctype html>
 <html class="x-admin-sm">
 <head>
@@ -68,14 +68,20 @@ layui.use('layer',function(){
 <div class="layui-row layui-col-space15">
 <div class="layui-col-md12">
 <div class="layui-card">
-<div class="layui-card-body ">
+<div class="layui-card-body">
     <fieldset class="layui-elem-field layui-field-title">
-        <legend>友情链接</legend>
+        <legend><?php echo lang('share'); ?>管理</legend>
     </fieldset>
-    <blockquote class="layui-elem-quote">
-        <a href="<?php echo url('add'); ?>" class="layui-btn layui-btn-sm"><?php echo lang('add'); ?>友链</a>
-        <button type="button" class="layui-btn layui-btn-sm layui-btn-danger" id="delAll">批量删除</button>
-    </blockquote>
+    <div class="demoTable">
+        <div class="layui-inline">
+            <input class="layui-input" name="key" id="key" placeholder="<?php echo lang('pleaseEnter'); ?>关键字">
+        </div>
+        <button class="layui-btn" id="search" data-type="reload"><?php echo lang('search'); ?></button>
+        <a href="<?php echo url('index'); ?>" class="layui-btn">显示全部</a>
+        <button type="button" class="layui-btn layui-btn-danger" id="delAll">批量删除</button>
+        <a href="<?php echo url('add'); ?>" class="layui-btn" style="float:right;"><i class="fa fa-plus" aria-hidden="true"></i><?php echo lang('add'); ?><?php echo lang('share'); ?></a>
+        <div style="clear: both;"></div>
+    </div>
     <table class="layui-table" id="list" lay-filter="list"></table>
 </div>
 </div>
@@ -87,44 +93,51 @@ layui.use('layer',function(){
 
 <!--js结束-->
 
-<script type="text/html" id="url">
-    <a href="{{d.url}}" target="_blank">{{d.url}}</a>
-</script>
-<script type="text/html" id="order">
-    <input name="{{d.link_id}}" data-id="{{d.link_id}}" class="list_order layui-input" value=" {{d.sort}}" size="10"/>
-</script>
-<script type="text/html" id="open">
-    <input type="checkbox" name="open" value="{{d.link_id}}" lay-skin="switch" lay-text="开启|关闭" lay-filter="open" {{ d.open == 1 ? 'checked' : '' }}>
+<script type="text/html" id="status">
+    <input type="checkbox" name="status" value="{{d.ad_id}}" lay-skin="switch" lay-text="开启|关闭" lay-filter="status" {{ d.status == 1 ? 'checked' : '' }}>
 </script>
 <script type="text/html" id="action">
-    <a href="<?php echo url('edit'); ?>?link_id={{d.link_id}}" class="layui-btn layui-btn-xs">编辑</a>
+    <a href="<?php echo url('edit'); ?>?ad_id={{d.ad_id}}" class="layui-btn layui-btn-xs">编辑</a>
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+    <a class="layui-btn layui-btn-xs" lay-event="trial">审核</a>
 </script>
 <script>
     layui.use(['table','form'], function() {
-        var table = layui.table,form = layui.form, $ = layui.jquery;
+        var table = layui.table,form = layui.form,$ = layui.jquery;
         var tableIn = table.render({
-            id: 'link',
+            id: 'ad',
             elem: '#list',
-            url: '<?php echo url("index"); ?>',
+            url: '<?php echo url("share"); ?>',
             method: 'post',
+            page:true,
             cols: [[
                 {checkbox: true, fixed: true},
-                {field: 'link_id', title: '<?php echo lang("id"); ?>', width: 80, fixed: true, sort: true},
-                {field: 'name', title: '链接名称', width: 200},
-                {field: 'url', title: '链接URL', width: 300,templet:'#url'},
-                {field: 'qq', title: '<?php echo lang("qq"); ?>', width: 120},
-                {field: 'addtime', title: '<?php echo lang("add"); ?><?php echo lang("time"); ?>', width: 150,sort: true},
-                {field: 'sort',align: 'center',title: '<?php echo lang("order"); ?>', width: 120, templet: '#order', sort: true},
-                {field: 'open',align: 'center', title: '<?php echo lang("status"); ?>', width: 100, sort: true,toolbar: '#open'},
+                {field: 'name', title: '姓名', width: 80, fixed: true},
+                {field: 'mobile', title: '电话', width: 120},
+                {field: 'username', title: '账户名称', width: 160},
+                {field: 'addtime', title: '<?php echo lang("add"); ?><?php echo lang("time"); ?>',width: 160},
+                {field: 'status', align: 'center', title: '<?php echo lang("status"); ?>', width: 100, toolbar: '#status'},
                 {width: 160, align: 'center', toolbar: '#action'}
-            ]]
+            ]],
+            limit:10
         });
+        //监听行单击事件（单击事件为：rowDouble）
+        table.on('row(list)', function(obj){
+          var data = obj.data;
+          
+          layer.alert(/static/admin/jsON.stringify(data), {
+            title: '当前行数据：'
+          });
+          
+          //标注选中样式
+          obj.tr.addClass('layui-table-click').siblings().removeClass('layui-table-click');
+        });
+
         form.on('switch(open)', function(obj){
             loading =layer.load(1, {shade: [0.1,'#fff']});
             var id = this.value;
             var open = obj.elem.checked===true?1:0;
-            $.post('<?php echo url("linkState"); ?>',{'id':id,'open':open},function (res) {
+            $.post('<?php echo url("editState"); ?>',{'id':id,'open':open},function (res) {
                 layer.close(loading);
                 if (res.status==1) {
                     tableIn.reload();
@@ -134,16 +147,25 @@ layui.use('layer',function(){
                 }
             })
         });
+        //搜索
+        $('#search').on('click', function () {
+            var key = $('#key').val();
+            if ($.trim(key) === '') {
+                layer.msg('<?php echo lang("pleaseEnter"); ?>关键字！', {icon: 0});
+                return;
+            }
+            tableIn.reload({ page: {page: 1}, where: {key: key}});
+        });
         table.on('tool(list)', function(obj) {
             var data = obj.data;
-            if(obj.event === 'del'){
-                layer.confirm('您确定要删除该链接吗？', function(index){
+            if (obj.event === 'del'){
+                layer.confirm('您确定要删除该广告吗？', function(index){
                     var loading = layer.load(1, {shade: [0.1, '#fff']});
-                    $.post("<?php echo url('del'); ?>",{link_id:data.link_id},function(res){
+                    $.post("<?php echo url('del'); ?>",{ad_id:data.ad_id},function(res){
                         layer.close(loading);
                         if(res.code===1){
                             layer.msg(res.msg,{time:1000,icon:1});
-                            obj.del();
+                            tableIn.reload();
                         }else{
                             layer.msg('操作失败！',{time:1000,icon:2});
                         }
@@ -153,31 +175,37 @@ layui.use('layer',function(){
             }
         });
         $('body').on('blur','.list_order',function() {
-            var link_id = $(this).attr('data-id');
+            var ad_id = $(this).attr('data-id');
             var sort = $(this).val();
-            $.post('<?php echo url("listOrder"); ?>',{link_id:link_id,sort:sort},function(res){
+            var loading = layer.load(1, {shade: [0.1, '#fff']});
+            $.post('<?php echo url("adOrder"); ?>',{ad_id:ad_id,sort:sort},function(res){
+                layer.close(loading);
                 if(res.code === 1){
                     layer.msg(res.msg, {time: 1000, icon: 1});
-                    table.reload('link');
+                    tableIn.reload();
                 }else{
                     layer.msg(res.msg,{time:1000,icon:2});
                 }
             })
         });
         $('#delAll').click(function(){
-            layer.confirm('确认要删除选中信息吗？', {icon: 3}, function(index) {
+            layer.confirm('确认要删除选中的广告吗？', {icon: 3}, function(index) {
                 layer.close(index);
-                var checkStatus = table.checkStatus('link'); //test即为参数id设定的值
+                var checkStatus = table.checkStatus('ad'); //test即为参数id设定的值
                 var ids = [];
                 $(checkStatus.data).each(function (i, o) {
-                    ids.push(o.link_id);
+                    ids.push(o.ad_id);
                 });
+                if(ids==''){
+                    layer.msg('请选择要删除的数据！', {time: 1000, icon: 2});
+                    return false;
+                }
                 var loading = layer.load(1, {shade: [0.1, '#fff']});
                 $.post("<?php echo url('delall'); ?>", {ids: ids}, function (data) {
                     layer.close(loading);
                     if (data.code === 1) {
                         layer.msg(data.msg, {time: 1000, icon: 1});
-                        table.reload('link');
+                        tableIn.reload();
                     } else {
                         layer.msg(data.msg, {time: 1000, icon: 2});
                     }
