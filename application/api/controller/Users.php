@@ -1660,7 +1660,7 @@ class Users extends Base
                     foreach ($goods_attr as $ks=>$vs){
                         $SttrName=Db::name('GoodsSttr')->where('id',$ks)->value('key');
                         $SttrValName=Db::name('GoodsSttrval')->where('id',$vs)->value('sttr_value');
-                        $data['goods_attr'] .=  $SttrName.':'.$SttrValName.'&nbsp';
+                        $data['goods_attr'] .=  $SttrName.':'.$SttrValName.' ';
                     }
                     /*--chen*/
                     $data['title'] = $cv['title'];
