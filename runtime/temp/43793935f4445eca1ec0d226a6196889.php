@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:85:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\statistic\good_ph.html";i:1569552705;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\sign\winner.html";i:1569466684;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
 <!doctype html>
 <html class="x-admin-sm">
 <head>
@@ -58,80 +58,91 @@ layui.use('layer',function(){
 
 </script>
     
-<style type="text/css">
-    .layui-table-body tr{height:50px;}
-    .layui-table-body td .laytable-cell-1-0-2{padding: 0;margin:0;height:50px;}
-</style>
 
+    
 
 </head>
 <body>
 
-<div class="layui-fluid">
-<div class="layui-row layui-col-space15">
-<div class="layui-col-md12">
-<div class="layui-card">
-<div class="layui-card-body">
-    <fieldset class="layui-elem-field layui-field-title">
-        <legend>商品销售排行</legend>
-    </fieldset>
-    <div class="demoTable">
-        <div class="layui-inline">
-            <input class="layui-input" name="key" id="key" placeholder="<?php echo lang('pleaseEnter'); ?>关键字">
+    <div class="layui-fluid">
+        <div class="layui-row">
+            <div class="layui-card">
+                <table class="layui-table" id="list" lay-filter="list"></table>
+            </div>
         </div>
-        <button class="layui-btn" id="search" data-type="reload"><?php echo lang('search'); ?></button>
-        <a href="<?php echo url('goodPh'); ?>" class="layui-btn">显示全部</a>
-        <div style="clear: both;"></div>
     </div>
-    <table class="layui-table" id="list" lay-filter="list" lay-skin="row"></table>
-</div>
-</div>
-</div>
-</div>
-</div>
 
 
 
 <!--js结束-->
 
-<script type="text/html" id="order">
-    <input name="{{d.id}}" data-id="{{d.id}}" class="list_order layui-input" value=" {{d.sort}}" size="10"/>
-</script>
-<script type="text/html" id="title">
-   {{d.title}}{{# if(d.title){ }}<img src="/static/admin/images/image.gif" onmouseover="layer.tips('<img src={{d.headimg}}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();" >{{# } }}
-</script>
+<script type="text/javascript">
+    layui.use(['table','form'], function() {
 
-<script>
-    layui.use(['table','form','util'], function() {
-        var table = layui.table, $ = layui.jquery,form = layui.form;util = layui.util;
+        var table = layui.table, $ = layui.jquery, form = layui.form;
+
         var tableIn = table.render({
+
             id: 'content',
+
             elem: '#list',
-            url: '<?php echo url("goodPh"); ?>',
+
+            url: '<?php echo url("admin/sign/winner"); ?>',
+
             method: 'post',
             toolbar: '#topBtn',
+
             page: true,
+
             cols: [[
-                {field: 'goodsn', title: '商品编号', width: 150},
-                {field: 'title', title: '商品名称',toolbar: '#title',},
-                {field: 'shopname', title: '所属商家',align:'center', width:150,templet:function(d){
-                    if (d.shopname) {return d.shopname;} else {return '平台自营';}}},
-                {field: 'catname',  title: '商品分类', width: 120},
-                {field: 'sold',  title: '销量', width: 80,templet:function(d){return '<span class="red">'+d.sold+'</span>';}},
+
+                {type: "checkbox", fixed: true},
+                {field: 'id', title: '编号'},
+                {field: 'mobile', title: '手机号'},
+                {field: 'add_time', title: '签到时间'},
+                {field: 'code', title: '签到码'},
+                {field: 'winstatus', title: '是否中奖'},
+                {field: 'code_source', title: '签到码来源'}
+
             ]],
+
             limit: 10
+
         });
-        //搜索
-        $('#search').on('click', function () {
-            var key = $('#key').val();
-            if ($.trim(key) === '') {
-                layer.msg('<?php echo lang("pleaseEnter"); ?>关键字！', {icon: 0});
-                return;
-            }
-            tableIn.reload({ page: {page: 1}, where: {key: key}});
-        });
-    });    
+
+        $('body').on('click','#delAll',function() {
+            layer.confirm('确认要删除选中的内容吗？', {icon: 3}, function(index) {
+                layer.close(index);
+                var checkStatus = table.checkStatus('content'); //content即为参数id设定的值
+                var ids = [];
+                $(checkStatus.data).each(function (i, o) {
+                    ids.push(o.id);
+                });
+                var loading = layer.load(1, {shade: [0.1, '#fff']});
+                $.post("<?php echo url('delAll'); ?>", {ids: ids,catid:'<?php echo input("catid"); ?>'}, function (data) {
+                    layer.close(loading);
+                    if(data.code===1) {
+                        layer.msg(data.msg, {time: 1000, icon: 1});
+                        tableIn.reload();
+                    } else {
+                        layer.msg(data.msg, {time: 1000, icon: 2});
+                    }
+                });
+            });
+        })
+
+
+
+
+
+    });
+
+
+
 </script>
+
+
+
 
 
 

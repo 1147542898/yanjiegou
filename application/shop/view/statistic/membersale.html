@@ -19,7 +19,7 @@
             <input class="layui-input" name="key" id="key" placeholder="{:lang('pleaseEnter')}关键字">
         </div>
         <button class="layui-btn" id="search" data-type="reload">{:lang('search')}</button>
-        <a href="{:url('index',['catid'=>input('catid')])}" class="layui-btn">显示全部</a>
+        <a href="{:url('membersale')}" class="layui-btn">显示全部</a>
         <div style="clear: both;"></div>
     </div>
     <table class="layui-table" id="list" lay-filter="list" lay-skin="row"></table>
@@ -48,10 +48,19 @@
                 {field: 'id', title: '编号', width: 80},
                 {field: 'username', title: '名称', width: 200},
                 {field: 'mobile', title: '电话',align:'center', width:150},
-                {field: 'counts',  title: '商品分类', width: 120,templet:function(d){return '<span class="red">'+d.counts+'</span>';}},
+                {field: 'counts',  title: '消费金额', width: 120,templet:function(d){return '<span class="red">'+d.counts+'</span>';}},
                 {field: 'reg_time',  title: '注册时间', width: 150},
             ]],
             limit: 10
+        });
+         //搜索
+        $('#search').on('click', function () {
+            var key = $('#key').val();
+            if ($.trim(key) === '') {
+                layer.msg('{:lang("pleaseEnter")}关键字！', {icon: 0});
+                return;
+            }
+            tableIn.reload({ page: {page: 1}, where: {key: key}});
         });
     });    
 </script>

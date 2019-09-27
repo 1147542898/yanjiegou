@@ -106,11 +106,13 @@ class Statistic extends Common{
             $page =input('page')?input('page'):1;
             $pageSize =input('limit')?input('limit'):config('pageSize');
             $map=[];
-            $keyword=input('key');
-            if(!empty($keyword)){$map['a.title']=array('like','%'.$keyword.'%');}
+            $keyword=input('key');            
+            if(!empty($keyword)){$map['a.username']=array('like','%'.$keyword.'%');}
+            $map['c.shop_id']=array('eq',SHID);
             $list = model('order')->alias('o')
-                ->join('users a','o.user_id = a.id','LEFT')
-                ->field('a.username,a.mobile,a.reg_time,a.id,sum(money) counts')
+                ->join('users_card_get c','o.user_id = c.user_id','LEFT')
+                ->join('users a','c.user_id = a.id','LEFT')
+                ->field('a.username,a.mobile,c.addtime reg_time,a.id,sum(o.money) counts')
                 ->where($map)
                 ->order("counts desc")
                 ->group('o.user_id')
@@ -127,7 +129,7 @@ class Statistic extends Common{
     /**
      * 会员增长趋势
      */
-    public function membertrend(){
+    public function membertrend(){       
         $date=input('date/s','');
         if (empty($date)) {
            $startDate=date('Y-m-d',strtotime("-1month"));
@@ -139,14 +141,20 @@ class Statistic extends Common{
         }
         $start = date('Y-m-d 00:00:00',strtotime($startDate));
         $end = date('Y-m-d 23:59:59',strtotime($endDate));
-        $rs = Db::name('users')->field('reg_time,count(id) total')
-                ->whereTime('reg_time','between',[$start,$end])
-                //->where()
-                ->order('reg_time asc')
-                ->group("date_format(from_unixtime(reg_time),'%Y-%m-%d')")->select();
+//        $rs = Db::name('users')->field('reg_time,count(id) total')
+//                ->whereTime('reg_time','between',[$start,$end])
+//                //->where()
+//                ->order('reg_time asc')
+//                ->group("date_format(from_unixtime(reg_time),'%Y-%m-%d')")->select();
+        $rs =Db::name('users_card_get')->field('addtime,count(id) total')
+              ->where(['shop_id'=>SHID])
+              ->whereTime('addtime','between',[$start,$end])
+              ->order('addtime asc')
+              ->group("date_format(from_unixtime(addtime),'%Y-%m-%d')")
+              ->select();
         $top=$bottom=[];        
         foreach ($rs as $k => $v) {
-            $top[]=date('Ymd',$v['reg_time']);
+            $top[]=date('Ymd',$v['addtime']);
             $bottom[]=$v['total'];
         }
         $this->assign('date',$startDate.' ~ '.$endDate);

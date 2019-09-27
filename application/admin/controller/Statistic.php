@@ -106,7 +106,7 @@ class Statistic extends Common{
             $pageSize =input('limit')?input('limit'):config('pageSize');
             $map=[];
             $keyword=input('key');
-            if(!empty($keyword)){$map['a.title']=array('like','%'.$keyword.'%');}
+            if(!empty($keyword)){$map['a.username']=array('like','%'.$keyword.'%');}
             $list = model('order')->alias('o')
                 ->join('users a','o.user_id = a.id','LEFT')
                 ->field('a.username,a.mobile,a.reg_time,a.id,sum(money) counts')

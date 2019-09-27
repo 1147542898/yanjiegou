@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:83:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\recommend\goods.html";i:1569478521;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:83:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\recommend\goods.html";i:1569554741;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
 <!doctype html>
 <html class="x-admin-sm">
 <head>
@@ -68,7 +68,7 @@ layui.use('layer',function(){
 input[type=text]{padding: 6px 5px;}
 </style>
 <form autocomplete='off'>
-<div id='alertTips' class='alert alert-success alert-tips fade in'>
+<div id='alertTips' class='layui-container'>
   <div id='headTip' class='head'><i class='fa fa-lightbulb-o'></i>操作说明</div>
   <ul class='body'>
       <li>本功能主要用于前台商品展示的推荐设置，例如首页各楼层，猜你喜欢，最新上架，热销商品，推荐商城等等。</li>
@@ -143,18 +143,17 @@ input[type=text]{padding: 6px 5px;}
 	 
 </table>
 </form>
+
+
+
+<!--js结束-->
+
 <script>
 $(function(){
 	listQueryByGoods('_2');
 	$('#headTip').WSTTips({width:90,height:35,callback:function(v){}});
 });
 </script>
-
-
-
-<!--js结束-->
-
-<script src="__ADMIN__/recommends/recommends.js?v=1" type="text/javascript"></script>
 
 
 

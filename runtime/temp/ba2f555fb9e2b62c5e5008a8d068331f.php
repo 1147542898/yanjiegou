@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:82:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\recommend\shop.html";i:1569550119;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:82:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\recommend\shop.html";i:1569554423;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
 <!doctype html>
 <html class="x-admin-sm">
 <head>
@@ -67,15 +67,18 @@ layui.use('layer',function(){
 <div class="layui-fluid">
     <div class="layui-row layui-col-space15">
         <div class="layui-card">
-            <div class="layui-card-body ">
-                <div class="layui-input-inline">
-                    <cascader id="demo1"></cascader>
+            <div class="layui-container ">
+                <div class="layui-fluid">
+                    <div class="layui-input-inline " >                   
+                        <cascader id="demo1"></cascader>                   
+                    </div>
                     <button class="layui-btn btns">提交</button>
+                    <div style="clear: both;"></div>
                 </div>
                 <div class="layui-container" style="margin-top: 15px;">
                     <div id="test1"></div>
                 </div>
-                
+
             </div>
         </div>
     </div>

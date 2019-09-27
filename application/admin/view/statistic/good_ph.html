@@ -19,7 +19,7 @@
             <input class="layui-input" name="key" id="key" placeholder="{:lang('pleaseEnter')}关键字">
         </div>
         <button class="layui-btn" id="search" data-type="reload">{:lang('search')}</button>
-        <a href="{:url('index',['catid'=>input('catid')])}" class="layui-btn">显示全部</a>
+        <a href="{:url('goodPh')}" class="layui-btn">显示全部</a>
         <div style="clear: both;"></div>
     </div>
     <table class="layui-table" id="list" lay-filter="list" lay-skin="row"></table>
@@ -43,7 +43,7 @@
         var tableIn = table.render({
             id: 'content',
             elem: '#list',
-            url: '{:url("")}',
+            url: '{:url("goodPh")}',
             method: 'post',
             toolbar: '#topBtn',
             page: true,
@@ -56,6 +56,15 @@
                 {field: 'sold',  title: '销量', width: 80,templet:function(d){return '<span class="red">'+d.sold+'</span>';}},
             ]],
             limit: 10
+        });
+        //搜索
+        $('#search').on('click', function () {
+            var key = $('#key').val();
+            if ($.trim(key) === '') {
+                layer.msg('{:lang("pleaseEnter")}关键字！', {icon: 0});
+                return;
+            }
+            tableIn.reload({ page: {page: 1}, where: {key: key}});
         });
     });    
 </script>

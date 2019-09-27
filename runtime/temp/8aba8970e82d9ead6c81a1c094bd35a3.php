@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:88:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\statistic\membersale.html";i:1569466684;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:88:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\statistic\membersale.html";i:1569553154;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
 <!doctype html>
 <html class="x-admin-sm">
 <head>
@@ -80,7 +80,7 @@ layui.use('layer',function(){
             <input class="layui-input" name="key" id="key" placeholder="<?php echo lang('pleaseEnter'); ?>关键字">
         </div>
         <button class="layui-btn" id="search" data-type="reload"><?php echo lang('search'); ?></button>
-        <a href="<?php echo url('index',['catid'=>input('catid')]); ?>" class="layui-btn">显示全部</a>
+        <a href="<?php echo url('membersale'); ?>" class="layui-btn">显示全部</a>
         <div style="clear: both;"></div>
     </div>
     <table class="layui-table" id="list" lay-filter="list" lay-skin="row"></table>
@@ -104,7 +104,7 @@ layui.use('layer',function(){
         var tableIn = table.render({
             id: 'content',
             elem: '#list',
-            url: '<?php echo url(""); ?>',
+            url: '<?php echo url("membersale"); ?>',
             method: 'post',
             toolbar: '#topBtn',
             page: true,
@@ -116,6 +116,15 @@ layui.use('layer',function(){
                 {field: 'reg_time',  title: '注册时间', width: 150},
             ]],
             limit: 10
+        });
+         //搜索
+        $('#search').on('click', function () {
+            var key = $('#key').val();
+            if ($.trim(key) === '') {
+                layer.msg('<?php echo lang("pleaseEnter"); ?>关键字！', {icon: 0});
+                return;
+            }
+            tableIn.reload({ page: {page: 1}, where: {key: key}});
         });
     });    
 </script>

@@ -6,6 +6,7 @@ use think\Db;
 use think\Request;
 use app\admin\controller\Common;
 use app\admin\model\GoodsCategory;
+
 class Recommend extends Common {
 
     public function _initialize() {
@@ -80,34 +81,36 @@ class Recommend extends Common {
             return $this->fetch();
         }
     }
+
     /*
      * 根据商品分类获取商家
      */
-    public function getShopByCategory(){
-        $categoryId=input('data');
-        if(empty($categoryId)){
-            return ['code'=>0,'msg'=>"数据不能为空"];
+
+    public function getShopByCategory() {
+        $categoryId = input('data');
+        if (empty($categoryId)) {
+            return ['code' => 0, 'msg' => "数据不能为空"];
         }
-        $ids =  explode(",", $categoryId);
-        $id=array_pop($ids);
-        $goodsCategory=Db::name("goods_category")->where(['id'=>$id])->find();
-        $catId=$goodsCategory['arrchildid'];
-        $catIds=  explode(",", $catId);
-        $shopids=Db::name("goods")->whereIn('shopid',$catIds)->column('shopid');
-        if(empty($shopids)){
-            return ['code'=>0,'msg'=>'暂无商家'];
+        $ids = explode(",", $categoryId);
+        $id = array_pop($ids);
+        $goodsCategory = Db::name("goods_category")->where(['id' => $id])->find();
+        $catId = $goodsCategory['arrchildid'];
+        $catIds = explode(",", $catId);
+        $shopids = Db::name("goods")->whereIn('shopid', $catIds)->column('shopid');
+        if (empty($shopids)) {
+            return ['code' => 0, 'msg' => '暂无商家'];
         }
-         $shop = Db::name("shop")->field("id,name,recommend")->where(['status' => 2])->whereIn('id',$shopids)->select();
-            $arr = [];
-            $data = [];
-            foreach ($shop as $key => $value) {
-                if ($value['recommend']) {
-                    $arr[] = $value['id'];
-                }
-                $data[$key]['value'] = $value['id'];
-                $data[$key]['title'] = $value['name'];
+        $shop = Db::name("shop")->field("id,name,recommend")->where(['status' => 2])->whereIn('id', $shopids)->select();
+        $arr = [];
+        $data = [];
+        foreach ($shop as $key => $value) {
+            if ($value['recommend']) {
+                $arr[] = $value['id'];
             }
-        return ['code'=>1,'arr'=>$arr,'list'=>$data];
+            $data[$key]['value'] = $value['id'];
+            $data[$key]['title'] = $value['name'];
+        }
+        return ['code' => 1, 'arr' => $arr, 'list' => $data];
     }
 
     /**
