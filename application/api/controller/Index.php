@@ -13,7 +13,7 @@ class Index extends Base
     public function adv()
     {
         $type_id = input('get.type_id') ? input('get.type_id') : 1;
-
+/*分支修改*/
         $where['type_id'] = $type_id;
         $where['open'] = 1;
 
