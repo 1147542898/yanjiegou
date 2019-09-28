@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\sign\winner.html";i:1569466684;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:82:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\evaluate\index.html";i:1569466684;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
 <!doctype html>
 <html class="x-admin-sm">
 <head>
@@ -64,85 +64,92 @@ layui.use('layer',function(){
 </head>
 <body>
 
-    <div class="layui-fluid">
-        <div class="layui-row">
-            <div class="layui-card">
-                <table class="layui-table" id="list" lay-filter="list"></table>
-            </div>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-card-body ">
+
+            <table id="order"></table>
         </div>
+
     </div>
+</div>
+
 
 
 
 <!--js结束-->
 
-<script type="text/javascript">
+<script>
     layui.use(['table','form'], function() {
-
-        var table = layui.table, $ = layui.jquery, form = layui.form;
-
+        var table = layui.table, form = layui.form, $ = layui.jquery;
         var tableIn = table.render({
+            elem: '#order'
+            ,url: "<?php echo url('admin/evaluate/index'); ?>" //数据接口
+            ,page: true //开启分页
+            ,cols: [[ //表头
+                {field: 'id', title: '评论ID', sort: true, fixed: 'left'}
+                ,{field: 'gtitle', title: '商品'}
+                ,{field: 'umobile', title: '评论者'}
+                ,{field: 'sname', title: '商家'}
+                ,{field: 'add_time', title: '评论时间'}
+                ,{field: 'is_show', align: 'center', title: '是否显示', width: 100, toolbar: '#open'},
+                ,{width: 160,title:'操作', toolbar: '#action'}
+            ]]
+        });
 
-            id: 'content',
+        $('#search').on('click', function () {
 
-            elem: '#list',
+            var key = $('#key').val();
 
-            url: '<?php echo url("admin/sign/winner"); ?>',
 
-            method: 'post',
-            toolbar: '#topBtn',
+            var paid = $('#paid').val();
 
-            page: true,
+//            if ($.trim(key) === '') {
+//
+//                layer.msg('<?php echo lang("pleaseEnter"); ?>关键字！', {icon: 0});
+//
+//                return;
+//
+//            }
 
-            cols: [[
-
-                {type: "checkbox", fixed: true},
-                {field: 'id', title: '编号'},
-                {field: 'mobile', title: '手机号'},
-                {field: 'add_time', title: '签到时间'},
-                {field: 'code', title: '签到码'},
-                {field: 'winstatus', title: '是否中奖'},
-                {field: 'code_source', title: '签到码来源'}
-
-            ]],
-
-            limit: 10
+            tableIn.reload({ page: {page: 1}, where: {key: key,paid:paid} });
 
         });
 
-        $('body').on('click','#delAll',function() {
-            layer.confirm('确认要删除选中的内容吗？', {icon: 3}, function(index) {
-                layer.close(index);
-                var checkStatus = table.checkStatus('content'); //content即为参数id设定的值
-                var ids = [];
-                $(checkStatus.data).each(function (i, o) {
-                    ids.push(o.id);
-                });
-                var loading = layer.load(1, {shade: [0.1, '#fff']});
-                $.post("<?php echo url('delAll'); ?>", {ids: ids,catid:'<?php echo input("catid"); ?>'}, function (data) {
-                    layer.close(loading);
-                    if(data.code===1) {
-                        layer.msg(data.msg, {time: 1000, icon: 1});
-                        tableIn.reload();
-                    } else {
-                        layer.msg(data.msg, {time: 1000, icon: 2});
-                    }
-                });
-            });
-        })
+        form.on('switch(open)', function (obj) {
+            loading = layer.load(1, {shade: [0.1, '#fff']});
+            var id = this.value;
+            var is_show = obj.elem.checked === true ? 1 : 0;
+            $.post('<?php echo url("editState"); ?>', {'id': id, 'is_show': is_show}, function (res) {
+                layer.close(loading);
+                if (res.status == 1) {
+                    tableIn.reload();
+                } else {
+                    layer.msg(res.msg, {time: 1000, icon: 2});
+                    return false;
+                }
+            })
+        });
 
+        form.on('submit(sreach)', function(data){
 
-
+            return false;
+        });
 
 
     });
-
-
-
 </script>
 
 
+<script type="text/html" id="action">
 
+    <a href="<?php echo url('admin/evaluate/see'); ?>?id={{d.id}}" class="layui-btn layui-btn-xs">查看</a>
+
+</script>
+
+<script type="text/html" id="open">
+    <input type="checkbox" name="is_show" value="{{d.id}}" lay-skin="switch" lay-text="显示|隐藏" lay-filter="open" {{ d.is_show == 1 ? 'checked' : '' }}>
+</script>
 
 
 

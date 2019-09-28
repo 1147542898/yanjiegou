@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:83:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\recommend\goods.html";i:1569554741;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:83:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\recommend\goods.html";i:1569657369;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
 <!doctype html>
 <html class="x-admin-sm">
 <head>
@@ -64,95 +64,142 @@ layui.use('layer',function(){
 </head>
 <body>
 
-<style>
-input[type=text]{padding: 6px 5px;}
-</style>
-<form autocomplete='off'>
-<div id='alertTips' class='layui-container'>
-  <div id='headTip' class='head'><i class='fa fa-lightbulb-o'></i>操作说明</div>
-  <ul class='body'>
-      <li>本功能主要用于前台商品展示的推荐设置，例如首页各楼层，猜你喜欢，最新上架，热销商品，推荐商城等等。</li>
-      <li>若未进行过商品的推荐操作，则系统默认按照商品销量、上架时间排序；若有设置过则以设置的商品及排序为主。</li>
-      <li>本功能为扩展功能，开发者可通过组合不同的商品分类和推荐类型在前台进行商品信息的展示</li>
-  </ul>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body ">
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>商品推荐</legend>
+                    </fieldset>
+                    <div class="layui-container">   
+                        <form class="layui-form">
+                            <div class="layui-form-item" >         
+                                <div class="layui-inline">               
+                                    <div class="layui-input-inline " >                    
+                                        <cascader id="demo1" ></cascader>                      
+                                    </div>
+                                </div>                               
+                                <div class="layui-inline ">
+                                    <label class="layui-form-label">商品类型：</label>    
+                                     <div class="layui-input-block">
+                                        <select name="type" class="types" lay-filter="type">
+                                            <option value=""></option>                        
+                                            <option value="1">热销</option>
+                                            <option value="2">新品</option>
+                                            <option value="3">精品</option>
+                                        </select>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <div class="layui-inline">  
+                                    <div class="layui-input-inline" style="width:300px" >
+                                        <input type="text" name="keywords" placeholder="搜索店铺名、商品名称、商品编号、商品货号"  class="layui-input" style="width:300px" id="keywords">
+                                    </div>
+                                </div>     
+                                <button type="button" class="layui-btn" lay-submit="" lay-filter="submit">搜索</button>  
+                            </div> 
+                        </form>
+                        <div class="layui-row-md6">
+                            <div id="test1" class="layui-col-md6"></div>    
+                        </div>   
+                        <div style="clear: both"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<table class='wst-form wst-box-top'>
-	  <tr>
-	     <th width='120'>商品分类<font color='red'>*</font>：</th>
-	     <td colspan='2'>
-	        <select id="cat12_0" class='ipt pgoodsCats1_2' level="0" onchange="WST.ITGoodsCats({id:'cat12_0',val:this.value,isRequire:false,className:'pgoodsCats1_2'});">
-	          <option value=''>请选择</option>
-	          <?php $_result=WSTGoodsCats(0);if(is_array($_result) || $_result instanceof \think\Collection || $_result instanceof \think\Paginator): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-	          <option value="<?php echo $vo['catId']; ?>"><?php echo $vo['catName']; ?></option>
-	          <?php endforeach; endif; else: echo "" ;endif; ?>
-	        </select>
-	     </td>
-	     <td>
-	        商品分类<font color='red'>*</font>：
-	        <select id="cat22_0" class='ipt pgoodsCats2_2' level="0" onchange="WST.ITGoodsCats({id:'cat22_0',val:this.value,isRequire:false,className:'pgoodsCats2_2',afterFunc:'listQueryByGoods'});">
-	          <option value=''>所有分类</option>
-	          <?php $_result=WSTGoodsCats(0);if(is_array($_result) || $_result instanceof \think\Collection || $_result instanceof \think\Paginator): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-	          <option value="<?php echo $vo['catId']; ?>"><?php echo $vo['catName']; ?></option>
-	          <?php endforeach; endif; else: echo "" ;endif; ?>
-	        </select>
-	     </td>
-	  <tr>
-	     <th width='120'>搜索：</th>
-	     <td colspan='2'>
-	        <input type='text' id='key_2' style='width:250px' class='ipt_2' placeholder='店铺名、商品名称、商品编号、商品货号'/>
-	        <button type="button" class="btn btn-primary" onclick='javascript:loadGoods("_2")'><i class="fa fa-search"></i>搜索</button>
-	     </td>
-	     <td style='padding-left:30px;'>
-	       类型<font color='red'>*</font>：
-	       <select id='dataType_2' onchange='listQueryByGoods("_2")'>
-	          <option value='0'>推荐</option>
-	          <option value='1'>热销</option>
-	          <option value='2'>精品</option>
-	          <option value='3'>新品</option>
-	        </select>
-	     </td>
-	  </tr>
-	  <tr>
-	     <th>请选择<font color='red'>*</font>：</th>
-	     <td width='320'>
-	       <div class="recom-lbox">
-	            <div class="trow head">
-	              <div class="tck"><input onclick="WST.checkChks(this,'.lchk_2')" type="checkbox"></div>
-	              <div class="ttxt">商品</div>
-	            </div>
-	            <div id="llist_2" style="width:350px;"></div>
-	       </div>
-	     </td>
-	     <td align='center'>
-	       <input type='button' value='》》' class='btn btn-primary' onclick='javascript:moveRight("_2")'/>
-	       <br/><br/>
-	       <input type='button' value='《《' class='btn btn-primary' onclick='javascript:moveLeft("_2")'/>
-	       <input type='hidden' id='ids_2'/>
-	     </td>
-	     <td>
-	       <div class="recom-rbox">
-	            <div class="trow head">
-		            <div class="tck"><input onclick="WST.checkChks(this,'.rchk_2')" type="checkbox"></div>
-		            <div class="ttxt">商品</div>
-		            <div class="top">排序</div>
-		        </div>
-	            <div id="rlist_2"></div>
-	       </div>
-	     </td>
-	  </tr>
-	 
-</table>
-</form>
 
 
 
 <!--js结束-->
 
-<script>
-$(function(){
-	listQueryByGoods('_2');
-	$('#headTip').WSTTips({width:90,height:35,callback:function(v){}});
-});
+<script>     
+  
+    layui.config({
+        base: '/static/admin/lib/layui/extend/'
+    }).use(['transfer','jquery','upload','layer','ajaxCascader','form'], function () {
+        form = layui.form;       
+        transfer = layui.transfer;
+        $ = layui.jquery;
+        cascader = layui.ajaxCascader;                
+        var options={
+            elem:'#test1',
+            title:['商品','推荐商品'],
+            showSearch:true    
+        };
+        transfer.render(options);      
+        // 直接赋值模式
+        cascader.load({
+            elem:'#demo1'                          
+            ,value:0 
+            ,placeholder:'请选择分类'           
+            ,getChildren:function(value,callback){  
+                var data = [];                  
+                $.ajax({                         
+                    url:'<?php echo url("getcate"); ?>?pid='+value,
+                    type:'get',
+                    success:function(res){
+                        data = res.data;
+                        for(var i in data){
+                            data[i].value = data[i].id;
+                            data[i].label = data[i].name;
+                            delete data[i].id;
+                            delete data[i].name;
+                            data[i].hasChild = true;
+                        }
+                        callback(data);
+                    }
+                });
+            }      
+        });   
+       form.on('submit(submit)', function (data) {  
+            var category=cascader.getChooseData('#demo1'); 
+            $.ajax({                         
+                url:'<?php echo url("recommend/goods"); ?>',
+                type:'post',
+                dataType:'json',
+                async: false,
+                data:{
+                    category:category.join(","),
+                    keywords:data.field.keywords,
+                    type:data.field.type
+                },
+                success:function(res){
+                    if(res.code){                                          
+                        data=res.list;                       
+                        value=res.arr; 
+                        var options={
+                            elem:'#test1',
+                            title:['商品','推荐商品'],
+                            showSearch:true,
+                            data:data,
+                            value:value,
+                            onchange:function(obj,index){
+                                var ids=[];
+                                for(var i=0 in obj){
+                                    ids +=obj[i]['value']+",";
+                                }
+                                $.post("<?php echo url('changeGoods'); ?>",{data:ids,status:index}, function (res) {
+                                    if (res.code) {
+                                        layer.msg(res.msg, {time: 1800, icon: 1});
+                                    } else {
+                                        layer.msg(res.msg, {time: 1800, icon: 2});
+                                    }
+                                });   
+                            }
+                        };
+                        transfer.render(options)
+                    }else{
+                        layer.msg(res.msg, {time: 1800, icon: 2});
+                    }
+                }
+            });
+        });
+    });   
+  
 </script>
 
 

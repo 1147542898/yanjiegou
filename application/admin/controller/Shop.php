@@ -262,9 +262,11 @@ class Shop extends Common{
         $data['status']=input('post.status/d');
         if ($data['status']==1) {
             $data['info']=input('post.info/s');
-        }
-        $data['douid']=session('aid');
+        }        
+        $data['douid']=session('seadmininfo')['aid'];
         $data['dotime']=time();
+        var_dump($data);
+        exit;
         if(model('ShopFundNow')->update($data)){
             $result['code'] =1;
             $result['msg'] ='成功！';

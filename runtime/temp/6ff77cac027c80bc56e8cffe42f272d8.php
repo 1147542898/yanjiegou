@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:85:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\statistic\good_ph.html";i:1569552705;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:83:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\goods_label\add.html";i:1569466684;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
 <!doctype html>
 <html class="x-admin-sm">
 <head>
@@ -58,11 +58,8 @@ layui.use('layer',function(){
 
 </script>
     
-<style type="text/css">
-    .layui-table-body tr{height:50px;}
-    .layui-table-body td .laytable-cell-1-0-2{padding: 0;margin:0;height:50px;}
-</style>
 
+    
 
 </head>
 <body>
@@ -73,17 +70,33 @@ layui.use('layer',function(){
 <div class="layui-card">
 <div class="layui-card-body">
     <fieldset class="layui-elem-field layui-field-title">
-        <legend>商品销售排行</legend>
+        <legend>添加标签</legend>
     </fieldset>
-    <div class="demoTable">
-        <div class="layui-inline">
-            <input class="layui-input" name="key" id="key" placeholder="<?php echo lang('pleaseEnter'); ?>关键字">
+    <form class="layui-form" method="post">
+        <div class="layui-form-item">
+            <label class="layui-form-label">标签</label>
+            <div class="layui-input-inline" id="box_tags">
+                <input type="text" data-required="1" min="0" max="0" errormsg="" title="标签" placeholder="请输入标签" lay-verify="defaul" class="tags layui-input" name="title" value="" />
+            </div>
+            <div class="layui-form-mid layui-word-aux red">*必填</div>
         </div>
-        <button class="layui-btn" id="search" data-type="reload"><?php echo lang('search'); ?></button>
-        <a href="<?php echo url('goodPh'); ?>" class="layui-btn">显示全部</a>
-        <div style="clear: both;"></div>
-    </div>
-    <table class="layui-table" id="list" lay-filter="list" lay-skin="row"></table>
+        <div class="layui-form-item">
+            <label class="layui-form-label">颜色</label>
+            <div class="layui-input-inline" style="width: 120px;">
+              <input type="text" value="" name="color" placeholder="请选择颜色" class="layui-input" id="test-colorpicker-form-input">
+            </div>
+            <div class="layui-inline" style="left: -11px;">
+              <div id="test-colorpicker-dome3"></div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button type="button" class="layui-btn" lay-submit="" lay-filter="submit">提交</button>
+                <a href="<?php echo url('index'); ?>" class="layui-btn layui-btn-primary">返回列表</a>
+            </div>
+        </div>
+    </form>
 </div>
 </div>
 </div>
@@ -94,45 +107,32 @@ layui.use('layer',function(){
 
 <!--js结束-->
 
-<script type="text/html" id="order">
-    <input name="{{d.id}}" data-id="{{d.id}}" class="list_order layui-input" value=" {{d.sort}}" size="10"/>
-</script>
-<script type="text/html" id="title">
-   {{d.title}}{{# if(d.title){ }}<img src="/static/admin/images/image.gif" onmouseover="layer.tips('<img src={{d.headimg}}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();" >{{# } }}
-</script>
-
 <script>
-    layui.use(['table','form','util'], function() {
-        var table = layui.table, $ = layui.jquery,form = layui.form;util = layui.util;
-        var tableIn = table.render({
-            id: 'content',
-            elem: '#list',
-            url: '<?php echo url("goodPh"); ?>',
-            method: 'post',
-            toolbar: '#topBtn',
-            page: true,
-            cols: [[
-                {field: 'goodsn', title: '商品编号', width: 150},
-                {field: 'title', title: '商品名称',toolbar: '#title',},
-                {field: 'shopname', title: '所属商家',align:'center', width:150,templet:function(d){
-                    if (d.shopname) {return d.shopname;} else {return '平台自营';}}},
-                {field: 'catname',  title: '商品分类', width: 120},
-                {field: 'sold',  title: '销量', width: 80,templet:function(d){return '<span class="red">'+d.sold+'</span>';}},
-            ]],
-            limit: 10
-        });
-        //搜索
-        $('#search').on('click', function () {
-            var key = $('#key').val();
-            if ($.trim(key) === '') {
-                layer.msg('<?php echo lang("pleaseEnter"); ?>关键字！', {icon: 0});
-                return;
-            }
-            tableIn.reload({ page: {page: 1}, where: {key: key}});
-        });
-    });    
-</script>
+    layui.use(['form','jquery','colorpicker'], function () {
+        var form = layui.form,$ = layui.jquery,colorpicker = layui.colorpicker;
 
+        //表单赋值
+        colorpicker.render({
+          elem: '#test-colorpicker-dome3'
+          ,color: '#1c97f5'
+          ,done: function(color){
+            $('#test-colorpicker-form-input').val(color);
+          }
+        });
+
+        form.on('submit(submit)', function (data) {
+            $.post("<?php echo url('add'); ?>", data.field, function (res) {
+                if (res.code > 0) {
+                    layer.msg(res.msg, {time: 1800, icon: 1}, function () {
+                        window.location.href="<?php echo url('index'); ?>"
+                    });
+                } else {
+                    layer.msg(res.msg, {time: 1800, icon: 2});
+                }
+            });
+        });
+    });
+</script>
 
 
 </body>

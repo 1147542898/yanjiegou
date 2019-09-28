@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:80:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\fsale\tixian.html";i:1569466684;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\shop\nows.html";i:1569570492;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
 <!doctype html>
 <html class="x-admin-sm">
 <head>
@@ -58,21 +58,8 @@ layui.use('layer',function(){
 
 </script>
     
-<style type="text/css">
-.layui-table tr td{
-    border;solid 1px #CCC
-}
-.layui-table tr td .layui-row{
-    border:solid 1px #EEE;
-}
-.layui-table tr td img{
-    height:50px;
-    width:50px;
-    margin: 5px;
-}
-.red{margin-right: 20px}
-</style>
 
+    
 
 </head>
 <body>
@@ -83,46 +70,16 @@ layui.use('layer',function(){
 <div class="layui-card">
 <div class="layui-card-body">
     <fieldset class="layui-elem-field layui-field-title">
-        <legend><?php echo lang('sharetixian'); ?>管理</legend>
+        <legend>提现申请</legend>
     </fieldset>
     <div class="demoTable">
         <div class="layui-inline">
             <input class="layui-input" name="key" id="key" placeholder="<?php echo lang('pleaseEnter'); ?>关键字">
         </div>
-        <button class="layui-btn" id="search" data-type="reload"><?php echo lang('search'); ?></button>
-        <a href="<?php echo url('type'); ?>" class="layui-btn">显示全部</a>
-        <div style="clear: both;"></div>
+        <button class="layui-btn" id="search" data-type="reload">搜索</button>
+        <a href="<?php echo url('index'); ?>" class="layui-btn">显示全部</a>
     </div>
-    <table class="layui-table">
-       <tr><th>商品信息</th><th>金额</th><th>订单状态</th><th>分销情况</th></tr>
-    </table>
-    <table class="layui-table">
-        <th>ID</th><th>基本信息</th>    <th>账号信息</th>    <th>提现信息</th>    <th>状态</th>  <th>申请时间</th>    <th>操作</th>
-        <tr>
-            <td>97</td>
-            <td>
-                <img src="/uploads/20190313/e1a73ec370cc30e147e7755eace02ee3.jpg">codeHero 微信
-            </td>
-            <td>
-                姓名：<span class="red">他说他</span><br/>
-                昵称：<span class="red">已付款</span>
-            </td>
-            <td>
-                用户申请提现金额：<span class="red">123123123123</span><br/>
-                手续费：<span class="red">申通</span><br/>
-                实际打款金额：<span class="red">王五【13211114422】</span> <br/>
-            </td>    
-            <td>
-               已打款(微信线下支付)
-            </td>
-            <td>
-               2019-05-15 09:19
-            </td>
-            <td>
-               
-            </td>
-            </tr>
-    </table>
+    <table class="layui-table" id="list" lay-filter="list"></table>
 </div>
 </div>
 </div>
@@ -134,41 +91,46 @@ layui.use('layer',function(){
 <!--js结束-->
 
 <script>
-    layui.use('table', function() {
-        var table = layui.table, $ = layui.jquery;
-       
-        //搜索
-        $('#search').on('click', function () {
-            var key = $('#key').val();
-            if ($.trim(key) === '') {
-                layer.msg('<?php echo lang("pleaseEnter"); ?>关键字！', {icon: 0});
-                return;
-            }
-            tableIn.reload({
-                where: {key: key}
-            });
-        });
-        //排序
-        $('body').on('blur','.list_order',function() {
-            var type_id = $(this).attr('data-id');
-            var sort = $(this).val();
-            var loading = layer.load(1, {shade: [0.1, '#fff']});
-            $.post('<?php echo url("typeOrder"); ?>',{type_id:type_id,sort:sort},function(res){
-                layer.close(loading);
-                if(res.code === 1){
-                    layer.msg(res.msg, {time: 1000, icon: 1});
-                    tableIn.reload();
-                }else{
-                    layer.msg(res.msg,{time:1000,icon:2});
-                }
-            })
+    layui.use(['table','form'], function() {
+        var table = layui.table,form = layui.form, $ = layui.jquery;
+        var tableIn = table.render({
+            id: 'user',
+            elem: '#list',
+            url: '<?php echo url(""); ?>',
+            method: 'post',
+            page: true,
+            cols: [[
+                {field: 'addtime', title: '申请时间', width: 150},
+                {field: 'money', title: '金额', width: 80},
+                {field: 'statusname', title: '状态', width: 80},
+                {field: 'note', title: '申请备注', width: 400},
+                {field: 'dotime', title: '处理时间', width: 150},
+                {field: 'dousername', title: '处理人账号', width: 120},
+                {width: 160, align: 'center', toolbar: '#action',title:'操作'}
+            ]],
+            limit: 10 //每页默认显示的数量
         });
         table.on('tool(list)', function(obj) {
             var data = obj.data;
-            if(obj.event === 'del'){
-                layer.confirm('您确定要删除该广告分类吗？', function(index){
+            if(obj.event === 'agree'){
+                layer.confirm('您确定同意该请求吗？', function(index){
                     var loading = layer.load(1, {shade: [0.1, '#fff']});
-                    $.post("<?php echo url('delType'); ?>",{type_id:data.type_id},function(res){
+                    $.post("<?php echo url('fundnowdo'); ?>",{id:data.id,status:2},function(res){
+                        layer.close(loading);
+                        if(res.code===1){
+                            layer.msg(res.msg,{time:1000,icon:1});
+                            tableIn.reload();
+                        }else{
+                            layer.msg('操作失败！',{time:1000,icon:2});
+                        }
+                    });
+                    layer.close(index);
+                });
+            }
+            if(obj.event === 'reject'){
+                layer.prompt({title: '请输入原因', formType: 2},function(text, index){
+                    var loading = layer.load(1, {shade: [0.1, '#fff']});
+                    $.post("<?php echo url('fundnowdo'); ?>",{id:data.id,status:1,info:text},function(res){
                         layer.close(loading);
                         if(res.code===1){
                             layer.msg(res.msg,{time:1000,icon:1});
@@ -181,8 +143,27 @@ layui.use('layer',function(){
                 });
             }
         });
+        //搜索
+        $('#search').on('click', function() {
+            var key = $('#key').val();
+            if($.trim(key)==='') {
+                layer.msg('<?php echo lang("pleaseEnter"); ?>关键字！',{icon:0});
+                return;
+            }
+            tableIn.reload({ page: {page: 1},where: {key: key}});
+        });
+       
     });
 </script>
+<script type="text/html" id="action">
+{{# if(d.status==0){ }}
+    <a class="layui-btn layui-btn-xs" lay-event="agree">同意</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="reject">拒绝</a>
+{{# } }}    
+</script>
+<!-- <script type="text/html" id="topBtn">
+    <a href="javascript:;" onclick="xadmin.open('添加申请','<?php echo url('add'); ?>',500,350)" style="height:30px; width:68px; " class="layui-btn layui-btn-danger layui-btn-sm" id="add" >添加申请</a>
+</script> -->
 
 
 
