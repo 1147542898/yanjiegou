@@ -80,4 +80,5 @@ return [
      
     'goods'=>'商品',
     'goodscategory'=>'商品分类'  ,
+    'goodsspec'=>'商品规格' ,
 ];

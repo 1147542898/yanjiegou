@@ -14,16 +14,16 @@
 <form method="post" id="form">
 <div class="admin-main layui-anim layui-anim-upbit">
     <fieldset class="layui-elem-field layui-field-title">
-        <legend>{:lang('goodscategory')}{:lang('list')}</legend>
+        <legend>{:lang('goodsspec')}{:lang('list')}</legend>
     </fieldset>
-        <a href="{:url('add')}" class="layui-btn layui-btn-sm">{:lang('add')}{:lang('goodscategory')}</a>
+        <a href="{:url('add')}" class="layui-btn layui-btn-sm">{:lang('add')}{:lang('goodsspec')}</a>
    
     <table class="layui-table" lay-filter="list">
         <thead>
         <tr>
             <th width="50px">编号</th>
-            <th>分类名称</th>
-            <th>导航</th>
+            <th>规格名称</th>
+            <th>所属商品分类</th>
             <th>{:lang('order')}</th>
             <th>操作</th>
         </tr>
@@ -63,7 +63,7 @@
         });
     });
     function del(id) {
-        layer.confirm('你确定要删除该分类及其子分类吗？', {icon: 3}, function (index) {
+        layer.confirm('你确定要删除该规格吗？', {icon: 3}, function (index) {
             $.post("{:url('del')}", {id: id}, function (data) {
                 if (data.status === 1) {
                     layer.alert(data.info, {icon: 6}, function(index){
@@ -77,21 +77,7 @@
             layer.close(index);
         });
     }
-    function ismenu(is,id) {
-        layer.confirm('你确定要取消此分类导航显示吗？', {icon: 3}, function (index) {
-            $.post("{:url('ismenu')}", {id: id,is:is}, function (data) {
-                if (data.status === 1) {
-                    layer.alert(data.info, {icon: 6}, function(index){
-                        layer.close(index);
-                        window.location.href=data.url;
-                    });
-                }else{
-                    layer.msg(data.info,{icon:5});
-                }
-            });
-            layer.close(index);
-        });
-    }
+    
     function showson(obj,id) {
         var dis=$(obj).data('display');
         if (dis) {
