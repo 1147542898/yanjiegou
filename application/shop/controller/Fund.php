@@ -97,5 +97,66 @@ class Fund extends Common {
 //            return $this->fetch();
 //        }
     }
+    
+    //资金账户列表
+    public  function bank(){
+        if(Request::instance()->isAjax()){
+            $banks=Db::name('shop_bank')
+                    ->where(['shop_id'=>SHID])                    
+                    ->select();
+            foreach($banks as &$v){
+                if($v['type']==0){
+                    $v['type']="银行卡";
+                }
+            }
+            return ['code'=>0,'msg'=>'获取成功','data'=>$banks];
+        }else{
+            return $this->fetch(); 
+        }       
+       
+    }
+    //添加账户列表
+    public function addBank(){
+        if(Request::instance()->isAjax()){
+            $data=input("post.");
+            $data['shop_id']=SHID;
+            $result=Db::name('shop_bank')->insert($data);
+            if($result){
+                return ['code'=>1,'msg'=>"添加成功！"];
+            }else{
+                return ['code'=>0,'msg'=>"添加失败！"];
+            }
+        }else{
+            return $this->fetch();
+        }
+        
+    }
+    //编辑账户信息
+    public function editBank(){
+        if(Request::instance()->isAjax()){
+            $data=input("post.");
+            $result=Db::name("shop_bank")->update($data);
+            if($result){
+                return ['code'=>1,'msg'=>"修改成功！"];
+            }else{
+                return ['code'=>0,'msg'=>'修改失败'];
+            }
+        }else{
+          $id=input('id');
+          $banks=Db::name('shop_bank')->find($id);
+          $this->assign('banks',$banks);
+          return $this->fetch();
+        }
+    }
+    //删除账户
+    public function deleteBank(){
+        $result=Db::name("shop_bank")->where(['id'=>input('id'),'shop_id'=>SHID])->delete();        
+        if($result){
+            return ['code'=>1,'msg'=>'删除成功！'];
+        }else{
+            return ['code'=>0,'msg'=>'删除失败！'];
+        }
+    }
+    
 
 }

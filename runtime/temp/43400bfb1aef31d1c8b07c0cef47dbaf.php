@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:87:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\view\statistic\membersale.html";i:1569556800;s:70:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\common.html";i:1569466684;s:66:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\js.html";i:1569466684;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:83:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\view\auth\admin_group.html";i:1569466684;s:70:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\common.html";i:1569466684;s:66:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\js.html";i:1569466684;}*/ ?>
 <!doctype html>
 <html class="x-admin-sm">
 <head>
@@ -51,11 +51,8 @@ var uploadApi = "<?php echo url('upload/index/uploadimage'); ?>";
     })
 </script>
     
-<style type="text/css">
-    .layui-table-body tr{height:50px;}
-    .layui-table-body td .laytable-cell-1-0-2{padding: 0;margin:0;height:50px;}
-</style>
 
+    
 
 </head>
 <body>
@@ -66,17 +63,9 @@ var uploadApi = "<?php echo url('upload/index/uploadimage'); ?>";
 <div class="layui-card">
 <div class="layui-card-body">
     <fieldset class="layui-elem-field layui-field-title">
-        <legend>会员消费排行</legend>
+        <legend>用户组列表</legend>
     </fieldset>
-    <div class="demoTable">
-        <div class="layui-inline">
-            <input class="layui-input" name="key" id="key" placeholder="<?php echo lang('pleaseEnter'); ?>关键字">
-        </div>
-        <button class="layui-btn" id="search" data-type="reload"><?php echo lang('search'); ?></button>
-        <a href="<?php echo url('membersale'); ?>" class="layui-btn">显示全部</a>
-        <div style="clear: both;"></div>
-    </div>
-    <table class="layui-table" id="list" lay-filter="list" lay-skin="row"></table>
+    <table class="layui-table" id="list" lay-filter="list"></table>
 </div>
 </div>
 </div>
@@ -87,39 +76,49 @@ var uploadApi = "<?php echo url('upload/index/uploadimage'); ?>";
 
 <!--js结束-->
 
-<script type="text/html" id="title">
-   {{d.title}}{{# if(d.title){ }}<img src="/static/admin/images/image.gif" onmouseover="layer.tips('<img src={{d.headimg}}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();" >{{# } }}
+<script type="text/html" id="action">
+    <a href="<?php echo url('groupAccess'); ?>?id={{d.group_id}}" class="layui-btn layui-btn-xs layui-btn-normal">配置规则</a>
+    <a href="<?php echo url('groupEdit'); ?>?id={{d.group_id}}" class="layui-btn layui-btn-warm layui-btn-xs"><?php echo lang('edit'); ?></a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><?php echo lang('del'); ?></a>
 </script>
-
+<script type="text/html" id="topBtn">
+   <a href="<?php echo url('groupAdd'); ?>" class="layui-btn layui-btn-sm"><?php echo lang('add'); ?>用户组</a>
+</script>
 <script>
-    layui.use(['table','form','util'], function() {
-        var table = layui.table, $ = layui.jquery,form = layui.form;util = layui.util;
-        var tableIn = table.render({
-            id: 'content',
+    layui.use('table', function() {
+        var table = layui.table,$ = layui.jquery;
+        table.render({
             elem: '#list',
-            url: '<?php echo url(""); ?>',
-            method: 'post',
-            toolbar: '#topBtn',
-            page: true,
+            url: '<?php echo url("adminGroup"); ?>',
+            method:'post',
+			toolbar: '#topBtn',
+			title:'用户组列表',
             cols: [[
-                {field: 'id', title: '编号', width: 80},
-                {field: 'username', title: '名称', width: 200},
-                {field: 'mobile', title: '电话',align:'center', width:150},
-                {field: 'counts',  title: '消费金额', width: 120,templet:function(d){return '<span class="red">'+d.counts+'</span>';}},
-                {field: 'reg_time',  title: '注册时间', width: 150},
-            ]],
-            limit: 10
+                {field:'group_id', title: '<?php echo lang("id"); ?>',width:80, fixed: true,sort: true},
+                {field:'title', title: '用户组名', width:180},
+                {field:'addtime', title: '添加时间', width:200,sort: true},
+                {width:260, align:'center',toolbar:'#action'}
+            ]]
         });
-         //搜索
-        $('#search').on('click', function () {
-            var key = $('#key').val();
-            if ($.trim(key) === '') {
-                layer.msg('<?php echo lang("pleaseEnter"); ?>关键字！', {icon: 0});
-                return;
+        table.on('tool(list)', function(obj){
+            var data = obj.data;
+            if(obj.event === 'del'){
+                layer.confirm('你确定要删除该分组吗？', function(index){
+                    loading =layer.load(1, {shade: [0.1,'#fff']});
+                    $.post("<?php echo url('groupDel'); ?>",{id:data.group_id},function(res){
+                        layer.close(loading);
+                        layer.close(index);
+                        if(res.code==1){
+                            layer.msg(res.msg,{time:1000,icon:1});
+                            obj.del();
+                        }else{
+                            layer.msg(res.msg,{time:1000,icon:2});
+                        }
+                    });
+                });
             }
-            tableIn.reload({ page: {page: 1}, where: {key: key}});
         });
-    });    
+    });
 </script>
 
 

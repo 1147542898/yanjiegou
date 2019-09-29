@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:76:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\view\fund\logs.html";i:1569466684;s:70:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\common.html";i:1569466684;s:66:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\js.html";i:1569466684;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:76:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\view\fund\bank.html";i:1569742628;s:70:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\common.html";i:1569466684;s:66:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\js.html";i:1569466684;}*/ ?>
 <!doctype html>
 <html class="x-admin-sm">
 <head>
@@ -58,25 +58,18 @@ var uploadApi = "<?php echo url('upload/index/uploadimage'); ?>";
 <body>
 
 <div class="layui-fluid">
-<div class="layui-row layui-col-space15">
-<div class="layui-col-md12">
-<div class="layui-card">
-<div class="layui-card-body">
-    <fieldset class="layui-elem-field layui-field-title">
-        <legend>资金流动列表</legend>
-    </fieldset>
-    <div class="demoTable">
-        <div class="layui-inline">
-            <input class="layui-input" name="key" id="key" placeholder="<?php echo lang('pleaseEnter'); ?>关键字">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>资金账户列表</legend>
+                    </fieldset>    
+                    <table class="layui-table" id="list" lay-filter="list"></table>
+                </div>
+            </div>
         </div>
-        <button class="layui-btn" id="search" data-type="reload">搜索</button>
-        <a href="<?php echo url('index'); ?>" class="layui-btn">显示全部</a>
     </div>
-    <table class="layui-table" id="list" lay-filter="list"></table>
-</div>
-</div>
-</div>
-</div>
 </div>
 
 
@@ -86,35 +79,51 @@ var uploadApi = "<?php echo url('upload/index/uploadimage'); ?>";
 <script>
     layui.use(['table','form'], function() {
         var table = layui.table,form = layui.form, $ = layui.jquery;
-        var tableIn = table.render({
-            id: 'user',
+        var tableIn = table.render({            
             elem: '#list',
-            url: '<?php echo url(""); ?>',
+            url: '<?php echo url("bank"); ?>',
             method: 'post',
-            page: true,
+            toolbar: '#topBtn',
+            page: false,
             cols: [[
-                {field: 'addtime', title: '时间', width: 150},
-                {field: 'money', title: '金额', width: 120},
-                {field: 'type', title: '类型', width: 120},
-                {field: 'note', title: '申请备注', width: 300},
-
-            ]],
+                    {field: 'id', title: 'ID', width: 150},
+                    {field: 'type', title: '账户类型', width: 120},
+                    {field: 'bank_name', title: '银行类型', width: 250},
+                    {field: 'bank_user_name', title: '开户人', width: 150},
+                    {field: 'bank_address', title: '银行账户', width: 150},
+                    {field: 'bank_address', title: '开户地址', width: 300},
+                    {align: 'left', toolbar: '#action',title:'操作'}
+                ]],
             limit: 10 //每页默认显示的数量
-        });
-       
-        //搜索
-        $('#search').on('click', function() {
-            var key = $('#key').val();
-            if($.trim(key)==='') {
-                layer.msg('<?php echo lang("pleaseEnter"); ?>关键字！',{icon:0});
-                return;
+        });   
+        table.on('tool(list)', function(obj) {
+            var data = obj.data;
+            if (obj.event === 'del'){
+                layer.confirm('您确定要删除？', function(index){                  
+                    $.post("<?php echo url('deleteBank'); ?>",{id:data.id},function(res){                        
+                        if(res.code===1){
+                            layer.msg(res.msg,{time:1000,icon:1});
+                            tableIn.reload();
+                        }else{
+                            layer.msg('操作失败！',{time:1000,icon:2});
+                        }
+                    });
+                    layer.close(index);
+                });
             }
-            tableIn.reload({ page: {page: 1},where: {key: key}});
         });
-       
-    });
+        
+    }); 
+    
 </script>
 
+<script type="text/html" id="topBtn">
+    <a href="javascript:;" onclick="xadmin.open('添加','<?php echo url('addBank'); ?>',600,500)"  class="layui-btn layui-btn-blue layui-btn-sm" id="add" >添加</a>
+</script>
+<script type="text/html" id="action">
+    <a href="javascript:;" onclick="xadmin.open('修改','<?php echo url('editBank'); ?>?id={{d.id}}',600,500)" class="layui-btn layui-btn-green layui-btn-sm" id="edit" >修改</a>
+    <a href="javascript:;" lay-event="del"  class="layui-btn layui-btn-danger layui-btn-sm"  >删除</a>
+</script>
 
 
 
