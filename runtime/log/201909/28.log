@@ -37831,3 +37831,3922 @@
 [ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.002000s ]
 [ sql ] [ SQL ] UPDATE `shy_goods`  SET `isrecommand`=1  WHERE  `id` IN (2,3,4,0) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:02:55+08:00 ] 127.0.0.1 GET www.yjg.com/shop/index/index.html
+[运行时间：0.044002s] [吞吐率：22.73req/s] [内存消耗：2,468.99kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'shop',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/shop/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/index/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Index->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\view\index\index.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:02:55+08:00 ] 127.0.0.1 GET www.yjg.com/shop/index/main.html
+[运行时间：0.079005s] [吞吐率：12.66req/s] [内存消耗：3,307.41kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'shop',
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/index/main_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Index->main[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\view\index\main.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+  2 => 'top',
+  3 => 'bottom1',
+  4 => 'bottom2',
+  5 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `id` = 7  AND `check_status` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `id` = 7  AND `check_status` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `id` = 7  AND `check_status` = 1  AND `status` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `id` = 7  AND `check_status` = -1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 3 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 7 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 8 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT add_time,sum(money) sum,count(id) total FROM `shy_order` WHERE  `add_time` BETWEEN 1566921600 AND 1569686399  AND `shop_id` = 7 GROUP BY date_format(from_unixtime(add_time),'%Y-%m-%d') ORDER BY `add_time` ASC [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:03:03+08:00 ] 127.0.0.1 GET www.yjg.com/admin/index/index.html
+[运行时间：0.071005s] [吞吐率：14.08req/s] [内存消耗：3,357.77kb] [文件加载：70]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/index/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\index\index.html [ array (
+  0 => 'attachmark',
+  1 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_auth_rule` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_auth_rule` WHERE  `menustatus` = 1 ORDER BY `sort` ASC [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:03:03+08:00 ] 127.0.0.1 GET www.yjg.com/admin/index/main.html
+[运行时间：0.103006s] [吞吐率：9.71req/s] [内存消耗：3,308.64kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/index/main_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Index->main[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\index\main.html [ array (
+  0 => 'attachmark',
+  1 => 'top',
+  2 => 'bottom1',
+  3 => 'bottom2',
+  4 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_users` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_users` WHERE  `reg_time` BETWEEN 1569600000 AND 1569686399 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `add_time` BETWEEN 1569600000 AND 1569686399 LIMIT 1 [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_shop` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `addtime` BETWEEN '1569600000' AND '1569686399'  AND `status` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_bigshop` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_bigshop` WHERE  `addtime` BETWEEN '1569600000' AND '1569686399' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `addtime` BETWEEN '1569600000' AND '1569686399'  AND `status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `createtime` BETWEEN 1569600000 AND 1569686399  AND `check_status` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `createtime` BETWEEN 1569600000 AND 1569686399  AND `check_status` = 0 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_users` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `shy_order` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `status` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_bigshop` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `check_status` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT add_time,sum(money) sum,count(id) total FROM `shy_order` WHERE  `add_time` BETWEEN 1566921600 AND 1569686399 GROUP BY date_format(from_unixtime(add_time),'%Y-%m-%d') ORDER BY `add_time` ASC [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:03:09+08:00 ] 127.0.0.1 GET www.yjg.com/admin/goods_category/index.html
+[运行时间：0.244014s] [吞吐率：4.10req/s] [内存消耗：5,689.15kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods_category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods_category/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\GoodsCategory->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\GoodsCategory.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\goods_category\index.html [ array (
+  0 => 'attachmark',
+  1 => 'categorys',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:03:11+08:00 ] 127.0.0.1 GET www.yjg.com/admin/goods_brand/index.html
+[运行时间：0.060003s] [吞吐率：16.67req/s] [内存消耗：3,341.78kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods_brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods_brand/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\Controller\GoodsBrand->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\GoodsBrand.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\goods_brand\index.html [ array (
+  0 => 'attachmark',
+  1 => 'moduleid',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:03:11+08:00 ] 127.0.0.1 POST www.yjg.com/admin/goods_brand/index.html
+[运行时间：0.068004s] [吞吐率：14.70req/s] [内存消耗：3,711.14kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods_brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/goods_brand/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods_brand/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\Controller\GoodsBrand->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\GoodsBrand.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_brand` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods_brand` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_goods_brand` ORDER BY `sort` ASC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:03:11+08:00 ] 127.0.0.1 GET www.yjg.com/admin/goods_label/index.html
+[运行时间：0.059004s] [吞吐率：16.95req/s] [内存消耗：3,338.77kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods_label',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods_label/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\Controller\GoodsLabel->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\GoodsLabel.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\goods_label\index.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:03:12+08:00 ] 127.0.0.1 POST www.yjg.com/admin/goods_label/index.html
+[运行时间：0.062004s] [吞吐率：16.13req/s] [内存消耗：3,707.60kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods_label',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/goods_label/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods_label/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\Controller\GoodsLabel->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\GoodsLabel.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_label` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods_label` LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_goods_label` ORDER BY `sort` ASC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:03:13+08:00 ] 127.0.0.1 GET www.yjg.com/admin/evaluate/index.html
+[运行时间：0.046002s] [吞吐率：21.74req/s] [内存消耗：2,399.07kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/evaluate/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Evaluate.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\evaluate\index.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:03:13+08:00 ] 127.0.0.1 GET www.yjg.com/admin/evaluate/index.html?page=1&limit=10
+[运行时间：0.071004s] [吞吐率：14.08req/s] [内存消耗：3,408.76kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/evaluate/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:03:14+08:00 ] 127.0.0.1 GET www.yjg.com/admin/goods/index/way/3.html
+[运行时间：0.057003s] [吞吐率：17.54req/s] [内存消耗：3,537.27kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods/index/way/3_html' => '',
+  'way' => '3',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Goods->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\goods\index.html [ array (
+  0 => 'attachmark',
+  1 => 'way',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:03:14+08:00 ] 127.0.0.1 POST www.yjg.com/admin/goods/index.html
+[运行时间：0.065004s] [吞吐率：15.38req/s] [内存消耗：3,771.80kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/goods/index/way/3.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '21',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+  'way' => '3',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Goods->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Goods.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` `a` LEFT JOIN `shy_goods_category` `c` ON `c`.`id`=`a`.`catid` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`a`.`shopid` WHERE  `a`.`check_status` = -1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`catname`,s.name as shopname FROM `shy_goods` `a` LEFT JOIN `shy_goods_category` `c` ON `c`.`id`=`a`.`catid` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`a`.`shopid` WHERE  `a`.`check_status` = -1 ORDER BY `sorts` DESC,`id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:03:14+08:00 ] 127.0.0.1 GET www.yjg.com/admin/goods/index/way/2.html
+[运行时间：0.057003s] [吞吐率：17.54req/s] [内存消耗：3,537.27kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods/index/way/2_html' => '',
+  'way' => '2',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Goods->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\goods\index.html [ array (
+  0 => 'attachmark',
+  1 => 'way',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:03:14+08:00 ] 127.0.0.1 POST www.yjg.com/admin/goods/index.html
+[运行时间：0.061003s] [吞吐率：16.39req/s] [内存消耗：3,771.80kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/goods/index/way/2.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '21',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+  'way' => '2',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Goods->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Goods.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` `a` LEFT JOIN `shy_goods_category` `c` ON `c`.`id`=`a`.`catid` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`a`.`shopid` WHERE  `a`.`check_status` = 0 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`catname`,s.name as shopname FROM `shy_goods` `a` LEFT JOIN `shy_goods_category` `c` ON `c`.`id`=`a`.`catid` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`a`.`shopid` WHERE  `a`.`check_status` = 0 ORDER BY `sorts` DESC,`id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:03:15+08:00 ] 127.0.0.1 GET www.yjg.com/admin/goods/index/way/1.html
+[运行时间：0.052003s] [吞吐率：19.23req/s] [内存消耗：3,537.27kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods/index/way/1_html' => '',
+  'way' => '1',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Goods->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\goods\index.html [ array (
+  0 => 'attachmark',
+  1 => 'way',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:03:15+08:00 ] 127.0.0.1 POST www.yjg.com/admin/goods/index.html
+[运行时间：0.067004s] [吞吐率：14.92req/s] [内存消耗：3,833.80kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/goods/index/way/1.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '21',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+  'way' => '1',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Goods->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Goods.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` `a` LEFT JOIN `shy_goods_category` `c` ON `c`.`id`=`a`.`catid` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`a`.`shopid` WHERE  `a`.`status` = 1  AND `a`.`check_status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`catname`,s.name as shopname FROM `shy_goods` `a` LEFT JOIN `shy_goods_category` `c` ON `c`.`id`=`a`.`catid` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`a`.`shopid` WHERE  `a`.`status` = 1  AND `a`.`check_status` = 1 ORDER BY `sorts` DESC,`id` DESC LIMIT 0,10 [ RunTime:0.001001s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:03:17+08:00 ] 127.0.0.1 GET www.yjg.com/admin/evaluate/index.html
+[运行时间：0.045003s] [吞吐率：22.22req/s] [内存消耗：2,399.07kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/evaluate/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Evaluate.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\evaluate\index.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:03:17+08:00 ] 127.0.0.1 GET www.yjg.com/admin/evaluate/index.html?page=1&limit=10
+[运行时间：0.062004s] [吞吐率：16.13req/s] [内存消耗：3,408.76kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/evaluate/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:03:35+08:00 ] 127.0.0.1 GET www.yjg.com/admin/goods/index/way/2.html
+[运行时间：0.059004s] [吞吐率：16.95req/s] [内存消耗：3,537.27kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods/index/way/2_html' => '',
+  'way' => '2',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Goods->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\goods\index.html [ array (
+  0 => 'attachmark',
+  1 => 'way',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:03:36+08:00 ] 127.0.0.1 POST www.yjg.com/admin/goods/index.html
+[运行时间：0.074004s] [吞吐率：13.51req/s] [内存消耗：3,771.80kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/goods/index/way/2.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '21',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+  'way' => '2',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Goods->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Goods.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` `a` LEFT JOIN `shy_goods_category` `c` ON `c`.`id`=`a`.`catid` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`a`.`shopid` WHERE  `a`.`check_status` = 0 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`catname`,s.name as shopname FROM `shy_goods` `a` LEFT JOIN `shy_goods_category` `c` ON `c`.`id`=`a`.`catid` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`a`.`shopid` WHERE  `a`.`check_status` = 0 ORDER BY `sorts` DESC,`id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:03:37+08:00 ] 127.0.0.1 GET www.yjg.com/admin/goods/index/way/1.html
+[运行时间：0.055003s] [吞吐率：18.18req/s] [内存消耗：3,537.27kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods/index/way/1_html' => '',
+  'way' => '1',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Goods->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\goods\index.html [ array (
+  0 => 'attachmark',
+  1 => 'way',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:03:37+08:00 ] 127.0.0.1 POST www.yjg.com/admin/goods/index.html
+[运行时间：0.064004s] [吞吐率：15.62req/s] [内存消耗：3,833.80kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/goods/index/way/1.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '21',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+  'way' => '1',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Goods->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Goods.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` `a` LEFT JOIN `shy_goods_category` `c` ON `c`.`id`=`a`.`catid` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`a`.`shopid` WHERE  `a`.`status` = 1  AND `a`.`check_status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`catname`,s.name as shopname FROM `shy_goods` `a` LEFT JOIN `shy_goods_category` `c` ON `c`.`id`=`a`.`catid` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`a`.`shopid` WHERE  `a`.`status` = 1  AND `a`.`check_status` = 1 ORDER BY `sorts` DESC,`id` DESC LIMIT 0,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:03:38+08:00 ] 127.0.0.1 GET www.yjg.com/admin/goods_brand/index.html
+[运行时间：0.054003s] [吞吐率：18.52req/s] [内存消耗：3,341.78kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods_brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods_brand/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\Controller\GoodsBrand->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\GoodsBrand.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\goods_brand\index.html [ array (
+  0 => 'attachmark',
+  1 => 'moduleid',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:03:38+08:00 ] 127.0.0.1 POST www.yjg.com/admin/goods_brand/index.html
+[运行时间：0.063004s] [吞吐率：15.87req/s] [内存消耗：3,711.14kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods_brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/goods_brand/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods_brand/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\Controller\GoodsBrand->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\GoodsBrand.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_brand` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods_brand` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_goods_brand` ORDER BY `sort` ASC LIMIT 0,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:03:39+08:00 ] 127.0.0.1 GET www.yjg.com/admin/goods_label/index.html
+[运行时间：0.057004s] [吞吐率：17.54req/s] [内存消耗：3,338.77kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods_label',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods_label/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\Controller\GoodsLabel->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\GoodsLabel.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\goods_label\index.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:03:40+08:00 ] 127.0.0.1 POST www.yjg.com/admin/goods_label/index.html
+[运行时间：0.065004s] [吞吐率：15.38req/s] [内存消耗：3,707.60kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods_label',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/goods_label/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods_label/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\Controller\GoodsLabel->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\GoodsLabel.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_label` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods_label` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_goods_label` ORDER BY `sort` ASC LIMIT 0,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:03:41+08:00 ] 127.0.0.1 GET www.yjg.com/admin/goods_brand/index.html
+[运行时间：0.056003s] [吞吐率：17.86req/s] [内存消耗：3,341.78kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods_brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods_brand/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\Controller\GoodsBrand->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\GoodsBrand.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\goods_brand\index.html [ array (
+  0 => 'attachmark',
+  1 => 'moduleid',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:03:41+08:00 ] 127.0.0.1 POST www.yjg.com/admin/goods_brand/index.html
+[运行时间：0.057004s] [吞吐率：17.54req/s] [内存消耗：3,711.14kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods_brand',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/goods_brand/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods_brand/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\Controller\GoodsBrand->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\GoodsBrand.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_brand` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods_brand` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_goods_brand` ORDER BY `sort` ASC LIMIT 0,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:03:42+08:00 ] 127.0.0.1 GET www.yjg.com/admin/goods_category/index.html
+[运行时间：0.242014s] [吞吐率：4.13req/s] [内存消耗：5,689.15kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods_category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods_category/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\GoodsCategory->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\GoodsCategory.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\goods_category\index.html [ array (
+  0 => 'attachmark',
+  1 => 'categorys',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:03:44+08:00 ] 127.0.0.1 GET www.yjg.com/admin/goods/index/way/3.html
+[运行时间：0.058003s] [吞吐率：17.24req/s] [内存消耗：3,537.27kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods/index/way/3_html' => '',
+  'way' => '3',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Goods->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\goods\index.html [ array (
+  0 => 'attachmark',
+  1 => 'way',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:03:44+08:00 ] 127.0.0.1 POST www.yjg.com/admin/goods/index.html
+[运行时间：0.074005s] [吞吐率：13.51req/s] [内存消耗：3,771.80kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/goods/index/way/3.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '21',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+  'way' => '3',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Goods->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Goods.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` `a` LEFT JOIN `shy_goods_category` `c` ON `c`.`id`=`a`.`catid` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`a`.`shopid` WHERE  `a`.`check_status` = -1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`catname`,s.name as shopname FROM `shy_goods` `a` LEFT JOIN `shy_goods_category` `c` ON `c`.`id`=`a`.`catid` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`a`.`shopid` WHERE  `a`.`check_status` = -1 ORDER BY `sorts` DESC,`id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:03:46+08:00 ] 127.0.0.1 GET www.yjg.com/admin/goods/index/way/2.html
+[运行时间：0.057004s] [吞吐率：17.54req/s] [内存消耗：3,537.27kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods/index/way/2_html' => '',
+  'way' => '2',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Goods->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\goods\index.html [ array (
+  0 => 'attachmark',
+  1 => 'way',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:03:46+08:00 ] 127.0.0.1 POST www.yjg.com/admin/goods/index.html
+[运行时间：0.073004s] [吞吐率：13.70req/s] [内存消耗：3,771.80kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/goods/index/way/2.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '21',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+  'way' => '2',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Goods->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Goods.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` `a` LEFT JOIN `shy_goods_category` `c` ON `c`.`id`=`a`.`catid` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`a`.`shopid` WHERE  `a`.`check_status` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`catname`,s.name as shopname FROM `shy_goods` `a` LEFT JOIN `shy_goods_category` `c` ON `c`.`id`=`a`.`catid` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`a`.`shopid` WHERE  `a`.`check_status` = 0 ORDER BY `sorts` DESC,`id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:03:47+08:00 ] 127.0.0.1 GET www.yjg.com/admin/goods/index/way/1.html
+[运行时间：0.059004s] [吞吐率：16.95req/s] [内存消耗：3,537.27kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods/index/way/1_html' => '',
+  'way' => '1',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Goods->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\goods\index.html [ array (
+  0 => 'attachmark',
+  1 => 'way',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:03:47+08:00 ] 127.0.0.1 POST www.yjg.com/admin/goods/index.html
+[运行时间：0.065003s] [吞吐率：15.38req/s] [内存消耗：3,833.80kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/goods/index/way/1.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '21',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+  'way' => '1',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Goods->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Goods.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` `a` LEFT JOIN `shy_goods_category` `c` ON `c`.`id`=`a`.`catid` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`a`.`shopid` WHERE  `a`.`status` = 1  AND `a`.`check_status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`c`.`catname`,s.name as shopname FROM `shy_goods` `a` LEFT JOIN `shy_goods_category` `c` ON `c`.`id`=`a`.`catid` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`a`.`shopid` WHERE  `a`.`status` = 1  AND `a`.`check_status` = 1 ORDER BY `sorts` DESC,`id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:03:50+08:00 ] 127.0.0.1 GET www.yjg.com/shop/index/index.html
+[运行时间：0.043002s] [吞吐率：23.25req/s] [内存消耗：2,468.99kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'shop',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/shop/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/index/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Index->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\view\index\index.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:03:50+08:00 ] 127.0.0.1 GET www.yjg.com/shop/index/main.html
+[运行时间：0.083005s] [吞吐率：12.05req/s] [内存消耗：3,307.41kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'shop',
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/index/main_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Index->main[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\view\index\main.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+  2 => 'top',
+  3 => 'bottom1',
+  4 => 'bottom2',
+  5 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `id` = 7  AND `check_status` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `id` = 7  AND `check_status` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `id` = 7  AND `check_status` = 1  AND `status` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `id` = 7  AND `check_status` = -1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 3 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 7 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 8 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT add_time,sum(money) sum,count(id) total FROM `shy_order` WHERE  `add_time` BETWEEN 1566921600 AND 1569686399  AND `shop_id` = 7 GROUP BY date_format(from_unixtime(add_time),'%Y-%m-%d') ORDER BY `add_time` ASC [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:04:10+08:00 ] 127.0.0.1 GET www.yjg.com/admin/evaluate/index.html
+[运行时间：0.057003s] [吞吐率：17.54req/s] [内存消耗：2,399.07kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/evaluate/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Evaluate.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\evaluate\index.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:04:10+08:00 ] 127.0.0.1 GET www.yjg.com/admin/evaluate/index.html?page=1&limit=10
+[运行时间：0.060004s] [吞吐率：16.67req/s] [内存消耗：3,408.76kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/evaluate/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:04:14+08:00 ] 127.0.0.1 GET www.yjg.com/admin/auth/adminrule.html
+[运行时间：0.053003s] [吞吐率：18.87req/s] [内存消耗：2,463.55kb] [文件加载：64]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'adminrule',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/auth/adminrule_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Auth->adminRule[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Auth.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\auth\admin_rule.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:04:15+08:00 ] 127.0.0.1 POST www.yjg.com/admin/auth/adminrule.html
+[运行时间：0.046003s] [吞吐率：21.74req/s] [内存消耗：2,412.88kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'adminrule',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/auth/adminrule.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/auth/adminrule_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Auth->adminRule[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Auth.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:04:17+08:00 ] 127.0.0.1 GET www.yjg.com/admin/auth/ruleadd.html
+[运行时间：0.097006s] [吞吐率：10.31req/s] [内存消耗：4,550.55kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'ruleadd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/auth/adminrule.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/auth/ruleadd_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Auth->ruleAdd[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\auth\rule_add.html [ array (
+  0 => 'attachmark',
+  1 => 'admin_rule',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_auth_rule` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_auth_rule` ORDER BY `sort` ASC [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:05:46+08:00 ] 127.0.0.1 POST www.yjg.com/admin/auth/ruleadd.html
+[运行时间：0.083005s] [吞吐率：12.05req/s] [内存消耗：3,641.60kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'ruleadd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/auth/ruleadd.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => '*/*',
+  'content-length' => '100',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/auth/ruleadd_html' => '',
+  'pid' => '287',
+  'title' => '商品规格',
+  'href' => 'GoodsSpec/index',
+  'icon' => '',
+  'menustatus' => '1',
+  'sort' => '50',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Auth->ruleAdd[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_auth_rule` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `shy_auth_rule` (`pid` , `title` , `href` , `icon` , `menustatus` , `sort` , `addtime`) VALUES (287 , '商品规格' , 'GoodsSpec/index' , '' , 1 , 50 , 1569657946) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:05:47+08:00 ] 127.0.0.1 GET www.yjg.com/admin/auth/adminrule.html
+[运行时间：0.051003s] [吞吐率：19.61req/s] [内存消耗：2,463.55kb] [文件加载：64]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'adminrule',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/auth/ruleadd.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/auth/adminrule_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Auth->adminRule[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Auth.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\auth\admin_rule.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:05:47+08:00 ] 127.0.0.1 POST www.yjg.com/admin/auth/adminrule.html
+[运行时间：0.053003s] [吞吐率：18.87req/s] [内存消耗：3,299.84kb] [文件加载：69]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'adminrule',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/auth/adminrule.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/auth/adminrule_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Auth->adminRule[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_auth_rule` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_auth_rule` ORDER BY `pid` ASC,`sort` ASC [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:05:51+08:00 ] 127.0.0.1 GET www.yjg.com/admin/index/index.html
+[运行时间：0.075004s] [吞吐率：13.33req/s] [内存消耗：3,358.61kb] [文件加载：70]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/index/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\index\index.html [ array (
+  0 => 'attachmark',
+  1 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_auth_rule` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_auth_rule` WHERE  `menustatus` = 1 ORDER BY `sort` ASC [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:05:51+08:00 ] 127.0.0.1 GET www.yjg.com/admin/index/main.html
+[运行时间：0.099006s] [吞吐率：10.10req/s] [内存消耗：3,308.64kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/index/main_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Index->main[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\index\main.html [ array (
+  0 => 'attachmark',
+  1 => 'top',
+  2 => 'bottom1',
+  3 => 'bottom2',
+  4 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_users` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_users` WHERE  `reg_time` BETWEEN 1569600000 AND 1569686399 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `add_time` BETWEEN 1569600000 AND 1569686399 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_shop` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `addtime` BETWEEN '1569600000' AND '1569686399'  AND `status` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_bigshop` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_bigshop` WHERE  `addtime` BETWEEN '1569600000' AND '1569686399' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `addtime` BETWEEN '1569600000' AND '1569686399'  AND `status` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `createtime` BETWEEN 1569600000 AND 1569686399  AND `check_status` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `createtime` BETWEEN 1569600000 AND 1569686399  AND `check_status` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_users` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `shy_order` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `status` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_bigshop` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `check_status` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT add_time,sum(money) sum,count(id) total FROM `shy_order` WHERE  `add_time` BETWEEN 1566921600 AND 1569686399 GROUP BY date_format(from_unixtime(add_time),'%Y-%m-%d') ORDER BY `add_time` ASC [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:05:57+08:00 ] 127.0.0.1 GET www.yjg.com/admin/goods_spec/index.html
+[运行时间：0.089005s] [吞吐率：11.24req/s] [内存消耗：3,774.28kb] [文件加载：74]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods_spec',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods_spec/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\GoodsSpec->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\GoodsSpec.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\goods_spec\index.html [ array (
+  0 => 'attachmark',
+  1 => 'categorys',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_sttr` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `s`.*,`c`.`catname` FROM `shy_goods_sttr` `s` LEFT JOIN `shy_goods_category` `c` ON `s`.`type_id`=`c`.`id` WHERE  `s`.`status` = '1' [ RunTime:0.004001s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:06:00+08:00 ] 127.0.0.1 GET www.yjg.com/admin/goods_spec/add.html
+[运行时间：0.070004s] [吞吐率：14.28req/s] [内存消耗：3,776.68kb] [文件加载：74]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods_spec',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/goods_spec/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods_spec/add_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\GoodsSpec->add[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\GoodsSpec.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\goods_spec\add.html [ array (
+  0 => 'attachmark',
+  1 => 'categorys',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`catname`,`parentid`,`child` FROM `shy_goods_category` WHERE  `parentid` = 0 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:06:28+08:00 ] 127.0.0.1 GET www.yjg.com/admin/goods_spec/index.html
+[运行时间：0.070004s] [吞吐率：14.28req/s] [内存消耗：3,629.03kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods_spec',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods_spec/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\GoodsSpec->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\GoodsSpec.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\goods_spec\index.html [ array (
+  0 => 'attachmark',
+  1 => 'categorys',
+  2 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_sttr` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `s`.*,`c`.`catname` FROM `shy_goods_sttr` `s` LEFT JOIN `shy_goods_category` `c` ON `s`.`type_id`=`c`.`id` WHERE  `s`.`status` = '1' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:06:33+08:00 ] 127.0.0.1 GET www.yjg.com/admin/goods_spec/add.html
+[运行时间：0.071004s] [吞吐率：14.08req/s] [内存消耗：3,632.02kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods_spec',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/goods_spec/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/goods_spec/add_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\GoodsSpec->add[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\GoodsSpec.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\goods_spec\add.html [ array (
+  0 => 'attachmark',
+  1 => 'categorys',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`catname`,`parentid`,`child` FROM `shy_goods_category` WHERE  `parentid` = 0 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:06:49+08:00 ] 127.0.0.1 GET www.yjg.com/shop/index/index.html
+[运行时间：0.043003s] [吞吐率：23.25req/s] [内存消耗：2,468.99kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'shop',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/shop/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/index/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Index->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\view\index\index.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:06:49+08:00 ] 127.0.0.1 GET www.yjg.com/shop/index/main.html
+[运行时间：0.092005s] [吞吐率：10.87req/s] [内存消耗：3,307.41kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'shop',
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/index/main_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Index->main[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\view\index\main.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+  2 => 'top',
+  3 => 'bottom1',
+  4 => 'bottom2',
+  5 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `id` = 7  AND `check_status` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `id` = 7  AND `check_status` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `id` = 7  AND `check_status` = 1  AND `status` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `id` = 7  AND `check_status` = -1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 3 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 7 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 8 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT add_time,sum(money) sum,count(id) total FROM `shy_order` WHERE  `add_time` BETWEEN 1566921600 AND 1569686399  AND `shop_id` = 7 GROUP BY date_format(from_unixtime(add_time),'%Y-%m-%d') ORDER BY `add_time` ASC [ RunTime:0.003001s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:06:54+08:00 ] 127.0.0.1 GET www.yjg.com/shop/goods/add.html
+[运行时间：0.161009s] [吞吐率：6.21req/s] [内存消耗：4,171.43kb] [文件加载：74]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'shop',
+    1 => 'goods',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/goods/add_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\shop\controller\Goods->add[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Goods.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\view\goods\add.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+  2 => 'moduleid',
+  3 => 'brandlist',
+  4 => 'label',
+  5 => 'cat_tree',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_brand` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_goods_brand` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_label` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `title` FROM `shy_goods_label` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`catname`,`parentid`,`child` FROM `shy_goods_category` [ RunTime:0.005000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:07:15+08:00 ] 127.0.0.1 GET www.yjg.com/admin/recommend/goods.html
+[运行时间：0.067004s] [吞吐率：14.92req/s] [内存消耗：2,423.28kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/goods_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->goods[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\recommend\goods.html [ array (
+  0 => 'attachmark',
+  1 => 'moduleid',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:07:15+08:00 ] 127.0.0.1 GET www.yjg.com/admin/recommend/getcate.html?pid=0
+[运行时间：0.062003s] [吞吐率：16.13req/s] [内存消耗：3,179.03kb] [文件加载：70]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'getcate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/getcate_html' => '',
+  'pid' => '0',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->getcate[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,catname name FROM `shy_goods_category` WHERE  (  parentid=0 ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:40:23+08:00 ] 127.0.0.1 GET www.yjg.com/admin/recommend/goods.html
+[运行时间：0.073004s] [吞吐率：13.70req/s] [内存消耗：2,423.28kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/goods_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->goods[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\recommend\goods.html [ array (
+  0 => 'attachmark',
+  1 => 'moduleid',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:40:23+08:00 ] 127.0.0.1 GET www.yjg.com/admin/recommend/getcate.html?pid=0
+[运行时间：0.066004s] [吞吐率：15.15req/s] [内存消耗：3,179.03kb] [文件加载：70]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'getcate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/getcate_html' => '',
+  'pid' => '0',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->getcate[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,catname name FROM `shy_goods_category` WHERE  (  parentid=0 ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:40:25+08:00 ] 127.0.0.1 GET www.yjg.com/admin/recommend/getcate.html?pid=1
+[运行时间：0.048003s] [吞吐率：20.83req/s] [内存消耗：3,178.14kb] [文件加载：70]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'getcate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/getcate_html' => '',
+  'pid' => '1',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->getcate[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `id`,catname name FROM `shy_goods_category` WHERE  (  parentid=1 ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:40:26+08:00 ] 127.0.0.1 POST www.yjg.com/admin/recommend/goods.html
+[运行时间：0.067003s] [吞吐率：14.92req/s] [内存消耗：3,193.17kb] [文件加载：69]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/goods_html' => '',
+  'category' => '1',
+  'keywords' => '',
+  'type' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->goods[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_goods_category` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`isrecommand` FROM `shy_goods` `a` LEFT JOIN `shy_shop` `b` ON `a`.`shopid`=`b`.`id` WHERE  `a`.`catid` IN ('1','22','165','166','167','168','1423','23','169','170','171','24','172','173','174','175','176','177','25','178','179','180','181','182','26','183','184','185','186','187','27','188','189','190','191','192','193','194','195','196','28','197','198','199','200','29','201','202','203','204','205','30','206','207','208','209','210','211','212','31','213','214','215','216','217','32','218','219','220','221','33','222','223','224') [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:40:29+08:00 ] 127.0.0.1 POST www.yjg.com/admin/recommend/changegoods.html
+[运行时间：0.058004s] [吞吐率：17.24req/s] [内存消耗：3,155.71kb] [文件加载：69]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'changegoods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => '*/*',
+  'content-length' => '18',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/changegoods_html' => '',
+  'data' => '5,',
+  'status' => '0',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->changeGoods[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] UPDATE `shy_goods`  SET `isrecommand`=1  WHERE  `id` IN (5,0) [ RunTime:0.002001s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:40:32+08:00 ] 127.0.0.1 POST www.yjg.com/admin/recommend/changegoods.html
+[运行时间：0.066003s] [吞吐率：15.15req/s] [内存消耗：3,155.71kb] [文件加载：69]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'changegoods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => '*/*',
+  'content-length' => '18',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/changegoods_html' => '',
+  'data' => '6,',
+  'status' => '0',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->changeGoods[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `shy_goods`  SET `isrecommand`=1  WHERE  `id` IN (6,0) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:40:34+08:00 ] 127.0.0.1 GET www.yjg.com/admin/recommend/getcate.html?pid=2
+[运行时间：0.060004s] [吞吐率：16.67req/s] [内存消耗：3,177.35kb] [文件加载：70]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'getcate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/getcate_html' => '',
+  'pid' => '2',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->getcate[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,catname name FROM `shy_goods_category` WHERE  (  parentid=2 ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:40:36+08:00 ] 127.0.0.1 POST www.yjg.com/admin/recommend/goods.html
+[运行时间：0.068004s] [吞吐率：14.70req/s] [内存消耗：3,191.39kb] [文件加载：69]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/goods_html' => '',
+  'category' => '2',
+  'keywords' => '',
+  'type' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->goods[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_goods_category` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`isrecommand` FROM `shy_goods` `a` LEFT JOIN `shy_shop` `b` ON `a`.`shopid`=`b`.`id` WHERE  `a`.`catid` IN ('2','34','225','226','35','227','228','229','230','36','231','232','233','234','235','236','237','238','239','240','241','242','243','244','245','246','247','248','249') [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:40:38+08:00 ] 127.0.0.1 GET www.yjg.com/admin/recommend/getcate.html?pid=3
+[运行时间：0.066004s] [吞吐率：15.15req/s] [内存消耗：3,177.63kb] [文件加载：70]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'getcate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/getcate_html' => '',
+  'pid' => '3',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->getcate[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,catname name FROM `shy_goods_category` WHERE  (  parentid=3 ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:40:41+08:00 ] 127.0.0.1 POST www.yjg.com/admin/recommend/goods.html
+[运行时间：0.069003s] [吞吐率：14.49req/s] [内存消耗：3,194.36kb] [文件加载：69]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/goods_html' => '',
+  'category' => '3',
+  'keywords' => '',
+  'type' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->goods[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_goods_category` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`isrecommand` FROM `shy_goods` `a` LEFT JOIN `shy_shop` `b` ON `a`.`shopid`=`b`.`id` WHERE  `a`.`catid` IN ('3','37','250','251','252','253','254','255','256','257','258','259','260','261','262','263','38','264','265','266','267','268','39','269','270','271','272','273','274','275','276','277','278','279','280','281','282','283','284','285','286','287','288','289','40','290','291','292','293','294','295','296','297','298','299','300','301','302','303','304','305','306','307','41','308','309','310','311','312','313','314','315','316','317','318','319','320','321','322','42','323','324','325','326','327','328','329','330','331','332','333','334','335','336','337','338','339','340') [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:40:44+08:00 ] 127.0.0.1 GET www.yjg.com/admin/recommend/getcate.html?pid=22
+[运行时间：0.065004s] [吞吐率：15.38req/s] [内存消耗：3,177.49kb] [文件加载：70]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'getcate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/getcate_html' => '',
+  'pid' => '22',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->getcate[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `id`,catname name FROM `shy_goods_category` WHERE  (  parentid=22 ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:40:44+08:00 ] 127.0.0.1 GET www.yjg.com/admin/recommend/getcate.html?pid=165
+[运行时间：0.054003s] [吞吐率：18.52req/s] [内存消耗：3,177.10kb] [文件加载：70]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'getcate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/getcate_html' => '',
+  'pid' => '165',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->getcate[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,catname name FROM `shy_goods_category` WHERE  (  parentid=165 ) [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:40:46+08:00 ] 127.0.0.1 GET www.yjg.com/admin/recommend/getcate.html?pid=166
+[运行时间：0.067004s] [吞吐率：14.92req/s] [内存消耗：3,177.10kb] [文件加载：70]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'getcate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/getcate_html' => '',
+  'pid' => '166',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->getcate[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,catname name FROM `shy_goods_category` WHERE  (  parentid=166 ) [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:40:48+08:00 ] 127.0.0.1 POST www.yjg.com/admin/recommend/goods.html
+[运行时间：0.073005s] [吞吐率：13.70req/s] [内存消耗：3,190.57kb] [文件加载：69]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '37',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/goods_html' => '',
+  'category' => '1,22,166',
+  'keywords' => '',
+  'type' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->goods[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_goods_category` WHERE  `id` = 166 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`isrecommand` FROM `shy_goods` `a` LEFT JOIN `shy_shop` `b` ON `a`.`shopid`=`b`.`id` WHERE  `a`.`catid` IN ('166') [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:40:50+08:00 ] 127.0.0.1 POST www.yjg.com/admin/recommend/changegoods.html
+[运行时间：0.054003s] [吞吐率：18.52req/s] [内存消耗：3,155.71kb] [文件加载：69]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'changegoods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => '*/*',
+  'content-length' => '18',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/changegoods_html' => '',
+  'data' => '5,',
+  'status' => '1',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->changeGoods[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `shy_goods`  SET `isrecommand`=0  WHERE  `id` IN (5,0) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:40:55+08:00 ] 127.0.0.1 POST www.yjg.com/admin/recommend/goods.html
+[运行时间：0.066004s] [吞吐率：15.15req/s] [内存消耗：3,191.29kb] [文件加载：69]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '38',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/goods_html' => '',
+  'category' => '1,22,166',
+  'keywords' => '1',
+  'type' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->goods[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_goods_category` WHERE  `id` = 166 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`isrecommand` FROM `shy_goods` `a` LEFT JOIN `shy_shop` `b` ON `a`.`shopid`=`b`.`id` WHERE  `a`.`catid` IN ('166')  AND ( `a`.`title` LIKE '%1%' OR `a`.`goodsn` LIKE '%1%' OR `a`.`goodsn` LIKE '%1%' OR `b`.`name` LIKE '%1%' ) [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:40:56+08:00 ] 127.0.0.1 POST www.yjg.com/admin/recommend/goods.html
+[运行时间：0.070004s] [吞吐率：14.28req/s] [内存消耗：3,191.29kb] [文件加载：69]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '38',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/goods_html' => '',
+  'category' => '1,22,166',
+  'keywords' => '1',
+  'type' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->goods[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_goods_category` WHERE  `id` = 166 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`isrecommand` FROM `shy_goods` `a` LEFT JOIN `shy_shop` `b` ON `a`.`shopid`=`b`.`id` WHERE  `a`.`catid` IN ('166')  AND ( `a`.`title` LIKE '%1%' OR `a`.`goodsn` LIKE '%1%' OR `a`.`goodsn` LIKE '%1%' OR `b`.`name` LIKE '%1%' ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:40:56+08:00 ] 127.0.0.1 POST www.yjg.com/admin/recommend/goods.html
+[运行时间：0.063004s] [吞吐率：15.87req/s] [内存消耗：3,191.29kb] [文件加载：69]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '38',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/goods_html' => '',
+  'category' => '1,22,166',
+  'keywords' => '1',
+  'type' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->goods[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_goods_category` WHERE  `id` = 166 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`isrecommand` FROM `shy_goods` `a` LEFT JOIN `shy_shop` `b` ON `a`.`shopid`=`b`.`id` WHERE  `a`.`catid` IN ('166')  AND ( `a`.`title` LIKE '%1%' OR `a`.`goodsn` LIKE '%1%' OR `a`.`goodsn` LIKE '%1%' OR `b`.`name` LIKE '%1%' ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:40:57+08:00 ] 127.0.0.1 POST www.yjg.com/admin/recommend/goods.html
+[运行时间：0.058003s] [吞吐率：17.24req/s] [内存消耗：3,191.29kb] [文件加载：69]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '38',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/goods_html' => '',
+  'category' => '1,22,166',
+  'keywords' => '1',
+  'type' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->goods[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_goods_category` WHERE  `id` = 166 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`isrecommand` FROM `shy_goods` `a` LEFT JOIN `shy_shop` `b` ON `a`.`shopid`=`b`.`id` WHERE  `a`.`catid` IN ('166')  AND ( `a`.`title` LIKE '%1%' OR `a`.`goodsn` LIKE '%1%' OR `a`.`goodsn` LIKE '%1%' OR `b`.`name` LIKE '%1%' ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:41:04+08:00 ] 127.0.0.1 POST www.yjg.com/admin/recommend/goods.html
+[运行时间：0.068004s] [吞吐率：14.70req/s] [内存消耗：3,194.73kb] [文件加载：69]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '27',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/goods_html' => '',
+  'category' => '3',
+  'keywords' => '1',
+  'type' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->goods[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_goods_category` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`isrecommand` FROM `shy_goods` `a` LEFT JOIN `shy_shop` `b` ON `a`.`shopid`=`b`.`id` WHERE  `a`.`catid` IN ('3','37','250','251','252','253','254','255','256','257','258','259','260','261','262','263','38','264','265','266','267','268','39','269','270','271','272','273','274','275','276','277','278','279','280','281','282','283','284','285','286','287','288','289','40','290','291','292','293','294','295','296','297','298','299','300','301','302','303','304','305','306','307','41','308','309','310','311','312','313','314','315','316','317','318','319','320','321','322','42','323','324','325','326','327','328','329','330','331','332','333','334','335','336','337','338','339','340')  AND ( `a`.`title` LIKE '%1%' OR `a`.`goodsn` LIKE '%1%' OR `a`.`goodsn` LIKE '%1%' OR `b`.`name` LIKE '%1%' ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:41:06+08:00 ] 127.0.0.1 POST www.yjg.com/admin/recommend/changegoods.html
+[运行时间：0.074004s] [吞吐率：13.51req/s] [内存消耗：3,155.71kb] [文件加载：69]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'changegoods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => '*/*',
+  'content-length' => '18',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/changegoods_html' => '',
+  'data' => '2,',
+  'status' => '1',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->changeGoods[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] UPDATE `shy_goods`  SET `isrecommand`=0  WHERE  `id` IN (2,0) [ RunTime:0.008001s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:41:08+08:00 ] 127.0.0.1 GET www.yjg.com/admin/recommend/goods.html
+[运行时间：0.044002s] [吞吐率：22.73req/s] [内存消耗：2,423.28kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/goods_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->goods[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\recommend\goods.html [ array (
+  0 => 'attachmark',
+  1 => 'moduleid',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:41:08+08:00 ] 127.0.0.1 GET www.yjg.com/admin/recommend/getcate.html?pid=0
+[运行时间：0.050003s] [吞吐率：20.00req/s] [内存消耗：3,179.03kb] [文件加载：70]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'getcate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/getcate_html' => '',
+  'pid' => '0',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->getcate[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,catname name FROM `shy_goods_category` WHERE  (  parentid=0 ) [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:41:11+08:00 ] 127.0.0.1 POST www.yjg.com/admin/recommend/goods.html
+[运行时间：0.056003s] [吞吐率：17.86req/s] [内存消耗：3,187.06kb] [文件加载：69]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/goods_html' => '',
+  'category' => '',
+  'keywords' => '1',
+  'type' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->goods[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`isrecommand` FROM `shy_goods` `a` LEFT JOIN `shy_shop` `b` ON `a`.`shopid`=`b`.`id` WHERE  ( `a`.`title` LIKE '%1%' OR `a`.`goodsn` LIKE '%1%' OR `a`.`goodsn` LIKE '%1%' OR `b`.`name` LIKE '%1%' ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:41:37+08:00 ] 127.0.0.1 POST www.yjg.com/admin/recommend/goods.html
+[运行时间：0.065004s] [吞吐率：15.38req/s] [内存消耗：3,187.06kb] [文件加载：69]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/goods_html' => '',
+  'category' => '',
+  'keywords' => '1',
+  'type' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->goods[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`isrecommand` FROM `shy_goods` `a` LEFT JOIN `shy_shop` `b` ON `a`.`shopid`=`b`.`id` WHERE  ( `a`.`title` LIKE '%1%' OR `a`.`goodsn` LIKE '%1%' OR `a`.`goodsn` LIKE '%1%' OR `b`.`name` LIKE '%1%' ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-09-28T16:41:39+08:00 ] 127.0.0.1 GET www.yjg.com/admin/recommend/goods.html
+[运行时间：0.047002s] [吞吐率：21.28req/s] [内存消耗：2,423.28kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/goods_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->goods[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\recommend\goods.html [ array (
+  0 => 'attachmark',
+  1 => 'moduleid',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-28T16:41:39+08:00 ] 127.0.0.1 GET www.yjg.com/admin/recommend/getcate.html?pid=0
+[运行时间：0.058004s] [吞吐率：17.24req/s] [内存消耗：3,179.03kb] [文件加载：70]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'recommend',
+    2 => 'getcate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=drll2mnf4eglkt69brkpvkh0d3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/recommend/goods.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/recommend/getcate_html' => '',
+  'pid' => '0',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Recommend->getcate[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Recommend.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `id`,catname name FROM `shy_goods_category` WHERE  (  parentid=0 ) [ RunTime:0.001000s ]

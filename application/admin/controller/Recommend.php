@@ -102,7 +102,7 @@ class Recommend extends Common {
         }
         $shop = Db::name("shop")->field("id,name,recommend")->where(['status' => 2])->whereIn('id', $shopids)->select();
         $arr = [];
-        $data = [];
+        $data =[];
         foreach ($shop as $key => $value) {
             if ($value['recommend']) {
                 $arr[] = $value['id'];
