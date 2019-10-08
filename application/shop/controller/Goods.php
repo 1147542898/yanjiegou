@@ -157,12 +157,17 @@ class Goods extends Common{
             if($msg!='true'){
                 return $result = ['code'=>0,'msg'=>$msg];
             }
+            print_r($data);exit;
             $insert=$this->model->insert($data);
             if($insert){
                 return $this->resultmsg('添加成功');
             }
             return $this->resultmsg('添加失败',0);
         }
+
+
+
+        /*渲染*/
         $brand=Db::name('GoodsBrand')->select();
         $this->assign('brandlist',$brand);
         $label=Db::name('GoodsLabel')->field('title')->select();
