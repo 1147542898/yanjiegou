@@ -6,16 +6,16 @@ use think\Db;
 use think\Request;
 use think\View;
 use app\shop\controller\Common;
-
 class Fund extends Common {
 
-    protected $now, $log;
+    protected $now, $log,$shop,$order;
 
     public function _initialize() {
         parent::_initialize();
         $this->now = model('ShopFundNow');
         $this->log = model('ShopFundLog');
         $this->order = model('Order');
+        $this->shop=model('Shop');
     }
 
     //申请列表
@@ -37,28 +37,57 @@ class Fund extends Common {
                                         $row['dotime'] = $row['dotime'] ? date('Y-m-d H:i:s', $row['dotime']) : '-';
                                     })->toArray();
             return ['code' => 0, 'msg' => "获取成功", 'data' => $list['data'], 'count' => $list['total'], 'rel' => 1];
+        }else{
+            $shop=Db::name('shop')->where(['id'=>SHID])->find();
+            $this->assign('shop_money',$shop['shop_money']);
+            $this->assign('lock_money',$shop['lock_money']);
+            return $this->fetch();
         }
-        return $this->fetch();
+        
     }
 
     //添加申请
     public function add() {
-        if (Request::instance()->isAjax()) {
+        if (Request::instance()->isAjax()) {            
             $data = input('post.');
+            $bank_name=input('post.bank_name');
+            $banks=explode(':',$bank_name);
+            $data['bank_name']=$banks[0];
+            $data['bank_number']=$banks[1];           
+            $data['bank_address']=$banks[2];           
             $data['shopid'] = SHID;
             $data['addtime'] = time();
             $data['status'] = 0;
-            $res = $this->now->insert($data);
-            if ($res) {
-                $result['code'] = 1;
-                $result['msg'] = '添加成功!';
-                return $result;
-            } else {
+            $money=$data['money'];
+            Db::startTrans();
+            try{
+                $res = $this->now->insert($data); 
+                $id=$this->now->getLastInsID();  
+                $shop=$this->shop->get(SHID); 
+                $shop->shop_money=$shop->shop_money-$money;
+                $shop->lock_money=$shop->lock_money+$money;    
+                $results=$shop->save();             
+                if ($res && $results !=false) {
+                    Db::commit();                  
+                    $result['code'] = 1;                   
+                    $result['msg'] = '添加成功!';
+                    return $result;
+                } else {
+                    Db::rollback();
+                    $result['code'] = 0;
+                    $result['msg'] = '添加失败!';
+                    return $result;
+                }
+            }catch (\Exception $e) {
+                Db::rollback();
                 $result['code'] = 0;
                 $result['msg'] = '添加失败!';
                 return $result;
             }
+           
         } else {
+            $banks=Db::name('shop_bank')->where(['shop_id'=>SHID])->select();
+            $this->assign('banks',$banks);
             return $this->fetch();
         }
     }
@@ -75,6 +104,11 @@ class Fund extends Common {
                             ->paginate(array('list_rows' => $pageSize, 'page' => $page))
                             ->each(function($row) {
                                         $row['addtime'] = date('Y-m-d H:i:s', $row['addtime']);
+                                        if($row['type']==1){
+                                            $row['money']="- ¥".$row['money'];
+                                        }else{
+                                            $row['money']="+ ¥".$row['money'];
+                                        }
                                         $row['type'] = get_status($row['type'], 'shop_fund_log_type');
                                     })->toArray();
             return ['code' => 0, 'msg' => "获取成功", 'data' => $list['data'], 'count' => $list['total'], 'rel' => 1];
@@ -150,7 +184,7 @@ class Fund extends Common {
     }
     //删除账户
     public function deleteBank(){
-        $result=Db::name("shop_bank")->where(['id'=>input('id'),'shop_id'=>SHID])->delete();        
+        $result=Db::name("shop_bank")->where(['id'=>input('id'),'shop_id'=>SHID])->delete();             
         if($result){
             return ['code'=>1,'msg'=>'删除成功！'];
         }else{

@@ -6,5 +6,6 @@ class ShopFundLog extends Model
     //protected $autoWriteTimestamp = true;
     // protected $createTime = "createtime";
     // protected $updateTime = "updatetime";
+    
 }
 
