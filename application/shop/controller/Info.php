@@ -126,13 +126,7 @@ class Info extends Common{
             cache('arealist', $arealist, 86400);
         }
         $this->assign('info',empty($info)?'':json_decode($info['money'],true));
-        $this->assign('arealist',$arealist);
-
-
-        
-
-
-
+        $this->assign('arealist',$arealist);  
         return $this->fetch();
     }   
 }

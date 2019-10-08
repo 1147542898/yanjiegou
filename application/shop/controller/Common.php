@@ -86,7 +86,7 @@ class Common extends Controller
 
     public function getmenu(){
          // 获取缓存数据
-        $bsrule = cache('srule');
+        $bsrule = cache('srule');       
         if(!$bsrule){
             $bsrule = Db::name('shopAuthRule')->where(['menustatus'=>1,'type'=>2])->order('sort asc')->select();
             cache('srule', $bsrule, 3600);

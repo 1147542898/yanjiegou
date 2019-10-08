@@ -6,7 +6,29 @@
 <div class="layui-card">
 <div class="layui-card-body">
         <form class="layui-form" method="post" enctype="multipart/form-data">
-            
+            <div class="layui-form-item">
+                <label class="layui-form-label">提现账号</label>
+                <div class="layui-input-inline">
+                    <select name="bank_name"  lay-verify="required" lay-filter="bank_name">
+                        <option value="">选择账号</option>
+                        {volist name="banks" id="list"}
+                        <option value="{$list.bank_name}:{$list.bank_number}:{$list.bank_address}:{$list.bank_user_name}" data-id="{$list.bank_number}">{$list.bank_name}</option>
+                        {/volist}
+                    </select>
+                </div>
+                <div class="layui-form-mid layui-word-aux">
+                    必填
+                </div>
+            </div>
+            <div class="layui-form-item">
+                    <label class="layui-form-label">持卡人</label>
+                    <div class="layui-input-inline">
+                        <input name="bank_user_name" id="bank_user_name" class="layui-input" lay-verify="required">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">
+                        必填
+                    </div>
+            </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">提现金额</label>
                 <div class="layui-input-inline">
@@ -54,6 +76,14 @@ layui.use(['form', 'layer'], function () {
             }
         });
     });
+   form.on('select(bank_name)',function(data){
+       console.log(data)
+      console.log(data.value)
+      var data=data.value;
+      var bank_user_name=data.split(":").pop();
+      $("#bank_user_name").val(bank_user_name);
+      console.log(bank_user_name)
+   });
 });
 </script>
 {/block}

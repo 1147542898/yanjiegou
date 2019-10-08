@@ -102,7 +102,7 @@ class Recommend extends Common {
         }
         $shop = Db::name("shop")->field("id,name,recommend")->where(['status' => 2])->whereIn('id', $shopids)->select();
         $arr = [];
-        $data = [];
+        $data =[];
         foreach ($shop as $key => $value) {
             if ($value['recommend']) {
                 $arr[] = $value['id'];
@@ -117,7 +117,64 @@ class Recommend extends Common {
      * 推荐商品
      * */
     public function goods() {
-        return $this->fetch();
+        if (Request::instance()->isAjax()) {
+            //推荐类型
+            $type = input('type') ? input('type') : 0;
+            switch ($type) {
+                case 1 :
+                    $map['a.ishot'] = array('eq', 1); //热销
+                    break;
+                case 2 :
+                    $map['a.isnew'] = array('eq', 1); //新品
+                    break;
+                case 3 :
+                    $map['a.isdiscount'] = array('eq', 1); //折
+                    break;
+            }
+            if (input('category')) {
+                $categoryId = input('category'); //分类id
+                $ids = explode(",", $categoryId);
+                $id = array_pop($ids);
+                $goodsCategory = Db::name("goods_category")->where(['id' => $id])->find();
+                $catId = $goodsCategory['arrchildid'];
+                $catIds = explode(",", $catId);
+                $map['a.catid'] = array('in', $catIds);
+            }
+            if (input('keywords')) {//关键字
+                $keywords =trim(input('keywords'));
+                $map['a.title|a.goodsn|a.goodsn|b.name'] = array('like','%'.$keywords.'%');
+            }  
+            if(!isset($map)){
+                return ['code'=>0,'msg'=>'参数错误！数据不能为空！'];
+            }
+            $goods = Db::name("goods")->alias('a')
+                    ->join('shop b','a.shopid = b.id','LEFT')
+                    ->where($map)->field('a.id,a.title,a.isrecommand')->select();
+            $arr = [];
+            $data = [];
+            foreach ($goods as $key => $value) {
+                if ($value['isrecommand']) {
+                    $arr[] = $value['id'];
+                }
+                $data[$key]['value'] = $value['id'];
+                $data[$key]['title'] = $value['title'];
+            }
+            return ['code' => 1, 'arr' => $arr, 'list' => $data];
+        } else {           
+            return $this->fetch();
+        }
+    }
+    //推荐商品
+    public function changeGoods(){
+           $status = input('status');
+            $data = explode(',', input('data'));
+            $recommend = $status ? 0 : 1;
+            $result = Db::name('goods')->whereIn('id', $data)->setField('isrecommand', $recommend);
+            if ($result) {
+                return ['code' => 1, 'msg' => "设置成功"];
+            } else {
+                return ['code' => 0, 'msg' => "设置失败"];
+            }
     }
 
 }
