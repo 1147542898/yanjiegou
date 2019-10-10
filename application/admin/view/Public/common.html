@@ -6,19 +6,21 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="CSS/font.css">
     <link rel="stylesheet" href="CSS/xadmin.css">
     <link rel="stylesheet" href="CSS/theme10.min.css">
     <link rel="stylesheet" href="LIB/font-awesome-4.7.0/css/font-awesome.min.css">
+
     {include file="Public/js" /}
     {block name="css"}
 
-    {/block}
+    {/block}    
 
 </head>
+
 <body>
-{block name="content"}
+    {block name="content"}
     <!-- 顶部开始 -->
     {include file="Public/top" /}
     <!-- 顶部结束 -->
@@ -31,16 +33,18 @@
         <div class="layui-tab tab" lay-filter="xbs_tab" lay-allowclose="false">
             <ul class="layui-tab-title">
                 <li class="home">
-                    <i class="layui-icon">&#xe68e;</i>我的桌面</li></ul>
+                    <i class="layui-icon">&#xe68e;</i>我的桌面</li>
+            </ul>
             <div class="layui-unselect layui-form-select layui-form-selected" id="tab_right">
                 <dl>
                     <dd data-type="this">关闭当前</dd>
                     <dd data-type="other">关闭其它</dd>
-                    <dd data-type="all">关闭全部</dd></dl>
+                    <dd data-type="all">关闭全部</dd>
+                </dl>
             </div>
             <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show">
-                    <iframe src='{:url('admin/index/main')}' frameborder="0" scrolling="yes" class="x-iframe"></iframe>
+                    <iframe src='{:url(' admin/index/main')}' frameborder="0" scrolling="yes" class="x-iframe"></iframe>
                 </div>
             </div>
             <div id="tab_show"></div>
@@ -50,16 +54,15 @@
     <style id="theme_style"></style>
     <!-- 右侧主体结束 -->
     <!-- 中部结束 -->
-{/block}
+    {/block}
 
 
-<!--js结束-->
-{block name="js"}
+    <!--js结束-->
+    {block name="js"}
 
-{/block}
+    {/block}
 
 
 </body>
 
 </html>
-

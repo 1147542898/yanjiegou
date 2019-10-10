@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:78:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\shop\index.html";i:1569466684;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1570615895;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:81:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\article\index.html";i:1569466684;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1570615895;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
 <!doctype html>
 <html class="x-admin-sm">
 <head>
@@ -66,38 +66,52 @@ layui.use('layer',function(){
 
 <body>
     
+<div class="x-nav">
+          <span class="layui-breadcrumb">
+            <a href="">首页</a>
+            <a href="">文章管理</a>
+            <a>
+              <cite>文章列表</cite></a>
+          </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" onclick="location.reload()" title="刷新">
+        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i></a>
+</div>
 <div class="layui-fluid">
-<div class="layui-row layui-col-space15">
-<div class="layui-col-md12">
-<div class="layui-card">
-<div class="layui-card-body">
-<fieldset class="layui-elem-field layui-field-title">
-    <legend>商家管理</legend>
-</fieldset>
-<div class="layui-inline layui-show-xs-block">
-    <input class="layui-input" name="key" id="key" placeholder="<?php echo lang('pleaseEnter'); ?>关键字">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body ">
+                    <div class="layui-inline layui-show-xs-block">
+                        <input class="layui-input" name="key" id="key" placeholder="<?php echo lang('pleaseEnter'); ?>关键字">
+                    </div>
+                    <div class="layui-inline layui-show-xs-block">
+                        <button class="layui-btn" id="search" data-type="reload" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+                    </div>
+                </div>
+                <div class="layui-card-header">
+                    <a href="<?php echo url('add',array('catid'=>input('catid'))); ?>" class="layui-btn layui-btn-sm"><?php echo lang('add'); ?></a>
+                    <button type="button" class="layui-btn layui-btn-danger layui-btn-sm" id="delAll">批量删除</button>
+                </div>
+                <div class="layui-card-body layui-table-body layui-table-main">
+                    <table class="layui-table" id="list" lay-filter="list"></table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="layui-inline layui-show-xs-block">
-    <button class="layui-btn" id="search" data-type="reload" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
-</div>
-<table class="layui-table" id="list" lay-filter="list"></table>              
- </div>
-</div>
-</div>
-</div>
-</div>
+
 
 
 
     <!--js结束-->
     
-<script type="text/javascript">
-    layui.use(['table','form'], function() {
-        var table = layui.table, $ = layui.jquery,form = layui.form;
+<script>
+    layui.use('table', function() {
+        var table = layui.table, $ = layui.jquery;
         var tableIn = table.render({
             id: 'content',
             elem: '#list',
-            url: '<?php echo url("admin/shop/index"); ?>',
+            url: '<?php echo url("index"); ?>',
             where:{catid:'<?php echo input("catid"); ?>'},
             method: 'post',
             toolbar: '#topBtn',
@@ -105,31 +119,16 @@ layui.use('layer',function(){
             cols: [[
                 {type: "checkbox", fixed: true},
                 {field: 'id', title: '<?php echo lang("id"); ?>', width: 80, fixed: true},
-                {field: 'name',  title: '商家名称', templet: '#name'},
-                {field: 'bname',  title: '所属商圈'},
-                {field: 'phone', title: '电话', width:120},
-                {field: 'pastdue',  title: '服务到期时间', width: 120},
+                {field: 'catname',  title: '<?php echo lang("catname"); ?>', width: 120},
+                {field: 'title', title: '<?php echo lang("title"); ?>', width: 400, templet: '#title'},
+                {field: 'hits',  title: '<?php echo lang("hit"); ?>', width: 80},
+                {field: 'createtime', title: '<?php echo lang("add"); ?><?php echo lang("time"); ?>', width: 180},
                 {field: 'sort', align: 'center', title: '<?php echo lang("order"); ?>', width: 120, templet: '#order'},
-                {field: 'statusname', align: 'center', title: '状态', width: 120 },
-                {field: 'lock_name', align: 'center', title: '锁定状态', width: 120},
-                {width: 300, align: 'center', toolbar: '#action',title:'操作'}
+                {width: 160, align: 'center', toolbar: '#action',title:'操作'}
             ]],
             limit: 10
         });
-        form.on('switch(status)', function(obj){
-            loading =layer.load(1, {shade: [0.1,'#fff']});
-            var id = this.value;
-            var status = obj.elem.checked===true?1:0;
-            $.post('<?php echo url("shopState"); ?>',{'id':id,'status':status},function (res) {
-                layer.close(loading);
-                if (res.code==1) {
-                    tableIn.reload();
-                }else{
-                    layer.msg(res.msg,{time:1000,icon:2});
-                    return false;
-                }
-            })
-        });
+        //搜索
         $('#search').on('click', function () {
             var key = $('#key').val();
             if ($.trim(key) === '') {
@@ -142,7 +141,7 @@ layui.use('layer',function(){
             var id = $(this).attr('data-id');
             var sort = $(this).val();
             var loading = layer.load(1, {shade: [0.1, '#fff']});
-            $.post('<?php echo url("listorder"); ?>',{id:id,sort:sort},function(res){
+            $.post('<?php echo url("listorder"); ?>',{id:id,sort:sort,catid:'<?php echo input("catid"); ?>'},function(res){
                 layer.close(loading);
                 if(res.code === 1){
                     layer.msg(res.msg, {time: 1000, icon: 1}, function () {
@@ -170,16 +169,6 @@ layui.use('layer',function(){
                     layer.close(index);
                 });
             }
-            if(obj.event === 'nature'){
-                layer.open({
-                    type: 2,
-                    title: '商品属性',
-                    area: ['700px', '450px'],
-                    fixed: false, //不固定
-                    maxmin: true,
-                    content: ['details.html','no']
-                });
-            }
         });
         $('body').on('click','#delAll',function() {
             layer.confirm('确认要删除选中的内容吗？', {icon: 3}, function(index) {
@@ -202,28 +191,27 @@ layui.use('layer',function(){
             });
         })
     });
+
+
 </script>
+
 <script type="text/html" id="order">
     <input name="{{d.id}}" data-id="{{d.id}}" class="list_order layui-input" value=" {{d.sort}}" size="10"/>
 </script>
-<script type="text/html" id="name">
-    {{d.name}}{{# if(d.name){ }}<img src="/static/admin/images/image.gif" onmouseover="layer.tips('<img width=300  src={{d.shoplogo}}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();" >{{# } }}
+<script type="text/html" id="title">
+    <span style="{{d.title_style}}">{{d.title}}</span>
+    {{# if(d.thumb){ }}<img src="/static/admin/images/image.gif" onmouseover="layer.tips('<img width=300 src={{d.thumb}}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();">{{# } }}
 </script>
 <script type="text/html" id="action">
     {{# if(d.is_show==1){ }}
     <a href="{{d.url}}" target="_blank" class="layui-btn layui-btn-xs layui-btn-normal">预览</a>
     {{# } }}
-    <a href="<?php echo url('admin/shop/edit'); ?>?id={{d.id}}" class="layui-btn layui-btn-xs">编辑</a>
+    <a href="<?php echo url('edit'); ?>?id={{d.id}}&catid={{d.catid}}" class="layui-btn layui-btn-xs">编辑</a>
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
-    <a href="<?php echo url('admin/shop/admin'); ?>?id={{d.id}}" class="layui-btn layui-btn-xs">商家管理员</a>
 </script>
-<script type="text/html" id="myaddress">
-    <p>{d.province}</p>
-</script>
-<script type="text/html" id="topBtn">
-    <button type="button" class="layui-btn layui-btn-danger" id="delAll"><i class="layui-icon"></i>批量删除</button>
-    <a href="<?php echo url('add',array('catid'=>input('catid'))); ?>" class="layui-btn"><i class="layui-icon"></i><?php echo lang('add'); ?></a>
-</script>
+
+
+
 
 
 

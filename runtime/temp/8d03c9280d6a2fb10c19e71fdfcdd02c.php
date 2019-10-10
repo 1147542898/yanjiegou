@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:88:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\statistic\membersale.html";i:1569553154;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:85:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\orderreason\lists.html";i:1569466684;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1570615895;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;}*/ ?>
 <!doctype html>
 <html class="x-admin-sm">
 <head>
@@ -7,11 +7,12 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="/static/admin/css/font.css">
     <link rel="stylesheet" href="/static/admin/css/xadmin.css">
     <link rel="stylesheet" href="/static/admin/css/theme10.min.css">
     <link rel="stylesheet" href="/static/admin/lib/font-awesome-4.7.0/css/font-awesome.min.css">
+
     <script type="text/javascript" src="/static/admin/js/jquery.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="/static/admin/lib/layui/layui.js" charset="utf-8"></script>
 <script type="text/javascript" src="/static/admin/js/xadmin.js"></script>
@@ -58,32 +59,32 @@ layui.use('layer',function(){
 
 </script>
     
-<style type="text/css">
-    .layui-table-body tr{height:50px;}
-    .layui-table-body td .laytable-cell-1-0-2{padding: 0;margin:0;height:50px;}
-</style>
 
+        
 
 </head>
-<body>
 
+<body>
+    
 <div class="layui-fluid">
 <div class="layui-row layui-col-space15">
 <div class="layui-col-md12">
 <div class="layui-card">
 <div class="layui-card-body">
     <fieldset class="layui-elem-field layui-field-title">
-        <legend>会员消费排行</legend>
+        <legend>订单退换原因</legend>
     </fieldset>
     <div class="demoTable">
-        <div class="layui-inline">
+        <!-- <div class="layui-inline">
             <input class="layui-input" name="key" id="key" placeholder="<?php echo lang('pleaseEnter'); ?>关键字">
-        </div>
+        </div> 
         <button class="layui-btn" id="search" data-type="reload"><?php echo lang('search'); ?></button>
-        <a href="<?php echo url('membersale'); ?>" class="layui-btn">显示全部</a>
-        <div style="clear: both;"></div>
+        <a href="<?php echo url('index'); ?>" class="layui-btn">显示全部</a>-->
+        <a href="<?php echo url('add'); ?>" style="height:30px; width:68px; " class="layui-btn layui-btn-sm" id="add" >添加原因</a>
+        <button type="button" class="layui-btn layui-btn-danger" id="delAll">批量删除</button>
     </div>
-    <table class="layui-table" id="list" lay-filter="list" lay-skin="row"></table>
+    <table class="layui-table" id="list" lay-filter="list"></table>
+</div>
 </div>
 </div>
 </div>
@@ -92,32 +93,29 @@ layui.use('layer',function(){
 
 
 
-<!--js结束-->
-
-<script type="text/html" id="title">
-   {{d.title}}{{# if(d.title){ }}<img src="/static/admin/images/image.gif" onmouseover="layer.tips('<img src={{d.headimg}}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();" >{{# } }}
+    <!--js结束-->
+    
+<script type="text/html" id="action">
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 </script>
-
 <script>
-    layui.use(['table','form','util'], function() {
-        var table = layui.table, $ = layui.jquery,form = layui.form;util = layui.util;
+    layui.use('table', function() {
+        var table = layui.table, $ = layui.jquery;
         var tableIn = table.render({
-            id: 'content',
+            id: 'message',
             elem: '#list',
-            url: '<?php echo url("membersale"); ?>',
+            url: '<?php echo url(""); ?>',
             method: 'post',
-            toolbar: '#topBtn',
             page: true,
             cols: [[
-                {field: 'id', title: '编号', width: 80},
-                {field: 'username', title: '名称', width: 200},
-                {field: 'mobile', title: '电话',align:'center', width:150},
-                {field: 'counts',  title: '消费额', width: 120,templet:function(d){return '<span class="red">'+d.counts+'</span>';}},
-                {field: 'reg_time',  title: '注册时间', width: 150},
+                {checkbox: true, fixed: true},
+                {field:'id',title:'编号', width:80},
+                {field: 'name', title: '原因', width: 500},
+                {width: 80, align: 'center', toolbar: '#action'}
             ]],
-            limit: 10
+            limit: 10 //每页默认显示的数量
         });
-         //搜索
+        //搜索
         $('#search').on('click', function () {
             var key = $('#key').val();
             if ($.trim(key) === '') {
@@ -126,7 +124,45 @@ layui.use('layer',function(){
             }
             tableIn.reload({ page: {page: 1}, where: {key: key}});
         });
-    });    
+        table.on('tool(list)', function(obj) {
+            var data = obj.data;
+            if (obj.event === 'del') {
+                layer.confirm('您确定要删除吗？', function(index){
+                    var loading = layer.load(1, {shade: [0.1, '#fff']});
+                    $.post("<?php echo url('del'); ?>",{id:data.id},function(res){
+                        layer.close(loading);
+                        if(res.code===1){
+                            layer.msg(res.msg,{time:1000,icon:1});
+                            tableIn.reload();
+                        }else{
+                            layer.msg('操作失败！',{time:1000,icon:2});
+                        }
+                    });
+                    layer.close(index);
+                });
+            }
+        });
+        $('#delAll').click(function(){
+            layer.confirm('确认要删除选中的原因吗？', {icon: 3}, function(index) {
+                layer.close(index);
+                var checkStatus = table.checkStatus('message'); //test即为参数id设定的值
+                var ids = [];
+                $(checkStatus.data).each(function (i, o) {
+                    ids.push(o.id);
+                });
+                var loading = layer.load(1, {shade: [0.1, '#fff']});
+                $.post("<?php echo url('delall'); ?>", {ids: ids}, function (data) {
+                    layer.close(loading);
+                    if (data.code === 1) {
+                        layer.msg(data.msg, {time: 1000, icon: 1});
+                        tableIn.reload();
+                    } else {
+                        layer.msg(data.msg, {time: 1000, icon: 2});
+                    }
+                });
+            });
+        })
+    });
 </script>
 
 
@@ -134,4 +170,3 @@ layui.use('layer',function(){
 </body>
 
 </html>
-

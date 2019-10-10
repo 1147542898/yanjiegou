@@ -256,13 +256,13 @@ class Shop extends Common
             $pageSize = input('limit') ? input('limit') : config('pageSize');
             $map = [];
             $keywords = input('key');
-            if(!empty($keywords)){
+            if (!empty($keywords)) {
                 $map['s.name|a.bank_number'] = array('like', "%" . $keywords . "%");
-            }           
-            $status = input('status'); 
-            if(!empty($status) || $status =='0'){
+            }
+            $status = input('status');
+            if (!empty($status) || $status == '0') {
                 $map['a.status'] = array('eq', $status);
-            }           
+            }
             $list = model('ShopFundNow')->alias('a')
                 ->join('shop s', 's.id = a.shopid', 'LEFT')
                 ->join('admin ad', 'ad.admin_id = a.douid', 'LEFT')
@@ -290,11 +290,14 @@ class Shop extends Common
         $apply_info = Db::name("shop_fund_now")->where(['id' => $data['id']])->find($data['id']);
         $shopid = $apply_info['shopid'];
         $shop = model('shop')->get($shopid);
+        $shop->lock_money = $shop->lock_money - $apply_info['money'];
+        if ($shop->lock_money < 0) {
+            $result['code'] = 0;
+            $result['msg'] = "冻结资金异常";
+            return $result;
+        }
         if ($data['status'] == 1) {
-            $shop->lock_money = $shop->lock_money - $apply_info['money'];
             $shop->shop_money = $shop->shop_money + $apply_info['money'];
-        } else {
-            $shop->lock_money = $shop->lock_money - $apply_info['money'];
         }
         $data['douid'] = session('seadmininfo')['aid'];
         $data['dotime'] = time();
@@ -302,12 +305,12 @@ class Shop extends Common
         try {
             if (model('ShopFundNow')->update($data) && $shop->save()) {
                 Db::commit();
-                if($data['status']!=1){
-                    $logs['shopid']=$shopid;
-                    $logs['money']=$apply_info['money'];
-                    $logs['addtime']=time();
-                    $logs['note']="提现申请单".$apply_info['id']."申请提现¥".$apply_info['money'];
-                    $logs['type']=1;
+                if ($data['status'] != 1) {
+                    $logs['shopid'] = $shopid;
+                    $logs['money'] = $apply_info['money'];
+                    $logs['addtime'] = time();
+                    $logs['note'] = "提现申请单" . $apply_info['id'] . "申请提现¥" . $apply_info['money'];
+                    $logs['type'] = 1;
                     $logs['yue'] = $shop->shop_money;
                     model('ShopFundLog')->insert($logs);
                 }
@@ -360,6 +363,55 @@ class Shop extends Common
         $this->assign('info', $info);
         return $this->fetch();
     }
-    //shopMoney  lockMoney
+    //商家订单结算
+    public function settlements()
+    {
+        if (Request::instance()->isAjax()) {
+            $page = input('page') ? input('page') : 1;
+            $pageSize = input('limit') ? input('limit') : config('pageSize');
+            $map = [];           
+            $list = model("settlements")->alias('a')
+                    ->join("shop b", "a.shopId=b.id", "LEFT")
+                    ->field("a.*,b.name")
+                    ->where($map)
+                    ->paginate(array('list_rows' => $pageSize, 'page' => $page))                   
+                    ->toArray();
+            return ['code' => 0, 'msg' => "获取成功", 'data' => $list['data'], 'count' => $list['total'], 'rel' => 1];
+        } else {
+            return $this->fetch();
+        }
+    }
+    //确定订单结算
+    public function dosettlements(){
+        $id =input("id");
+        $setInfo=Db::name('settlements')->where(['settlementId'=>$id])->find();
+        //拼接数据
+        $data['settlementType']=1;
+        $data['backMoney']=$setInfo['settlementMoney'];
+        $data['settlementStatus']=1;
+        $data['settlementTime']=date("Y-m-d H:i:s",time());
+        Db::startTrans();
+        try {
+            $results=Db::name("settlements")->where(['settlementId'=>$id])->update($data);
+            $shop = model('shop')->get($setInfo['shopId']);
+            $shop->shop_money=$shop->shop_money+$setInfo['settlementMoney'];            
+            if ($results && $shop->save()) {
+                Db::commit();                
+                $result['code'] = 1;
+                $result['msg'] = '成功！';
+                return $result;
+            } else {
+                Db::rollback();
+                $result['code'] = 0;
+                $result['msg'] = '失败！';
+                return $result;
+            }
+        } catch (\Exception $e) {
+            Db::rollback();
+            $result['code'] = 0;
+            $result['msg'] = '失败！';
+            return $result;
+        }
 
+    }
 }

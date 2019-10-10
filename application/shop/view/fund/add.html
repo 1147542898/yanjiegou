@@ -76,13 +76,10 @@ layui.use(['form', 'layer'], function () {
             }
         });
     });
-   form.on('select(bank_name)',function(data){
-       console.log(data)
-      console.log(data.value)
+   form.on('select(bank_name)',function(data){      
       var data=data.value;
       var bank_user_name=data.split(":").pop();
-      $("#bank_user_name").val(bank_user_name);
-      console.log(bank_user_name)
+      $("#bank_user_name").val(bank_user_name);     
    });
 });
 </script>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:79:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\index\index.html";i:1569466684;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;s:68:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\top.html";i:1569466684;s:73:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\leftmenu.html";i:1569466684;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:79:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\index\index.html";i:1569466684;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1570615895;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;s:68:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\top.html";i:1569466684;s:73:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\leftmenu.html";i:1569466684;}*/ ?>
 <!doctype html>
 <html class="x-admin-sm">
 <head>
@@ -7,11 +7,12 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="/static/admin/css/font.css">
     <link rel="stylesheet" href="/static/admin/css/xadmin.css">
     <link rel="stylesheet" href="/static/admin/css/theme10.min.css">
     <link rel="stylesheet" href="/static/admin/lib/font-awesome-4.7.0/css/font-awesome.min.css">
+
     <script type="text/javascript" src="/static/admin/js/jquery.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="/static/admin/lib/layui/layui.js" charset="utf-8"></script>
 <script type="text/javascript" src="/static/admin/js/xadmin.js"></script>
@@ -59,11 +60,12 @@ layui.use('layer',function(){
 </script>
     
 
-    
+        
 
 </head>
-<body>
 
+<body>
+    
     <!-- 顶部开始 -->
     <div class="container">
     <div class="logo">
@@ -155,16 +157,18 @@ layui.use('layer',function(){
         <div class="layui-tab tab" lay-filter="xbs_tab" lay-allowclose="false">
             <ul class="layui-tab-title">
                 <li class="home">
-                    <i class="layui-icon">&#xe68e;</i>我的桌面</li></ul>
+                    <i class="layui-icon">&#xe68e;</i>我的桌面</li>
+            </ul>
             <div class="layui-unselect layui-form-select layui-form-selected" id="tab_right">
                 <dl>
                     <dd data-type="this">关闭当前</dd>
                     <dd data-type="other">关闭其它</dd>
-                    <dd data-type="all">关闭全部</dd></dl>
+                    <dd data-type="all">关闭全部</dd>
+                </dl>
             </div>
             <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show">
-                    <iframe src='<?php echo url('admin/index/main'); ?>' frameborder="0" scrolling="yes" class="x-iframe"></iframe>
+                    <iframe src='<?php echo url(' admin/index/main'); ?>' frameborder="0" scrolling="yes" class="x-iframe"></iframe>
                 </div>
             </div>
             <div id="tab_show"></div>
@@ -174,16 +178,15 @@ layui.use('layer',function(){
     <style id="theme_style"></style>
     <!-- 右侧主体结束 -->
     <!-- 中部结束 -->
+    
 
 
+    <!--js结束-->
+    
 
-<!--js结束-->
-
-
-
+    
 
 
 </body>
 
 </html>
-
