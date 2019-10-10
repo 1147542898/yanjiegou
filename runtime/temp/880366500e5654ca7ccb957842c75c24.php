@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\view\fund\order.html";i:1570675228;s:70:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\common.html";i:1569466684;s:66:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\js.html";i:1569466684;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\view\fund\order.html";i:1570693026;s:70:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\common.html";i:1569466684;s:66:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\js.html";i:1569466684;}*/ ?>
 <!doctype html>
 <html class="x-admin-sm">
 <head>
@@ -62,7 +62,7 @@ var uploadApi = "<?php echo url('upload/index/uploadimage'); ?>";
         <div class="layui-col-md12">
             <div class="layui-card">
                 <div class="layui-card-body">
-                    <div class="layui-tab layui-tab-brief">
+                    <div class="layui-tab layui-tab-brief" lay-filter="test1">
                         <fieldset class="layui-elem-field layui-field-title">
                             <legend>订单结算</legend>
                         </fieldset>
@@ -76,18 +76,10 @@ var uploadApi = "<?php echo url('upload/index/uploadimage'); ?>";
                                 <table class="layui-table" id="jsxx" lay-filter="jsxx"></table>
                             </div>
                             <div class="layui-tab-item">
-                                <!-- <div class="demoTable">
-                                    <div class="layui-inline">
-                                        <input class="layui-input" name="key" id="key"
-                                            placeholder="<?php echo lang('pleaseEnter'); ?>关键字">
-                                    </div>
-                                    <button class="layui-btn" id="search" data-type="reload">搜索</button>
-                                    <a href="<?php echo url('index'); ?>" class="layui-btn">显示全部</a>
-                                </div> -->
-                                <table class="layui-table" id="list" lay-filter="list"></table>
+                                <table class="layui-table" id="lists" lay-filter="lists"></table>
                             </div>
                             <div class="layui-tab-item">
-                                    <table class="layui-table" id="yjsd" lay-filter="yjsd"></table>
+                                <table class="layui-table" id="yjsd" lay-filter="yjsd"></table>
                             </div>
                         </div>
                     </div>
@@ -105,26 +97,26 @@ var uploadApi = "<?php echo url('upload/index/uploadimage'); ?>";
     layui.use(['table', 'form', 'jquery', 'element'], function () {
         var table = layui.table, form = layui.form, $ = layui.jquery, element = layui.element;
         var tableIn = table.render({
-            id: 'user',
+            id: 'user0',
             elem: '#jsxx',
             url: '<?php echo url("settlements"); ?>',
-            method: 'post',          
+            method: 'post',
             page: true,
             cols: [[
                 { field: 'settlementNo', title: '结算单号', width: 150 },
                 { field: 'settlementType', title: '类型', width: 100 },
                 { field: 'settlementMoney', title: '结算金额', width: 160 },
                 { field: 'backMoney', title: '返还金额', width: 120 },
-                { field: 'createTime', title: '创建时间', width: 120 },                
-                { field: 'settlementStatus', title: '结算状态', width: 120 },                
-                { field: 'settlementTime', title: '结算时间', width: 120 },                
-                { field: 'remarks', title: '备注', width: 200 },                
+                { field: 'createTime', title: '创建时间', width: 120 },
+                { field: 'settlementStatus', title: '结算状态', width: 120 },
+                { field: 'settlementTime', title: '结算时间', width: 120 },
+                { field: 'remarks', title: '备注', width: 200 },
             ]],
             limit: 10 //每页默认显示的数量
         });
         var tableIn = table.render({
-            id: 'user',
-            elem: '#list',
+            id: 'user1',
+            elem: '#lists',
             url: '<?php echo url(""); ?>',
             method: 'post',
             // toolbar: '#topBtn',
@@ -139,8 +131,8 @@ var uploadApi = "<?php echo url('upload/index/uploadimage'); ?>";
             ]],
             limit: 10 //每页默认显示的数量
         });
-        var tableIn = table.render({
-            id: 'user',
+        var tableIn= table.render({
+            id: 'user2',
             elem: '#yjsd',
             url: '<?php echo url("jsOrder"); ?>',
             method: 'post',
@@ -153,7 +145,7 @@ var uploadApi = "<?php echo url('upload/index/uploadimage'); ?>";
                 { field: 'freight', title: '运费', width: 120 },
                 { field: 'money', title: '实付金额', width: 120 },
                 { field: 'settlementNo', title: '结算单号', width: 120 },
-                { field: 'settlementTime', title: '结算时间', width: 120 },                
+                { field: 'settlementTime', title: '结算时间', width: 120 },
             ]],
             limit: 10 //每页默认显示的数量
         });
@@ -166,14 +158,13 @@ var uploadApi = "<?php echo url('upload/index/uploadimage'); ?>";
             }
             tableIn.reload({ page: { page: 1 }, where: { key: key } });
         });
-        table.on('tool(list)', function (obj) {
+        table.on('tool(lists)', function (obj) {
             var data = obj.data;
             if (obj.event === 'sendOrder') {
-                console.log(data.id);
                 $.post("<?php echo url('setOrderjs'); ?>", { id: data.id }, function (res) {
                     if (res.code == 1) {
                         layer.msg(res.msg, { time: 1000, icon: 1 }, function () {
-                            tableIn.reload();
+                            obj.del();
                         });
                     } else {
                         layer.msg(res.msg, { time: 1000, icon: 2 });
@@ -182,6 +173,10 @@ var uploadApi = "<?php echo url('upload/index/uploadimage'); ?>";
                 });
 
             }
+        });
+        //触发事件
+        element.on('tab(test1)', function (data) {           
+            table.reload("user"+data.index);
         });
 
     });

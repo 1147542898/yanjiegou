@@ -170,7 +170,7 @@ class Fund extends Common
         $setOrder['settlementType'] = 1;
         $setOrder['shopId'] = $order_info['shop_id'];
         $setOrder['settlementMoney'] = $order_info['money'];
-        $setOrder['createTime'] = date("Y-m-d H:i:s", time());
+        $setOrder['createTime'] = date("Y-m-d H:i:s", time());       
         Db::startTrans();
         try {
             $settlementid = Db::name('settlements')->insertGetId($setOrder);
@@ -226,21 +226,13 @@ class Fund extends Common
             $where['a.shop_id'] = SHID;
             $where['b.settlementStatus']=1;
             $page = input('page') ? input('page') : 1;
-            $pageSize = input('limit') ? input('limit') : 5;                      
+            $pageSize = input('limit') ? input('limit') : 5;                                  
             $list =$this->order->alias("a")
-                ->join('settlements b','a.settlementId=b.settlementId',"LEFT")
+                ->join('settlements b','a.settlementId = b.settlementId',"LEFT")
                 ->where($where)
-                ->order('a.id','desc')
+                ->order('a.id desc')
                 ->paginate(array('list_rows' => $pageSize, 'page' => $page))
-                ->each(function ($row) {
-                    switch ($row['settlementType']) {
-                        case 0:
-                            $row['settlementType'] = "自动结算";
-                            break;
-                        case 1:
-                            $row['settlementType'] = "手动结算";
-                            break;                        
-                    } 
+                ->each(function ($row) {               
                     if($row['settlementStatus']==1){
                         $row['settlementStatus']="已结算";
                     }else{
@@ -258,8 +250,7 @@ class Fund extends Common
                             break;
                     }                 
                 })
-                ->toArray();
-               
+                ->toArray(); 
             return ['code' => 0, 'msg' => '获取成功！', 'data' => $list['data'], 'count' => $list['total'], 'rel' => 1];
         } 
     }
