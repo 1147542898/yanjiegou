@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:78:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\view\index\index.html";i:1569466684;s:70:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\common.html";i:1569466684;s:66:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\js.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\top.html";i:1569466684;s:72:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\leftmenu.html";i:1569466684;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:78:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\view\index\index.html";i:1569466684;s:70:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\common.html";i:1569466684;s:66:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\js.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\top.html";i:1570759840;s:72:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\leftmenu.html";i:1569466684;}*/ ?>
 <!doctype html>
 <html class="x-admin-sm">
 <head>
@@ -64,12 +64,12 @@ var uploadApi = "<?php echo url('upload/index/uploadimage'); ?>";
     <div class="left_open">
         <a><i title="展开左侧栏" class="iconfont">&#xe699;</i></a>
     </div>
-    <ul class="layui-nav left fast-add" lay-filter="">
+    <!-- <ul class="layui-nav left fast-add" lay-filter="">
         <li class="layui-nav-item">
             <a href="javascript:;">+新增</a>
-            <dl class="layui-nav-child">
+            <dl class="layui-nav-child"> -->
                 <!-- 二级菜单 -->
-                <dd>
+                <!-- <dd>
                     <a onclick="xadmin.open('最大化','http://www.baidu.com','','',true)">
                         <i class="iconfont">&#xe6a2;</i>弹出最大化</a></dd>
                 <dd>
@@ -86,7 +86,7 @@ var uploadApi = "<?php echo url('upload/index/uploadimage'); ?>";
                         <i class="iconfont">&#xe6b8;</i>在tab打开刷新</a></dd>
             </dl>
         </li>
-    </ul>
+    </ul> -->
     <ul class="layui-nav right" lay-filter="">
         <li class="layui-nav-item">
             <a href="javascript:;"><?php echo \think\Session::get('sinfo.ursname'); ?></a>
@@ -100,8 +100,8 @@ var uploadApi = "<?php echo url('upload/index/uploadimage'); ?>";
                     <a href="<?php echo url('shop/index/logout'); ?>">退出</a></dd>
             </dl>
         </li>
-        <li class="layui-nav-item to-index">
-            <a href="/">前台首页</a></li>
+        <!-- <li class="layui-nav-item to-index">
+            <a href="/">前台首页</a></li> -->
         <li class="layui-nav-item to-clear">
             <a href="javascript:;" id="cache">清除缓存</a></li>    
     </ul>

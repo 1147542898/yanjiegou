@@ -107,11 +107,25 @@ class Goods extends Base
 
 
         $goods['tjgoods'] = $tjgoods;
-
+        $sale_num=$this->goodsSaleNum($goods_id);
+        $goods['sale_num']=$sale_num ? $sale_num:0;
         $this->json_success($goods);
 
     }
-
+    //获取商品的月销量--v
+    public function goodsSaleNum($goods_id){       
+        $where['a.goodsid']=array('eq',$goods_id);        
+        //开始计算时间30天       
+        $time =strtotime("-30day");      
+        $where['b.paytime']=array('egt',$time);
+        $where['b.status']=array('eq',5);
+        $count=Db::name("order_goods")->alias("a")
+                ->join("order b","a.order_sn=b.order_sn","LEFT")
+                ->where($where)
+                ->value("SUM(a.num)");
+        return $count;
+    }
+    //-v
     //点击搜索商品
     public function search()
     {

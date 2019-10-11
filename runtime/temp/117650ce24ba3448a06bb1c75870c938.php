@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:79:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\index\index.html";i:1569466684;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1570615895;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;s:68:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\top.html";i:1569466684;s:73:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\leftmenu.html";i:1569466684;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:79:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\index\index.html";i:1569466684;s:71:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\common.html";i:1570755897;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\js.html";i:1569466684;s:68:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\top.html";i:1569466684;s:73:"D:\phpstudy_pro\WWW\yanjiegou\application\admin\view\Public\leftmenu.html";i:1569466684;}*/ ?>
 <!doctype html>
 <html class="x-admin-sm">
 <head>
@@ -168,7 +168,7 @@ layui.use('layer',function(){
             </div>
             <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show">
-                    <iframe src='<?php echo url(' admin/index/main'); ?>' frameborder="0" scrolling="yes" class="x-iframe"></iframe>
+                    <iframe src="<?php echo url('admin/index/main'); ?>" frameborder="0" scrolling="yes" class="x-iframe"></iframe>
                 </div>
             </div>
             <div id="tab_show"></div>

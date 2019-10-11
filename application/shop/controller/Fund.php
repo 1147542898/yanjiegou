@@ -227,8 +227,8 @@ class Fund extends Common
             $where['b.settlementStatus']=1;
             $page = input('page') ? input('page') : 1;
             $pageSize = input('limit') ? input('limit') : 5;                                  
-            $list =$this->order->alias("a")
-                ->join('settlements b','a.settlementId = b.settlementId',"LEFT")
+            $list =model("settlements")->alias("b")
+                ->join('order a','a.settlementId = b.settlementId',"LEFT")
                 ->where($where)
                 ->order('a.id desc')
                 ->paginate(array('list_rows' => $pageSize, 'page' => $page))
@@ -316,4 +316,7 @@ class Fund extends Common
             return ['code' => 0, 'msg' => '删除失败！'];
         }
     }
+        
+    
+    
 }

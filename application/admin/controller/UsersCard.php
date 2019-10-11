@@ -44,10 +44,10 @@ class UsersCard extends Common{
       * 添加会员卡
       **/
     public function add(){
-        if(request()->isPost()) {
+        if(request()->isPost()) {           
             $data = input('post.');
-            $data['adduid'] = session('aid');
-            $data['addusername'] = session('username');
+            $data['adduid'] = session('seadmininfo.aid');
+            $data['addusername'] = session('seadmininfo.username');
             $data['shopid']=0;
             $data['create_time']=time();
             $insert=$this->model->insert($data);
@@ -71,9 +71,14 @@ class UsersCard extends Common{
             return $this->resultmsg('修改失败',0);
         }
         $id = input('id');
-        $info=$this->model->find($id);
-        $this->assign('info',$info);
-        return $this->fetch();
+        if($id){
+            $info=$this->model->find($id);
+            $this->assign('info',$info);
+            return $this->fetch();
+        }else{           
+            return $this->fetch("add");
+        }
+       
      }
 
     public function listorder(){
@@ -99,7 +104,7 @@ class UsersCard extends Common{
      * 平台会员卡
      **/
     public function info(){
-        $info=$this->model->where(['shopid'=>0])->find();
+        $info=$this->model->where(['shopid'=>0])->find();       
         $this->assign('info',$info);
         return $this->fetch();
     }

@@ -2,6 +2,7 @@
 namespace app\api\controller;
 use app\api\model\Comment;
 use app\api\model\Report;
+use app\api\model\Shop as ShopModel;
 use think\Db;
 use think\Request;
 // 商家
@@ -28,11 +29,12 @@ class Shop extends Base
 
         //物流服务  logistics
         //服务态度  manner
-
-        $shop = \app\api\model\Shop::where('id',$shop_id)->field('id,name,shoplogo,intro,province,city,area,address,description,quality,service')->find();
-
-        $shop['shoplogo'] = $this->domain().$shop['shoplogo'];
-
+        //liu
+        $shop = Db::name("shop")->where('id',$shop_id)->field('id,name,shoplogo,intro,province,city,area,address,description,quality,service')->find();
+        $shop['shop_fans']=ShopModel::get($shop_id)->shopFans()->count();
+        $shop['shop_goods_num']=ShopModel::get($shop_id)->shopGoodsNum()->count();
+        $shop['shoplogo'] = $this->domain().$shop['shoplogo'];       
+        $shop['sale_num']=ShopModel::shopOrderNum($shop_id);
         if($res!=null){
             $res = $res[0];
             if($num>0){
@@ -212,6 +214,6 @@ class Shop extends Base
         }
 
     }
-
+    
 
 }
