@@ -1636,7 +1636,7 @@ class Users extends Base
         $rows = empty(input('post.rows'))?10:input('post.rows');
         $carts = Db::name('shopcart')->alias('c')
             ->join('goods g','g.id=c.goods_id','LEFT')
-            ->where(['user_id'=>$user_id])
+            ->where(['c.user_id'=>$user_id,'c.is_new'=>0])
             ->field('c.*,g.shopid,g.headimg,g.title,g.price')
             ->select();
 

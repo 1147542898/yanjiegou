@@ -1,0 +1,87 @@
+---------------------------------------------------------------
+[ 2019-10-12T09:18:25+08:00 ] 127.0.0.1 POST www.yjg.com/api/shop/index
+[运行时间：0.099005s] [吞吐率：10.10req/s] [内存消耗：3,185.26kb] [文件加载：64]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'shop',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '163',
+  'content-type' => 'multipart/form-data; boundary=--------------------------897327537424183662585584',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.yjg.com',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => '613cb2ce-1108-4564-9839-6edef1883049',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'api/shop/index' => '',
+  'shop_id' => '4',
+)
+[ info ] [ RUN ] app\api\controller\Shop->index[ D:\phpstudy_pro\WWW\yanjiegou\application\api\controller\Shop.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_comment` LIMIT 1 [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT sum(logistics) as logistics,sum(manner) as manner FROM `shy_comment` WHERE  `shop_id` = 4 GROUP BY `shop_id` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_comment` WHERE  `shop_id` = 4 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_shop` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`shoplogo`,`intro`,`province`,`city`,`area`,`address`,`description`,`quality`,`service` FROM `shy_shop` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_shop` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_collectionshop` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_collectionshop` WHERE  `shop_id` = 4 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_shop` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 4  AND `status` = 5 LIMIT 1 [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_collectionshop` WHERE  `shop_id` = 4 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`headimg`,`price` FROM `shy_goods` WHERE  `shopid` = 4 ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_collectiongoods` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_collectiongoods` WHERE  `goods_id` = 5 LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-10-12T09:49:11+08:00 ] 127.0.0.1 POST www.yjg.com/api/brand/lists
+[运行时间：0.038002s] [吞吐率：26.31req/s] [内存消耗：2,773.16kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'brand',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '163',
+  'content-type' => 'multipart/form-data; boundary=--------------------------401070773356458103383219',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.yjg.com',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => 'b14c97c0-0cde-4909-be66-ac82dba998a7',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'api/brand/lists' => '',
+  'shop_id' => '4',
+)
+[ info ] [ RUN ] app\api\controller\Brand->lists[ D:\phpstudy_pro\WWW\yanjiegou\application\api\controller\Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_brand` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `etitle` FROM `shy_goods_brand` GROUP BY `etitle` ORDER BY `etitle` ASC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`pic` FROM `shy_goods_brand` WHERE  `etitle` = 'C' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`pic` FROM `shy_goods_brand` WHERE  `etitle` = 'D' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`pic` FROM `shy_goods_brand` WHERE  `etitle` = 'G' [ RunTime:0.001000s ]
