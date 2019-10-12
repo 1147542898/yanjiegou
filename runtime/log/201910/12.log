@@ -85,3 +85,40 @@
 [ sql ] [ SQL ] SELECT `id`,`title`,`pic` FROM `shy_goods_brand` WHERE  `etitle` = 'C' [ RunTime:0.000000s ]
 [ sql ] [ SQL ] SELECT `id`,`title`,`pic` FROM `shy_goods_brand` WHERE  `etitle` = 'D' [ RunTime:0.000000s ]
 [ sql ] [ SQL ] SELECT `id`,`title`,`pic` FROM `shy_goods_brand` WHERE  `etitle` = 'G' [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-10-12T16:26:22+08:00 ] 127.0.0.1 POST www.yjg.com/api/brand/lists
+[运行时间：0.065004s] [吞吐率：15.38req/s] [内存消耗：2,773.16kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'brand',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '163',
+  'content-type' => 'multipart/form-data; boundary=--------------------------627584030389182980965529',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.yjg.com',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => 'acae9ed9-2c04-4ac8-b614-f0ea34f25b43',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'api/brand/lists' => '',
+  'shop_id' => '4',
+)
+[ info ] [ RUN ] app\api\controller\Brand->lists[ D:\phpstudy_pro\WWW\yanjiegou\application\api\controller\Brand.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_brand` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `etitle` FROM `shy_goods_brand` GROUP BY `etitle` ORDER BY `etitle` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`pic` FROM `shy_goods_brand` WHERE  `etitle` = 'C' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`pic` FROM `shy_goods_brand` WHERE  `etitle` = 'D' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`pic` FROM `shy_goods_brand` WHERE  `etitle` = 'G' [ RunTime:0.000000s ]

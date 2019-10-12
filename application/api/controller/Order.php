@@ -26,7 +26,6 @@ class Order extends Base
 
         $shop_ids = array_unique(array_column($carts,'shopid'));
         $shop_ids = implode(',',$shop_ids);
-
         //获取当前用户领取的商家优惠券
         $coupons = Db::name('couponlog')->alias('clog')
             ->join('coupon c','c.id=clog.coupon_id')
@@ -34,7 +33,6 @@ class Order extends Base
             ->field('clog.id as clogid,clog.user_id,clog.is_use,clog.receive_time,c.*')
             ->order('clog.id desc')
             ->select();
-
         $time = time();
         foreach($coupons as $cck=>$ccv){
             if($time>$ccv['end_time']){

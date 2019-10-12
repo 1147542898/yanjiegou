@@ -333,7 +333,8 @@ class Goods extends Base
         //立即购买
         if($is_new==1){
             $cart_id = Db::name('shopcart')->insertGetId($info);
-            $this->json_success($cart_id,"加入购物车成功");
+            $data['cart_id']=$cart_id;
+            $this->json_success($data,"加入购物车成功");
             die;
         }
         $where['sku_id'] = $sku_id;
