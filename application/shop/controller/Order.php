@@ -76,8 +76,9 @@ class Order extends Common{
         $id=input('id/d');
         $info=$this->model->where(['id'=>$id])->find();
         if ($info['status'] == 7) {
-            $info['shtime']=Db::name('orderrefund')->where(['order_id'=>$id])->value('add_time');
+            $info['shtime']=Db::name('orderrefund')->where(['order_id'=>$id])->value('add_time');            
         }
+        // $info['express_company']=config('system.express_company')[$info['expresscom']]['statusname'];
         $info['pay_type']=get_status($info['pay_type'],'pay_type');
         $goods=Db::name('orderGoods')->alias('og')
               ->join('goods g','g.id = og.goodsid','left')
