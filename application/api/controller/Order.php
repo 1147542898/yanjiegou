@@ -617,6 +617,7 @@ class Order extends Base
         if($otype==1){
             $headimgs = explode(',',$orders_goods['headimg']);
             $orders_goods['headimg'] = $this->domain().$headimgs[0];
+            
             $this->json_success($orders_goods);
             die;
         }else{
