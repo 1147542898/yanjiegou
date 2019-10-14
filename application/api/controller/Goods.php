@@ -280,17 +280,21 @@ class Goods extends Base
             die;
         }
         /*--chen*/
-        $sku_id = input('post.sku_id');
-        if (empty($sku_id)) {
-            $this->json_error('请传过来sku编号');
+        $is_spec=Db::name('goods')->where('goods_id',$goods_id)->value('is_spec');
+        $sku_id = input('post.sku_id')?input('post.sku_id'):0;
+        if ($is_spec == 1) {
+            if (empty($sku_id)) {
+                $this->json_error('请传过来sku编号');
+            }
+            // 查看sku库存是否充足
+            $sku = Db::name('GoodsSttrxsku')->where('id', $sku_id)->find();
+            $number = $sku ? $sku['number'] : 0;
+            if (!$sku || $num > $number) {
+                $this->json_error('库存不足');
+                die;
+            }
         }
-        // 查看sku库存是否充足
-        $sku = Db::name('GoodsSttrxsku')->where('id', $sku_id)->find();
-        $number = $sku ? $sku['number'] : 0;
-        if (!$sku || $num > $number) {
-            $this->json_error('库存不足');
-            die;
-        }
+        
         $is_new = input('post.is_new') ? input('post.is_new') : 0;
         /*--chen*/
 
@@ -328,7 +332,11 @@ class Goods extends Base
             'update_time' => time()
         ];
         /*--chen*/
-        $info['sku_id'] = $sku_id;
+        if ($is_spec == 1) {
+            $info['sku_id'] = $sku_id;
+            $where['sku_id'] = $sku_id;
+        } 
+        
         //立即购买
         if($is_new==1){
             $cart_id = Db::name('shopcart')->insertGetId($info);
@@ -336,7 +344,7 @@ class Goods extends Base
             $this->json_success($data,"加入购物车成功");
             die;
         }
-        $where['sku_id'] = $sku_id;
+               
         /*--chen*/
         //加入之前判断购物车是否已经有了，有了话，只加数量
         $where['goods_id'] = $goods_id;
@@ -359,11 +367,13 @@ class Goods extends Base
             }
             /*--chen*/
             // cku库存检测
-            $number = $sku['number'];
-            $sku_num = $cartnum + $num;
-            if ($sku_num > $number) {
-                $this->json_error('库存不足');
-                die;
+            if ($is_spec == 1) {
+                $number = $sku['number'];
+                $sku_num = $cartnum + $num;
+                if ($sku_num > $number) {
+                    $this->json_error('库存不足');
+                    die;
+                }
             }
             /*--chen*/
 
