@@ -1,0 +1,3711 @@
+---------------------------------------------------------------
+[ 2019-10-11T09:14:05+08:00 ] 127.0.0.1 GET www.yanjg.com/
+[运行时间：0.203742s] [吞吐率：4.91req/s] [内存消耗：1,960.80kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T09:14:05+08:00 ] 127.0.0.1 GET www.yanjg.com/admin/login/index.html
+[运行时间：0.391478s] [吞吐率：2.55req/s] [内存消耗：1,973.97kb] [文件加载：64]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\login\index.html [ array (
+  0 => 'system',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T09:14:06+08:00 ] 127.0.0.1 GET www.yanjg.com/admin/login/verify.html
+[运行时间：0.260047s] [吞吐率：3.85req/s] [内存消耗：1,971.16kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/verify_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T09:14:10+08:00 ] 127.0.0.1 POST www.yanjg.com/admin/login/index.html
+[运行时间：0.581800s] [吞吐率：1.72req/s] [内存消耗：2,820.27kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com/admin/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com',
+  'accept' => '*/*',
+  'content-length' => '43',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+  'username' => 'admin',
+  'password' => '123123',
+  'vercode' => 'jy4f',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.138497s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_admin` [ RunTime:0.053107s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.051286s ]
+---------------------------------------------------------------
+[ 2019-10-11T09:14:13+08:00 ] 127.0.0.1 GET www.yanjg.com/admin/index/index.html
+[运行时间：0.575854s] [吞吐率：1.74req/s] [内存消耗：2,762.56kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com/admin/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/index/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\index\index.html [ array (
+  0 => 'attachmark',
+  1 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.113481s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_auth_rule` [ RunTime:0.075955s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_auth_rule` WHERE  `menustatus` = 1 ORDER BY `sort` ASC [ RunTime:0.075543s ]
+---------------------------------------------------------------
+[ 2019-10-11T09:14:14+08:00 ] 127.0.0.1 GET www.yanjg.com/admin/index/main.html
+[运行时间：1.231679s] [吞吐率：0.81req/s] [内存消耗：2,710.95kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/index/main_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Index->main[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\index\main.html [ array (
+  0 => 'attachmark',
+  1 => 'top',
+  2 => 'bottom1',
+  3 => 'bottom2',
+  4 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080632s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_users` [ RunTime:0.051934s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_users` WHERE  `reg_time` BETWEEN 1570723200 AND 1570809599 LIMIT 1 [ RunTime:0.051518s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order` [ RunTime:0.051703s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `add_time` BETWEEN 1570723200 AND 1570809599 LIMIT 1 [ RunTime:0.053440s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_shop` [ RunTime:0.054288s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `addtime` BETWEEN '1570723200' AND '1570809599'  AND `status` = 2 LIMIT 1 [ RunTime:0.051567s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_bigshop` [ RunTime:0.052037s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_bigshop` WHERE  `addtime` BETWEEN '1570723200' AND '1570809599' LIMIT 1 [ RunTime:0.055470s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `addtime` BETWEEN '1570723200' AND '1570809599'  AND `status` = 1 LIMIT 1 [ RunTime:0.053315s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.051325s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `createtime` BETWEEN 1570723200 AND 1570809599  AND `check_status` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.051151s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `createtime` BETWEEN 1570723200 AND 1570809599  AND `check_status` = 0 LIMIT 1 [ RunTime:0.050697s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_users` LIMIT 1 [ RunTime:0.051096s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` LIMIT 1 [ RunTime:0.051789s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `shy_order` LIMIT 1 [ RunTime:0.050441s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `status` = 2 LIMIT 1 [ RunTime:0.051313s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_bigshop` LIMIT 1 [ RunTime:0.050817s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `check_status` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.052368s ]
+[ sql ] [ SQL ] SELECT add_time,sum(money) sum,count(id) total FROM `shy_order` WHERE  `add_time` BETWEEN 1568131200 AND 1570809599 GROUP BY date_format(from_unixtime(add_time),'%Y-%m-%d') ORDER BY `add_time` ASC [ RunTime:0.052465s ]
+---------------------------------------------------------------
+[ 2019-10-11T09:14:46+08:00 ] 127.0.0.1 GET www.yanjg.com/admin/order/refund.html
+[运行时间：0.302552s] [吞吐率：3.31req/s] [内存消耗：2,776.51kb] [文件加载：74]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T09:14:48+08:00 ] 127.0.0.1 POST www.yanjg.com/admin/order/refund.html
+[运行时间：0.615685s] [吞吐率：1.62req/s] [内存消耗：3,069.45kb] [文件加载：78]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.112450s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.075493s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.089861s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.104938s ]
+---------------------------------------------------------------
+[ 2019-10-11T09:28:48+08:00 ] 127.0.0.1 GET 127.0.0.1:5577/
+[运行时间：0.046671s] [吞吐率：21.43req/s] [内存消耗：1,961.90kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_b7430e7b23cd88324f5713163082a431=1552534052,1552701802; Hm_lvt_8d3ecad75cd3d16ca1f01099e0ad3065=1569216855',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '127.0.0.1:5577',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T09:28:48+08:00 ] 127.0.0.1 GET 127.0.0.1:5577/admin/login/index.html
+[运行时间：0.030352s] [吞吐率：32.95req/s] [内存消耗：1,974.52kb] [文件加载：64]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_b7430e7b23cd88324f5713163082a431=1552534052,1552701802; Hm_lvt_8d3ecad75cd3d16ca1f01099e0ad3065=1569216855; PHPSESSID=ltksqebcbaqe9chkgn11dvcpfe',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '127.0.0.1:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\login\index.html [ array (
+  0 => 'system',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T09:28:48+08:00 ] 127.0.0.1 GET 127.0.0.1:5577/admin/login/verify.html
+[运行时间：0.064922s] [吞吐率：15.40req/s] [内存消耗：1,972.09kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_b7430e7b23cd88324f5713163082a431=1552534052,1552701802; Hm_lvt_8d3ecad75cd3d16ca1f01099e0ad3065=1569216855; PHPSESSID=ltksqebcbaqe9chkgn11dvcpfe',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:5577/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'connection' => 'close',
+  'host' => '127.0.0.1:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/verify_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T09:28:55+08:00 ] 127.0.0.1 POST 127.0.0.1:5577/admin/login/index.html
+[运行时间：0.235821s] [吞吐率：4.24req/s] [内存消耗：2,821.07kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_b7430e7b23cd88324f5713163082a431=1552534052,1552701802; Hm_lvt_8d3ecad75cd3d16ca1f01099e0ad3065=1569216855; PHPSESSID=ltksqebcbaqe9chkgn11dvcpfe',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:5577/admin/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1:5577',
+  'accept' => '*/*',
+  'content-length' => '43',
+  'connection' => 'close',
+  'host' => '127.0.0.1:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+  'username' => 'admin',
+  'password' => '123123',
+  'vercode' => '6lfp',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085624s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_admin` [ RunTime:0.055940s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.051654s ]
+---------------------------------------------------------------
+[ 2019-10-11T09:28:57+08:00 ] 127.0.0.1 GET 127.0.0.1:5577/admin/index/index.html
+[运行时间：0.042425s] [吞吐率：23.57req/s] [内存消耗：2,138.63kb] [文件加载：65]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_b7430e7b23cd88324f5713163082a431=1552534052,1552701802; Hm_lvt_8d3ecad75cd3d16ca1f01099e0ad3065=1569216855; PHPSESSID=ltksqebcbaqe9chkgn11dvcpfe',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:5577/admin/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '127.0.0.1:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/index/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\index\index.html [ array (
+  0 => 'attachmark',
+  1 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T09:28:58+08:00 ] 127.0.0.1 GET 127.0.0.1:5577/admin/index/main.html
+[运行时间：1.189179s] [吞吐率：0.84req/s] [内存消耗：2,711.63kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_b7430e7b23cd88324f5713163082a431=1552534052,1552701802; Hm_lvt_8d3ecad75cd3d16ca1f01099e0ad3065=1569216855; PHPSESSID=ltksqebcbaqe9chkgn11dvcpfe',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '127.0.0.1:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/index/main_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Index->main[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\index\main.html [ array (
+  0 => 'attachmark',
+  1 => 'top',
+  2 => 'bottom1',
+  3 => 'bottom2',
+  4 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078385s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_users` [ RunTime:0.057295s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_users` WHERE  `reg_time` BETWEEN 1570723200 AND 1570809599 LIMIT 1 [ RunTime:0.051521s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order` [ RunTime:0.052189s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `add_time` BETWEEN 1570723200 AND 1570809599 LIMIT 1 [ RunTime:0.050973s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_shop` [ RunTime:0.076169s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `addtime` BETWEEN '1570723200' AND '1570809599'  AND `status` = 2 LIMIT 1 [ RunTime:0.061743s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_bigshop` [ RunTime:0.062712s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_bigshop` WHERE  `addtime` BETWEEN '1570723200' AND '1570809599' LIMIT 1 [ RunTime:0.064324s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `addtime` BETWEEN '1570723200' AND '1570809599'  AND `status` = 1 LIMIT 1 [ RunTime:0.052233s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.051795s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `createtime` BETWEEN 1570723200 AND 1570809599  AND `check_status` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.051021s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `createtime` BETWEEN 1570723200 AND 1570809599  AND `check_status` = 0 LIMIT 1 [ RunTime:0.050865s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_users` LIMIT 1 [ RunTime:0.051413s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` LIMIT 1 [ RunTime:0.051928s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `shy_order` LIMIT 1 [ RunTime:0.051007s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `status` = 2 LIMIT 1 [ RunTime:0.051120s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_bigshop` LIMIT 1 [ RunTime:0.052968s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `check_status` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.061922s ]
+[ sql ] [ SQL ] SELECT add_time,sum(money) sum,count(id) total FROM `shy_order` WHERE  `add_time` BETWEEN 1568131200 AND 1570809599 GROUP BY date_format(from_unixtime(add_time),'%Y-%m-%d') ORDER BY `add_time` ASC [ RunTime:0.051712s ]
+---------------------------------------------------------------
+[ 2019-10-11T09:29:02+08:00 ] 127.0.0.1 GET 127.0.0.1:5577/admin/order/refund.html
+[运行时间：0.047513s] [吞吐率：21.05req/s] [内存消耗：2,777.43kb] [文件加载：74]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_b7430e7b23cd88324f5713163082a431=1552534052,1552701802; Hm_lvt_8d3ecad75cd3d16ca1f01099e0ad3065=1569216855; PHPSESSID=ltksqebcbaqe9chkgn11dvcpfe',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '127.0.0.1:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T09:29:03+08:00 ] 127.0.0.1 POST 127.0.0.1:5577/admin/order/refund.html
+[运行时间：0.278513s] [吞吐率：3.59req/s] [内存消耗：3,070.38kb] [文件加载：78]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_b7430e7b23cd88324f5713163082a431=1552534052,1552701802; Hm_lvt_8d3ecad75cd3d16ca1f01099e0ad3065=1569216855; PHPSESSID=ltksqebcbaqe9chkgn11dvcpfe',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://127.0.0.1:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => '127.0.0.1:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077488s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.051197s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.050493s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.051886s ]
+---------------------------------------------------------------
+[ 2019-10-11T09:30:08+08:00 ] 192.168.0.102 GET 192.168.0.108:5577/
+[运行时间：0.027906s] [吞吐率：35.83req/s] [内存消耗：1,960.96kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T09:30:08+08:00 ] 192.168.0.102 GET 192.168.0.108:5577/admin/login/index.html
+[运行时间：0.029455s] [吞吐率：33.95req/s] [内存消耗：1,974.11kb] [文件加载：64]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4uv7bcdkclo3q97i3afs5h2grm',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\login\index.html [ array (
+  0 => 'system',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T09:30:08+08:00 ] 192.168.0.102 GET 192.168.0.108:5577/admin/login/verify.html
+[运行时间：0.030017s] [吞吐率：33.31req/s] [内存消耗：1,971.21kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4uv7bcdkclo3q97i3afs5h2grm',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.108:5577/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/verify_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T09:30:21+08:00 ] 192.168.0.102 POST 192.168.0.108:5577/admin/login/index.html
+[运行时间：0.306321s] [吞吐率：3.26req/s] [内存消耗：2,820.47kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4uv7bcdkclo3q97i3afs5h2grm',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.108:5577/admin/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://192.168.0.108:5577',
+  'accept' => '*/*',
+  'content-length' => '43',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+  'username' => 'admin',
+  'password' => '123123',
+  'vercode' => 'RVBI',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.114302s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_admin` [ RunTime:0.075012s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.077149s ]
+---------------------------------------------------------------
+[ 2019-10-11T09:30:23+08:00 ] 192.168.0.102 GET 192.168.0.108:5577/admin/index/index.html
+[运行时间：0.034211s] [吞吐率：29.23req/s] [内存消耗：2,137.89kb] [文件加载：65]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4uv7bcdkclo3q97i3afs5h2grm',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.108:5577/admin/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/index/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\index\index.html [ array (
+  0 => 'attachmark',
+  1 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T09:30:24+08:00 ] 192.168.0.102 GET 192.168.0.108:5577/admin/index/main.html
+[运行时间：1.111893s] [吞吐率：0.90req/s] [内存消耗：2,711.14kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4uv7bcdkclo3q97i3afs5h2grm',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.108:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/index/main_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Index->main[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\index\main.html [ array (
+  0 => 'attachmark',
+  1 => 'top',
+  2 => 'bottom1',
+  3 => 'bottom2',
+  4 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083380s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_users` [ RunTime:0.051404s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_users` WHERE  `reg_time` BETWEEN 1570723200 AND 1570809599 LIMIT 1 [ RunTime:0.052088s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order` [ RunTime:0.051827s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `add_time` BETWEEN 1570723200 AND 1570809599 LIMIT 1 [ RunTime:0.052830s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_shop` [ RunTime:0.052058s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `addtime` BETWEEN '1570723200' AND '1570809599'  AND `status` = 2 LIMIT 1 [ RunTime:0.050813s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_bigshop` [ RunTime:0.051627s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_bigshop` WHERE  `addtime` BETWEEN '1570723200' AND '1570809599' LIMIT 1 [ RunTime:0.054186s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `addtime` BETWEEN '1570723200' AND '1570809599'  AND `status` = 1 LIMIT 1 [ RunTime:0.051473s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.052063s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `createtime` BETWEEN 1570723200 AND 1570809599  AND `check_status` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.051064s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `createtime` BETWEEN 1570723200 AND 1570809599  AND `check_status` = 0 LIMIT 1 [ RunTime:0.050962s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_users` LIMIT 1 [ RunTime:0.050976s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` LIMIT 1 [ RunTime:0.051764s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `shy_order` LIMIT 1 [ RunTime:0.050337s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `status` = 2 LIMIT 1 [ RunTime:0.051586s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_bigshop` LIMIT 1 [ RunTime:0.050475s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `check_status` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.051381s ]
+[ sql ] [ SQL ] SELECT add_time,sum(money) sum,count(id) total FROM `shy_order` WHERE  `add_time` BETWEEN 1568131200 AND 1570809599 GROUP BY date_format(from_unixtime(add_time),'%Y-%m-%d') ORDER BY `add_time` ASC [ RunTime:0.051490s ]
+---------------------------------------------------------------
+[ 2019-10-11T09:30:43+08:00 ] 192.168.0.102 GET 192.168.0.108:5577/admin/system/system.html
+[运行时间：0.491568s] [吞吐率：2.03req/s] [内存消耗：2,643.90kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'system',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4uv7bcdkclo3q97i3afs5h2grm',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.108:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/system/system_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\System->system[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\System.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\system\system.html [ array (
+  0 => 'attachmark',
+  1 => 'system',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.108807s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_system` [ RunTime:0.071368s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_system` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.070794s ]
+---------------------------------------------------------------
+[ 2019-10-11T09:30:47+08:00 ] 192.168.0.102 GET 192.168.0.108:5577/admin/orderreason/lists.html
+[运行时间：0.142503s] [吞吐率：7.02req/s] [内存消耗：2,673.20kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'orderreason',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4uv7bcdkclo3q97i3afs5h2grm',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.108:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/orderreason/lists_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Orderreason->lists[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Orderreason.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\orderreason\lists.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T09:30:48+08:00 ] 192.168.0.102 POST 192.168.0.108:5577/admin/orderreason/lists.html
+[运行时间：0.283496s] [吞吐率：3.53req/s] [内存消耗：2,643.38kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'orderreason',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4uv7bcdkclo3q97i3afs5h2grm',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.108:5577/admin/orderreason/lists.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://192.168.0.108:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/orderreason/lists_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Orderreason->lists[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Orderreason.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078189s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderreason` [ RunTime:0.050964s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderreason` LIMIT 1 [ RunTime:0.050709s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_orderreason` LIMIT 0,10 [ RunTime:0.051085s ]
+---------------------------------------------------------------
+[ 2019-10-11T10:08:35+08:00 ] 192.168.0.102 OPTIONS 192.168.0.108:5577/yjg/api/order/ordersub
+[运行时间：0.095269s] [吞吐率：10.50req/s] [内存消耗：1,621.05kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'yjg',
+    1 => 'api',
+    2 => 'order',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:8080/js?cart_id=190&skku=%E5%B0%BA%E7%A0%81%3AXL%20%E9%A2%9C%E8%89%B2%3A%E8%93%9D%20&total_amount=0.02&selected_products=2',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://localhost:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'yjg/api/order/ordersub' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T10:09:29+08:00 ] 192.168.0.102 GET 192.168.0.108:5577/yjg/api/order/ordersub
+[运行时间：0.022677s] [吞吐率：44.10req/s] [内存消耗：1,619.80kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'yjg',
+    1 => 'api',
+    2 => 'order',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'yjg/api/order/ordersub' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T10:09:52+08:00 ] 192.168.0.102 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.126245s] [吞吐率：7.92req/s] [内存消耗：1,921.26kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:8080/js?cart_id=190&skku=%E5%B0%BA%E7%A0%81%3AXL%20%E9%A2%9C%E8%89%B2%3A%E8%93%9D%20&total_amount=0.02&selected_products=2',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://localhost:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [64]Cannot redeclare app\api\controller\Order::refund()[D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php:840]
+---------------------------------------------------------------
+[ 2019-10-11T10:52:51+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.115701s] [吞吐率：8.64req/s] [内存消耗：1,920.96kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?token=55&cart_id=191&id=3&idd=2&total_amount=0.01&selected_products=2',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [64]Cannot redeclare app\api\controller\Order::refund()[D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php:840]
+---------------------------------------------------------------
+[ 2019-10-11T10:53:16+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.034536s] [吞吐率：28.96req/s] [内存消耗：1,921.02kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?token=55&cart_id=191&id=3&idd=2&total_amount=0.01&selected_products=2',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [64]Cannot redeclare app\api\controller\Order::refund()[D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php:841]
+---------------------------------------------------------------
+[ 2019-10-11T11:04:30+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.035662s] [吞吐率：28.04req/s] [内存消耗：1,921.02kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?token=55&cart_id=191&id=3&idd=2&total_amount=0.01&selected_products=3',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [64]Cannot redeclare app\api\controller\Order::refund()[D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php:841]
+---------------------------------------------------------------
+[ 2019-10-11T11:05:07+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.028859s] [吞吐率：34.65req/s] [内存消耗：1,921.02kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?token=55&cart_id=191&id=3&idd=2&total_amount=0.01&selected_products=3',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [64]Cannot redeclare app\api\controller\Order::refund()[D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php:841]
+---------------------------------------------------------------
+[ 2019-10-11T11:05:46+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.027340s] [吞吐率：36.58req/s] [内存消耗：1,921.02kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?token=55&cart_id=191&id=3&idd=2&total_amount=0.01&selected_products=3',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [64]Cannot redeclare app\api\controller\Order::refund()[D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php:841]
+---------------------------------------------------------------
+[ 2019-10-11T11:10:12+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.034388s] [吞吐率：29.08req/s] [内存消耗：1,921.46kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [64]Cannot redeclare app\api\controller\Order::refund()[D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php:841]
+---------------------------------------------------------------
+[ 2019-10-11T11:11:22+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.034624s] [吞吐率：28.88req/s] [内存消耗：1,921.46kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [64]Cannot redeclare app\api\controller\Order::refund()[D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php:841]
+---------------------------------------------------------------
+[ 2019-10-11T11:13:26+08:00 ] 192.168.0.108 GET 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.039419s] [吞吐率：25.37req/s] [内存消耗：1,919.95kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [64]Cannot redeclare app\api\controller\Order::refund()[D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php:841]
+---------------------------------------------------------------
+[ 2019-10-11T11:14:46+08:00 ] 192.168.0.108 GET 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.101207s] [吞吐率：9.88req/s] [内存消耗：1,786.59kb] [文件加载：56]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:15:02+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.027581s] [吞吐率：36.26req/s] [内存消耗：1,788.02kb] [文件加载：56]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:15:19+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.054552s] [吞吐率：18.33req/s] [内存消耗：1,707.37kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:17:26+08:00 ] 192.168.0.102 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.032342s] [吞吐率：30.92req/s] [内存消耗：1,707.25kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190&skku=%E5%B0%BA%E7%A0%81%3AXL%20%E9%A2%9C%E8%89%B2%3A%E8%93%9D%20&total_amount=0.02&selected_products=2',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:17:47+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.026322s] [吞吐率：37.99req/s] [内存消耗：1,707.37kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:18:20+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.024617s] [吞吐率：40.62req/s] [内存消耗：1,707.41kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:18:32+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.026200s] [吞吐率：38.17req/s] [内存消耗：1,707.41kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:19:09+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.055036s] [吞吐率：18.17req/s] [内存消耗：1,707.37kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:19:51+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.033904s] [吞吐率：29.49req/s] [内存消耗：1,707.37kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:20:09+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.031207s] [吞吐率：32.04req/s] [内存消耗：1,707.41kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:20:31+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.022714s] [吞吐率：44.03req/s] [内存消耗：1,707.41kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:20:42+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.026896s] [吞吐率：37.18req/s] [内存消耗：1,707.41kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:22:19+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.044273s] [吞吐率：22.59req/s] [内存消耗：1,707.37kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:22:23+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.025918s] [吞吐率：38.58req/s] [内存消耗：1,707.37kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:22:25+08:00 ] 192.168.0.102 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.026508s] [吞吐率：37.72req/s] [内存消耗：1,707.25kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190&skku=%E5%B0%BA%E7%A0%81%3AXL%20%E9%A2%9C%E8%89%B2%3A%E8%93%9D%20&total_amount=0.02&selected_products=2',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:22:26+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.025228s] [吞吐率：39.64req/s] [内存消耗：1,707.37kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:22:30+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.024506s] [吞吐率：40.81req/s] [内存消耗：1,707.37kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:22:30+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.024496s] [吞吐率：40.82req/s] [内存消耗：1,707.37kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:22:30+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.024102s] [吞吐率：41.49req/s] [内存消耗：1,707.37kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:22:31+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.025334s] [吞吐率：39.47req/s] [内存消耗：1,707.37kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:24:36+08:00 ] 192.168.0.102 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.031027s] [吞吐率：32.23req/s] [内存消耗：1,707.23kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:8080/js?cart_id=190&skku=%E5%B0%BA%E7%A0%81%3AXL%20%E9%A2%9C%E8%89%B2%3A%E8%93%9D%20&total_amount=0.02&selected_products=2',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://localhost:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:28:14+08:00 ] 192.168.0.102 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.032830s] [吞吐率：30.46req/s] [内存消耗：1,707.23kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:8080/js?cart_id=190&skku=%E5%B0%BA%E7%A0%81%3AXL%20%E9%A2%9C%E8%89%B2%3A%E8%93%9D%20&total_amount=0.02&selected_products=2',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://localhost:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:40:55+08:00 ] 192.168.0.102 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.036605s] [吞吐率：27.32req/s] [内存消耗：1,707.25kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190&skku=%E5%B0%BA%E7%A0%81%3AXL%20%E9%A2%9C%E8%89%B2%3A%E8%93%9D%20&total_amount=0.02&selected_products=2',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:40:57+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.028139s] [吞吐率：35.54req/s] [内存消耗：1,707.37kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:41:56+08:00 ] 192.168.0.108 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.028624s] [吞吐率：34.94req/s] [内存消耗：1,707.37kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T11:48:28+08:00 ] 192.168.0.102 OPTIONS 192.168.0.108:5577/api/order/ordersub
+[运行时间：0.035033s] [吞吐率：28.54req/s] [内存消耗：1,707.25kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190&skku=%E5%B0%BA%E7%A0%81%3AXL%20%E9%A2%9C%E8%89%B2%3A%E8%93%9D%20&total_amount=0.02&selected_products=2',
+  'accept' => '*/*',
+  'access-control-request-headers' => 'content-type',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://192.168.0.102:8080',
+  'access-control-request-method' => 'POST',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T12:02:09+08:00 ] 192.168.0.102 GET 192.168.0.108:5577/api/order/ordersub?params%5Buser_id%5D=8&params%5Bpay_type%5D=1&params%5Bmyshop%5D=%5B%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%22%2C%22remark_member%22%3A%22%22%7D%5D&jsonp=handleCallback&callback=jsonp_a8f18d14f3e258
+[运行时间：0.035821s] [吞吐率：27.92req/s] [内存消耗：1,708.03kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190&skku=%E5%B0%BA%E7%A0%81%3AXL%20%E9%A2%9C%E8%89%B2%3A%E8%93%9D%20&total_amount=0.02&selected_products=2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+  'params' => 
+  array (
+    'user_id' => '8',
+    'pay_type' => '1',
+    'myshop' => '[{"shop_id":5,"cart_id":"190","remark_member":""}]',
+  ),
+  'jsonp' => 'handleCallback',
+  'callback' => 'jsonp_a8f18d14f3e258',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T12:02:58+08:00 ] 192.168.0.108 GET 192.168.0.108:5577/api/order/ordersub?params%5Buser_id%5D=8&params%5Bpay_type%5D=1&params%5Bmyshop%5D=%5B%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%2C191%22%2C%22remark_member%22%3A%22%22%7D%5D&jsonp=handleCallback&callback=jsonp_d94f4384689458
+[运行时间：0.028091s] [吞吐率：35.60req/s] [内存消耗：1,708.15kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+  'params' => 
+  array (
+    'user_id' => '8',
+    'pay_type' => '1',
+    'myshop' => '[{"shop_id":5,"cart_id":"190,191","remark_member":""}]',
+  ),
+  'jsonp' => 'handleCallback',
+  'callback' => 'jsonp_d94f4384689458',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T12:03:00+08:00 ] 192.168.0.108 GET 192.168.0.108:5577/api/order/ordersub?params%5Buser_id%5D=8&params%5Bpay_type%5D=1&params%5Bmyshop%5D=%5B%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%2C191%22%2C%22remark_member%22%3A%22%22%7D%2C%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%2C191%22%2C%22remark_member%22%3A%22%22%7D%5D&jsonp=handleCallback&callback=jsonp_1ecdfb93b0953c0
+[运行时间：0.039415s] [吞吐率：25.37req/s] [内存消耗：1,709.02kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+  'params' => 
+  array (
+    'user_id' => '8',
+    'pay_type' => '1',
+    'myshop' => '[{"shop_id":5,"cart_id":"190,191","remark_member":""},{"shop_id":5,"cart_id":"190,191","remark_member":""}]',
+  ),
+  'jsonp' => 'handleCallback',
+  'callback' => 'jsonp_1ecdfb93b0953c0',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T12:03:06+08:00 ] 192.168.0.108 GET 192.168.0.108:5577/api/order/ordersub?params%5Buser_id%5D=8&params%5Bpay_type%5D=1&params%5Bmyshop%5D=%5B%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%2C191%22%2C%22remark_member%22%3A%22%22%7D%2C%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%2C191%22%2C%22remark_member%22%3A%22%22%7D%2C%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%2C191%22%2C%22remark_member%22%3A%22%22%7D%5D&jsonp=handleCallback&callback=jsonp_dbbe22a3750540
+[运行时间：0.024890s] [吞吐率：40.18req/s] [内存消耗：1,709.77kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+  'params' => 
+  array (
+    'user_id' => '8',
+    'pay_type' => '1',
+    'myshop' => '[{"shop_id":5,"cart_id":"190,191","remark_member":""},{"shop_id":5,"cart_id":"190,191","remark_member":""},{"shop_id":5,"cart_id":"190,191","remark_member":""}]',
+  ),
+  'jsonp' => 'handleCallback',
+  'callback' => 'jsonp_dbbe22a3750540',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T12:03:37+08:00 ] 192.168.0.108 GET 192.168.0.108:5577/api/order/ordersub?params%5Buser_id%5D=8&params%5Bpay_type%5D=1&params%5Bmyshop%5D=%5B%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%2C191%22%2C%22remark_member%22%3A%22%22%7D%5D&jsonp=handleCallback&callback=jsonp_1b234d04362e120
+[运行时间：0.027806s] [吞吐率：35.96req/s] [内存消耗：1,708.15kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+  'params' => 
+  array (
+    'user_id' => '8',
+    'pay_type' => '1',
+    'myshop' => '[{"shop_id":5,"cart_id":"190,191","remark_member":""}]',
+  ),
+  'jsonp' => 'handleCallback',
+  'callback' => 'jsonp_1b234d04362e120',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T12:03:38+08:00 ] 192.168.0.108 GET 192.168.0.108:5577/api/order/ordersub?params%5Buser_id%5D=8&params%5Bpay_type%5D=1&params%5Bmyshop%5D=%5B%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%2C191%22%2C%22remark_member%22%3A%22%22%7D%2C%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%2C191%22%2C%22remark_member%22%3A%22%22%7D%5D&jsonp=handleCallback&callback=jsonp_1742273c5300b50
+[运行时间：0.026037s] [吞吐率：38.41req/s] [内存消耗：1,709.02kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+  'params' => 
+  array (
+    'user_id' => '8',
+    'pay_type' => '1',
+    'myshop' => '[{"shop_id":5,"cart_id":"190,191","remark_member":""},{"shop_id":5,"cart_id":"190,191","remark_member":""}]',
+  ),
+  'jsonp' => 'handleCallback',
+  'callback' => 'jsonp_1742273c5300b50',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T12:03:46+08:00 ] 192.168.0.108 GET 192.168.0.108:5577/api/order/ordersub?params%5Buser_id%5D=8&params%5Bpay_type%5D=1&params%5Bmyshop%5D=%5B%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%2C191%22%2C%22remark_member%22%3A%22%22%7D%2C%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%2C191%22%2C%22remark_member%22%3A%22%22%7D%2C%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%2C191%22%2C%22remark_member%22%3A%22%22%7D%5D&jsonp=handleCallback&callback=jsonp_173102927e55430
+[运行时间：0.024982s] [吞吐率：40.03req/s] [内存消耗：1,709.77kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+  'params' => 
+  array (
+    'user_id' => '8',
+    'pay_type' => '1',
+    'myshop' => '[{"shop_id":5,"cart_id":"190,191","remark_member":""},{"shop_id":5,"cart_id":"190,191","remark_member":""},{"shop_id":5,"cart_id":"190,191","remark_member":""}]',
+  ),
+  'jsonp' => 'handleCallback',
+  'callback' => 'jsonp_173102927e55430',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T12:04:17+08:00 ] 192.168.0.102 GET 192.168.0.108:5577/api/order/ordersub?params%5Buser_id%5D=8&params%5Bpay_type%5D=1&params%5Bmyshop%5D=%5B%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%22%2C%22remark_member%22%3A%22%22%7D%5D&jsonp=handleCallback&callback=jsonp_22813c8ced7a860
+[运行时间：0.031109s] [吞吐率：32.15req/s] [内存消耗：1,708.03kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190&skku=%E5%B0%BA%E7%A0%81%3AXL%20%E9%A2%9C%E8%89%B2%3A%E8%93%9D%20&total_amount=0.02&selected_products=2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+  'params' => 
+  array (
+    'user_id' => '8',
+    'pay_type' => '1',
+    'myshop' => '[{"shop_id":5,"cart_id":"190","remark_member":""}]',
+  ),
+  'jsonp' => 'handleCallback',
+  'callback' => 'jsonp_22813c8ced7a860',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T12:04:40+08:00 ] 192.168.0.102 GET 192.168.0.108:5577/api/order/ordersub?params%5Buser_id%5D=8&params%5Bpay_type%5D=1&params%5Bmyshop%5D=%5B%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%22%2C%22remark_member%22%3A%22%22%7D%5D&jsonp=handleCallback&callback=jsonp_2a21f5ab2bd9b8
+[运行时间：0.023192s] [吞吐率：43.12req/s] [内存消耗：1,708.03kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190&skku=%E5%B0%BA%E7%A0%81%3AXL%20%E9%A2%9C%E8%89%B2%3A%E8%93%9D%20&total_amount=0.02&selected_products=2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+  'params' => 
+  array (
+    'user_id' => '8',
+    'pay_type' => '1',
+    'myshop' => '[{"shop_id":5,"cart_id":"190","remark_member":""}]',
+  ),
+  'jsonp' => 'handleCallback',
+  'callback' => 'jsonp_2a21f5ab2bd9b8',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T12:04:47+08:00 ] 192.168.0.102 GET 192.168.0.108:5577/api/order/ordersub?params%5Buser_id%5D=8&params%5Bpay_type%5D=1&params%5Bmyshop%5D=%5B%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%22%2C%22remark_member%22%3A%22%22%7D%2C%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%22%2C%22remark_member%22%3A%22%22%7D%5D&jsonp=handleCallback&callback=jsonp_b4650cfca26b30
+[运行时间：0.022938s] [吞吐率：43.60req/s] [内存消耗：1,708.91kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190&skku=%E5%B0%BA%E7%A0%81%3AXL%20%E9%A2%9C%E8%89%B2%3A%E8%93%9D%20&total_amount=0.02&selected_products=2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+  'params' => 
+  array (
+    'user_id' => '8',
+    'pay_type' => '1',
+    'myshop' => '[{"shop_id":5,"cart_id":"190","remark_member":""},{"shop_id":5,"cart_id":"190","remark_member":""}]',
+  ),
+  'jsonp' => 'handleCallback',
+  'callback' => 'jsonp_b4650cfca26b30',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T12:04:47+08:00 ] 192.168.0.102 GET 192.168.0.108:5577/api/order/ordersub?params%5Buser_id%5D=8&params%5Bpay_type%5D=1&params%5Bmyshop%5D=%5B%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%22%2C%22remark_member%22%3A%22%22%7D%2C%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%22%2C%22remark_member%22%3A%22%22%7D%2C%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%22%2C%22remark_member%22%3A%22%22%7D%5D&jsonp=handleCallback&callback=jsonp_1c083c15b3b1b00
+[运行时间：0.022978s] [吞吐率：43.52req/s] [内存消耗：1,709.59kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190&skku=%E5%B0%BA%E7%A0%81%3AXL%20%E9%A2%9C%E8%89%B2%3A%E8%93%9D%20&total_amount=0.02&selected_products=2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+  'params' => 
+  array (
+    'user_id' => '8',
+    'pay_type' => '1',
+    'myshop' => '[{"shop_id":5,"cart_id":"190","remark_member":""},{"shop_id":5,"cart_id":"190","remark_member":""},{"shop_id":5,"cart_id":"190","remark_member":""}]',
+  ),
+  'jsonp' => 'handleCallback',
+  'callback' => 'jsonp_1c083c15b3b1b00',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T12:06:15+08:00 ] 192.168.0.102 GET 192.168.0.108:5577/api/order/ordersub?params%5Buser_id%5D=8&params%5Bpay_type%5D=1&params%5Bmyshop%5D=%5B%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%22%2C%22remark_member%22%3A%22%22%7D%5D&callback=jsonp_efbcd411e11e4
+[运行时间：0.023382s] [吞吐率：42.77req/s] [内存消耗：1,707.78kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190&skku=%E5%B0%BA%E7%A0%81%3AXL%20%E9%A2%9C%E8%89%B2%3A%E8%93%9D%20&total_amount=0.02&selected_products=2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+  'params' => 
+  array (
+    'user_id' => '8',
+    'pay_type' => '1',
+    'myshop' => '[{"shop_id":5,"cart_id":"190","remark_member":""}]',
+  ),
+  'callback' => 'jsonp_efbcd411e11e4',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T13:35:49+08:00 ] 192.168.0.108 GET 192.168.0.108:5577/api/order/ordersub?params%5Buser_id%5D=8&params%5Bpay_type%5D=1&params%5Bmyshop%5D=%5B%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%2C191%22%2C%22remark_member%22%3A%22%22%7D%5D&callback=jsonp_1610b8430d9b920
+[运行时间：0.626201s] [吞吐率：1.60req/s] [内存消耗：1,708.09kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+  'params' => 
+  array (
+    'user_id' => '8',
+    'pay_type' => '1',
+    'myshop' => '[{"shop_id":5,"cart_id":"190,191","remark_member":""}]',
+  ),
+  'callback' => 'jsonp_1610b8430d9b920',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T13:45:26+08:00 ] 192.168.0.108 GET 192.168.0.108:5577/api/order/ordersub?params%5Buser_id%5D=8&params%5Bpay_type%5D=1&params%5Bmyshop%5D=%5B%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%2C191%22%2C%22remark_member%22%3A%22%22%7D%2C%7B%22shop_id%22%3A5%2C%22cart_id%22%3A%22190%2C191%22%2C%22remark_member%22%3A%22%22%7D%5D&callback=jsonp_b37814a40ed78
+[运行时间：0.048724s] [吞吐率：20.52req/s] [内存消耗：1,708.52kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'order',
+    2 => 'ordersub',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://192.168.0.102:8080/js?cart_id=190,191&skku=%E5%B0%BA%E7%A0%81%3AL%20%E9%A2%9C%E8%89%B2%3A%E9%BB%84%20&total_amount=0.07&selected_products=7',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'connection' => 'close',
+  'host' => '192.168.0.108:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/order/ordersub' => '',
+  'params' => 
+  array (
+    'user_id' => '8',
+    'pay_type' => '1',
+    'myshop' => '[{"shop_id":5,"cart_id":"190,191","remark_member":""},{"shop_id":5,"cart_id":"190,191","remark_member":""}]',
+  ),
+  'callback' => 'jsonp_b37814a40ed78',
+)
+[ info ] [ RUN ] app\api\controller\Order->ordersub[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T15:38:33+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/
+[运行时间：1.404383s] [吞吐率：0.71req/s] [内存消耗：2,759.13kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\index\index.html [ array (
+  0 => 'attachmark',
+  1 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.170344s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_auth_rule` [ RunTime:0.076682s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_auth_rule` WHERE  `menustatus` = 1 ORDER BY `sort` ASC [ RunTime:0.076217s ]
+---------------------------------------------------------------
+[ 2019-10-11T15:38:36+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/index/main.html
+[运行时间：1.725956s] [吞吐率：0.58req/s] [内存消耗：2,710.81kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/index/main_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Index->main[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\index\main.html [ array (
+  0 => 'attachmark',
+  1 => 'top',
+  2 => 'bottom1',
+  3 => 'bottom2',
+  4 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.113833s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_users` [ RunTime:0.072412s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_users` WHERE  `reg_time` BETWEEN 1570723200 AND 1570809599 LIMIT 1 [ RunTime:0.073538s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order` [ RunTime:0.073344s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `add_time` BETWEEN 1570723200 AND 1570809599 LIMIT 1 [ RunTime:0.072687s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_shop` [ RunTime:0.073708s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `addtime` BETWEEN '1570723200' AND '1570809599'  AND `status` = 2 LIMIT 1 [ RunTime:0.072243s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_bigshop` [ RunTime:0.073475s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_bigshop` WHERE  `addtime` BETWEEN '1570723200' AND '1570809599' LIMIT 1 [ RunTime:0.075606s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `addtime` BETWEEN '1570723200' AND '1570809599'  AND `status` = 1 LIMIT 1 [ RunTime:0.074373s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.073999s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `createtime` BETWEEN 1570723200 AND 1570809599  AND `check_status` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.072612s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `createtime` BETWEEN 1570723200 AND 1570809599  AND `check_status` = 0 LIMIT 1 [ RunTime:0.072299s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_users` LIMIT 1 [ RunTime:0.073002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` LIMIT 1 [ RunTime:0.073110s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `shy_order` LIMIT 1 [ RunTime:0.072343s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `status` = 2 LIMIT 1 [ RunTime:0.072966s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_bigshop` LIMIT 1 [ RunTime:0.073169s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `check_status` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.071646s ]
+[ sql ] [ SQL ] SELECT add_time,sum(money) sum,count(id) total FROM `shy_order` WHERE  `add_time` BETWEEN 1568131200 AND 1570809599 GROUP BY date_format(from_unixtime(add_time),'%Y-%m-%d') ORDER BY `add_time` ASC [ RunTime:0.075338s ]
+---------------------------------------------------------------
+[ 2019-10-11T15:39:20+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/api/activity/fund
+[运行时间：2.303588s] [吞吐率：0.43req/s] [内存消耗：3,071.63kb] [文件加载：128]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'fund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/activity/fund' => '',
+)
+[ info ] [ RUN ] app\api\controller\Activity->fund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Activity.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [4]ERROR_GATEWAY: Get Alipay API Error:Business Failed - ACQ.TRADE_NOT_EXIST[D:\phpstudy123\PHPTutorial\WWW\yanjiegou\vendor\yansongda\pay\src\Gateways\Alipay\Support.php:324]
+---------------------------------------------------------------
+[ 2019-10-11T15:46:16+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/api/activity/fund
+[运行时间：0.537942s] [吞吐率：1.86req/s] [内存消耗：3,072.05kb] [文件加载：128]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'fund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/activity/fund' => '',
+)
+[ info ] [ RUN ] app\api\controller\Activity->fund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Activity.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [4]ERROR_GATEWAY: Get Alipay API Error:Business Failed - ACQ.TRADE_NOT_EXIST[D:\phpstudy123\PHPTutorial\WWW\yanjiegou\vendor\yansongda\pay\src\Gateways\Alipay\Support.php:324]
+---------------------------------------------------------------
+[ 2019-10-11T15:50:38+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/api/activity/fund
+[运行时间：1.456131s] [吞吐率：0.69req/s] [内存消耗：2,993.18kb] [文件加载：125]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'fund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/activity/fund' => '',
+)
+[ info ] [ RUN ] app\api\controller\Activity->fund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Activity.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T17:23:45+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/
+[运行时间：1.169008s] [吞吐率：0.86req/s] [内存消耗：2,759.13kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\index\index.html [ array (
+  0 => 'attachmark',
+  1 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.098739s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_auth_rule` [ RunTime:0.053018s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_auth_rule` WHERE  `menustatus` = 1 ORDER BY `sort` ASC [ RunTime:0.052660s ]
+---------------------------------------------------------------
+[ 2019-10-11T17:23:46+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/index/main.html
+[运行时间：1.296973s] [吞吐率：0.77req/s] [内存消耗：2,710.81kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/index/main_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Index->main[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\index\main.html [ array (
+  0 => 'attachmark',
+  1 => 'top',
+  2 => 'bottom1',
+  3 => 'bottom2',
+  4 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.098677s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_users` [ RunTime:0.053969s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_users` WHERE  `reg_time` BETWEEN 1570723200 AND 1570809599 LIMIT 1 [ RunTime:0.060712s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order` [ RunTime:0.052468s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `add_time` BETWEEN 1570723200 AND 1570809599 LIMIT 1 [ RunTime:0.060405s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_shop` [ RunTime:0.055462s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `addtime` BETWEEN '1570723200' AND '1570809599'  AND `status` = 2 LIMIT 1 [ RunTime:0.056540s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_bigshop` [ RunTime:0.054204s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_bigshop` WHERE  `addtime` BETWEEN '1570723200' AND '1570809599' LIMIT 1 [ RunTime:0.057530s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `addtime` BETWEEN '1570723200' AND '1570809599'  AND `status` = 1 LIMIT 1 [ RunTime:0.051002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.056095s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `createtime` BETWEEN 1570723200 AND 1570809599  AND `check_status` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.055774s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `createtime` BETWEEN 1570723200 AND 1570809599  AND `check_status` = 0 LIMIT 1 [ RunTime:0.053564s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_users` LIMIT 1 [ RunTime:0.058832s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` LIMIT 1 [ RunTime:0.056437s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `shy_order` LIMIT 1 [ RunTime:0.054479s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `status` = 2 LIMIT 1 [ RunTime:0.052523s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_bigshop` LIMIT 1 [ RunTime:0.051629s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `check_status` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.053094s ]
+[ sql ] [ SQL ] SELECT add_time,sum(money) sum,count(id) total FROM `shy_order` WHERE  `add_time` BETWEEN 1568131200 AND 1570809599 GROUP BY date_format(from_unixtime(add_time),'%Y-%m-%d') ORDER BY `add_time` ASC [ RunTime:0.055489s ]
+---------------------------------------------------------------
+[ 2019-10-11T17:23:52+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.315378s] [吞吐率：3.17req/s] [内存消耗：2,776.48kb] [文件加载：74]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T17:23:52+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.412216s] [吞吐率：2.43req/s] [内存消耗：3,070.52kb] [文件加载：78]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085103s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.052915s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.057060s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.054827s ]
+---------------------------------------------------------------
+[ 2019-10-11T17:23:56+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/info.html?id=321
+[运行时间：0.545375s] [吞吐率：1.83req/s] [内存消耗：3,198.24kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/info_html' => '',
+  'id' => '321',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->info[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\info.html [ array (
+  0 => 'attachmark',
+  1 => 'goods',
+  2 => 'info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.112158s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order` [ RunTime:0.076970s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_order` WHERE  `id` = 321 LIMIT 1 [ RunTime:0.071533s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order_goods` [ RunTime:0.075418s ]
+[ sql ] [ SQL ] SELECT `og`.*,`g`.`title`,`g`.`headimg` FROM `shy_order_goods` `og` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`og`.`goodsid` WHERE  `og`.`order_sn` = 'IA11765039555566' [ RunTime:0.071816s ]
+---------------------------------------------------------------
+[ 2019-10-11T17:29:34+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.205031s] [吞吐率：4.88req/s] [内存消耗：3,087.89kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T17:29:35+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.458163s] [吞吐率：2.18req/s] [内存消耗：3,070.52kb] [文件加载：78]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.122155s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.052256s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.055302s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.056487s ]
+---------------------------------------------------------------
+[ 2019-10-11T17:30:41+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.071780s] [吞吐率：13.93req/s] [内存消耗：3,088.02kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T17:30:42+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.416918s] [吞吐率：2.40req/s] [内存消耗：3,070.52kb] [文件加载：78]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.112678s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.073578s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.073571s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.073863s ]
+---------------------------------------------------------------
+[ 2019-10-11T17:31:59+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.103182s] [吞吐率：9.69req/s] [内存消耗：3,088.02kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T17:31:59+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.343299s] [吞吐率：2.91req/s] [内存消耗：3,070.52kb] [文件加载：78]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086301s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.053523s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.056522s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.060206s ]
+---------------------------------------------------------------
+[ 2019-10-11T17:32:01+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/info.html?id=321
+[运行时间：0.376715s] [吞吐率：2.65req/s] [内存消耗：3,052.51kb] [文件加载：74]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/info_html' => '',
+  'id' => '321',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->info[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\info.html [ array (
+  0 => 'attachmark',
+  1 => 'goods',
+  2 => 'info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079873s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order` [ RunTime:0.052282s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_order` WHERE  `id` = 321 LIMIT 1 [ RunTime:0.052376s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order_goods` [ RunTime:0.051781s ]
+[ sql ] [ SQL ] SELECT `og`.*,`g`.`title`,`g`.`headimg` FROM `shy_order_goods` `og` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`og`.`goodsid` WHERE  `og`.`order_sn` = 'IA11765039555566' [ RunTime:0.051649s ]
+---------------------------------------------------------------
+[ 2019-10-11T17:34:11+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.089574s] [吞吐率：11.16req/s] [内存消耗：2,776.81kb] [文件加载：74]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T17:34:11+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.628497s] [吞吐率：1.59req/s] [内存消耗：3,070.52kb] [文件加载：78]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.172965s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.156482s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.051442s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.150935s ]
+---------------------------------------------------------------
+[ 2019-10-11T17:46:14+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.091235s] [吞吐率：10.96req/s] [内存消耗：2,776.81kb] [文件加载：74]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-11T17:46:15+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.429954s] [吞吐率：2.33req/s] [内存消耗：3,070.52kb] [文件加载：78]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.121451s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.074587s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.077574s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.078268s ]
+---------------------------------------------------------------
+[ 2019-10-11T17:46:32+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/info.html?id=321
+[运行时间：0.702110s] [吞吐率：1.42req/s] [内存消耗：3,056.12kb] [文件加载：74]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=jkcj5061jlh008m8sfo7i17pi0',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/info_html' => '',
+  'id' => '321',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->info[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\info.html [ array (
+  0 => 'attachmark',
+  1 => 'goods',
+  2 => 'info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.116765s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order` [ RunTime:0.076611s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_order` WHERE  `id` = 321 LIMIT 1 [ RunTime:0.076276s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.076587s ]
+[ sql ] [ SQL ] SELECT `add_time` FROM `shy_orderrefund` WHERE  `order_id` = 321 LIMIT 1 [ RunTime:0.073414s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order_goods` [ RunTime:0.077368s ]
+[ sql ] [ SQL ] SELECT `og`.*,`g`.`title`,`g`.`headimg` FROM `shy_order_goods` `og` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`og`.`goodsid` WHERE  `og`.`order_sn` = 'IA11765039555566' [ RunTime:0.078441s ]

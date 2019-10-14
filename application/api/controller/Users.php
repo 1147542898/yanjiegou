@@ -1481,7 +1481,7 @@ class Users extends Base
             ->where($where)
             ->where(['o.user_id'=>$user_id,'is_del'=>0])
             ->order('o.id','desc')
-            ->field('o.id as oid,o.order_sn,o.money,o.oldmoney,o.freight,o.total_num,o.pay_type,o.status,o.getusername,o.mobile as recmobile,o.shop_id,s.id as sid,s.name,s.shoplogo')
+            ->field('o.id as oid,o.order_sn,o.money,o.oldmoney,o.freight,o.total_num,o.pay_type,o.status,o.getusername,o.mobile as recmobile,o.shop_id,s.id as sid,s.name,s.shoplogo,o.expresscom,o.expresssn')
             ->select();
 
         //订单编号，去查找订单商品
@@ -1587,7 +1587,7 @@ class Users extends Base
             $this->json_error('请传过来订单编号');
         }
 
-        $order = Db::name('order')->where(['user_id'=>$user_id,'id'=>$order_id])->field('id,order_sn,money,oldmoney,pay_type,freight,total_num,remark_shop,remark_member,add_time,status,getusername,mobile,province,city,area,address,shop_id')->find();
+        $order = Db::name('order')->where(['user_id'=>$user_id,'id'=>$order_id])->field('id,order_sn,money,oldmoney,pay_type,freight,total_num,remark_shop,remark_member,add_time,status,getusername,mobile,province,city,area,address,shop_id,expresscom,expresssn')->find();
 
         $oid = $order['id'];
 

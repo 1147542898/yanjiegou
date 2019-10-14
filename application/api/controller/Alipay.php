@@ -14,6 +14,7 @@ class Alipay
         $config = config('alipay');
         $pay = new \Pay\Pay($config);
         $data = input('post.');
+        // $data = json_encode($data);
         if ($pay->driver('alipay')->gateway('wap')->verify($data)) {
             file_put_contents('notify.txt', "收到来自支付宝的异步通知\r\n", FILE_APPEND);
             file_put_contents('notify.txt', "订单单号：{$data['out_trade_no']}\r\n", FILE_APPEND);
@@ -22,6 +23,7 @@ class Alipay
             file_put_contents('notify.txt', "gmt_create：{$data['gmt_create']}\r\n\r\n", FILE_APPEND);
             file_put_contents('notify.txt', "gmt_payment：{$data['gmt_payment']}\r\n\r\n", FILE_APPEND);
             file_put_contents('notify.txt', "notify_time：{$data['notify_time']}\r\n\r\n", FILE_APPEND);
+            file_put_contents('notify.txt', json_encode($data), FILE_APPEND);
             if($data['trade_status']=='TRADE_SUCCESS'){
 
                 //开启事务
@@ -62,4 +64,7 @@ class Alipay
         echo "<script type='text/javascript'>location.href='http://wap.yanjiegou.com/ddd?id=2';</script>";
         die;
     }
+
+
+    
 }

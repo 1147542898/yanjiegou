@@ -43,10 +43,10 @@ return [
 		'4'		=> ['status'=>4,'statusname'=>'平台配送','color'=>'red'],
 	],
 	'express_company'=>[
-	    '1'		=> ['status'=>'shentong','statusname'=>'申通','color'=>'red'],
-		'2'		=> ['status'=>'zhongtong','statusname'=>'中通','color'=>'red'],
-		'3'		=> ['status'=>'yuantong','statusname'=>'圆通','color'=>'red'],
-		'4'		=> ['status'=>'shunfeng','statusname'=>'顺丰','color'=>'red'],
+	    'shentong'		=> ['status'=>'shentong','statusname'=>'申通','color'=>'red'],
+		'zhongtong'		=> ['status'=>'zhongtong','statusname'=>'中通','color'=>'red'],
+		'yuantong'		=> ['status'=>'yuantong','statusname'=>'圆通','color'=>'red'],
+		'shunfeng'		=> ['status'=>'shunfeng','statusname'=>'顺丰','color'=>'red'],
 	],
 	'order_status'=>[
 	    '1'		=> ['status'=>1,'statusname'=>'待付款','color'=>'red'], 
