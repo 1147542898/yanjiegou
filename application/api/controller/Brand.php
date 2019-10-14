@@ -24,6 +24,7 @@ class Brand extends Base
             die;
         }
     }
+    
     //品牌精品
     public function jxlists(){
         if (Request::instance()->isPost()){

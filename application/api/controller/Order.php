@@ -641,7 +641,6 @@ class Order extends Base
                 $mobile = input('post.')['mobile'];
                 $imgs = $result['imgs'];
                 $money = $orders_goods['ogprice'];
-
                 //申请过了不让重新申请
                 $orderrefund = Db::name('orderrefund')->where(['user_id'=>$user_id,'og_id'=>
                     $og_id])->find();

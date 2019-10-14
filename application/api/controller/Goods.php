@@ -106,8 +106,7 @@ class Goods extends Base
             $tjgoods[$k]['headimg'] = $this->domain() . $headimg[0];
             $tjgoods[$k]['shoplogo'] = $this->domain() . $v['shoplogo'];
         }
-
-
+        $goods['goods_sttr']=$this->getsttrgroup($goods_id);
         $goods['tjgoods'] = $tjgoods;
         $sale_num = $this->goodsSaleNum($goods_id);
         $goods['sale_num'] = $sale_num ? $sale_num : 0;
@@ -614,7 +613,7 @@ class Goods extends Base
             $this->json_error('参数错误');
         }
         $data = Db::name('GoodsSttrxsku')->where('goods_id', $goods_id)->where('number', 'gt', 0)->select();
-
+        $info=array();
         foreach ($data as $key => $value) {
             $group = json_decode($value['group_sku'], true);
             $info[$key] = [
@@ -629,6 +628,7 @@ class Goods extends Base
                 $info[$key]['s' . $k] = $v;
             }
         }
+        
         //        $info[] = [
         //            'id'=> $value['id'],  //sku_id
         //            'price'=> ,           //价格
