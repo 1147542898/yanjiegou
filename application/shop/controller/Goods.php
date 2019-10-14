@@ -64,6 +64,27 @@ class Goods extends Common{
     public function edit(){
         if(Request::instance()->isAjax()){
              $data = input('post.');
+
+/*---chen*/
+            $results = $data['results'];
+            $spec = $data['spec'];
+            $sku_code = $data['sku_code'];
+            $sku_market_price = $data['sku_market_price'];
+            $sku_price = $data['sku_price'];
+            $sku_stock = $data['sku_stock'];
+            if (!array_key_exists('ist_spec', $data)) {
+                return $this->resultmsg('请选择默认销售规格',0);
+            }
+            $ist_spec = $data['ist_spec'];
+            unset($data['results'],$data['spec'],$data['sku_code'],$data['sku_market_price'],$data['sku_price'],$data['sku_stock'],$data['ist_spec']);
+            // 规格是否有；
+            if (!empty($results)) {
+                $data['is_spec'] = 1;
+            }
+/*---chen*/
+
+
+
             unset($data['upfile']);
             $data['userid'] = URID;
             $data['createtime']=time();
@@ -97,10 +118,16 @@ class Goods extends Common{
                 return $result = ['code'=>0,'msg'=>$msg];
             }
             if($this->model->where(array('id'=>$data['id']))->update($data)){
+/*---chen*/
+                $this->AddSku($data['id'],$results,$spec,$sku_code,$sku_market_price,$sku_price,$sku_stock,$ist_spec);
+/*---chen*/
                 return $this->resultmsg('修改成功');
             }
             return $this->resultmsg('修改失败',0);
         }
+
+
+        // 渲染
         $id = input('id');
         $info = $this->model->where('id',$id)->find();
         $info['headimg']=explode(',',$info['headimg']);
@@ -114,6 +141,57 @@ class Goods extends Common{
         $this->assign('cat_tree',$cat_tree);
         $this->assign ('info', $info );
         $this->assign('brandlist','');
+
+        
+        // 商品规格类型
+        $top_id = $this->getcatidtype($info['catid']);
+        // $top_id = $this->getcatidtype('9');
+        $findSpec = $top_id['data'];
+        $specList = [];
+        $headers = [];
+        foreach ($findSpec as $key => $value) {
+            $specList[$key]['id'] = $value['id'];
+            $specList[$key]['name'] = $value['key'];
+            $son = Db::name('GoodsSttrval')
+                        ->field('id,sttr_value')
+                        ->where('goods_id',$id)
+                        ->where('sttr_id',$value['id'])
+                        ->where('shop_id',SHID)
+                        ->where('status',1)
+                        ->select();
+            $specList[$key]['son'] = $son;
+            if ($son) {
+                $headers[] = $value['key'];
+            }
+            
+        }
+        $count = Db::name('GoodsSttrval')
+                ->where('goods_id',$id)
+                ->where('shop_id',SHID)
+                ->where('status',1)
+                ->count();
+
+
+        $this->assign('spec',$specList);
+        $this->assign('spec_count',$count);
+        $sku = Db::name('GoodsSttrxsku')->where('goods_id',$id)->order('id ASC')->select();
+        foreach ($sku as $key => $value) {
+            $group = json_decode($value['group_sku'],true);
+            $zuhe = [];
+            foreach ($group as $gk => $gv) {
+                $g_name = Db::name('GoodsSttr')->where('id',$gk)->value('key');
+                $g_value = Db::name('GoodsSttrval')->where('id',$gv)->value('sttr_value');
+                $sku[$key]['son'][] = [
+                    'name'  =>  $g_name,
+                    'value' =>  $g_value,
+                ];
+                $zuhe[] = $g_value;
+            }
+            $sku[$key]['group'] = implode('!%', $zuhe);
+        }
+        // print_r($sku);exit;
+        $this->assign('sku',$sku);
+        $this->assign('theads',$headers);
         return $this->fetch();
     }
    
@@ -124,6 +202,21 @@ class Goods extends Common{
     public function add(){
         if(Request::instance()->isAjax()){
             $data = input('post.');
+
+            $results = $data['results'];
+            $spec = $data['spec'];
+            $sku_code = $data['sku_code'];
+            $sku_market_price = $data['sku_market_price'];
+            $sku_price = $data['sku_price'];
+            $sku_stock = $data['sku_stock'];
+            $ist_spec = $data['ist_spec'];
+            unset($data['results'],$data['spec'],$data['sku_code'],$data['sku_market_price'],$data['sku_price'],$data['sku_stock'],$data['ist_spec']);
+            // 规格是否有；
+            if (!empty($results)) {
+                $data['is_spec'] = 1;
+            }
+            
+
             unset($data['upfile']);
             $data['userid'] = URID;
             $data['createtime']=time();
@@ -146,7 +239,6 @@ class Goods extends Common{
                    $data['parameter']=json_encode($parameter);
                 }
             }
-            
             if (!empty($data['headimg'])) {
                 $data['headimg']=implode(',',$data['headimg']);
             }
@@ -157,9 +249,10 @@ class Goods extends Common{
             if($msg!='true'){
                 return $result = ['code'=>0,'msg'=>$msg];
             }
-            print_r($data);exit;
-            $insert=$this->model->insert($data);
+            // $insert=$this->model->insert($data);
+            $insert=$this->model->insertGetId($data);
             if($insert){
+                $this->AddSku($insert,$results,$spec,$sku_code,$sku_market_price,$sku_price,$sku_stock,$ist_spec);
                 return $this->resultmsg('添加成功');
             }
             return $this->resultmsg('添加失败',0);
@@ -178,7 +271,70 @@ class Goods extends Common{
         $this->assign('cat_tree',$cat_tree);
         return $this->fetch();
     }
+    function AddSku($goods_id,$results,$spec,$sku_code,$sku_market_price,$sku_price,$sku_stock,$ist_spec){
+        $val_key = []; // 规格值['val'=>id];
+        // 删除空值            
+        foreach ($spec as $kl => $vl) {
+            foreach ($vl as $kk => $vk) {
+                if (empty($vk)) {
+                    unset($spec[$kl][$kk]);
+                }
+                if (empty($spec[$kl])) {
+                    unset($spec[$kl]);
+                }
+            }
+        }
 
+        // 删除之前的规格信息。
+        Db::name('GoodsSttrval')
+            ->where('goods_id',$goods_id)
+            ->where('shop_id',SHID)
+            ->delete();
+        unset($key,$value);
+        foreach ($spec as $key => $value) {
+            foreach ($value as $k => $v) {
+                if (!empty($v)) {
+                    $val = [
+                        'sttr_value'    =>  $v,
+                        'sttr_id'   =>  $key,
+                        'shop_id'   =>  SHID,
+                        'goods_id'  =>  $goods_id,
+                    ];
+                    $val_key[$v]['val'] = Db::name('GoodsSttrval')->insertGetId($val);
+                    $val_key[$v]['sttr_id'] = $key;
+                }
+            }
+        }
+
+        // 删除之前的规格信息。
+        Db::name('GoodsSttrxsku')
+            ->where('goods_id',$goods_id)
+            ->delete();
+        // 
+        foreach ($results as $ks => $vs) {
+            $results[$ks] = explode('!%', $vs);
+            $sttrval_group = [];
+            $json_val = []; // json的{规格名：值}
+            foreach ($results[$ks] as $kg => $vg) {
+                $sttrval_group[] = $val_key[$vg]['val'];
+                $json_val[$val_key[$vg]['sttr_id']] = $val_key[$vg]['val'];
+            }
+            // print_r($ist_spec);
+            // print_r($ist_spec);
+            $sku[] = [
+                'sttrval_group'  =>  implode('_', $sttrval_group), // 组合
+                'number'    =>  $sku_stock[$ks],
+                'market_price'  =>  $sku_market_price[$ks],
+                'money' =>  $sku_price[$ks],
+                'goods_id'  =>  $goods_id,
+                'group_sku' =>  json_encode($json_val),
+                'code_sku'  =>  $sku_code[$ks],
+                'is_default'    =>  ($ist_spec == $ks)?1:0,
+            ];
+
+        }
+        Db::name('GoodsSttrxsku')->insertAll($sku);
+    }
 
     //设置商品审核状态
     public function SetCheckStatus(){
@@ -278,5 +434,41 @@ class Goods extends Common{
            return $this->resultmsg('操作成功',1);
         }
         return $this->resultmsg('操作失败',0);
+    }
+
+
+    /**
+     * 查看顶级catid
+     *
+     */
+    function getcatidtype($id){
+        while (true) {
+            $find = Db::name('GoodsCategory')->field('id,parentid')->where('id',$id)->find();
+            if ($find['parentid'] == 0 || !$find) {
+                break;
+            }else{
+                $id = $find['parentid'];
+            }
+        }
+        if ($find) {
+            $sel = Db::name('GoodsSttr')->field('id,key')->order('id ASC')->where('type_id',$find['id'])->select();
+            return $this->resultmsg('操作成功',1,'',$sel);
+        }    
+    }
+    function getSkuList($goodsid){
+        $sku = Db::name('GoodsSttrxsku')->where('goods_id',$goodsid)->select();
+        foreach ($sku as $key => $value) {
+            $group = json_decode($value['group_sku'],true);
+            $zuhe = [];
+            foreach ($group as $gk => $gv) {
+                $g_value = Db::name('GoodsSttrval')->where('id',$gv)->value('sttr_value');
+                $zuhe[] = $g_value;
+            }
+            $sku[$key]['group'] = implode('!%', $zuhe);
+        }
+
+        if ($sku) {
+            return $this->resultmsg('操作成功',1,'',$sku);
+        }    
     }
 }
