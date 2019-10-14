@@ -2,7 +2,7 @@
 //商品评论
 namespace app\shop\controller;
 
-use app\shop\model\Comment;
+use app\common\model\Comment;
 use think\Controller;
 use think\Request;
 use app\shop\controller\Common;
@@ -57,7 +57,7 @@ class Evaluate extends Common
             ->join('__GOODS__ g','g.id = c.goods_id','LEFT')
             ->join('__USERS__ u','u.id = c.user_id','LEFT')
             ->join('__SHOP__ s','s.id = c.shop_id','LEFT')
-            ->join('__ORDER__ o ','o.id = c.order_id','LEFT')
+            ->join('__ORDER__ o ','o.id = c.order_gid','LEFT')
             ->field('c.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname,o.id as oid,o.order_sn as ordersn,o.money as omoney')
             ->order("c.id desc")
             ->where('c.id', $id)

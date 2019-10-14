@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\view\order\info.html";i:1569466684;s:70:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\common.html";i:1569466684;s:66:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\js.html";i:1569466684;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\view\order\info.html";i:1571034873;s:70:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\common.html";i:1569466684;s:66:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\js.html";i:1569466684;}*/ ?>
 <!doctype html>
 <html class="x-admin-sm">
 <head>
@@ -144,7 +144,10 @@ label{font-weight: bold;color:#009688;}
              <label class="green">配送方式：</label><?php echo $info['send_type']; ?>
             </div>
             <div class="layui-col-md12">
-             <label class="green">快递公司：</label><?php echo get_status($info['expresscom'],'express_company'); ?>
+             <label class="green">快递公司：</label>
+             <?php echo config('system.express_company')[$info['expresscom']]['statusname']; ?>
+
+          
             </div>
             <div class="layui-col-md12">
              <label class="green">单号：</label><?php echo $info['expresssn']; ?>
