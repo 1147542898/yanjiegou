@@ -5552,3 +5552,1438 @@
 [ sql ] [ DB ] CONNECT:[ UseTime:0.078005s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.051003s ]
 [ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname,o.id as oid,o.order_sn as ordersn,o.money as omoney FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` LEFT JOIN `shy_order` `o` ON `o`.`id`=`c`.`order_gid` WHERE  `c`.`id` = '5' ORDER BY `c`.`id` DESC LIMIT 1 [ RunTime:0.051003s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:15:52+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html
+[运行时间：0.049002s] [吞吐率：20.41req/s] [内存消耗：2,470.80kb] [文件加载：65]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'shop',
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/shop',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\view\evaluate\index.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T15:15:53+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html?page=1&limit=10
+[运行时间：0.236013s] [吞吐率：4.24req/s] [内存消耗：3,681.34kb] [文件加载：74]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'shop',
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078004s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.051003s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:15:56+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/see.html?id=5
+[运行时间：0.229013s] [吞吐率：4.37req/s] [内存消耗：3,687.53kb] [文件加载：74]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'shop',
+    1 => 'evaluate',
+    2 => 'see',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/shop/evaluate/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/see_html' => '',
+  'id' => '5',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->see[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\view\evaluate\see.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+  2 => 'imgsrc',
+  3 => 'comments',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078005s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname,o.id as oid,o.order_sn as ordersn,o.money as omoney FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` LEFT JOIN `shy_order` `o` ON `o`.`id`=`c`.`order_gid` WHERE  `c`.`id` = '5' ORDER BY `c`.`id` DESC LIMIT 1 [ RunTime:0.052003s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:18:34+08:00 ] 127.0.0.1 POST www.yjg.com/api/goods/show
+[运行时间：0.681039s] [吞吐率：1.47req/s] [内存消耗：3,212.09kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'goods',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'content-length' => '271',
+  'content-type' => 'multipart/form-data; boundary=--------------------------027833667787215235191469',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.yjg.com',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => '957cd045-a864-42c7-8835-3d03799fd61d',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'api/goods/show' => '',
+  'goods_id' => '1',
+  'user_id' => '2',
+)
+[ info ] [ RUN ] app\api\controller\Goods->show[ D:\phpstudy_pro\WWW\yanjiegou\application\api\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078005s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SELECT `g`.`id`,`g`.`headimg`,`g`.`title`,`g`.`price`,`g`.`original_price`,`g`.`cost_price`,`g`.`content`,s.id as sid,`s`.`name`,`s`.`shoplogo`,`s`.`star`,`s`.`description`,`s`.`quality`,`s`.`service` FROM `shy_goods` `g` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`g`.`shopid` WHERE  `g`.`id` = '1' ORDER BY `g`.`sorts` ASC,`g`.`id` DESC LIMIT 1 [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_collectiongoods` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_collectiongoods` WHERE  `user_id` = 2  AND `goods_id` = 1 LIMIT 1 [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.051002s ]
+[ sql ] [ SQL ] SELECT c.id as cid,`c`.`content`,`c`.`imgsrc`,`c`.`video`,`c`.`add_time`,`u`.`avatar`,`u`.`username`,`u`.`mobile` FROM `shy_comment` `c` INNER JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` WHERE  `c`.`goods_id` = '1' LIMIT 0,10 [ RunTime:0.051002s ]
+[ sql ] [ SQL ] SELECT `g`.`id`,`g`.`headimg`,`g`.`title`,`g`.`price`,s.id as sid,`s`.`name`,`s`.`shoplogo` FROM `shy_goods` `g` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`g`.`shopid` WHERE  `g`.`status` = 1  AND `g`.`check_status` = 1 ORDER BY `g`.`readpoint` DESC,`g`.`id` DESC LIMIT 0,10 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_sttrxsku` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_goods_sttrxsku` WHERE  `goods_id` = 1  AND `number` > 0 [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order_goods` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT SUM(a.num) FROM `shy_order_goods` `a` LEFT JOIN `shy_order` `b` ON `a`.`order_sn`=`b`.`order_sn` WHERE  `a`.`goodsid` = '1'  AND `b`.`paytime` >= 1568445514  AND `b`.`status` = 5 LIMIT 1 [ RunTime:0.051003s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:19:03+08:00 ] 127.0.0.1 GET www.yjg.com/shop/users/index.html
+[运行时间：0.053003s] [吞吐率：18.87req/s] [内存消耗：2,614.08kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'shop',
+    1 => 'users',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/users/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Users->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Users.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\view\users\index.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T15:19:03+08:00 ] 127.0.0.1 POST www.yjg.com/shop/users/index.html
+[运行时间：0.380022s] [吞吐率：2.63req/s] [内存消耗：3,822.11kb] [文件加载：78]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'shop',
+    1 => 'users',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/shop/users/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/users/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Users->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Users.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.108006s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_users_card_get` [ RunTime:0.072005s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_users_card_get` `g` LEFT JOIN `shy_users` `u` ON `u`.`id`=`g`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`g`.`shop_id` WHERE  `g`.`shop_id` = 7 LIMIT 1 [ RunTime:0.070004s ]
+[ sql ] [ SQL ] SELECT `u`.`username`,`u`.`mobile`,`u`.`sex`,`g`.`addtime` FROM `shy_users_card_get` `g` LEFT JOIN `shy_users` `u` ON `u`.`id`=`g`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`g`.`shop_id` WHERE  `g`.`shop_id` = 7 ORDER BY `g`.`id` DESC LIMIT 0,10 [ RunTime:0.070004s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:19:14+08:00 ] 127.0.0.1 GET www.yjg.com/admin/index/index.html
+[运行时间：0.043003s] [吞吐率：23.25req/s] [内存消耗：2,369.49kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/index/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T15:19:14+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/index.html
+[运行时间：0.038002s] [吞吐率：26.31req/s] [内存消耗：2,383.95kb] [文件加载：64]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\login\index.html [ array (
+  0 => 'system',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T15:19:14+08:00 ] 127.0.0.1 GET www.yjg.com/admin/login/verify.html
+[运行时间：0.050003s] [吞吐率：20.00req/s] [内存消耗：2,380.28kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/verify_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T15:19:20+08:00 ] 127.0.0.1 POST www.yjg.com/admin/login/index.html
+[运行时间：0.229014s] [吞吐率：4.37req/s] [内存消耗：3,615.53kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => '*/*',
+  'content-length' => '43',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/login/index_html' => '',
+  'username' => 'admin',
+  'password' => '123123',
+  'vercode' => 'kxtv',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077005s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_admin` [ RunTime:0.050003s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.050002s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:19:22+08:00 ] 127.0.0.1 GET www.yjg.com/admin/index/index.html
+[运行时间：0.686039s] [吞吐率：1.46req/s] [内存消耗：3,718.58kb] [文件加载：74]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/index/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\index\index.html [ array (
+  0 => 'attachmark',
+  1 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.111007s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_goods_category` ORDER BY `sort` [ RunTime:0.148008s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_category` [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_category` ORDER BY `sort` [ RunTime:0.073004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_auth_rule` [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_auth_rule` WHERE  `menustatus` = 1 ORDER BY `sort` ASC [ RunTime:0.073004s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:19:24+08:00 ] 127.0.0.1 GET www.yjg.com/admin/index/main.html
+[运行时间：1.536088s] [吞吐率：0.65req/s] [内存消耗：3,663.14kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/index/main_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\Index->main[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\index\main.html [ array (
+  0 => 'attachmark',
+  1 => 'top',
+  2 => 'bottom1',
+  3 => 'bottom2',
+  4 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.107006s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_users` [ RunTime:0.072004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_users` WHERE  `reg_time` BETWEEN 1570982400 AND 1571068799 LIMIT 1 [ RunTime:0.071004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order` [ RunTime:0.071004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `add_time` BETWEEN 1570982400 AND 1571068799 LIMIT 1 [ RunTime:0.071004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_shop` [ RunTime:0.070004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `addtime` BETWEEN '1570982400' AND '1571068799'  AND `status` = 2 LIMIT 1 [ RunTime:0.069004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_bigshop` [ RunTime:0.070004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_bigshop` WHERE  `addtime` BETWEEN '1570982400' AND '1571068799' LIMIT 1 [ RunTime:0.069004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `addtime` BETWEEN '1570982400' AND '1571068799'  AND `status` = 1 LIMIT 1 [ RunTime:0.070004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.082005s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `createtime` BETWEEN 1570982400 AND 1571068799  AND `check_status` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.070004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `createtime` BETWEEN 1570982400 AND 1571068799  AND `check_status` = 0 LIMIT 1 [ RunTime:0.070004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_users` LIMIT 1 [ RunTime:0.069004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` LIMIT 1 [ RunTime:0.069004s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `shy_order` LIMIT 1 [ RunTime:0.069004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_shop` WHERE  `status` = 2 LIMIT 1 [ RunTime:0.069004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_bigshop` LIMIT 1 [ RunTime:0.070004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `check_status` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.070004s ]
+[ sql ] [ SQL ] SELECT add_time,sum(money) sum,count(id) total FROM `shy_order` WHERE  `add_time` BETWEEN 1568390400 AND 1571068799 GROUP BY date_format(from_unixtime(add_time),'%Y-%m-%d') ORDER BY `add_time` ASC [ RunTime:0.070004s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:19:32+08:00 ] 127.0.0.1 GET www.yjg.com/admin/order/lists/status/6.html
+[运行时间：0.054003s] [吞吐率：18.52req/s] [内存消耗：3,698.44kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/lists/status/6_html' => '',
+  'status' => '6',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lists[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\order\lists.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T15:19:32+08:00 ] 127.0.0.1 POST www.yjg.com/admin/order/lists.html
+[运行时间：0.291017s] [吞吐率：3.44req/s] [内存消耗：3,810.07kb] [文件加载：77]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/order/lists/status/6.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '24',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/lists_html' => '',
+  'page' => '1',
+  'limit' => '10',
+  'status' => '6',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->lists[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078004s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order` [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` `o` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` WHERE  `o`.`status` = 6 LIMIT 1 [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SELECT `o`.*,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_order` `o` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` WHERE  `o`.`status` = 6 ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.052003s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:19:35+08:00 ] 127.0.0.1 GET www.yjg.com/admin/order/info.html?id=323
+[运行时间：0.467027s] [吞吐率：2.14req/s] [内存消耗：3,933.04kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/order/lists/status/6.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/info_html' => '',
+  'id' => '323',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->info[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\order\info.html [ array (
+  0 => 'attachmark',
+  1 => 'goods',
+  2 => 'info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.112006s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order` [ RunTime:0.074005s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_order` WHERE  `id` = 323 LIMIT 1 [ RunTime:0.073004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order_goods` [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SELECT `og`.*,`g`.`title`,`g`.`headimg` FROM `shy_order_goods` `og` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`og`.`goodsid` WHERE  `og`.`order_sn` = 'IA11809228666148' [ RunTime:0.074004s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:19:40+08:00 ] 127.0.0.1 GET www.yjg.com/admin/order/refund.html
+[运行时间：0.060004s] [吞吐率：16.67req/s] [内存消耗：3,728.09kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T15:19:40+08:00 ] 127.0.0.1 POST www.yjg.com/admin/order/refund.html
+[运行时间：0.287017s] [吞吐率：3.48req/s] [内存消耗：3,785.94kb] [文件加载：78]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077005s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.051002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.050002s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.051003s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:19:43+08:00 ] 127.0.0.1 POST www.yjg.com/admin/order/tmoney.html
+[运行时间：0.497028s] [吞吐率：2.01req/s] [内存消耗：5,051.11kb] [文件加载：141]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'tmoney',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => '*/*',
+  'content-length' => '6',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/tmoney_html' => '',
+  'id' => '322',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->Tmoney[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.111007s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order_trade` [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SELECT `out_trade_no`,`total_amount` FROM `shy_order_trade` WHERE  `order_ids` = '322' LIMIT 1 [ RunTime:0.073004s ]
+[ error ] [0]cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)[D:\phpstudy_pro\WWW\yanjiegou\vendor\guzzlehttp\guzzle\src\Handler\CurlFactory.php:186]
+---------------------------------------------------------------
+[ 2019-10-14T15:19:43+08:00 ] 127.0.0.1 POST www.yjg.com/admin/order/tmoney.html
+[运行时间：0.338019s] [吞吐率：2.96req/s] [内存消耗：5,051.11kb] [文件加载：141]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'tmoney',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => '*/*',
+  'content-length' => '6',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/tmoney_html' => '',
+  'id' => '322',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->Tmoney[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077005s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order_trade` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT `out_trade_no`,`total_amount` FROM `shy_order_trade` WHERE  `order_ids` = '322' LIMIT 1 [ RunTime:0.049003s ]
+[ error ] [0]cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)[D:\phpstudy_pro\WWW\yanjiegou\vendor\guzzlehttp\guzzle\src\Handler\CurlFactory.php:186]
+---------------------------------------------------------------
+[ 2019-10-14T15:19:44+08:00 ] 127.0.0.1 POST www.yjg.com/admin/order/tmoney.html
+[运行时间：0.335019s] [吞吐率：2.98req/s] [内存消耗：5,051.11kb] [文件加载：141]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'tmoney',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => '*/*',
+  'content-length' => '6',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/tmoney_html' => '',
+  'id' => '322',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->Tmoney[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078005s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order_trade` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT `out_trade_no`,`total_amount` FROM `shy_order_trade` WHERE  `order_ids` = '322' LIMIT 1 [ RunTime:0.050002s ]
+[ error ] [0]cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)[D:\phpstudy_pro\WWW\yanjiegou\vendor\guzzlehttp\guzzle\src\Handler\CurlFactory.php:186]
+---------------------------------------------------------------
+[ 2019-10-14T15:19:44+08:00 ] 127.0.0.1 POST www.yjg.com/admin/order/tmoney.html
+[运行时间：0.340020s] [吞吐率：2.94req/s] [内存消耗：5,051.11kb] [文件加载：141]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'tmoney',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => '*/*',
+  'content-length' => '6',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/tmoney_html' => '',
+  'id' => '322',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->Tmoney[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077004s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order_trade` [ RunTime:0.050003s ]
+[ sql ] [ SQL ] SELECT `out_trade_no`,`total_amount` FROM `shy_order_trade` WHERE  `order_ids` = '322' LIMIT 1 [ RunTime:0.050003s ]
+[ error ] [0]cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)[D:\phpstudy_pro\WWW\yanjiegou\vendor\guzzlehttp\guzzle\src\Handler\CurlFactory.php:186]
+---------------------------------------------------------------
+[ 2019-10-14T15:19:45+08:00 ] 127.0.0.1 POST www.yjg.com/admin/order/tmoney.html
+[运行时间：0.446026s] [吞吐率：2.24req/s] [内存消耗：5,051.11kb] [文件加载：141]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'tmoney',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => '*/*',
+  'content-length' => '6',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/tmoney_html' => '',
+  'id' => '322',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->Tmoney[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.110007s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order_trade` [ RunTime:0.074004s ]
+[ sql ] [ SQL ] SELECT `out_trade_no`,`total_amount` FROM `shy_order_trade` WHERE  `order_ids` = '322' LIMIT 1 [ RunTime:0.072004s ]
+[ error ] [0]cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)[D:\phpstudy_pro\WWW\yanjiegou\vendor\guzzlehttp\guzzle\src\Handler\CurlFactory.php:186]
+---------------------------------------------------------------
+[ 2019-10-14T15:19:45+08:00 ] 127.0.0.1 POST www.yjg.com/admin/order/tmoney.html
+[运行时间：0.424025s] [吞吐率：2.36req/s] [内存消耗：5,051.11kb] [文件加载：141]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'tmoney',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => '*/*',
+  'content-length' => '6',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/tmoney_html' => '',
+  'id' => '322',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->Tmoney[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.107006s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order_trade` [ RunTime:0.071004s ]
+[ sql ] [ SQL ] SELECT `out_trade_no`,`total_amount` FROM `shy_order_trade` WHERE  `order_ids` = '322' LIMIT 1 [ RunTime:0.071004s ]
+[ error ] [0]cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)[D:\phpstudy_pro\WWW\yanjiegou\vendor\guzzlehttp\guzzle\src\Handler\CurlFactory.php:186]
+---------------------------------------------------------------
+[ 2019-10-14T15:19:46+08:00 ] 127.0.0.1 POST www.yjg.com/admin/order/tmoney.html
+[运行时间：0.416024s] [吞吐率：2.40req/s] [内存消耗：5,051.11kb] [文件加载：141]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'tmoney',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => '*/*',
+  'content-length' => '6',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/tmoney_html' => '',
+  'id' => '321',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->Tmoney[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.110007s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order_trade` [ RunTime:0.073004s ]
+[ sql ] [ SQL ] SELECT `out_trade_no`,`total_amount` FROM `shy_order_trade` WHERE  `order_ids` = '321' LIMIT 1 [ RunTime:0.072004s ]
+[ error ] [0]cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)[D:\phpstudy_pro\WWW\yanjiegou\vendor\guzzlehttp\guzzle\src\Handler\CurlFactory.php:186]
+---------------------------------------------------------------
+[ 2019-10-14T15:19:47+08:00 ] 127.0.0.1 POST www.yjg.com/admin/order/tmoney.html
+[运行时间：0.329019s] [吞吐率：3.04req/s] [内存消耗：5,051.11kb] [文件加载：141]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'tmoney',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => '*/*',
+  'content-length' => '6',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/tmoney_html' => '',
+  'id' => '321',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->Tmoney[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.076004s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order_trade` [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SELECT `out_trade_no`,`total_amount` FROM `shy_order_trade` WHERE  `order_ids` = '321' LIMIT 1 [ RunTime:0.050003s ]
+[ error ] [0]cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)[D:\phpstudy_pro\WWW\yanjiegou\vendor\guzzlehttp\guzzle\src\Handler\CurlFactory.php:186]
+---------------------------------------------------------------
+[ 2019-10-14T15:19:48+08:00 ] 127.0.0.1 POST www.yjg.com/admin/order/tmoney.html
+[运行时间：0.416024s] [吞吐率：2.40req/s] [内存消耗：5,051.11kb] [文件加载：141]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'tmoney',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => '*/*',
+  'content-length' => '6',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/tmoney_html' => '',
+  'id' => '321',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->Tmoney[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.110006s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order_trade` [ RunTime:0.072004s ]
+[ sql ] [ SQL ] SELECT `out_trade_no`,`total_amount` FROM `shy_order_trade` WHERE  `order_ids` = '321' LIMIT 1 [ RunTime:0.072004s ]
+[ error ] [0]cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)[D:\phpstudy_pro\WWW\yanjiegou\vendor\guzzlehttp\guzzle\src\Handler\CurlFactory.php:186]
+---------------------------------------------------------------
+[ 2019-10-14T15:19:48+08:00 ] 127.0.0.1 POST www.yjg.com/admin/order/tmoney.html
+[运行时间：0.481027s] [吞吐率：2.08req/s] [内存消耗：5,051.11kb] [文件加载：141]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'tmoney',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => '*/*',
+  'content-length' => '6',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/tmoney_html' => '',
+  'id' => '321',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->Tmoney[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078005s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order_trade` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT `out_trade_no`,`total_amount` FROM `shy_order_trade` WHERE  `order_ids` = '321' LIMIT 1 [ RunTime:0.051003s ]
+[ error ] [0]cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)[D:\phpstudy_pro\WWW\yanjiegou\vendor\guzzlehttp\guzzle\src\Handler\CurlFactory.php:186]
+---------------------------------------------------------------
+[ 2019-10-14T15:19:48+08:00 ] 127.0.0.1 POST www.yjg.com/admin/order/tmoney.html
+[运行时间：0.546031s] [吞吐率：1.83req/s] [内存消耗：5,051.11kb] [文件加载：141]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'tmoney',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => '*/*',
+  'content-length' => '6',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/tmoney_html' => '',
+  'id' => '321',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->Tmoney[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077004s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order_trade` [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SELECT `out_trade_no`,`total_amount` FROM `shy_order_trade` WHERE  `order_ids` = '321' LIMIT 1 [ RunTime:0.050003s ]
+[ error ] [0]cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)[D:\phpstudy_pro\WWW\yanjiegou\vendor\guzzlehttp\guzzle\src\Handler\CurlFactory.php:186]
+---------------------------------------------------------------
+[ 2019-10-14T15:19:49+08:00 ] 127.0.0.1 POST www.yjg.com/admin/order/tmoney.html
+[运行时间：0.352020s] [吞吐率：2.84req/s] [内存消耗：5,051.11kb] [文件加载：141]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'tmoney',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => '*/*',
+  'content-length' => '6',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/tmoney_html' => '',
+  'id' => '321',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->Tmoney[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.076004s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order_trade` [ RunTime:0.050003s ]
+[ sql ] [ SQL ] SELECT `out_trade_no`,`total_amount` FROM `shy_order_trade` WHERE  `order_ids` = '321' LIMIT 1 [ RunTime:0.049003s ]
+[ error ] [0]cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)[D:\phpstudy_pro\WWW\yanjiegou\vendor\guzzlehttp\guzzle\src\Handler\CurlFactory.php:186]
+---------------------------------------------------------------
+[ 2019-10-14T15:19:55+08:00 ] 127.0.0.1 POST www.yjg.com/admin/order/tmoney.html
+[运行时间：0.340020s] [吞吐率：2.94req/s] [内存消耗：5,051.11kb] [文件加载：141]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'tmoney',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => '*/*',
+  'content-length' => '6',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/tmoney_html' => '',
+  'id' => '321',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->Tmoney[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077005s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order_trade` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT `out_trade_no`,`total_amount` FROM `shy_order_trade` WHERE  `order_ids` = '321' LIMIT 1 [ RunTime:0.051003s ]
+[ error ] [0]cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)[D:\phpstudy_pro\WWW\yanjiegou\vendor\guzzlehttp\guzzle\src\Handler\CurlFactory.php:186]
+---------------------------------------------------------------
+[ 2019-10-14T15:20:42+08:00 ] 127.0.0.1 POST www.yjg.com/admin/order/tmoney.html
+[运行时间：0.451025s] [吞吐率：2.22req/s] [内存消耗：5,051.11kb] [文件加载：141]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'tmoney',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yjg.com/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yjg.com',
+  'accept' => '*/*',
+  'content-length' => '6',
+  'connection' => 'close',
+  'host' => 'www.yjg.com',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/tmoney_html' => '',
+  'id' => '322',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->Tmoney[ D:\phpstudy_pro\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.111006s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order_trade` [ RunTime:0.073004s ]
+[ sql ] [ SQL ] SELECT `out_trade_no`,`total_amount` FROM `shy_order_trade` WHERE  `order_ids` = '322' LIMIT 1 [ RunTime:0.073004s ]
+[ error ] [0]cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)[D:\phpstudy_pro\WWW\yanjiegou\vendor\guzzlehttp\guzzle\src\Handler\CurlFactory.php:186]
