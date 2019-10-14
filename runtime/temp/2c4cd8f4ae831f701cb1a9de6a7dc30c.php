@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:76:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\view\fund\logs.html";i:1570521638;s:70:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\common.html";i:1569466684;s:66:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\js.html";i:1569466684;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:86:"D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\evaluate\index.html";i:1571023845;s:75:"D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\view\Public\common.html";i:1571023845;s:71:"D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\view\Public\js.html";i:1571023845;}*/ ?>
 <!doctype html>
 <html class="x-admin-sm">
 <head>
@@ -58,26 +58,15 @@ var uploadApi = "<?php echo url('upload/index/uploadimage'); ?>";
 <body>
 
 <div class="layui-fluid">
-<div class="layui-row layui-col-space15">
-<div class="layui-col-md12">
-<div class="layui-card">
-<div class="layui-card-body">
-    <fieldset class="layui-elem-field layui-field-title">
-        <legend>资金流动列表</legend>
-    </fieldset>
-    <!-- <div class="demoTable">
-        <div class="layui-inline">
-            <input class="layui-input" name="key" id="key" placeholder="<?php echo lang('pleaseEnter'); ?>关键字">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-card-body ">
+
+            <table id="order"></table>
         </div>
-        <button class="layui-btn" id="search" data-type="reload">搜索</button>
-        <a href="<?php echo url('index'); ?>" class="layui-btn">显示全部</a>
-    </div> -->
-    <table class="layui-table" id="list" lay-filter="list"></table>
+
+    </div>
 </div>
-</div>
-</div>
-</div>
-</div>
+
 
 
 
@@ -85,36 +74,75 @@ var uploadApi = "<?php echo url('upload/index/uploadimage'); ?>";
 
 <script>
     layui.use(['table','form'], function() {
-        var table = layui.table,form = layui.form, $ = layui.jquery;
+        var table = layui.table, form = layui.form, $ = layui.jquery;
         var tableIn = table.render({
-            id: 'user',
-            elem: '#list',
-            url: '<?php echo url(""); ?>',
-            method: 'post',
-            page: true,
-            cols: [[
-                {field: 'addtime', title: '时间', width: 150},
-                {field: 'money', title: '金额', width: 120},
-                {field: 'type', title: '类型', width: 120},
-                {field: 'note', title: '申请备注', width: 300},
+            elem: '#order'
+            ,url: "<?php echo url('index'); ?>" //数据接口
+            ,page: true //开启分页
+            ,cols: [[ //表头
+                {field: 'id', title: '评论ID', sort: true, fixed: 'left'}
+                ,{field: 'gtitle', title: '商品'}
+                ,{field: 'umobile', title: '评论者'}
+                ,{field: 'sname', title: '商家'}
+                ,{field: 'add_time', title: '评论时间'}
+                ,{field: 'is_show', align: 'center', title: '是否显示', width: 100, toolbar: '#open'},
+                ,{width: 160,title:'操作', toolbar: '#action'}
+            ]]
+        });
 
-            ]],
-            limit: 10 //每页默认显示的数量
-        });
-       
-        //搜索
-        $('#search').on('click', function() {
+        $('#search').on('click', function () {
+
             var key = $('#key').val();
-            if($.trim(key)==='') {
-                layer.msg('<?php echo lang("pleaseEnter"); ?>关键字！',{icon:0});
-                return;
-            }
-            tableIn.reload({ page: {page: 1},where: {key: key}});
+
+
+            var paid = $('#paid').val();
+
+//            if ($.trim(key) === '') {
+//
+//                layer.msg('<?php echo lang("pleaseEnter"); ?>关键字！', {icon: 0});
+//
+//                return;
+//
+//            }
+
+            tableIn.reload({ page: {page: 1}, where: {key: key,paid:paid} });
+
         });
-       
+
+        form.on('switch(open)', function (obj) {
+            loading = layer.load(1, {shade: [0.1, '#fff']});
+            var id = this.value;
+            var is_show = obj.elem.checked === true ? 1 : 0;
+            $.post('<?php echo url("editState"); ?>', {'id': id, 'is_show': is_show}, function (res) {
+                layer.close(loading);
+                if (res.status == 1) {
+                    tableIn.reload();
+                } else {
+                    layer.msg(res.msg, {time: 1000, icon: 2});
+                    return false;
+                }
+            })
+        });
+
+        form.on('submit(sreach)', function(data){
+
+            return false;
+        });
+
+
     });
 </script>
 
+
+<script type="text/html" id="action">
+
+    <a href="<?php echo url('see'); ?>?id={{d.id}}" class="layui-btn layui-btn-xs">查看</a>
+
+</script>
+
+<script type="text/html" id="open">
+    <input type="checkbox" name="is_show" value="{{d.id}}" lay-skin="switch" lay-text="显示|隐藏" lay-filter="open" {{ d.is_show == 1 ? 'checked' : '' }}>
+</script>
 
 
 

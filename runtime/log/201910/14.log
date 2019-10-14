@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+---------------------------------------------------------------
+[ 2019-10-14T14:59:52+08:00 ] 127.0.0.1 POST www.yanjie.com/shop/index/clear.html
+[运行时间：0.030048s] [吞吐率：33.28req/s] [内存消耗：2,415.43kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 ---------------------------------------------------------------
 [ 2019-10-14T14:45:49+08:00 ] 127.0.0.1 GET www.yjg.com/shop
 [运行时间：0.254014s] [吞吐率：3.94req/s] [内存消耗：3,645.16kb] [文件加载：74]
@@ -48,12 +54,35 @@
 [ 2019-10-14T14:45:50+08:00 ] 127.0.0.1 GET www.yjg.com/shop/index/main.html
 [运行时间：0.801046s] [吞吐率：1.25req/s] [内存消耗：3,656.20kb] [文件加载：75]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
     1 => 'index',
+<<<<<<< HEAD
+    2 => 'clear',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjie.com',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/index/clear_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     2 => 'main',
   ),
 )
@@ -2644,12 +2673,23 @@
   'limit' => '10',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Index->clear[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T14:59:54+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html
+[运行时间：0.066760s] [吞吐率：14.98req/s] [内存消耗：3,360.38kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ DB ] INIT mysql
@@ -2663,11 +2703,33 @@
 [ 2019-10-14T14:51:48+08:00 ] 127.0.0.1 GET www.yjg.com/shop/fund/order.html
 [运行时间：0.054003s] [吞吐率：18.52req/s] [内存消耗：3,651.73kb] [文件加载：76]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
+<<<<<<< HEAD
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     1 => 'fund',
     2 => 'order',
   ),
@@ -2687,12 +2749,31 @@
   'shop/fund/order_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\evaluate\index.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010927s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_shop_auth_rule` [ RunTime:0.000913s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_shop_auth_rule` WHERE  `menustatus` = 1  AND `type` = 2 ORDER BY `sort` ASC [ RunTime:0.000513s ]
+---------------------------------------------------------------
+[ 2019-10-14T14:59:54+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=10
+[运行时间：0.044463s] [吞吐率：22.49req/s] [内存消耗：3,443.67kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ DB ] INIT mysql
@@ -2706,11 +2787,35 @@
 [ 2019-10-14T14:51:48+08:00 ] 127.0.0.1 POST www.yjg.com/shop/fund/settlements.html
 [运行时间：0.394022s] [吞吐率：2.54req/s] [内存消耗：3,929.12kb] [文件加载：82]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
+<<<<<<< HEAD
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     1 => 'fund',
     2 => 'settlements',
   ),
@@ -2735,12 +2840,27 @@
   'limit' => '10',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001049s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.001415s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.000917s ]
+---------------------------------------------------------------
+[ 2019-10-14T14:59:55+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html
+[运行时间：0.027380s] [吞吐率：36.52req/s] [内存消耗：2,404.02kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ DB ] INIT mysql
@@ -2754,11 +2874,33 @@
 [ 2019-10-14T14:51:49+08:00 ] 127.0.0.1 POST www.yjg.com/shop/fund/order.html
 [运行时间：0.736042s] [吞吐率：1.36req/s] [内存消耗：3,946.13kb] [文件加载：81]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
+<<<<<<< HEAD
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     1 => 'fund',
     2 => 'order',
   ),
@@ -3018,12 +3160,27 @@
   'shop/fund/logs_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\evaluate\index.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T14:59:55+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=10
+[运行时间：0.043440s] [吞吐率：23.02req/s] [内存消耗：3,443.67kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ DB ] INIT mysql
@@ -3037,11 +3194,35 @@
 [ 2019-10-14T14:52:01+08:00 ] 127.0.0.1 POST www.yjg.com/shop/fund/logs.html
 [运行时间：0.285016s] [吞吐率：3.51req/s] [内存消耗：3,914.55kb] [文件加载：81]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
+<<<<<<< HEAD
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     1 => 'fund',
     2 => 'logs',
   ),
@@ -3066,12 +3247,27 @@
   'limit' => '10',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000637s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.001198s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.000645s ]
+---------------------------------------------------------------
+[ 2019-10-14T14:59:55+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html
+[运行时间：0.030761s] [吞吐率：32.51req/s] [内存消耗：2,404.02kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ DB ] INIT mysql
@@ -3085,11 +3281,33 @@
 [ 2019-10-14T14:52:02+08:00 ] 127.0.0.1 GET www.yjg.com/shop/fund/nows.html
 [运行时间：0.231014s] [吞吐率：4.33req/s] [内存消耗：3,800.96kb] [文件加载：77]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
+<<<<<<< HEAD
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     1 => 'fund',
     2 => 'nows',
   ),
@@ -3109,12 +3327,27 @@
   'shop/fund/nows_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\evaluate\index.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T14:59:55+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=10
+[运行时间：0.051305s] [吞吐率：19.49req/s] [内存消耗：3,443.67kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ DB ] INIT mysql
@@ -3133,11 +3366,35 @@
 [ 2019-10-14T14:52:03+08:00 ] 127.0.0.1 POST www.yjg.com/shop/fund/nows.html
 [运行时间：0.289017s] [吞吐率：3.46req/s] [内存消耗：3,915.12kb] [文件加载：81]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
+<<<<<<< HEAD
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     1 => 'fund',
     2 => 'nows',
   ),
@@ -3162,12 +3419,27 @@
   'limit' => '10',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000651s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.002200s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.000728s ]
+---------------------------------------------------------------
+[ 2019-10-14T14:59:56+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/index/index.html
+[运行时间：0.089682s] [吞吐率：11.15req/s] [内存消耗：2,610.88kb] [文件加载：65]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ DB ] INIT mysql
@@ -3181,11 +3453,34 @@
 [ 2019-10-14T14:52:04+08:00 ] 127.0.0.1 GET www.yjg.com/shop/fund/logs.html
 [运行时间：0.054003s] [吞吐率：18.52req/s] [内存消耗：3,647.50kb] [文件加载：76]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
+<<<<<<< HEAD
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/index/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     1 => 'fund',
     2 => 'logs',
   ),
@@ -3205,12 +3500,27 @@
   'shop/fund/logs_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Index->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\index\index.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T14:59:56+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/index/main.html
+[运行时间：0.090772s] [吞吐率：11.02req/s] [内存消耗：3,423.79kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ DB ] INIT mysql
@@ -3224,11 +3534,33 @@
 [ 2019-10-14T14:52:04+08:00 ] 127.0.0.1 POST www.yjg.com/shop/fund/logs.html
 [运行时间：0.383022s] [吞吐率：2.61req/s] [内存消耗：3,914.55kb] [文件加载：81]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
+<<<<<<< HEAD
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/index/main_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     1 => 'fund',
     2 => 'logs',
   ),
@@ -3296,12 +3628,46 @@
   'shop/fund/bank_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Index->main[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\index\main.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+  2 => 'top',
+  3 => 'bottom1',
+  4 => 'bottom2',
+  5 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000756s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.000930s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `id` = 7  AND `check_status` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000355s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `id` = 7  AND `check_status` = 0 LIMIT 1 [ RunTime:0.000226s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `id` = 7  AND `check_status` = 1  AND `status` = 0 LIMIT 1 [ RunTime:0.000280s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `id` = 7  AND `check_status` = -1 LIMIT 1 [ RunTime:0.000260s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order` [ RunTime:0.001545s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 1 LIMIT 1 [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 2 LIMIT 1 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 3 LIMIT 1 [ RunTime:0.000266s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 4 LIMIT 1 [ RunTime:0.000221s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 7 LIMIT 1 [ RunTime:0.000217s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 8 LIMIT 1 [ RunTime:0.000248s ]
+[ sql ] [ SQL ] SELECT add_time,sum(money) sum,count(id) total FROM `shy_order` WHERE  `add_time` BETWEEN 1568390400 AND 1571068799  AND `shop_id` = 7 GROUP BY date_format(from_unixtime(add_time),'%Y-%m-%d') ORDER BY `add_time` ASC [ RunTime:0.000394s ]
+---------------------------------------------------------------
+[ 2019-10-14T14:59:58+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html
+[运行时间：0.029073s] [吞吐率：34.40req/s] [内存消耗：2,404.02kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ DB ] INIT mysql
@@ -3315,11 +3681,33 @@
 [ 2019-10-14T14:52:06+08:00 ] 127.0.0.1 POST www.yjg.com/shop/fund/bank.html
 [运行时间：0.311018s] [吞吐率：3.22req/s] [内存消耗：3,766.02kb] [文件加载：77]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
+<<<<<<< HEAD
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     1 => 'fund',
     2 => 'bank',
   ),
@@ -3386,12 +3774,27 @@
   'shop/coupon/index_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\evaluate\index.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T14:59:58+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=10
+[运行时间：0.044600s] [吞吐率：22.42req/s] [内存消耗：3,443.67kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ DB ] INIT mysql
@@ -3405,11 +3808,35 @@
 [ 2019-10-14T14:52:09+08:00 ] 127.0.0.1 POST www.yjg.com/shop/coupon/index.html
 [运行时间：0.283016s] [吞吐率：3.53req/s] [内存消耗：3,835.73kb] [文件加载：78]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
+<<<<<<< HEAD
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     1 => 'coupon',
     2 => 'index',
   ),
@@ -3434,12 +3861,27 @@
   'limit' => '10',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001308s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.001415s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.000451s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:00:39+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html
+[运行时间：0.029469s] [吞吐率：33.93req/s] [内存消耗：2,404.08kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ DB ] INIT mysql
@@ -3453,11 +3895,33 @@
 [ 2019-10-14T14:52:11+08:00 ] 127.0.0.1 GET www.yjg.com/shop/goods/index/way/1.html
 [运行时间：0.062003s] [吞吐率：16.13req/s] [内存消耗：3,824.96kb] [文件加载：76]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
+<<<<<<< HEAD
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     1 => 'goods',
     2 => 'index',
   ),
@@ -3478,12 +3942,27 @@
   'way' => '1',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\evaluate\index.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T15:00:39+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=10
+[运行时间：0.044235s] [吞吐率：22.61req/s] [内存消耗：3,425.24kb] [文件加载：70]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ DB ] INIT mysql
@@ -3499,11 +3978,35 @@
 [ 2019-10-14T14:52:11+08:00 ] 127.0.0.1 POST www.yjg.com/shop/goods/index.html
 [运行时间：0.376022s] [吞吐率：2.66req/s] [内存消耗：3,963.73kb] [文件加载：79]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
+<<<<<<< HEAD
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     1 => 'goods',
     2 => 'index',
   ),
@@ -3529,12 +4032,27 @@
   'way' => '1',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000873s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.001391s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.000643s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:01:33+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html
+[运行时间：0.030505s] [吞吐率：32.78req/s] [内存消耗：2,404.08kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ DB ] INIT mysql
@@ -3548,11 +4066,33 @@
 [ 2019-10-14T14:52:11+08:00 ] 127.0.0.1 GET www.yjg.com/shop/goods/index/way/4.html
 [运行时间：0.055004s] [吞吐率：18.18req/s] [内存消耗：3,648.30kb] [文件加载：74]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
+<<<<<<< HEAD
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     1 => 'goods',
     2 => 'index',
   ),
@@ -3573,12 +4113,27 @@
   'way' => '4',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\evaluate\index.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T15:01:33+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=10
+[运行时间：0.050525s] [吞吐率：19.79req/s] [内存消耗：3,425.24kb] [文件加载：70]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ DB ] INIT mysql
@@ -3594,11 +4149,35 @@
 [ 2019-10-14T14:52:12+08:00 ] 127.0.0.1 POST www.yjg.com/shop/goods/index.html
 [运行时间：0.388022s] [吞吐率：2.58req/s] [内存消耗：3,936.03kb] [文件加载：79]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
+<<<<<<< HEAD
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     1 => 'goods',
     2 => 'index',
   ),
@@ -3667,12 +4246,27 @@
   'shop/goods/add_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001071s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.002028s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.000826s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:02:23+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html
+[运行时间：0.034416s] [吞吐率：29.06req/s] [内存消耗：2,404.08kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ DB ] INIT mysql
@@ -3697,11 +4291,33 @@
 [ 2019-10-14T14:52:59+08:00 ] 127.0.0.1 GET www.yjg.com/shop/goods/index/way/3.html
 [运行时间：0.055004s] [吞吐率：18.18req/s] [内存消耗：3,648.30kb] [文件加载：74]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
+<<<<<<< HEAD
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     1 => 'goods',
     2 => 'index',
   ),
@@ -3722,12 +4338,27 @@
   'way' => '3',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\evaluate\index.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T15:02:23+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=10
+[运行时间：0.043060s] [吞吐率：23.22req/s] [内存消耗：3,428.62kb] [文件加载：70]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ DB ] INIT mysql
@@ -3743,11 +4374,35 @@
 [ 2019-10-14T14:53:00+08:00 ] 127.0.0.1 POST www.yjg.com/shop/goods/index.html
 [运行时间：0.387022s] [吞吐率：2.58req/s] [内存消耗：3,936.03kb] [文件加载：79]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
+<<<<<<< HEAD
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     1 => 'goods',
     2 => 'index',
   ),
@@ -3773,12 +4428,27 @@
   'way' => '3',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000655s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.001295s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.001098s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:02:39+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html
+[运行时间：0.029665s] [吞吐率：33.71req/s] [内存消耗：2,404.02kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ DB ] INIT mysql
@@ -3792,11 +4462,33 @@
 [ 2019-10-14T14:53:00+08:00 ] 127.0.0.1 GET www.yjg.com/shop/goods/add.html
 [运行时间：0.550031s] [吞吐率：1.82req/s] [内存消耗：4,243.35kb] [文件加载：76]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
+<<<<<<< HEAD
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     1 => 'goods',
     2 => 'add',
   ),
@@ -3816,12 +4508,27 @@
   'shop/goods/add_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\evaluate\index.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T15:02:39+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=10
+[运行时间：0.045347s] [吞吐率：22.05req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ DB ] INIT mysql
@@ -3846,11 +4553,35 @@
 [ 2019-10-14T14:53:15+08:00 ] 127.0.0.1 POST www.yjg.com/shop/goods/getcatidtype.html
 [运行时间：0.432025s] [吞吐率：2.31req/s] [内存消耗：3,762.67kb] [文件加载：75]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
+<<<<<<< HEAD
+    1 => 'evaluate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     1 => 'goods',
     2 => 'getcatidtype',
   ),
@@ -3874,12 +4605,27 @@
   'id' => '165',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002693s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.001428s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.000808s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:02:41+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/see.html?id=4
+[运行时间：0.048401s] [吞吐率：20.66req/s] [内存消耗：3,689.48kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ DB ] INIT mysql
@@ -3896,11 +4642,34 @@
 [ 2019-10-14T14:53:19+08:00 ] 127.0.0.1 POST www.yjg.com/shop/goods/getcatidtype.html
 [运行时间：0.428025s] [吞吐率：2.34req/s] [内存消耗：3,762.67kb] [文件加载：75]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
+<<<<<<< HEAD
+    1 => 'evaluate',
+    2 => 'see',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/see_html' => '',
+  'id' => '4',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     1 => 'goods',
     2 => 'getcatidtype',
   ),
@@ -3924,12 +4693,27 @@
   'id' => '167',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->see[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001410s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.001751s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.order_id' in 'on clause'[D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\library\think\db\Connection.php:385]
+---------------------------------------------------------------
+[ 2019-10-14T15:02:44+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html
+[运行时间：0.032287s] [吞吐率：30.97req/s] [内存消耗：2,404.02kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ DB ] INIT mysql
@@ -3946,6 +4730,7 @@
 [ 2019-10-14T14:53:41+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html
 [运行时间：0.048003s] [吞吐率：20.83req/s] [内存消耗：2,615.55kb] [文件加载：67]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -3954,6 +4739,24 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -3970,12 +4773,27 @@
   'shop/evaluate/index_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\evaluate\index.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T15:02:44+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=10
+[运行时间：0.046636s] [吞吐率：21.44req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -3988,6 +4806,7 @@
 [ 2019-10-14T14:53:42+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html?page=1&limit=10
 [运行时间：0.044002s] [吞吐率：22.73req/s] [内存消耗：2,509.38kb] [文件加载：67]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -3996,6 +4815,20 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -4008,18 +4841,38 @@
   'connection' => 'close',
   'host' => 'www.yjg.com',
 )
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ PARAM ] array (
   'shop/evaluate/index_html' => '',
   'page' => '1',
   'limit' => '10',
+<<<<<<< HEAD
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000857s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.001465s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.000868s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:02:52+08:00 ] 127.0.0.1 POST www.yanjie.com/shop/evaluate/editstate.html
+[运行时间：0.048878s] [吞吐率：20.46req/s] [内存消耗：3,154.18kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4029,12 +4882,38 @@
 [ 2019-10-14T14:53:44+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html
 [运行时间：0.051003s] [吞吐率：19.61req/s] [内存消耗：2,470.78kb] [文件加载：65]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
     1 => 'evaluate',
+<<<<<<< HEAD
+    2 => 'editstate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjie.com',
+  'accept' => '*/*',
+  'content-length' => '14',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/editstate_html' => '',
+  'id' => '4',
+  'is_show' => '0',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     2 => 'index',
   ),
 )
@@ -4053,12 +4932,27 @@
   'shop/evaluate/index_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->editState[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001352s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.002484s ]
+[ sql ] [ SQL ] UPDATE `shy_comment`  SET `is_show`=0  WHERE  (  id=4 ) [ RunTime:0.000961s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:02:52+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=10
+[运行时间：0.045050s] [吞吐率：22.20req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4071,6 +4965,7 @@
 [ 2019-10-14T14:53:44+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html?page=1&limit=10
 [运行时间：0.042003s] [吞吐率：23.81req/s] [内存消耗：2,509.38kb] [文件加载：67]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -4079,6 +4974,20 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -4091,18 +5000,38 @@
   'connection' => 'close',
   'host' => 'www.yjg.com',
 )
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ PARAM ] array (
   'shop/evaluate/index_html' => '',
   'page' => '1',
   'limit' => '10',
+<<<<<<< HEAD
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000631s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.000608s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.001255s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:02:53+08:00 ] 127.0.0.1 POST www.yanjie.com/shop/evaluate/editstate.html
+[运行时间：0.054941s] [吞吐率：18.20req/s] [内存消耗：3,154.18kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4112,12 +5041,38 @@
 [ 2019-10-14T14:53:45+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html
 [运行时间：0.041002s] [吞吐率：24.39req/s] [内存消耗：2,470.78kb] [文件加载：65]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
     1 => 'evaluate',
+<<<<<<< HEAD
+    2 => 'editstate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjie.com',
+  'accept' => '*/*',
+  'content-length' => '14',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/editstate_html' => '',
+  'id' => '4',
+  'is_show' => '1',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     2 => 'index',
   ),
 )
@@ -4136,12 +5091,27 @@
   'shop/evaluate/index_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->editState[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012060s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.000710s ]
+[ sql ] [ SQL ] UPDATE `shy_comment`  SET `is_show`=1  WHERE  (  id=4 ) [ RunTime:0.000938s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:02:53+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=10
+[运行时间：0.045365s] [吞吐率：22.04req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4154,6 +5124,7 @@
 [ 2019-10-14T14:53:45+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html?page=1&limit=10
 [运行时间：0.048003s] [吞吐率：20.83req/s] [内存消耗：2,509.38kb] [文件加载：67]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -4162,6 +5133,20 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -4174,18 +5159,38 @@
   'connection' => 'close',
   'host' => 'www.yjg.com',
 )
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ PARAM ] array (
   'shop/evaluate/index_html' => '',
   'page' => '1',
   'limit' => '10',
+<<<<<<< HEAD
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000855s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.002623s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.000838s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:02:54+08:00 ] 127.0.0.1 POST www.yanjie.com/shop/evaluate/editstate.html
+[运行时间：0.042972s] [吞吐率：23.27req/s] [内存消耗：3,154.18kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4195,12 +5200,38 @@
 [ 2019-10-14T14:53:45+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html
 [运行时间：0.040002s] [吞吐率：25.00req/s] [内存消耗：2,470.78kb] [文件加载：65]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
     1 => 'evaluate',
+<<<<<<< HEAD
+    2 => 'editstate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjie.com',
+  'accept' => '*/*',
+  'content-length' => '14',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/editstate_html' => '',
+  'id' => '4',
+  'is_show' => '0',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     2 => 'index',
   ),
 )
@@ -4219,12 +5250,27 @@
   'shop/evaluate/index_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->editState[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001260s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.000870s ]
+[ sql ] [ SQL ] UPDATE `shy_comment`  SET `is_show`=0  WHERE  (  id=4 ) [ RunTime:0.001580s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:02:54+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=10
+[运行时间：0.055783s] [吞吐率：17.93req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4237,6 +5283,7 @@
 [ 2019-10-14T14:53:45+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html?page=1&limit=10
 [运行时间：0.044002s] [吞吐率：22.73req/s] [内存消耗：2,509.38kb] [文件加载：67]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -4245,6 +5292,20 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -4257,18 +5318,38 @@
   'connection' => 'close',
   'host' => 'www.yjg.com',
 )
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ PARAM ] array (
   'shop/evaluate/index_html' => '',
   'page' => '1',
   'limit' => '10',
+<<<<<<< HEAD
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010499s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.000654s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.000465s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:02:55+08:00 ] 127.0.0.1 POST www.yanjie.com/shop/evaluate/editstate.html
+[运行时间：0.048317s] [吞吐率：20.70req/s] [内存消耗：3,154.18kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4278,12 +5359,38 @@
 [ 2019-10-14T14:53:45+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html
 [运行时间：0.042002s] [吞吐率：23.81req/s] [内存消耗：2,470.78kb] [文件加载：65]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
     1 => 'evaluate',
+<<<<<<< HEAD
+    2 => 'editstate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjie.com',
+  'accept' => '*/*',
+  'content-length' => '14',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/editstate_html' => '',
+  'id' => '4',
+  'is_show' => '1',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     2 => 'index',
   ),
 )
@@ -4302,12 +5409,27 @@
   'shop/evaluate/index_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->editState[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009780s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.001781s ]
+[ sql ] [ SQL ] UPDATE `shy_comment`  SET `is_show`=1  WHERE  (  id=4 ) [ RunTime:0.001910s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:02:55+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=10
+[运行时间：0.062138s] [吞吐率：16.09req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4320,6 +5442,7 @@
 [ 2019-10-14T14:53:46+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html?page=1&limit=10
 [运行时间：0.046002s] [吞吐率：21.74req/s] [内存消耗：2,509.38kb] [文件加载：67]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -4328,6 +5451,20 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -4340,18 +5477,38 @@
   'connection' => 'close',
   'host' => 'www.yjg.com',
 )
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ PARAM ] array (
   'shop/evaluate/index_html' => '',
   'page' => '1',
   'limit' => '10',
+<<<<<<< HEAD
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011104s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.001343s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.000661s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:02:55+08:00 ] 127.0.0.1 POST www.yanjie.com/shop/evaluate/editstate.html
+[运行时间：0.049259s] [吞吐率：20.30req/s] [内存消耗：3,154.18kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4361,12 +5518,38 @@
 [ 2019-10-14T14:53:46+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html
 [运行时间：0.040002s] [吞吐率：25.00req/s] [内存消耗：2,470.78kb] [文件加载：65]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
     1 => 'evaluate',
+<<<<<<< HEAD
+    2 => 'editstate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjie.com',
+  'accept' => '*/*',
+  'content-length' => '14',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/editstate_html' => '',
+  'id' => '4',
+  'is_show' => '0',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     2 => 'index',
   ),
 )
@@ -4385,12 +5568,27 @@
   'shop/evaluate/index_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->editState[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011999s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.001169s ]
+[ sql ] [ SQL ] UPDATE `shy_comment`  SET `is_show`=0  WHERE  (  id=4 ) [ RunTime:0.001537s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:02:55+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=10
+[运行时间：0.045576s] [吞吐率：21.94req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4403,6 +5601,7 @@
 [ 2019-10-14T14:53:46+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html?page=1&limit=10
 [运行时间：0.045003s] [吞吐率：22.22req/s] [内存消耗：2,509.38kb] [文件加载：67]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -4411,6 +5610,20 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -4423,18 +5636,38 @@
   'connection' => 'close',
   'host' => 'www.yjg.com',
 )
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ PARAM ] array (
   'shop/evaluate/index_html' => '',
   'page' => '1',
   'limit' => '10',
+<<<<<<< HEAD
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000686s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.000633s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.000513s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:03:06+08:00 ] 127.0.0.1 POST www.yanjie.com/shop/evaluate/editstate.html
+[运行时间：0.053133s] [吞吐率：18.82req/s] [内存消耗：3,154.18kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4444,12 +5677,38 @@
 [ 2019-10-14T14:53:46+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html
 [运行时间：0.041002s] [吞吐率：24.39req/s] [内存消耗：2,470.78kb] [文件加载：65]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
     1 => 'evaluate',
+<<<<<<< HEAD
+    2 => 'editstate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjie.com',
+  'accept' => '*/*',
+  'content-length' => '14',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/editstate_html' => '',
+  'id' => '4',
+  'is_show' => '1',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     2 => 'index',
   ),
 )
@@ -4468,12 +5727,27 @@
   'shop/evaluate/index_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->editState[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009979s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.001274s ]
+[ sql ] [ SQL ] UPDATE `shy_comment`  SET `is_show`=1  WHERE  (  id=4 ) [ RunTime:0.001083s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:03:07+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=10
+[运行时间：0.045448s] [吞吐率：22.00req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4486,6 +5760,7 @@
 [ 2019-10-14T14:53:46+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html?page=1&limit=10
 [运行时间：0.044003s] [吞吐率：22.73req/s] [内存消耗：2,509.38kb] [文件加载：67]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -4494,6 +5769,20 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -4506,18 +5795,81 @@
   'connection' => 'close',
   'host' => 'www.yjg.com',
 )
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ PARAM ] array (
   'shop/evaluate/index_html' => '',
   'page' => '1',
   'limit' => '10',
+<<<<<<< HEAD
 )
-[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000617s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.000608s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.000695s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:03:12+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/see.html?id=4
+[运行时间：0.058055s] [吞吐率：17.23req/s] [内存消耗：3,689.48kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'shop',
+    1 => 'evaluate',
+    2 => 'see',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/see_html' => '',
+  'id' => '4',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->see[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011148s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.001140s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.order_id' in 'on clause'[D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\library\think\db\Connection.php:385]
+---------------------------------------------------------------
+[ 2019-10-14T15:04:13+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html
+[运行时间：0.031575s] [吞吐率：31.67req/s] [内存消耗：2,404.02kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4527,6 +5879,7 @@
 [ 2019-10-14T14:53:46+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html
 [运行时间：0.038002s] [吞吐率：26.31req/s] [内存消耗：2,470.78kb] [文件加载：65]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -4535,6 +5888,24 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -4551,12 +5922,27 @@
   'shop/evaluate/index_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\evaluate\index.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T15:04:13+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=10
+[运行时间：0.044144s] [吞吐率：22.65req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4569,6 +5955,7 @@
 [ 2019-10-14T14:53:46+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html?page=1&limit=10
 [运行时间：0.045003s] [吞吐率：22.22req/s] [内存消耗：2,509.38kb] [文件加载：67]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -4577,6 +5964,20 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -4589,18 +5990,87 @@
   'connection' => 'close',
   'host' => 'www.yjg.com',
 )
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ PARAM ] array (
   'shop/evaluate/index_html' => '',
   'page' => '1',
   'limit' => '10',
+<<<<<<< HEAD
 )
-[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000691s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.000676s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.000511s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:04:15+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/see.html?id=4
+[运行时间：0.069300s] [吞吐率：14.43req/s] [内存消耗：3,814.23kb] [文件加载：74]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'shop',
+    1 => 'evaluate',
+    2 => 'see',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/see_html' => '',
+  'id' => '4',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->see[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\evaluate\see.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+  2 => 'imgsrc',
+  3 => 'comments',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001688s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.000726s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname,o.id as oid,o.order_sn as ordersn,o.money as omoney FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` LEFT JOIN `shy_order` `o` ON `o`.`id`=`c`.`order_gid` WHERE  `c`.`id` = '4' ORDER BY `c`.`id` DESC LIMIT 1 [ RunTime:0.000579s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:11:16+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html
+[运行时间：0.034627s] [吞吐率：28.88req/s] [内存消耗：2,404.02kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4610,6 +6080,7 @@
 [ 2019-10-14T14:53:46+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html
 [运行时间：0.041002s] [吞吐率：24.39req/s] [内存消耗：2,470.78kb] [文件加载：65]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -4618,6 +6089,24 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -4634,12 +6123,27 @@
   'shop/evaluate/index_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\evaluate\index.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T15:11:16+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=10
+[运行时间：0.049762s] [吞吐率：20.10req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4652,6 +6156,7 @@
 [ 2019-10-14T14:53:46+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html?page=1&limit=10
 [运行时间：0.041003s] [吞吐率：24.39req/s] [内存消耗：2,509.38kb] [文件加载：67]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -4660,6 +6165,20 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -4672,18 +6191,38 @@
   'connection' => 'close',
   'host' => 'www.yjg.com',
 )
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ PARAM ] array (
   'shop/evaluate/index_html' => '',
   'page' => '1',
   'limit' => '10',
+<<<<<<< HEAD
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001323s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.001100s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.000835s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:11:48+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=20
+[运行时间：0.054701s] [吞吐率：18.28req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4693,6 +6232,7 @@
 [ 2019-10-14T14:53:47+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html
 [运行时间：0.041003s] [吞吐率：24.39req/s] [内存消耗：2,470.78kb] [文件加载：65]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -4701,6 +6241,26 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+  'page' => '1',
+  'limit' => '20',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -4717,12 +6277,27 @@
   'shop/evaluate/index_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001085s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.001043s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,20 [ RunTime:0.000833s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:12:01+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=20
+[运行时间：0.052955s] [吞吐率：18.88req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4735,6 +6310,7 @@
 [ 2019-10-14T14:53:47+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html?page=1&limit=10
 [运行时间：0.044002s] [吞吐率：22.73req/s] [内存消耗：2,509.38kb] [文件加载：67]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -4743,6 +6319,26 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+  'page' => '1',
+  'limit' => '20',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -4761,12 +6357,27 @@
   'limit' => '10',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009971s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.000657s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,20 [ RunTime:0.000556s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:12:17+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=20
+[运行时间：0.045342s] [吞吐率：22.05req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4776,6 +6387,7 @@
 [ 2019-10-14T14:53:47+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html
 [运行时间：0.042002s] [吞吐率：23.81req/s] [内存消耗：2,470.78kb] [文件加载：65]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -4784,6 +6396,26 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+  'page' => '1',
+  'limit' => '20',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -4800,12 +6432,27 @@
   'shop/evaluate/index_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000781s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.000673s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,20 [ RunTime:0.000847s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:12:17+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=20
+[运行时间：0.041720s] [吞吐率：23.97req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4818,6 +6465,7 @@
 [ 2019-10-14T14:53:47+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html?page=1&limit=10
 [运行时间：0.040002s] [吞吐率：25.00req/s] [内存消耗：2,509.38kb] [文件加载：67]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -4826,6 +6474,26 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+  'page' => '1',
+  'limit' => '20',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -4844,12 +6512,27 @@
   'limit' => '10',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001323s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.001331s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,20 [ RunTime:0.000625s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:12:18+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=20
+[运行时间：0.045966s] [吞吐率：21.76req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4859,6 +6542,7 @@
 [ 2019-10-14T14:54:08+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html
 [运行时间：0.081004s] [吞吐率：12.35req/s] [内存消耗：2,470.78kb] [文件加载：65]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -4867,6 +6551,26 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+  'page' => '1',
+  'limit' => '20',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -4883,12 +6587,27 @@
   'shop/evaluate/index_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011183s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.000679s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,20 [ RunTime:0.000505s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:12:18+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=20
+[运行时间：0.048901s] [吞吐率：20.45req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4901,6 +6620,7 @@
 [ 2019-10-14T14:54:08+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html?page=1&limit=10
 [运行时间：0.046003s] [吞吐率：21.74req/s] [内存消耗：2,509.38kb] [文件加载：67]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -4909,6 +6629,26 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+  'page' => '1',
+  'limit' => '20',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -4927,12 +6667,27 @@
   'limit' => '10',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011995s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.000851s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,20 [ RunTime:0.000764s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:12:19+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=20
+[运行时间：0.046652s] [吞吐率：21.44req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4942,6 +6697,7 @@
 [ 2019-10-14T14:56:08+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html
 [运行时间：0.061004s] [吞吐率：16.39req/s] [内存消耗：2,470.80kb] [文件加载：65]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -4950,6 +6706,26 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+  'page' => '1',
+  'limit' => '20',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -4966,12 +6742,27 @@
   'shop/evaluate/index_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011356s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.000660s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,20 [ RunTime:0.000512s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:12:19+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=20
+[运行时间：0.045923s] [吞吐率：21.78req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -4984,6 +6775,7 @@
 [ 2019-10-14T14:56:09+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html?page=1&limit=10
 [运行时间：0.313017s] [吞吐率：3.19req/s] [内存消耗：3,681.34kb] [文件加载：74]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -4992,6 +6784,26 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+  'page' => '1',
+  'limit' => '20',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -5010,12 +6822,27 @@
   'limit' => '10',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011121s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.000705s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,20 [ RunTime:0.000471s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:12:22+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=20
+[运行时间：0.044769s] [吞吐率：22.34req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -5028,6 +6855,7 @@
 [ 2019-10-14T14:57:14+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html
 [运行时间：0.050003s] [吞吐率：20.00req/s] [内存消耗：2,470.80kb] [文件加载：65]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -5036,6 +6864,26 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+  'page' => '1',
+  'limit' => '20',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -5052,12 +6900,27 @@
   'shop/evaluate/index_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011434s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.000660s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,20 [ RunTime:0.000517s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:12:28+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=30
+[运行时间：0.073186s] [吞吐率：13.66req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -5070,6 +6933,7 @@
 [ 2019-10-14T14:57:14+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html?page=1&limit=10
 [运行时间：0.242014s] [吞吐率：4.13req/s] [内存消耗：3,681.34kb] [文件加载：74]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -5078,6 +6942,70 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+  'page' => '1',
+  'limit' => '30',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011490s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.002554s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,30 [ RunTime:0.000959s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:12:42+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/index/index.html
+[运行时间：0.043614s] [吞吐率：22.93req/s] [内存消耗：2,440.29kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'shop',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/index/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -5096,12 +7024,27 @@
   'limit' => '10',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Index->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\index\index.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T15:12:43+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/index/main.html
+[运行时间：0.043197s] [吞吐率：23.15req/s] [内存消耗：3,249.52kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -5114,11 +7057,35 @@
 [ 2019-10-14T14:57:16+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/see.html?id=5
 [运行时间：0.218013s] [吞吐率：4.59req/s] [内存消耗：3,725.54kb] [文件加载：78]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
+<<<<<<< HEAD
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/index/main_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     1 => 'evaluate',
     2 => 'see',
   ),
@@ -5139,12 +7106,46 @@
   'id' => '5',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Index->main[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\index\main.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+  2 => 'top',
+  3 => 'bottom1',
+  4 => 'bottom2',
+  5 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000967s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods` [ RunTime:0.000877s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `id` = 7  AND `check_status` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000266s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `id` = 7  AND `check_status` = 0 LIMIT 1 [ RunTime:0.000165s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `id` = 7  AND `check_status` = 1  AND `status` = 0 LIMIT 1 [ RunTime:0.000172s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_goods` WHERE  `id` = 7  AND `check_status` = -1 LIMIT 1 [ RunTime:0.000152s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order` [ RunTime:0.001435s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 1 LIMIT 1 [ RunTime:0.000320s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 2 LIMIT 1 [ RunTime:0.000204s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 3 LIMIT 1 [ RunTime:0.000198s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 4 LIMIT 1 [ RunTime:0.000200s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 7 LIMIT 1 [ RunTime:0.000192s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_order` WHERE  `shop_id` = 7  AND `status` = 8 LIMIT 1 [ RunTime:0.000193s ]
+[ sql ] [ SQL ] SELECT add_time,sum(money) sum,count(id) total FROM `shy_order` WHERE  `add_time` BETWEEN 1568390400 AND 1571068799  AND `shop_id` = 7 GROUP BY date_format(from_unixtime(add_time),'%Y-%m-%d') ORDER BY `add_time` ASC [ RunTime:0.000321s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:12:44+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html
+[运行时间：0.023441s] [吞吐率：42.66req/s] [内存消耗：2,404.02kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->see[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -5157,6 +7158,7 @@
 [ 2019-10-14T14:57:25+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html
 [运行时间：0.054003s] [吞吐率：18.52req/s] [内存消耗：2,470.80kb] [文件加载：65]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -5165,6 +7167,24 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -5181,12 +7201,27 @@
   'shop/evaluate/index_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\evaluate\index.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T15:12:44+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=10
+[运行时间：0.035211s] [吞吐率：28.40req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -5199,6 +7234,7 @@
 [ 2019-10-14T14:57:25+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html?page=1&limit=10
 [运行时间：0.320018s] [吞吐率：3.12req/s] [内存消耗：3,681.34kb] [文件加载：74]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -5207,6 +7243,20 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -5219,18 +7269,38 @@
   'connection' => 'close',
   'host' => 'www.yjg.com',
 )
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ PARAM ] array (
   'shop/evaluate/index_html' => '',
   'page' => '1',
   'limit' => '10',
+<<<<<<< HEAD
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000684s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.000599s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.000465s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:16:15+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/see.html?id=4
+[运行时间：0.048227s] [吞吐率：20.74req/s] [内存消耗：3,453.41kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -5243,6 +7313,7 @@
 [ 2019-10-14T14:57:28+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/see.html?id=5
 [运行时间：0.283016s] [吞吐率：3.53req/s] [内存消耗：3,725.54kb] [文件加载：78]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -5251,6 +7322,25 @@
     1 => 'evaluate',
     2 => 'see',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/see_html' => '',
+  'id' => '4',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -5268,12 +7358,33 @@
   'id' => '5',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->see[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\evaluate\see.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+  2 => 'imgsrc',
+  3 => 'comments',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011529s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.000853s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname,o.id as oid,o.order_sn as ordersn,o.money as omoney FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` LEFT JOIN `shy_order` `o` ON `o`.`id`=`c`.`order_gid` WHERE  `c`.`id` = '4' ORDER BY `c`.`id` DESC LIMIT 1 [ RunTime:0.000639s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:16:17+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html
+[运行时间：0.025518s] [吞吐率：39.19req/s] [内存消耗：2,404.02kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->see[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -5286,6 +7397,7 @@
 [ 2019-10-14T14:59:06+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html
 [运行时间：0.048002s] [吞吐率：20.83req/s] [内存消耗：2,470.80kb] [文件加载：65]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -5294,6 +7406,24 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -5310,12 +7440,27 @@
   'shop/evaluate/index_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\evaluate\index.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T15:16:17+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=10
+[运行时间：0.054081s] [吞吐率：18.49req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -5328,6 +7473,7 @@
 [ 2019-10-14T14:59:07+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html?page=1&limit=10
 [运行时间：0.323018s] [吞吐率：3.10req/s] [内存消耗：3,681.34kb] [文件加载：74]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -5336,6 +7482,20 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -5348,18 +7508,38 @@
   'connection' => 'close',
   'host' => 'www.yjg.com',
 )
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ PARAM ] array (
   'shop/evaluate/index_html' => '',
   'page' => '1',
   'limit' => '10',
+<<<<<<< HEAD
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011427s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.001334s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.000511s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:16:17+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/goods/add.html
+[运行时间：0.185045s] [吞吐率：5.40req/s] [内存消耗：4,579.31kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -5372,11 +7552,33 @@
 [ 2019-10-14T14:59:09+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/see.html?id=5
 [运行时间：0.238013s] [吞吐率：4.20req/s] [内存消耗：3,896.98kb] [文件加载：76]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'shop',
+<<<<<<< HEAD
+    1 => 'goods',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/goods/add_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
     1 => 'evaluate',
     2 => 'see',
   ),
@@ -5397,12 +7599,39 @@
   'id' => '5',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\shop\controller\Goods->add[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Goods.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\goods\add.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+  2 => 'moduleid',
+  3 => 'brandlist',
+  4 => 'label',
+  5 => 'cat_tree',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010562s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_brand` [ RunTime:0.000746s ]
+[ sql ] [ SQL ] SELECT * FROM `shy_goods_brand` [ RunTime:0.000451s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_label` [ RunTime:0.000577s ]
+[ sql ] [ SQL ] SELECT `title` FROM `shy_goods_label` [ RunTime:0.000187s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_goods_category` [ RunTime:0.000477s ]
+[ sql ] [ SQL ] SELECT `id`,`catname`,`parentid`,`child` FROM `shy_goods_category` [ RunTime:0.000996s ]
+---------------------------------------------------------------
+[ 2019-10-14T15:16:18+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html
+[运行时间：0.025157s] [吞吐率：39.75req/s] [内存消耗：2,404.02kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->see[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -5421,6 +7650,7 @@
 [ 2019-10-14T14:59:58+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html
 [运行时间：0.051002s] [吞吐率：19.61req/s] [内存消耗：2,470.80kb] [文件加载：65]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -5429,6 +7659,24 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+[ info ] [ PARAM ] array (
+  'shop/evaluate/index_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -5445,12 +7693,27 @@
   'shop/evaluate/index_html' => '',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\evaluate\index.html [ array (
+  0 => 'menus',
+  1 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-14T15:16:18+08:00 ] 127.0.0.1 GET www.yanjie.com/shop/evaluate/index.html?page=1&limit=10
+[运行时间：0.038321s] [吞吐率：26.10req/s] [内存消耗：3,444.77kb] [文件加载：72]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -5463,6 +7726,7 @@
 [ 2019-10-14T14:59:58+08:00 ] 127.0.0.1 GET www.yjg.com/shop/evaluate/index.html?page=1&limit=10
 [运行时间：0.230013s] [吞吐率：4.35req/s] [内存消耗：3,681.34kb] [文件加载：74]
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -5471,6 +7735,20 @@
     1 => 'evaluate',
     2 => 'index',
   ),
+<<<<<<< HEAD
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=pdpvs2h88imirojshspae9u5j7',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjie.com/shop/evaluate/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'www.yanjie.com',
+)
+=======
 )
 [ info ] [ HEADER ] array (
   'cookie' => 'PHPSESSID=m076or7e3g81gni19lqikiucd6',
@@ -5483,10 +7761,15 @@
   'connection' => 'close',
   'host' => 'www.yjg.com',
 )
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ PARAM ] array (
   'shop/evaluate/index_html' => '',
   'page' => '1',
   'limit' => '10',
+<<<<<<< HEAD
+)
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\lang\zh-cn.php
+=======
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
 [ info ] [ SESSION ] INIT array (
@@ -5532,12 +7815,23 @@
   'id' => '5',
 )
 [ info ] [ LANG ] D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\lang\zh-cn.php
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
   'prefix' => 'think',
   'type' => '',
   'auto_start' => true,
+<<<<<<< HEAD
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\shop\controller\Evaluate->index[ D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\controller\Evaluate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001374s ] mysql:host=127.0.0.1;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.000878s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` WHERE  `shop_id` = 7 ORDER BY `c`.`id` DESC LIMIT 0,10 [ RunTime:0.000715s ]
+=======
 )
 [ info ] [ CACHE ] INIT File
 [ info ] [ RUN ] app\shop\controller\Evaluate->see[ D:\phpstudy_pro\WWW\yanjiegou\application\shop\controller\Evaluate.php ]
@@ -5547,6 +7841,7 @@
   1 => 'attachmark',
   2 => 'imgsrc',
   3 => 'comments',
+<<<<<<< HEAD
 ) ]
 [ info ] [ LOG ] INIT File
 [ sql ] [ DB ] CONNECT:[ UseTime:0.078005s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
@@ -6987,3 +9282,11 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `shy_order_trade` [ RunTime:0.073004s ]
 [ sql ] [ SQL ] SELECT `out_trade_no`,`total_amount` FROM `shy_order_trade` WHERE  `order_ids` = '322' LIMIT 1 [ RunTime:0.073004s ]
 [ error ] [0]cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)[D:\phpstudy_pro\WWW\yanjiegou\vendor\guzzlehttp\guzzle\src\Handler\CurlFactory.php:186]
+=======
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078005s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_comment` [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SELECT `c`.*,g.id as gid,g.title as gtitle,u.id as uid,u.mobile as umobile,s.id as sid,s.name as sname,o.id as oid,o.order_sn as ordersn,o.money as omoney FROM `shy_comment` `c` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`c`.`goods_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`c`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`c`.`shop_id` LEFT JOIN `shy_order` `o` ON `o`.`id`=`c`.`order_gid` WHERE  `c`.`id` = '5' ORDER BY `c`.`id` DESC LIMIT 1 [ RunTime:0.051003s ]
+>>>>>>> f70d8bd1de516fa8ea921a653f3af8135edab394
+>>>>>>> 6bc4a28c18958f590efc267fa7443d89d10371ab

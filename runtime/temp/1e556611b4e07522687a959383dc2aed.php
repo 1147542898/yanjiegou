@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:78:"D:\phpstudy_pro\WWW\yanjiegou\public/../application/shop\view\index\index.html";i:1569466684;s:70:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\common.html";i:1569466684;s:66:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\js.html";i:1569466684;s:67:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\top.html";i:1570759840;s:72:"D:\phpstudy_pro\WWW\yanjiegou\application\shop\view\Public\leftmenu.html";i:1569466684;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:83:"D:\phpstudy_pro\WWW\www.yanjie.com\public/../application/shop\view\index\index.html";i:1571023845;s:75:"D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\view\Public\common.html";i:1571023845;s:71:"D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\view\Public\js.html";i:1571023845;s:72:"D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\view\Public\top.html";i:1571023845;s:77:"D:\phpstudy_pro\WWW\www.yanjie.com\application\shop\view\Public\leftmenu.html";i:1571023845;}*/ ?>
 <!doctype html>
 <html class="x-admin-sm">
 <head>
