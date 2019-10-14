@@ -12,13 +12,7 @@
             "type": "zip",
             "url": "https://api.github.com/repos/adbario/php-dot-notation/zipball/eee4fc81296531e6aafba4c2bbccfc5adab1676e",
             "reference": "eee4fc81296531e6aafba4c2bbccfc5adab1676e",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "shasum": ""
         },
         "require": {
             "ext-json": "*",
@@ -69,13 +63,7 @@
             "type": "zip",
             "url": "https://api.github.com/repos/aliyun/openapi-sdk-php-client/zipball/eb7148a209bf74687431c079a719b097f1e9d37a",
             "reference": "eb7148a209bf74687431c079a719b097f1e9d37a",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "shasum": ""
         },
         "require": {
             "adbario/php-dot-notation": "^2.2",
@@ -158,13 +146,7 @@
             "type": "zip",
             "url": "https://api.github.com/repos/clagiordano/weblibs-configmanager/zipball/d1869310b9f57812581ff56cf4b456cbcc0d0516",
             "reference": "d1869310b9f57812581ff56cf4b456cbcc0d0516",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "shasum": ""
         },
         "require": {
             "php": ">=5.4"
@@ -213,13 +195,7 @@
             "type": "zip",
             "url": "https://api.github.com/repos/danielstjules/Stringy/zipball/df24ab62d2d8213bbbe88cc36fc35a4503b4bd7e",
             "reference": "df24ab62d2d8213bbbe88cc36fc35a4503b4bd7e",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "shasum": ""
         },
         "require": {
             "php": ">=5.4.0",
@@ -277,13 +253,7 @@
             "type": "zip",
             "url": "https://api.github.com/repos/guzzle/guzzle/zipball/407b0cb880ace85c9b63c5f9551db498cb2d50ba",
             "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "shasum": ""
         },
         "require": {
             "guzzlehttp/promises": "^1.0",
@@ -350,13 +320,7 @@
             "type": "zip",
             "url": "https://api.github.com/repos/guzzle/promises/zipball/a59da6cf61d80060647ff4d3eb2c03a2bc694646",
             "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "shasum": ""
         },
         "require": {
             "php": ">=5.5.0"
@@ -409,13 +373,7 @@
             "type": "zip",
             "url": "https://api.github.com/repos/guzzle/psr7/zipball/9f83dded91781a01c63574e387eaa769be769115",
             "reference": "9f83dded91781a01c63574e387eaa769be769115",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "shasum": ""
         },
         "require": {
             "php": ">=5.4.0",
@@ -472,6 +430,89 @@
         ]
     },
     {
+        "name": "monolog/monolog",
+        "version": "2.0.0",
+        "version_normalized": "2.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Seldaek/monolog.git",
+            "reference": "68545165e19249013afd1d6f7485aecff07a2d22"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Seldaek/monolog/zipball/68545165e19249013afd1d6f7485aecff07a2d22",
+            "reference": "68545165e19249013afd1d6f7485aecff07a2d22",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.2",
+            "psr/log": "^1.0.1"
+        },
+        "provide": {
+            "psr/log-implementation": "1.0.0"
+        },
+        "require-dev": {
+            "aws/aws-sdk-php": "^2.4.9 || ^3.0",
+            "doctrine/couchdb": "~1.0@dev",
+            "elasticsearch/elasticsearch": "^6.0",
+            "graylog2/gelf-php": "^1.4.2",
+            "jakub-onderka/php-parallel-lint": "^0.9",
+            "php-amqplib/php-amqplib": "~2.4",
+            "php-console/php-console": "^3.1.3",
+            "phpspec/prophecy": "^1.6.1",
+            "phpunit/phpunit": "^8.3",
+            "predis/predis": "^1.1",
+            "rollbar/rollbar": "^1.3",
+            "ruflin/elastica": ">=0.90 <3.0",
+            "swiftmailer/swiftmailer": "^5.3|^6.0"
+        },
+        "suggest": {
+            "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
+            "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+            "elasticsearch/elasticsearch": "Allow sending log messages to an Elasticsearch server via official client",
+            "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+            "ext-mbstring": "Allow to work properly with unicode symbols",
+            "ext-mongodb": "Allow sending log messages to a MongoDB server (via driver)",
+            "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+            "mongodb/mongodb": "Allow sending log messages to a MongoDB server (via library)",
+            "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
+            "php-console/php-console": "Allow sending log messages to Google Chrome",
+            "rollbar/rollbar": "Allow sending log messages to Rollbar",
+            "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
+        },
+        "time": "2019-08-30T09:56:44+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Monolog\\": "src/Monolog"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jordi Boggiano",
+                "email": "j.boggiano@seld.be",
+                "homepage": "http://seld.be"
+            }
+        ],
+        "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
+        "homepage": "http://github.com/Seldaek/monolog",
+        "keywords": [
+            "log",
+            "logging",
+            "psr-3"
+        ]
+    },
+    {
         "name": "mtdowling/jmespath.php",
         "version": "2.4.0",
         "version_normalized": "2.4.0.0",
@@ -484,13 +525,7 @@
             "type": "zip",
             "url": "https://api.github.com/repos/jmespath/jmespath.php/zipball/adcc9531682cf87dfda21e1fd5d0e7a41d292fac",
             "reference": "adcc9531682cf87dfda21e1fd5d0e7a41d292fac",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "shasum": ""
         },
         "require": {
             "php": ">=5.4.0"
@@ -547,13 +582,7 @@
             "type": "zip",
             "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
             "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "shasum": ""
         },
         "require": {
             "php": ">=5.3.0"
@@ -593,6 +622,55 @@
         ]
     },
     {
+        "name": "psr/log",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-fig/log.git",
+            "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-fig/log/zipball/6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+            "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2018-11-20T15:27:04+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Psr\\Log\\": "Psr/Log/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common interface for logging libraries",
+        "homepage": "https://github.com/php-fig/log",
+        "keywords": [
+            "log",
+            "psr",
+            "psr-3"
+        ]
+    },
+    {
         "name": "ralouphie/getallheaders",
         "version": "2.0.5",
         "version_normalized": "2.0.5.0",
@@ -605,13 +683,7 @@
             "type": "zip",
             "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
             "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "shasum": ""
         },
         "require": {
             "php": ">=5.3"
@@ -641,6 +713,320 @@
         "description": "A polyfill for getallheaders."
     },
     {
+        "name": "symfony/event-dispatcher",
+        "version": "v4.3.5",
+        "version_normalized": "4.3.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/event-dispatcher.git",
+            "reference": "6229f58993e5a157f6096fc7145c0717d0be8807"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/6229f58993e5a157f6096fc7145c0717d0be8807",
+            "reference": "6229f58993e5a157f6096fc7145c0717d0be8807",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.1.3",
+            "symfony/event-dispatcher-contracts": "^1.1"
+        },
+        "conflict": {
+            "symfony/dependency-injection": "<3.4"
+        },
+        "provide": {
+            "psr/event-dispatcher-implementation": "1.0",
+            "symfony/event-dispatcher-implementation": "1.1"
+        },
+        "require-dev": {
+            "psr/log": "~1.0",
+            "symfony/config": "~3.4|~4.0",
+            "symfony/dependency-injection": "~3.4|~4.0",
+            "symfony/expression-language": "~3.4|~4.0",
+            "symfony/http-foundation": "^3.4|^4.0",
+            "symfony/service-contracts": "^1.1",
+            "symfony/stopwatch": "~3.4|~4.0"
+        },
+        "suggest": {
+            "symfony/dependency-injection": "",
+            "symfony/http-kernel": ""
+        },
+        "time": "2019-10-01T16:40:32+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.3-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\EventDispatcher\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony EventDispatcher Component",
+        "homepage": "https://symfony.com"
+    },
+    {
+        "name": "symfony/event-dispatcher-contracts",
+        "version": "v1.1.7",
+        "version_normalized": "1.1.7.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/event-dispatcher-contracts.git",
+            "reference": "c43ab685673fb6c8d84220c77897b1d6cdbe1d18"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/c43ab685673fb6c8d84220c77897b1d6cdbe1d18",
+            "reference": "c43ab685673fb6c8d84220c77897b1d6cdbe1d18",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.1.3"
+        },
+        "suggest": {
+            "psr/event-dispatcher": "",
+            "symfony/event-dispatcher-implementation": ""
+        },
+        "time": "2019-09-17T09:54:03+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.1-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Contracts\\EventDispatcher\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Generic abstractions related to dispatching event",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "abstractions",
+            "contracts",
+            "decoupling",
+            "interfaces",
+            "interoperability",
+            "standards"
+        ]
+    },
+    {
+        "name": "symfony/http-foundation",
+        "version": "v4.3.5",
+        "version_normalized": "4.3.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/http-foundation.git",
+            "reference": "76590ced16d4674780863471bae10452b79210a5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/http-foundation/zipball/76590ced16d4674780863471bae10452b79210a5",
+            "reference": "76590ced16d4674780863471bae10452b79210a5",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.1.3",
+            "symfony/mime": "^4.3",
+            "symfony/polyfill-mbstring": "~1.1"
+        },
+        "require-dev": {
+            "predis/predis": "~1.0",
+            "symfony/expression-language": "~3.4|~4.0"
+        },
+        "time": "2019-10-04T19:48:13+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.3-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\HttpFoundation\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony HttpFoundation Component",
+        "homepage": "https://symfony.com"
+    },
+    {
+        "name": "symfony/mime",
+        "version": "v4.3.5",
+        "version_normalized": "4.3.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/mime.git",
+            "reference": "32f71570547b91879fdbd9cf50317d556ae86916"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/mime/zipball/32f71570547b91879fdbd9cf50317d556ae86916",
+            "reference": "32f71570547b91879fdbd9cf50317d556ae86916",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.1.3",
+            "symfony/polyfill-intl-idn": "^1.10",
+            "symfony/polyfill-mbstring": "^1.0"
+        },
+        "require-dev": {
+            "egulias/email-validator": "^2.1.10",
+            "symfony/dependency-injection": "~3.4|^4.1"
+        },
+        "time": "2019-09-19T17:00:15+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.3-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Mime\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "A library to manipulate MIME messages",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "mime",
+            "mime-type"
+        ]
+    },
+    {
+        "name": "symfony/polyfill-intl-idn",
+        "version": "v1.12.0",
+        "version_normalized": "1.12.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/polyfill-intl-idn.git",
+            "reference": "6af626ae6fa37d396dc90a399c0ff08e5cfc45b2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/6af626ae6fa37d396dc90a399c0ff08e5cfc45b2",
+            "reference": "6af626ae6fa37d396dc90a399c0ff08e5cfc45b2",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3",
+            "symfony/polyfill-mbstring": "^1.3",
+            "symfony/polyfill-php72": "^1.9"
+        },
+        "suggest": {
+            "ext-intl": "For best performance"
+        },
+        "time": "2019-08-06T08:03:45+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.12-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Polyfill\\Intl\\Idn\\": ""
+            },
+            "files": [
+                "bootstrap.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Laurent Bassin",
+                "email": "laurent@bassin.info"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony polyfill for intl's idn_to_ascii and idn_to_utf8 functions",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "compatibility",
+            "idn",
+            "intl",
+            "polyfill",
+            "portable",
+            "shim"
+        ]
+    },
+    {
         "name": "symfony/polyfill-mbstring",
         "version": "v1.11.0",
         "version_normalized": "1.11.0.0",
@@ -653,13 +1039,7 @@
             "type": "zip",
             "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fe5e94c604826c35a32fa832f35bd036b6799609",
             "reference": "fe5e94c604826c35a32fa832f35bd036b6799609",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "shasum": ""
         },
         "require": {
             "php": ">=5.3.3"
@@ -708,6 +1088,63 @@
         ]
     },
     {
+        "name": "symfony/polyfill-php72",
+        "version": "v1.12.0",
+        "version_normalized": "1.12.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/polyfill-php72.git",
+            "reference": "04ce3335667451138df4307d6a9b61565560199e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/04ce3335667451138df4307d6a9b61565560199e",
+            "reference": "04ce3335667451138df4307d6a9b61565560199e",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "time": "2019-08-06T08:03:45+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.12-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Polyfill\\Php72\\": ""
+            },
+            "files": [
+                "bootstrap.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "compatibility",
+            "polyfill",
+            "portable",
+            "shim"
+        ]
+    },
+    {
         "name": "topthink/framework",
         "version": "v5.0.21",
         "version_normalized": "5.0.21.0",
@@ -720,13 +1157,7 @@
             "type": "zip",
             "url": "https://api.github.com/repos/top-think/framework/zipball/ab826da071a7a47116a7f1d01f72228d6bcf212a",
             "reference": "ab826da071a7a47116a7f1d01f72228d6bcf212a",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "shasum": ""
         },
         "require": {
             "php": ">=5.4.0",
@@ -779,13 +1210,7 @@
             "type": "zip",
             "url": "https://api.github.com/repos/top-think/think-captcha/zipball/0c55455df26a1626a60d0dc35d2d89002b741d44",
             "reference": "0c55455df26a1626a60d0dc35d2d89002b741d44",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "shasum": ""
         },
         "time": "2016-07-06T01:47:11+00:00",
         "type": "library",
@@ -823,13 +1248,7 @@
             "type": "zip",
             "url": "https://api.github.com/repos/top-think/think-helper/zipball/0c99dc625b0d2d4124e1b6ca15a3ad6f0125963f",
             "reference": "0c99dc625b0d2d4124e1b6ca15a3ad6f0125963f",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "shasum": ""
         },
         "time": "2017-04-05T07:15:37+00:00",
         "type": "library",
@@ -867,13 +1286,7 @@
             "type": "zip",
             "url": "https://api.github.com/repos/top-think/think-image/zipball/8586cf47f117481c6d415b20f7dedf62e79d5512",
             "reference": "8586cf47f117481c6d415b20f7dedf62e79d5512",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "shasum": ""
         },
         "require": {
             "ext-gd": "*"
@@ -915,13 +1328,7 @@
             "type": "zip",
             "url": "https://api.github.com/repos/top-think/think-installer/zipball/1be326e68f63de4e95977ed50f46ae75f017556d",
             "reference": "1be326e68f63de4e95977ed50f46ae75f017556d",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "shasum": ""
         },
         "require": {
             "composer-plugin-api": "^1.0"
@@ -964,13 +1371,7 @@
             "type": "zip",
             "url": "https://api.github.com/repos/top-think/think-migration/zipball/8e489f8d38a39876690c0e00fcf9a54ae92c4d3d",
             "reference": "8e489f8d38a39876690c0e00fcf9a54ae92c4d3d",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "shasum": ""
         },
         "require-dev": {
             "topthink/framework": "^5.0"
@@ -1011,13 +1412,7 @@
             "type": "zip",
             "url": "https://api.github.com/repos/top-think/think-mongo/zipball/657cc79bd5f090a58b0cc83776073dd69c83a3d1",
             "reference": "657cc79bd5f090a58b0cc83776073dd69c83a3d1",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "shasum": ""
         },
         "time": "2018-06-03T01:51:27+00:00",
         "type": "library",
@@ -1053,13 +1448,7 @@
             "type": "zip",
             "url": "https://api.github.com/repos/top-think/think-oracle/zipball/89a049e876167030b489322f691aed00799fd68f",
             "reference": "89a049e876167030b489322f691aed00799fd68f",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "shasum": ""
         },
         "require": {
             "topthink/framework": "~5.0.17"
@@ -1098,13 +1487,7 @@
             "type": "zip",
             "url": "https://api.github.com/repos/top-think/think-queue/zipball/465320c9cb7811df22d4ff8f29f58ead7d104348",
             "reference": "465320c9cb7811df22d4ff8f29f58ead7d104348",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "shasum": ""
         },
         "require": {
             "topthink/think-helper": ">=1.0.4",
@@ -1151,13 +1534,7 @@
             "type": "zip",
             "url": "https://api.github.com/repos/top-think/think-worker/zipball/b609ff5e38dbb7194aab027d2b2c6b31a7ed1bd1",
             "reference": "b609ff5e38dbb7194aab027d2b2c6b31a7ed1bd1",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "shasum": ""
         },
         "require": {
             "workerman/workerman": "^3.3.0"
@@ -1196,13 +1573,7 @@
             "type": "zip",
             "url": "https://api.github.com/repos/walkor/Workerman/zipball/6d70996b2b4ec94000e807246aca0e861c9601d8",
             "reference": "6d70996b2b4ec94000e807246aca0e861c9601d8",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "shasum": ""
         },
         "require": {
             "php": ">=5.3"
@@ -1235,6 +1606,117 @@
         "keywords": [
             "asynchronous",
             "event-loop"
+        ]
+    },
+    {
+        "name": "yansongda/pay",
+        "version": "v2.8.6",
+        "version_normalized": "2.8.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/yansongda/pay.git",
+            "reference": "841999b65f97466ed1b405c52400c0c73aeaa3b5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/yansongda/pay/zipball/841999b65f97466ed1b405c52400c0c73aeaa3b5",
+            "reference": "841999b65f97466ed1b405c52400c0c73aeaa3b5",
+            "shasum": ""
+        },
+        "require": {
+            "ext-json": "*",
+            "ext-libxml": "*",
+            "ext-openssl": "*",
+            "ext-simplexml": "*",
+            "php": ">=7.1.3",
+            "symfony/event-dispatcher": "^4.0",
+            "symfony/http-foundation": "^4.0",
+            "yansongda/supports": "^2.0"
+        },
+        "require-dev": {
+            "mockery/mockery": "^1.2",
+            "phpunit/phpunit": "^7.5"
+        },
+        "time": "2019-09-21T15:05:57+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Yansongda\\Pay\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "yansongda",
+                "email": "me@yansongda.cn"
+            }
+        ],
+        "description": "专注 Alipay 和 WeChat 的支付扩展包",
+        "keywords": [
+            "alipay",
+            "pay",
+            "wechat"
+        ]
+    },
+    {
+        "name": "yansongda/supports",
+        "version": "v2.0.2",
+        "version_normalized": "2.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/yansongda/supports.git",
+            "reference": "d4742562cf0453d127dc064334ad6dc3f86d247d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/yansongda/supports/zipball/d4742562cf0453d127dc064334ad6dc3f86d247d",
+            "reference": "d4742562cf0453d127dc064334ad6dc3f86d247d",
+            "shasum": ""
+        },
+        "require": {
+            "guzzlehttp/guzzle": "^6.2",
+            "monolog/monolog": "^1.23 || ^2.0",
+            "php": ">=7.1.3"
+        },
+        "require-dev": {
+            "friendsofphp/php-cs-fixer": "^2.15",
+            "phpunit/phpunit": "^7.5",
+            "predis/predis": "^1.1"
+        },
+        "suggest": {
+            "predis/predis": "Allows to use throttle feature"
+        },
+        "time": "2019-09-21T14:56:18+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Yansongda\\Supports\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "yansongda",
+                "email": "me@yansongda.cn"
+            }
+        ],
+        "description": "common components",
+        "keywords": [
+            "Guzzle",
+            "array",
+            "collection",
+            "config",
+            "http",
+            "support",
+            "throttle"
         ]
     },
     {

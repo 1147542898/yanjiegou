@@ -313,15 +313,18 @@ class Order extends Base
     //提交订单
     public function ordersub()
     {
+
         $user_id = input('post.user_id');
         if(null===$user_id){
             $this->json_error('请传过来用户编号');
         }
+        
         $myshop = input('post.myshop');
         if(!is_json($myshop)){
             $this->json_error('格式不对');
             die;
         }
+
         $myshop = json_decode($myshop,true);
         if(null===$myshop){
             $this->json_error('请传过来店铺编号和购物车id信息和备注信息');
@@ -457,6 +460,7 @@ class Order extends Base
         Db::startTrans();
         //数据操作
         $order = Db::name('order')->insertAll($order);
+
         $order_id = Db::name('order')->getLastInsID();
         $order_ids = [];
         for ($i=0; $i<$order; $i++) {
@@ -672,7 +676,7 @@ class Order extends Base
 
 
 
-
+                $rel = Db::name('order')->where('id',$order_id)->update(['status'=>7]);
                 $id = Db::name('orderrefund')->insertGetId($data);
                 if($id){
                     $this->json_success([],'申请成功，请耐心等待结果');
@@ -834,5 +838,15 @@ class Order extends Base
             $this->json_error('取消订单失败');
         }
     }
+
+
+    // // 退款订单
+    // public function refund()
+    // {
+    //     $user_id = input('post.user_id');
+    //     if(null===$user_id){
+    //         $this->json_error('请传过来用户编号');
+    //     }
+    // }
 
 }

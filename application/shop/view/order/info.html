@@ -93,7 +93,10 @@ label{font-weight: bold;color:#009688;}
              <label class="green">配送方式：</label>{$info.send_type}
             </div>
             <div class="layui-col-md12">
-             <label class="green">快递公司：</label>{:get_status($info.expresscom,'express_company')}
+             <label class="green">快递公司：</label>
+             {:config('system.express_company')[$info['expresscom']]['statusname']}
+
+          
             </div>
             <div class="layui-col-md12">
              <label class="green">单号：</label>{$info.expresssn}
