@@ -280,7 +280,7 @@ class Goods extends Base
             die;
         }
         /*--chen*/
-        $is_spec=Db::name('goods')->where('goods_id',$goods_id)->value('is_spec');
+        $is_spec=Db::name('goods')->where('id',$goods_id)->value('is_spec');
         $sku_id = input('post.sku_id')?input('post.sku_id'):0;
         if ($is_spec == 1) {
             if (empty($sku_id)) {
