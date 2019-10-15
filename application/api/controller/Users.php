@@ -1654,13 +1654,14 @@ class Users extends Base
                     $data['num'] = $cv['num'];
                     //$data['goods_attr'] = json_decode($cv['goods_attr'],true);
                   /*--chen*/
-                    $goods_attr = json_decode($cv['goods_attr'],true);
                     $data['goods_attr'] = '';
-                  
-                    foreach ($goods_attr as $ks=>$vs){
-                        $SttrName=Db::name('GoodsSttr')->where('id',$ks)->value('key');
-                        $SttrValName=Db::name('GoodsSttrval')->where('id',$vs)->value('sttr_value');
-                        $data['goods_attr'] .=  $SttrName.':'.$SttrValName.' ';
+                    if ($cv['sku_id'] != 0) {
+                        $goods_attr = json_decode($cv['goods_attr'],true);
+                        foreach ($goods_attr as $ks=>$vs){
+                            $SttrName=Db::name('GoodsSttr')->where('id',$ks)->value('key');
+                            $SttrValName=Db::name('GoodsSttrval')->where('id',$vs)->value('sttr_value');
+                            $data['goods_attr'] .=  $SttrName.':'.$SttrValName.' ';
+                        }
                     }
                     /*--chen*/
                     $data['title'] = $cv['title'];

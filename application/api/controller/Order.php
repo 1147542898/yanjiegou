@@ -311,9 +311,16 @@ class Order extends Base
     }
 
     //提交订单
+    /**
+     *
+     *[user_id] => 17
+     *[pay_type] => 1
+     *[myshop] => [{"shop_id":5,"cart_id":"245","remark_member":""}]
+     *
+     */
     public function ordersub()
     {
-
+        print_r(input());exit;
         $user_id = input('post.user_id');
         if(null===$user_id){
             $this->json_error('请传过来用户编号');
