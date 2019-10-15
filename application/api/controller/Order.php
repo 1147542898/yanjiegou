@@ -60,6 +60,7 @@ class Order extends Base
                     $data['num'] = $cv['num'];
                     $totalnum+=$cv['num'];
                     $data['goods_attr'] = json_decode($cv['goods_attr'],true);
+                    $data['goods_sku'] = $cv['sku_id'];
                     $data['title'] = $cv['title'];
                     $data['price'] = $cv['price'];
                     $totalprice+=($cv['num']*$cv['price']);
