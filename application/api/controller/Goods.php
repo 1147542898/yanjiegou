@@ -318,7 +318,12 @@ class Goods extends Base
         //        }
         /*--重写*/
         // 商品属性由sku获得
-        $goods_attr = $sku['group_sku'];
+        if ($is_spec == 1) {
+            $goods_attr = $sku['group_sku'];
+        }else{
+            $goods_attr = '';
+        }
+        
 
         /*--chen*/
 
