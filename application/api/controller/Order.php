@@ -61,6 +61,16 @@ class Order extends Base
                     $totalnum+=$cv['num'];
                     $data['goods_attr'] = json_decode($cv['goods_attr'],true);
                     $data['goods_sku'] = $cv['sku_id'];
+                    /*---chen*/
+                    $data['goods_attr_val'] = '';
+                    if (!empty($data['goods_attr'])) {
+                        foreach ($data['goods_attr'] as $ks=>$vs){
+                            $SttrName=Db::name('GoodsSttr')->where('id',$ks)->value('key');
+                            $SttrValName=Db::name('GoodsSttrval')->where('id',$vs)->value('sttr_value');
+                            $data['goods_attr_val'] .=  $SttrName.':'.$SttrValName.' ';
+                        }
+                    }
+                    /*---chen*/
                     $data['title'] = $cv['title'];
                     $data['price'] = ($cv['sku_id']==0)?$cv['price']:(Db::name('GoodsSttrxsku')->where('id',$cv['sku_id'])->value('money'));
                     // $totalprice+=($cv['num']*$cv['price']);

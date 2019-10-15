@@ -586,7 +586,7 @@ class Goods extends Base
         if (empty($goods_id) || !is_numeric($goods_id)) {
             $this->json_error('参数错误');
         }
-        $sttrArr = Db::name('GoodsSttrx')->where('goods_id', $goods_id)->select();
+        $sttrArr = Db::name('GoodsSttrval')->field('sttr_id')->where('goods_id', $goods_id)->group('sttr_id')->select();
         if (empty($sttrArr)) {
             $this->json_error('没有属性');
         }
@@ -633,7 +633,7 @@ class Goods extends Base
             $group = json_decode($value['group_sku'], true);
             $info[$key] = [
                 'id' => $value['id'],  //sku_id
-                'price' => $value['money'],           //价格
+                'price' => $value['money']*100,           //价格
                 'discount' => '',      //折扣
                 'stock_num' => $value['number'],     //库存
                 'goods_id' => $value['goods_id']   //商品id
