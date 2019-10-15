@@ -1664,7 +1664,8 @@ class Users extends Base
                     }
                     /*--chen*/
                     $data['title'] = $cv['title'];
-                    $data['price'] = $cv['price'];
+                    // $data['price'] = $cv['price'];
+                    $data['price'] = ($cv['sku_id']==0)?$cv['price']:(Db::name('GoodsSttrxsku')->where('id',$cv['sku_id'])->value('money'));
                     $data['check'] = 'false';
                     $headimgs = explode(',',$cv['headimg']);
                     $data['headimg'] = $this->domain().$headimgs[0];

@@ -607,7 +607,7 @@ class Goods extends Base
             ];
         }
         $data['list'] = $this->getsttrgroup($goods_id);
-        //        print_r($data);exit;
+               // print_r($data);exit;
         $this->json_success($data, '成功');
     }
 
