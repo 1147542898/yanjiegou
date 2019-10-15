@@ -640,4 +640,6 @@ class Goods extends Base
         //        ];
         return $info;
     }
+    
+     
 }

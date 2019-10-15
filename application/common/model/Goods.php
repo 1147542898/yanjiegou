@@ -7,5 +7,7 @@ class Goods extends Model
     protected $createTime = "createtime";
     protected $updateTime = "updatetime";
 
+   
+
 }
 
