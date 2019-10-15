@@ -60,9 +60,11 @@ class Order extends Base
                     $data['num'] = $cv['num'];
                     $totalnum+=$cv['num'];
                     $data['goods_attr'] = json_decode($cv['goods_attr'],true);
+                    $data['goods_sku'] = $cv['sku_id'];
                     $data['title'] = $cv['title'];
-                    $data['price'] = $cv['price'];
-                    $totalprice+=($cv['num']*$cv['price']);
+                    $data['price'] = ($cv['sku_id']==0)?$cv['price']:(Db::name('GoodsSttrxsku')->where('id',$cv['sku_id'])->value('money'));
+                    // $totalprice+=($cv['num']*$cv['price']);
+                    $totalprice+=($cv['num']*$data['price']);
                     $headimgs = explode(',',$cv['headimg']);
                     $data['headimg'] = $this->domain().$headimgs[0];
                     $shops[$k]['goods'][] = $data;
@@ -309,9 +311,16 @@ class Order extends Base
     }
 
     //提交订单
+    /**
+     *
+     *[user_id] => 17
+     *[pay_type] => 1
+     *[myshop] => [{"shop_id":5,"cart_id":"245","remark_member":""}]
+     *
+     */
     public function ordersub()
     {
-
+        print_r(input());exit;
         $user_id = input('post.user_id');
         if(null===$user_id){
             $this->json_error('请传过来用户编号');
