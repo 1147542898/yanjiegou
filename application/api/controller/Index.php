@@ -55,6 +55,7 @@ class Index extends Base
 
             //每页显示的数量
             $rows = empty(input('post.rows'))?10:input('post.rows');
+            $user_id =empty(input('post.user_id')) ? "" : input('post.user_id');
 
             $goodsmodel = new Goods();
 
@@ -78,6 +79,12 @@ class Index extends Base
                 $headimg = explode(',',$v['headimg']);
                 $goods[$k]['headimg'] = $this->domain().$headimg[0];
                 $goods[$k]['shoplogo'] = $this->domain().$v['shoplogo'];
+                $goods[$k]['collection_num']=$goodsmodel::get($v['id'])->collectiongoods()->count();
+                if($user_id){
+                 $goods[$k]['is_collection']=$goodsmodel->if_collection($v['id'],$user_id);               
+                }else{
+                    $goods[$k]['is_collection']=0;
+                }
             }
 
 
