@@ -225,11 +225,16 @@ class ComposerStaticInit2bc4f313dba415539e266f7ac2c87dcd
         ),
     );
 
+    public static $classMap = array (
+        'think\\cache\\driver\\RedisPro' => __DIR__ . '/..' . '/marlon/thinkphp-redis/src/RedisPro.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit2bc4f313dba415539e266f7ac2c87dcd::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit2bc4f313dba415539e266f7ac2c87dcd::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit2bc4f313dba415539e266f7ac2c87dcd::$classMap;
 
         }, null, ClassLoader::class);
     }

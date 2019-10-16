@@ -7,7 +7,7 @@ use think\Request;
 use ensh\Leftnav;
 use app\api\controller\Base;
 use app\admin\controller\Common;
-
+use think\cache\driver\RedisPro;
 class Shop extends Common
 {
     protected  $model;

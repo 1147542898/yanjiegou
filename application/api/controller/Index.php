@@ -5,6 +5,7 @@ use app\api\model\Bigshop;
 use app\api\model\Goods;
 use think\Db;
 use think\Request;
+use geo\Geohash;
 
 class Index extends Base
 {
@@ -13,7 +14,7 @@ class Index extends Base
     public function adv()
     {
         $type_id = input('get.type_id') ? input('get.type_id') : 1;
-/*分支修改*/
+        /*分支修改*/
         $where['type_id'] = $type_id;
         $where['open'] = 1;
 
@@ -52,11 +53,11 @@ class Index extends Base
             //当前的页码
             $p = empty(input('post.p')) ?1:input('post.p');
 
-
             //每页显示的数量
             $rows = empty(input('post.rows'))?10:input('post.rows');
             $user_id =empty(input('post.user_id')) ? "" : input('post.user_id');
-
+            $lat=input('post.lat');
+            $lng=input('post.lng');
             $goodsmodel = new Goods();
 
             $where = [
@@ -71,7 +72,7 @@ class Index extends Base
                 ->join('__SHOP__ s','s.id=g.shopid','LEFT')
                 ->order('g.readpoint desc,g.id asc')
                 ->where($where)
-                ->field('g.id,g.headimg,g.title,g.price,s.id as sid,s.name,s.shoplogo')
+                ->field('g.id,g.headimg,g.title,g.price,s.id as sid,s.name,s.shoplogo,s.longitude,s.latitude')
                 ->page($p,$rows)
                 ->select();
 
@@ -80,15 +81,16 @@ class Index extends Base
                 $goods[$k]['headimg'] = $this->domain().$headimg[0];
                 $goods[$k]['shoplogo'] = $this->domain().$v['shoplogo'];
                 $goods[$k]['collection_num']=$goodsmodel::get($v['id'])->collectiongoods()->count();
+                if($lng && $lat){
+                    $geo =new Geohash();                    
+                    $goods[$k]['distance']=$geo::getDistance($lng,$lat,$v['longitude'],$v['latitude']);
+                }
                 if($user_id){
                  $goods[$k]['is_collection']=$goodsmodel->if_collection($v['id'],$user_id);               
                 }else{
                     $goods[$k]['is_collection']=0;
                 }
-            }
-
-
-
+            }  
             $this->json_success($goods,'请求数据成功');
 
         }else{
@@ -98,5 +100,6 @@ class Index extends Base
 
 
     }
+   
     
 }

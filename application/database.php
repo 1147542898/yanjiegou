@@ -13,13 +13,16 @@ return [
     // 数据库类型
     'type'            => 'mysql',
     // 服务器地址+++++++++++++++++++++++++++++++++
-   'hostname'        => '47.110.9.93',
+  //  'hostname'        => '47.110.9.93',
+   'hostname'        => '127.0.0.1',
    // 数据库名
    'database'        => 'test_yulongyang_',
    // 用户名
-   'username'        => 'test_yulongyang_',
+  //  'username'        => 'test_yulongyang_',
+   'username'        => 'root',
    // 密码
-   'password'        => 'XSw8Mk8a7Eitcrt3',
+  //  'password'        => 'XSw8Mk8a7Eitcrt3',
+   'password'        => 'root',
      // 'hostname'        => '47.110.9.93',
      // // 数据库名
      // 'database'        => 'test_yulongyang_',

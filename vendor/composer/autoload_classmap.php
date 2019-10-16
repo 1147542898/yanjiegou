@@ -6,4 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'think\\cache\\driver\\RedisPro' => $vendorDir . '/marlon/thinkphp-redis/src/RedisPro.php',
 );

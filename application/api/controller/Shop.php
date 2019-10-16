@@ -31,6 +31,9 @@ class Shop extends Base
         //服务态度  manner
         //liu
         $shop = Db::name("shop")->where('id',$shop_id)->field('id,name,shoplogo,intro,province,city,area,address,description,quality,service')->find();
+        if(empty($shop)){
+            $this->json_error('商家不存在！');
+        }
         $shop['shop_fans']=ShopModel::get($shop_id)->shopFans()->count();
         $shop['shop_goods_num']=ShopModel::get($shop_id)->shopGoodsNum()->count();
         $shop['shoplogo'] = $this->domain().$shop['shoplogo'];       
