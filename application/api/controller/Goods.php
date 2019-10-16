@@ -5,6 +5,8 @@ namespace app\api\controller;
 use app\api\model\Comment;
 use think\Db;
 use think\Request;
+use think\Session;
+use think\Cookie;
 // 商品
 class Goods extends Base
 {
@@ -110,7 +112,35 @@ class Goods extends Base
         $goods['tjgoods'] = $tjgoods;
         $sale_num = $this->goodsSaleNum($goods_id);
         $goods['sale_num'] = $sale_num ? $sale_num : 0;
+
+
+
+        $this->readNumber($goods_id);
         $this->json_success($goods);
+    }
+    function readNumber($goods_id){
+        // 点击量加1
+        $readgoods = Session::get('readgoods');
+        if (empty($readgoods)) {
+            Db::name('goods')->where('id', $goods_id)->setInc('readpoint');
+            $readgoods[$goods_id] = time();
+            Session::set('readgoods',$readgoods);
+        }else{
+            // 不为空，判断有没有goods_id.
+            if (array_key_exists($goods_id,$readgoods)) {
+                // 有id判断时间是否在一天内
+                if (($readgoods[$goods_id]+86400) < time() ) {
+                    Db::name('goods')->where('id', $goods_id)->setInc('readpoint');
+                    $readgoods[$goods_id] = time();
+                    Session::set('readgoods',$readgoods);
+                }
+            }else{
+                // 没有id第一次点击，加
+                Db::name('goods')->where('id', $goods_id)->setInc('readpoint');
+                $readgoods[$goods_id] = time();
+                Session::set('readgoods',$readgoods);
+            }
+        }
     }
     //获取商品的月销量--v
     public function goodsSaleNum($goods_id)

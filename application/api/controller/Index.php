@@ -72,7 +72,7 @@ class Index extends Base
                 ->join('__SHOP__ s','s.id=g.shopid','LEFT')
                 ->order('g.readpoint desc,g.id asc')
                 ->where($where)
-                ->field('g.id,g.headimg,g.title,g.price,s.id as sid,s.name,s.shoplogo,s.longitude,s.latitude')
+                ->field('g.id,g.headimg,g.title,g.price,g.label,s.id as sid,s.name,s.shoplogo,s.longitude,s.latitude')
                 ->page($p,$rows)
                 ->select();
 
@@ -90,6 +90,7 @@ class Index extends Base
                 }else{
                     $goods[$k]['is_collection']=0;
                 }
+                $goods[$k]['label'] = explode(',', $v['label']);
             }  
             $this->json_success($goods,'请求数据成功');
 
