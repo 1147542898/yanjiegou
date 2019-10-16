@@ -37,11 +37,16 @@ class Brand extends Base
             foreach ($list as $k => $v) {
                 $list[$k]['pic'] = $this->domain() . $v['pic'];
                 $goods = Db::name('goods')->field('id,headimg,title,price,original_price,cost_price,zk_price')->where(['brandid' => $v['id']])->limit(3)->select();
-                foreach ($goods as $gk => $gv) {
-                    $headimg = explode(',', $gv['headimg']);
-                    $goods[$gk]['headimg'] = $this->domain() . $headimg[0];
+                if(empty($goods)){
+                    unset($list[$k]);
+                }else{
+                    foreach ($goods as $gk => $gv) {
+                        $headimg = explode(',', $gv['headimg']);
+                        $goods[$gk]['headimg'] = $this->domain() . $headimg[0];
+                    }
+                    $list[$k]['goods'] = $goods;
                 }
-                $list[$k]['goods'] = $goods;
+                
             }
             $this->json_success($list, '请求数据成功');
         } else {
@@ -101,11 +106,15 @@ class Brand extends Base
                     ->where(['brandid' => $v['id'], 'isqc' => 1])
                     ->field('id,headimg,title,price,original_price')
                     ->limit(3)->select();
-                foreach ($goods as $gk => $gv) {
-                    $headimg = explode(',', $gv['headimg']);
-                    $goods[$gk]['headimg'] = $this->domain() . $headimg[0];
+                if(empty($goods)){
+                        unset($list[$k]);
+                }else{
+                    foreach ($goods as $gk => $gv) {
+                        $headimg = explode(',', $gv['headimg']);
+                        $goods[$gk]['headimg'] = $this->domain() . $headimg[0];
+                    }
+                    $list[$k]['goods'] = $goods;
                 }
-                $list[$k]['goods'] = $goods;
             }
             $this->json_success($list, '请求数据成功');
         } else {
@@ -150,11 +159,16 @@ class Brand extends Base
                     ->where(['brandid' => $v['id'], 'istj' => 1])
                     ->field('id,headimg,title,price,original_price')
                     ->select();
-                foreach ($goods as $gk => $gv) {
-                    $headimg = explode(',', $gv['headimg']);
-                    $goods[$gk]['headimg'] = $this->domain() . $headimg[0];
+                if(empty($goods)){
+                        unset($list[$k]);
+                }else{
+                    foreach ($goods as $gk => $gv) {
+                        $headimg = explode(',', $gv['headimg']);
+                        $goods[$gk]['headimg'] = $this->domain() . $headimg[0];
+                    }
+                    $list[$k]['goods'] = $goods;
                 }
-                $list[$k]['goods'] = $goods;
+                
             }
             $this->json_success($list, '请求数据成功');
         } else {
@@ -199,11 +213,20 @@ class Brand extends Base
                     ->where(['brandid' => $v['id'], 'iszk' => 1])
                     ->field('id,headimg,title,price,original_price,zk_price')
                     ->select();
-                foreach ($goods as $gk => $gv) {
-                    $headimg = explode(',', $gv['headimg']);
-                    $goods[$gk]['headimg'] = $this->domain() . $headimg[0];
+                if(empty($goods)){
+                        unset($list[$k]);
+                }else{
+                    foreach ($goods as $gk => $gv) {
+                        $headimg = explode(',', $gv['headimg']);
+                        $goods[$gk]['headimg'] = $this->domain() . $headimg[0];
+                    }
+                    $list[$k]['goods'] = $goods;
                 }
-                $list[$k]['goods'] = $goods;
+                // foreach ($goods as $gk => $gv) {
+                //     $headimg = explode(',', $gv['headimg']);
+                //     $goods[$gk]['headimg'] = $this->domain() . $headimg[0];
+                // }
+                // $list[$k]['goods'] = $goods;
             }
             $this->json_success($list, '请求数据成功');
         } else {
