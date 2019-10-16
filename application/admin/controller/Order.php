@@ -118,7 +118,9 @@ class Order extends Common{
      * 售后订单
      **/
     public function refund(){
-        $model=model('orderrefund');
+        // $model=model('orderrefund')::all()->toArray();       
+        // $model = $model->toArray();
+        
         if(Request::instance()->isAjax()){
             $page =input('page')?input('page'):1;
             $pageSize =input('limit')?input('limit'):config('pageSize');
@@ -130,7 +132,7 @@ class Order extends Common{
             if(!empty($status)){
                 $where['o.status']=7;
             }
-            $list = $model->alias('a')
+            $list = model('orderrefund')->alias('a')
                 ->join('order o','o.id = a.order_id','LEFT')
                 ->join('users u','u.id = o.user_id','LEFT')
                 ->join('shop s','s.id = o.shop_id','LEFT')
@@ -149,9 +151,11 @@ class Order extends Common{
             return ['code'=>0,'msg'=>"获取成功",'data'=>$list['data'],'count'=>$list['total'],'rel'=>1];
             return $result;
 
+        }else{
+          return  $this->fetch();
         }
-        
-        return $this->fetch();
+    //     $this->assign('list',$model);
+    //     return $this->fetch();
     }
 
     //设置商品审核状态
@@ -199,10 +203,16 @@ class Order extends Common{
             'out_trade_no' => $list['out_trade_no'],
             'refund_amount' => number_format($list['total_amount'],2,".",""),
         ];
-        $result = Pay::alipay($this->config)->refund($order);           
+        $result = Pay::alipay($this->config)->refund($order); 
+        
+
         if($result['msg'] == 'Success'){
+            $rel = Db::name('orderrefund')->where('order_id',$id)->update(['type'=>1]);
             // return $this->resultmsg('退款成功',1);
-            return ['code'=>1,'msg'=>"退款成功"];
+            if($rel){
+                return ['code'=>1,'msg'=>"退款成功"];
+            }
+            
 
         }else{
             // return $this->resultmsg('退款失败',0);
