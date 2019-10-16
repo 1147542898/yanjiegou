@@ -1725,3 +1725,227 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.074601s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.075016s ]
 [ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.075636s ]
+---------------------------------------------------------------
+[ 2019-10-16T17:39:10+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/api/activity/abount
+[运行时间：0.060817s] [吞吐率：16.44req/s] [内存消耗：1,708.24kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'abount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/activity/abount' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-16T17:39:16+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/api/activity/about
+[运行时间：0.229419s] [吞吐率：4.36req/s] [内存消耗：2,360.88kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'about',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/activity/about' => '',
+)
+[ info ] [ RUN ] app\api\controller\Activity->about[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Activity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078638s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_system` [ RunTime:0.052199s ]
+[ sql ] [ SQL ] SELECT `logo`,`tel`,`name` FROM `shy_system` LIMIT 1 [ RunTime:0.052001s ]
+---------------------------------------------------------------
+[ 2019-10-16T17:39:27+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/api/activity/about
+[运行时间：0.285751s] [吞吐率：3.50req/s] [内存消耗：2,361.70kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'about',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/activity/about' => '',
+)
+[ info ] [ RUN ] app\api\controller\Activity->about[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Activity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.108710s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_system` [ RunTime:0.072503s ]
+[ sql ] [ SQL ] SELECT `logo`,`tel`,`name` FROM `shy_system` LIMIT 1 [ RunTime:0.072553s ]
+---------------------------------------------------------------
+[ 2019-10-16T17:39:42+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/api/activity/about
+[运行时间：0.292504s] [吞吐率：3.42req/s] [内存消耗：2,361.88kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'about',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/activity/about' => '',
+)
+[ info ] [ RUN ] app\api\controller\Activity->about[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Activity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.111522s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_system` [ RunTime:0.074329s ]
+[ sql ] [ SQL ] SELECT `logo`,`tel`,`name` FROM `shy_system` LIMIT 1 [ RunTime:0.073480s ]
+---------------------------------------------------------------
+[ 2019-10-16T17:40:17+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/api/activity/about
+[运行时间：0.214612s] [吞吐率：4.66req/s] [内存消耗：2,361.84kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'about',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/activity/about' => '',
+)
+[ info ] [ RUN ] app\api\controller\Activity->about[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Activity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078817s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_system` [ RunTime:0.052012s ]
+[ sql ] [ SQL ] SELECT `logo`,`tel`,`name` FROM `shy_system` LIMIT 1 [ RunTime:0.051906s ]
+---------------------------------------------------------------
+[ 2019-10-16T17:43:17+08:00 ] 192.168.0.100 POST 192.168.0.109:5577/api/activity/about
+[运行时间：0.220485s] [吞吐率：4.54req/s] [内存消耗：2,302.85kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'about',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:8080/our',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://localhost:8080',
+  'accept' => 'application/json, text/plain, */*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => '192.168.0.109:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/activity/about' => '',
+)
+[ info ] [ RUN ] app\api\controller\Activity->about[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Activity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077982s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_system` [ RunTime:0.052002s ]
+[ sql ] [ SQL ] SELECT `logo`,`tel`,`name` FROM `shy_system` LIMIT 1 [ RunTime:0.051026s ]
+---------------------------------------------------------------
+[ 2019-10-16T17:45:50+08:00 ] 192.168.0.100 POST 192.168.0.109:5577/api/activity/about
+[运行时间：0.219626s] [吞吐率：4.55req/s] [内存消耗：2,302.85kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'about',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:8080/our',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'origin' => 'http://localhost:8080',
+  'accept' => 'application/json, text/plain, */*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => '192.168.0.109:5577',
+)
+[ info ] [ PARAM ] array (
+  'api/activity/about' => '',
+)
+[ info ] [ RUN ] app\api\controller\Activity->about[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\api\controller\Activity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078250s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_system` [ RunTime:0.051189s ]
+[ sql ] [ SQL ] SELECT `logo`,`tel`,`name` FROM `shy_system` LIMIT 1 [ RunTime:0.049951s ]
