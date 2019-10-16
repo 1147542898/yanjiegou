@@ -169,7 +169,7 @@ class Brand extends Base
                     $list[$k]['goods'] = $goods;
                 }
                 
-            }
+            }         
             $this->json_success($list, '请求数据成功');
         } else {
             $this->json_error('请求方式有问题');
