@@ -145,7 +145,7 @@ class Order extends Common{
                     $row['pay_type']=get_status($row['pay_type'],'pay_type');
                     $row['add_time']=date('Y-m-d H:i:s',$row['add_time']);
                     $row['oadd_time']=date('Y-m-d H:i:s',$row['oadd_time']);
-                    $row['headimg'] = '/'.explode(',',$row['headimg'])[0];
+                    $row['headimg'] = explode(',',$row['headimg'])[0];
                     $row['statusname'] = get_status($row['status'],'check');
                 })->toArray();    
             return ['code'=>0,'msg'=>"获取成功",'data'=>$list['data'],'count'=>$list['total'],'rel'=>1];

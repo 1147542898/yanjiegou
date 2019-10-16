@@ -1,0 +1,1727 @@
+---------------------------------------------------------------
+[ 2019-10-16T16:56:30+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.060853s] [吞吐率：16.43req/s] [内存消耗：3,096.23kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-16T16:56:31+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.294751s] [吞吐率：3.39req/s] [内存消耗：3,088.04kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078580s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.052026s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.064222s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.052373s ]
+---------------------------------------------------------------
+[ 2019-10-16T16:59:03+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.058593s] [吞吐率：17.07req/s] [内存消耗：3,096.38kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-16T16:59:04+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.430497s] [吞吐率：2.32req/s] [内存消耗：3,088.04kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.111086s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.074647s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.073326s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.074289s ]
+---------------------------------------------------------------
+[ 2019-10-16T16:59:20+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.042965s] [吞吐率：23.27req/s] [内存消耗：3,096.38kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-16T16:59:20+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.383030s] [吞吐率：2.61req/s] [内存消耗：3,088.04kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.112461s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.074213s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.074550s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.075151s ]
+---------------------------------------------------------------
+[ 2019-10-16T16:59:34+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.042485s] [吞吐率：23.54req/s] [内存消耗：3,096.38kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-16T16:59:35+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.382680s] [吞吐率：2.61req/s] [内存消耗：3,088.04kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.111423s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.074446s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.074278s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.075122s ]
+---------------------------------------------------------------
+[ 2019-10-16T16:59:41+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.044198s] [吞吐率：22.63req/s] [内存消耗：2,777.17kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-16T16:59:41+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.387916s] [吞吐率：2.58req/s] [内存消耗：3,088.04kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.113423s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.074884s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.075096s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.075081s ]
+---------------------------------------------------------------
+[ 2019-10-16T16:59:56+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.040479s] [吞吐率：24.70req/s] [内存消耗：2,777.17kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-16T16:59:57+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.275909s] [吞吐率：3.62req/s] [内存消耗：3,088.04kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.076799s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.052177s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.050432s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.052528s ]
+---------------------------------------------------------------
+[ 2019-10-16T17:00:09+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.043195s] [吞吐率：23.15req/s] [内存消耗：3,096.38kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-16T17:00:10+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.293845s] [吞吐率：3.40req/s] [内存消耗：3,088.04kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078909s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.052868s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.052067s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.052694s ]
+---------------------------------------------------------------
+[ 2019-10-16T17:00:47+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.043320s] [吞吐率：23.08req/s] [内存消耗：3,096.38kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-16T17:00:48+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.381298s] [吞吐率：2.62req/s] [内存消耗：3,088.04kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.111519s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.074205s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.074706s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.075079s ]
+---------------------------------------------------------------
+[ 2019-10-16T17:11:41+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.059984s] [吞吐率：16.67req/s] [内存消耗：3,096.17kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-16T17:11:41+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.382427s] [吞吐率：2.61req/s] [内存消耗：3,088.04kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.111932s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.074128s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.073424s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.075076s ]
+---------------------------------------------------------------
+[ 2019-10-16T17:12:36+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.048159s] [吞吐率：20.76req/s] [内存消耗：2,776.84kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-16T17:12:37+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.289916s] [吞吐率：3.45req/s] [内存消耗：3,087.91kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086531s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.052442s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.051166s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.052351s ]
+---------------------------------------------------------------
+[ 2019-10-16T17:12:55+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.040482s] [吞吐率：24.70req/s] [内存消耗：2,777.05kb] [文件加载：73]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-16T17:12:55+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.281950s] [吞吐率：3.55req/s] [内存消耗：3,087.91kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078278s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.051868s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.051590s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.052454s ]
+---------------------------------------------------------------
+[ 2019-10-16T17:15:07+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.057077s] [吞吐率：17.52req/s] [内存消耗：3,096.25kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-16T17:15:08+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.376982s] [吞吐率：2.65req/s] [内存消耗：3,087.91kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.108596s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.073070s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.072970s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.074218s ]
+---------------------------------------------------------------
+[ 2019-10-16T17:15:26+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.043521s] [吞吐率：22.98req/s] [内存消耗：3,096.25kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-16T17:15:27+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.575502s] [吞吐率：1.74req/s] [内存消耗：3,087.91kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.140064s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.137015s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.113367s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.137842s ]
+---------------------------------------------------------------
+[ 2019-10-16T17:15:41+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.042417s] [吞吐率：23.58req/s] [内存消耗：3,096.25kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-16T17:15:42+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.372417s] [吞吐率：2.69req/s] [内存消耗：3,087.91kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.108507s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.071717s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.072697s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.072796s ]
+---------------------------------------------------------------
+[ 2019-10-16T17:15:56+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.042228s] [吞吐率：23.68req/s] [内存消耗：3,096.25kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-16T17:15:56+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.378476s] [吞吐率：2.64req/s] [内存消耗：3,087.91kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.109401s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.072872s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.072506s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.074551s ]
+---------------------------------------------------------------
+[ 2019-10-16T17:16:05+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.042936s] [吞吐率：23.29req/s] [内存消耗：3,096.25kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-16T17:16:06+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.285876s] [吞吐率：3.50req/s] [内存消耗：3,087.91kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079202s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.051829s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.052177s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.053273s ]
+---------------------------------------------------------------
+[ 2019-10-16T17:21:25+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.058139s] [吞吐率：17.20req/s] [内存消耗：3,096.25kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-16T17:21:26+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.293011s] [吞吐率：3.41req/s] [内存消耗：3,087.91kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079278s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.052853s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.054492s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.054217s ]
+---------------------------------------------------------------
+[ 2019-10-16T17:21:47+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.044168s] [吞吐率：22.64req/s] [内存消耗：3,096.25kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-16T17:21:47+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.375793s] [吞吐率：2.66req/s] [内存消耗：3,087.91kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.108428s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.073834s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.072389s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.073187s ]
+---------------------------------------------------------------
+[ 2019-10-16T17:21:56+08:00 ] 127.0.0.1 GET www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.045843s] [吞吐率：21.81req/s] [内存消耗：3,096.25kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\view\order\refund.html [ array (
+  0 => 'attachmark',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-16T17:21:57+08:00 ] 127.0.0.1 POST www.yanjg.com:5577/admin/order/refund.html
+[运行时间：0.383761s] [吞吐率：2.61req/s] [内存消耗：3,087.91kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=4n25v5ipa4loorm3ukmomda4be',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yanjg.com:5577/admin/order/refund.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.yanjg.com:5577',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '15',
+  'connection' => 'close',
+  'host' => 'www.yanjg.com:5577',
+)
+[ info ] [ PARAM ] array (
+  'admin/order/refund_html' => '',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ LANG ] D:\phpstudy123\PHPTutorial\WWW\yanjiegou\public/../application/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->refund[ D:\phpstudy123\PHPTutorial\WWW\yanjiegou\application\admin\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.112057s ] mysql:host=47.110.9.93;port=3306;dbname=test_yulongyang_;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `shy_orderrefund` [ RunTime:0.074601s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` LIMIT 1 [ RunTime:0.075016s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`pay_type`,o.add_time oadd_time,o.status as ostatus,`u`.`username`,s.id as sid,s.name as sname,`g`.`title`,`g`.`headimg` FROM `shy_orderrefund` `a` LEFT JOIN `shy_order` `o` ON `o`.`id`=`a`.`order_id` LEFT JOIN `shy_users` `u` ON `u`.`id`=`o`.`user_id` LEFT JOIN `shy_shop` `s` ON `s`.`id`=`o`.`shop_id` LEFT JOIN `shy_goods` `g` ON `g`.`id`=`a`.`goods_id` ORDER BY `o`.`id` DESC LIMIT 0,10 [ RunTime:0.075636s ]
