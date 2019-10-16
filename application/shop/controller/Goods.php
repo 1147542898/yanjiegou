@@ -66,21 +66,22 @@ class Goods extends Common{
              $data = input('post.');
 
 /*---chen*/
-            $results = $data['results'];
-            $spec = $data['spec'];
-            $sku_code = $data['sku_code'];
-            $sku_market_price = $data['sku_market_price'];
-            $sku_price = $data['sku_price'];
-            $sku_stock = $data['sku_stock'];
-            if (!array_key_exists('ist_spec', $data)) {
-                return $this->resultmsg('请选择默认销售规格',0);
-            }
-            $ist_spec = $data['ist_spec'];
-            unset($data['results'],$data['spec'],$data['sku_code'],$data['sku_market_price'],$data['sku_price'],$data['sku_stock'],$data['ist_spec']);
-            // 规格是否有；
-            if (!empty($results)) {
+            if (input('post.results')) {
+                $results = $data['results'];
+                $spec = $data['spec'];
+                $sku_code = $data['sku_code'];
+                $sku_market_price = $data['sku_market_price'];
+                $sku_price = $data['sku_price'];
+                $sku_stock = $data['sku_stock'];
+                if (!array_key_exists('ist_spec', $data)) {
+                    return $this->resultmsg('请选择默认销售规格',0);
+                }
+                $ist_spec = $data['ist_spec'];
+                unset($data['results'],$data['spec'],$data['sku_code'],$data['sku_market_price'],$data['sku_price'],$data['sku_stock'],$data['ist_spec']);
+                // 规格是否有；
                 $data['is_spec'] = 1;
             }
+            
 /*---chen*/
 
 
@@ -119,7 +120,10 @@ class Goods extends Common{
             }
             if($this->model->where(array('id'=>$data['id']))->update($data)){
 /*---chen*/
-                $this->AddSku($data['id'],$results,$spec,$sku_code,$sku_market_price,$sku_price,$sku_stock,$ist_spec);
+                if (input('post.results')) {
+                    $this->AddSku($data['id'],$results,$spec,$sku_code,$sku_market_price,$sku_price,$sku_stock,$ist_spec);
+                }
+                
 /*---chen*/
                 return $this->resultmsg('修改成功');
             }
@@ -202,20 +206,21 @@ class Goods extends Common{
     public function add(){
         if(Request::instance()->isAjax()){
             $data = input('post.');
-
-            $results = $data['results'];
-            $spec = $data['spec'];
-            $sku_code = $data['sku_code'];
-            $sku_market_price = $data['sku_market_price'];
-            $sku_price = $data['sku_price'];
-            $sku_stock = $data['sku_stock'];
-            $ist_spec = $data['ist_spec'];
-            unset($data['results'],$data['spec'],$data['sku_code'],$data['sku_market_price'],$data['sku_price'],$data['sku_stock'],$data['ist_spec']);
+            if (input('post.results')) {
+                $results = $data['results'];
+                $spec = $data['spec'];
+                $sku_code = $data['sku_code'];
+                $sku_market_price = $data['sku_market_price'];
+                $sku_price = $data['sku_price'];
+                $sku_stock = $data['sku_stock'];
+                $ist_spec = $data['ist_spec'];
+                unset($data['results'],$data['spec'],$data['sku_code'],$data['sku_market_price'],$data['sku_price'],$data['sku_stock'],$data['ist_spec']);
+                
             // 规格是否有；
-            if (!empty($results)) {
                 $data['is_spec'] = 1;
             }
-            
+
+             
 
             unset($data['upfile']);
             $data['userid'] = URID;
@@ -252,7 +257,10 @@ class Goods extends Common{
             // $insert=$this->model->insert($data);
             $insert=$this->model->insertGetId($data);
             if($insert){
-                $this->AddSku($insert,$results,$spec,$sku_code,$sku_market_price,$sku_price,$sku_stock,$ist_spec);
+                if (input('post.results')) {
+                    $this->AddSku($insert,$results,$spec,$sku_code,$sku_market_price,$sku_price,$sku_stock,$ist_spec);
+                }
+                
                 return $this->resultmsg('添加成功');
             }
             return $this->resultmsg('添加失败',0);
