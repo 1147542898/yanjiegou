@@ -425,7 +425,9 @@ class Order extends Base
                     $order_goods[$ck]['num'] = $cv['num'];
                     $order_goods[$ck]['specification'] = $cv['goods_attr'];
                     $order_goods[$ck]['addtime'] = time();
-
+                    /*---chen*/
+                    $order_goods[$ck]['sku_id'] = $cv['sku_id'];
+                    /*---chen*/
                 }
             }
             $shops[$k]['totalprice'] = $total;

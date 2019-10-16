@@ -69,7 +69,7 @@ class Index extends Base
 
             $goods = $goodsmodel->alias('g')
                 ->join('__SHOP__ s','s.id=g.shopid','LEFT')
-                ->order('g.sorts asc,g.id desc')
+                ->order('g.readpoint desc,g.id asc')
                 ->where($where)
                 ->field('g.id,g.headimg,g.title,g.price,s.id as sid,s.name,s.shoplogo')
                 ->page($p,$rows)
