@@ -267,6 +267,8 @@ class Activity extends Base
     public function about()
     {
         $data = Db::name('system')->field('logo,tel,name')->find();
+        $data['logo'] ='http://'.$_SERVER['HTTP_HOST'].$data['logo'];
+      
         $this->json_success($data);
     }
 
