@@ -32,7 +32,8 @@ class Goods extends Base
         foreach ($headimg as $k => $v) {
             $imgs[] = $this->domain() . $v;
         }
-
+        $lat=input('post.lat');//纬度
+        $lng=input('post.lng');//经度
         $goods['headimg'] = $imgs;
         $goods['shoplogo'] = $this->domain() . $goods['shoplogo'];
 
@@ -96,7 +97,7 @@ class Goods extends Base
             ->join('__SHOP__ s', 's.id=g.shopid', 'LEFT')
             ->order('g.readpoint desc,g.id desc')
             ->where($where)
-            ->field('g.id,g.headimg,g.title,g.price,s.id as sid,s.name,s.shoplogo')
+            ->field('g.id,g.headimg,g.title,g.price,s.id as sid,s.name,s.shoplogo,s.longitude,s.latitude,GETDISTANCE(s.latitude,s.longitude,'.$lat.','.$lng.') as distance')
             ->page($p, $rows)
             ->select();
 
@@ -107,6 +108,11 @@ class Goods extends Base
             $headimg = explode(',', $v['headimg']);
             $tjgoods[$k]['headimg'] = $this->domain() . $headimg[0];
             $tjgoods[$k]['shoplogo'] = $this->domain() . $v['shoplogo'];
+            if($v['distance']>1000){
+                $tjgoods[$k]['distance']=round($v['distance']/1000,2)."km";
+            }else{
+                $tjgoods[$k]['distance']=round($v['distance'])."m";
+            }
         }
         $goods['goods_sttr']=$this->getsttrgroup($goods_id);
         $goods['tjgoods'] = $tjgoods;
