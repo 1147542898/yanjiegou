@@ -22,9 +22,12 @@ class Goods extends Base
             ->join('__SHOP__ s', 's.id=g.shopid', 'LEFT')
             ->order('g.sorts asc,g.id desc')
             ->where('g.id', $goods_id)
-            ->field('g.id,g.headimg,g.title,g.price,g.original_price,g.cost_price,g.content,s.id as sid,s.name,s.shoplogo,s.star,s.description,s.quality,s.service')
+            ->field('g.id,g.headimg,g.title,g.price,g.original_price,g.cost_price,g.content,g.sold,g.parameter,s.id as sid,s.name,s.shoplogo,s.star,s.description,s.quality,s.service')
             ->find();
-
+        if ($goods['parameter'] != '') {
+            $goods['parameter'] = json_decode($goods['parameter'],true);
+        }
+        
 
 
         $headimg = explode(',', $goods['headimg']);
@@ -55,7 +58,7 @@ class Goods extends Base
         //当前的页码
         $p = empty(input('post.p')) ? 1 : input('post.p');
         //每页显示的数量
-        $rows = empty(input('post.rows')) ? 10 : input('post.rows');
+        $rows = empty(input('post.rows')) ? 3 : input('post.rows');
 
         //评论
         $comments = Db::name('comment')->alias('c')
@@ -99,10 +102,6 @@ class Goods extends Base
             ->field('g.id,g.headimg,g.title,g.price,s.id as sid,s.name,s.shoplogo')
             ->page($p, $rows)
             ->select();
-
-
-
-
         foreach ($tjgoods as $k => $v) {
             $headimg = explode(',', $v['headimg']);
             $tjgoods[$k]['headimg'] = $this->domain() . $headimg[0];
@@ -141,6 +140,50 @@ class Goods extends Base
                 Session::set('readgoods',$readgoods);
             }
         }
+    }
+
+
+    /**
+     * 商品评论列表
+     * goods_id
+     * p
+     * rows
+     */
+    public function getcommentlist(){
+        $goods_id = input('goods_id');
+        if (empty($goods_id)) {
+            $this->json_error('请传过来商品编号');
+        }
+        //当前的页码
+        $p = empty(input('post.p')) ? 1 : input('post.p');
+        //每页显示的数量
+        $rows = empty(input('post.rows')) ? 3 : input('post.rows');
+
+        //评论
+        $comments = Db::name('comment')->alias('c')
+            ->join('__USERS__ u', 'u.id=c.user_id')
+            ->where('c.goods_id', $goods_id)
+            ->field('c.id as cid,c.content,c.imgsrc,c.video,c.add_time,u.avatar,u.username,u.mobile')
+            ->page($p, $rows)
+            ->select();
+
+        foreach ($comments as $k => $v) {
+            if (!empty($v['imgsrc'])) {
+                $imgsrc = explode(',', $v['imgsrc']);
+                foreach ($imgsrc as $key => $val) {
+                    $imgsrc[$key] = $this->domain() . $val;
+                }
+                $comments[$k]['imgsrc'] = $imgsrc;
+            }
+            if (!empty($v['avatar'])) {
+                $comments[$k]['avatar'] = $this->domain() . $v['avatar'];
+            }
+            $comments[$k]['add_time'] = date('Y-m-d H:i:s', $v['add_time']);
+
+
+            $order_gid = $v['order_gid'];
+        }
+        $this->json_success($comments);
     }
     //获取商品的月销量--v
     public function goodsSaleNum($goods_id)
@@ -620,17 +663,25 @@ class Goods extends Base
         if (empty($sttrArr)) {
             $this->json_error('没有属性');
         }
+        // 图片
+        $imgUrl = '';
+        $headimg = Db::name('goods')->where('id',$goods_id)->value('headimg');
+        if (!empty($headimg)) {
+            $headimg = explode(',', $headimg);
+            $imgUrl = $headimg[0];
+        }
+        
         $data = [];
         foreach ($sttrArr as $key => $value) {
             $sttr = Db::name('GoodsSttr')->where('id', $value['sttr_id'])->where('status', 1)->find();
-            $sttrval = Db::name('GoodsSttrval')->field('id,sttr_value')->where('sttr_id', $value['sttr_id'])->where('status', 1)->select();
+            $sttrval = Db::name('GoodsSttrval')->field('id,sttr_value')->where('goods_id',$goods_id)->where('sttr_id', $value['sttr_id'])->where('status', 1)->select();
             $sttrcount = Db::name('GoodsSttrval')->field('id,sttr_value')->where('sttr_id', $value['sttr_id'])->where('status', 1)->count();
             $sttrarr = [];
             foreach ($sttrval as $k => $v) {
                 $sttrarr[$k] = [
                     'id'    =>  $v['id'],
                     'name'  =>  $v['sttr_value'],
-                    'imgUrl' =>  ''
+                    'imgUrl' =>  $this->domain().$imgUrl,
                 ];
             }
             $data['info'][$key] = [

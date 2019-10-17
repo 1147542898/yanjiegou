@@ -66,7 +66,7 @@ class Goods extends Common{
              $data = input('post.');
 
 /*---chen*/
-            if (input('post.results')) {
+            if (array_key_exists('results',input('post.'))) {
                 $results = $data['results'];
                 $spec = $data['spec'];
                 $sku_code = $data['sku_code'];
@@ -120,7 +120,7 @@ class Goods extends Common{
             }
             if($this->model->where(array('id'=>$data['id']))->update($data)){
 /*---chen*/
-                if (input('post.results')) {
+                if (array_key_exists('results',input('post.'))) {
                     $this->AddSku($data['id'],$results,$spec,$sku_code,$sku_market_price,$sku_price,$sku_stock,$ist_spec);
                 }
                 
@@ -193,6 +193,7 @@ class Goods extends Common{
             }
             $sku[$key]['group'] = implode('!%', $zuhe);
         }
+
         // print_r($sku);exit;
         $this->assign('sku',$sku);
         $this->assign('theads',$headers);
@@ -206,7 +207,7 @@ class Goods extends Common{
     public function add(){
         if(Request::instance()->isAjax()){
             $data = input('post.');
-            if (input('post.results')) {
+            if (array_key_exists('results',input('post.'))) {
                 $results = $data['results'];
                 $spec = $data['spec'];
                 $sku_code = $data['sku_code'];
@@ -257,7 +258,7 @@ class Goods extends Common{
             // $insert=$this->model->insert($data);
             $insert=$this->model->insertGetId($data);
             if($insert){
-                if (input('post.results')) {
+                if (array_key_exists('results',input('post.'))) {
                     $this->AddSku($insert,$results,$spec,$sku_code,$sku_market_price,$sku_price,$sku_stock,$ist_spec);
                 }
                 

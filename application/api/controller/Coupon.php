@@ -129,13 +129,13 @@ class Coupon extends Base
     public function receive()
     {
         $user_id = input('post.user_id');
-        if(null===$user_id){
+        if(empty($user_id)){
             $this->json_error('请传过来用户编号');
             die;
         }
 
         $coupon_id = input('post.coupon_id');
-        if(null===$coupon_id){
+        if(empty($coupon_id)){
             $this->json_error('请传过来优惠券编号');
             die;
         }
@@ -146,17 +146,22 @@ class Coupon extends Base
             $this->json_error('你已经领取过，不要重复领取');
             die;
         }
-
         $data = [
             'user_id'=>$user_id,
             'coupon_id'=>$coupon_id,
             'add_time'=>time(),
             'receive_time'=>time()
         ];
+        $total_count = Db::name('Coupon')->where('id', $coupon_id)->value('total_count');
+        if (!$total_count || $total_count <= 0) {
+            $this->json_error('抱歉优惠卷暂无');
+            die;
+        }
         $id = Couponlog::insertGetId($data);
         if($id){
+            // 卷减一
+            Db::name('Coupon')->where('id', $coupon_id)->setDec('total_count');
             $couponlog = Couponlog::find($id);
-
             $this->json_success($couponlog,'领取成功');
             die;
         }else{
