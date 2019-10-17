@@ -55,7 +55,8 @@ class Activity extends Base
 
             //活动类型筛选
             $type = empty(input('post.type')) ?1:input('post.type');
-
+            $lat=input('post.lat');//纬度
+            $lng=input('post.lng');//经度
             //isrecommand--商品属性推荐
             //isnew--商品属性新品
             //ishot--商品属性热卖
@@ -93,7 +94,7 @@ class Activity extends Base
                 ->join('__SHOP__ s','s.id=g.shopid','LEFT')
                 ->order('g.sorts asc,g.id desc')
                 ->where($where)
-                ->field('g.id,g.headimg,g.title,g.price,s.id as sid,s.name,s.shoplogo')
+                ->field('g.id,g.headimg,g.title,g.price,s.id as sid,s.name,s.shoplogo,GETDISTANCE(s.latitude,s.longitude,'.$lat.','.$lng.') as distance')
                 ->page($p,$rows)
                 ->select();
 
@@ -101,6 +102,11 @@ class Activity extends Base
                 $headimg = explode(',',$v['headimg']);
                 $goods[$k]['headimg'] = $this->domain().$headimg[0];
                 $goods[$k]['shoplogo'] = $this->domain().$v['shoplogo'];
+                if($v['distance']>1000){
+                    $goods[$k]['distance']=round($v['distance']/1000,2)."km";
+                }else{
+                    $goods[$k]['distance']=round($v['distance'])."m";
+                }
             }
             $this->json_success($goods,'请求数据成功');
 
@@ -261,6 +267,8 @@ class Activity extends Base
     public function about()
     {
         $data = Db::name('system')->field('logo,tel,name')->find();
+        $data['logo'] ='http://'.$_SERVER['HTTP_HOST'].$data['logo'];
+      
         $this->json_success($data);
     }
 

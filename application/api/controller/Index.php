@@ -56,8 +56,8 @@ class Index extends Base
             //每页显示的数量
             $rows = empty(input('post.rows'))?10:input('post.rows');
             $user_id =empty(input('post.user_id')) ? "" : input('post.user_id');
-            $lat=input('post.lat');
-            $lng=input('post.lng');
+            $lat=input('post.lat');//纬度
+            $lng=input('post.lng');//经度
             $goodsmodel = new Goods();
 
             $where = [
@@ -72,7 +72,8 @@ class Index extends Base
                 ->join('__SHOP__ s','s.id=g.shopid','LEFT')
                 ->order('g.readpoint desc,g.id asc')
                 ->where($where)
-                ->field('g.id,g.headimg,g.title,g.price,g.label,s.id as sid,s.name,s.shoplogo,s.longitude,s.latitude')
+                ->field('g.id,g.headimg,g.title,g.price,g.label,s.id as sid,s.name,s.shoplogo,s.longitude,s.latitude,GETDISTANCE(s.latitude,s.longitude,'.$lat.','.$lng.') as distance')
+                ->order('distance ASC')
                 ->page($p,$rows)
                 ->select();
 
@@ -81,9 +82,10 @@ class Index extends Base
                 $goods[$k]['headimg'] = $this->domain().$headimg[0];
                 $goods[$k]['shoplogo'] = $this->domain().$v['shoplogo'];
                 $goods[$k]['collection_num']=$goodsmodel::get($v['id'])->collectiongoods()->count();
-                if($lng && $lat){
-                    $geo =new Geohash();                    
-                    $goods[$k]['distance']=$geo::getDistance($lng,$lat,$v['longitude'],$v['latitude']);
+                if($v['distance']>1000){
+                    $goods[$k]['distance']=round($v['distance']/1000,2)."km";
+                }else{
+                    $goods[$k]['distance']=round($v['distance'])."m";
                 }
                 if($user_id){
                  $goods[$k]['is_collection']=$goodsmodel->if_collection($v['id'],$user_id);               
@@ -91,7 +93,7 @@ class Index extends Base
                     $goods[$k]['is_collection']=0;
                 }
                 $goods[$k]['label'] = explode(',', $v['label']);
-            }  
+            }              
             $this->json_success($goods,'请求数据成功');
 
         }else{

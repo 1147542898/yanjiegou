@@ -4,5 +4,7 @@ use think\Model;
 use think\Db;
 class Orderrefund extends Model
 {
-
+	
+		protected $resultSetType = 'collection';
+	
 }
