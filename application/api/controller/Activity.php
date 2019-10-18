@@ -57,6 +57,10 @@ class Activity extends Base
             $type = empty(input('post.type')) ?1:input('post.type');
             $lat=input('post.lat');//纬度
             $lng=input('post.lng');//经度
+            if(empty($lat) &&empty($lng)){
+                $this->json_error("获取位置失败！");
+                die;
+            }
             //isrecommand--商品属性推荐
             //isnew--商品属性新品
             //ishot--商品属性热卖

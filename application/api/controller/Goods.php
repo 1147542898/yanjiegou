@@ -34,6 +34,10 @@ class Goods extends Base
         }
         $lat=input('post.lat');//纬度
         $lng=input('post.lng');//经度
+        if(empty($lat) &&empty($lng)){
+            $this->json_error("获取位置失败！");
+            die;
+        }
         $goods['headimg'] = $imgs;
         $goods['shoplogo'] = $this->domain() . $goods['shoplogo'];
 

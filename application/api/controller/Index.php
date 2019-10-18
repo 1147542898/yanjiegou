@@ -59,7 +59,10 @@ class Index extends Base
             $lat=input('post.lat');//纬度
             $lng=input('post.lng');//经度
             $goodsmodel = new Goods();
-
+            if(empty($lat) &&empty($lng)){
+                $this->json_error("获取位置失败！");
+                die;
+            }
             $where = [
                 //status  0否1上架
                 'g.status'=>1,
@@ -102,6 +105,53 @@ class Index extends Base
         }
 
 
+    }
+    //推荐商品
+    public function recommendGoods(){
+        if (Request::instance()->isPost()){
+            //当前的页码
+            $p = empty(input('post.p')) ?1:input('post.p');
+            //每页显示的数量
+            $rows = empty(input('post.rows'))?10:input('post.rows');          
+            $lat=input('post.lat');//纬度
+            $lng=input('post.lng');//经度
+            if(empty($lat) && empty($lng)){
+                $this->json_error("获取位置失败！");
+                die;
+            }
+            $goodsmodel = new Goods();
+            $where = [               
+                'g.status'=>1,                
+                'g.check_status'=>1,
+                'g.isrecommand'=>1
+
+            ];
+            $goods = $goodsmodel->alias('g')
+                ->join('__SHOP__ s','s.id=g.shopid','LEFT')
+                ->order('g.readpoint desc,g.id asc')
+                ->where($where)
+                ->field('g.id,g.headimg,g.title,g.price,g.label,s.id as sid,s.name,s.shoplogo,s.longitude,s.latitude,GETDISTANCE(s.latitude,s.longitude,'.$lat.','.$lng.') as distance')
+                ->order('distance ASC')
+                ->page($p,$rows)
+                ->select();
+            foreach($goods as $k=>$v){
+                $headimg = explode(',',$v['headimg']);
+                $goods[$k]['headimg'] = $this->domain().$headimg[0];
+                $goods[$k]['shoplogo'] = $this->domain().$v['shoplogo'];
+                $goods[$k]['collection_num']=$goodsmodel::get($v['id'])->collectiongoods()->count();
+                if($v['distance']>1000){
+                    $goods[$k]['distance']=round($v['distance']/1000,2)."km";
+                }else{
+                    $goods[$k]['distance']=round($v['distance'])."m";
+                }                
+                $goods[$k]['label'] = explode(',', $v['label']);
+            }              
+            $this->json_success($goods,'请求数据成功');
+
+        }else{
+            $this->json_error('请求方式有问题');
+            die;
+        }
     }
    
     

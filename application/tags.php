@@ -12,7 +12,10 @@
 // 应用行为扩展定义文件
 return [
     // 应用初始化
-    'app_init'     => [],
+    'app_init'     => [
+        'app\\index\\behavior\\CheckOrder',
+        '_overlay'=>true
+    ],
     // 应用开始
     'app_begin'    => [],
     // 模块初始化
