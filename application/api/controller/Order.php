@@ -423,7 +423,20 @@ class Order extends Base
                     $order_goods[$ck]['goodsid'] = $cv['goods_id'];
                     $order_goods[$ck]['price'] = $cv['price'];
                     $order_goods[$ck]['num'] = $cv['num'];
-                    $order_goods[$ck]['specification'] = $cv['goods_attr'];
+                    
+/*---chen*/
+                    $order_goods[$ck]['specification'] = '';
+                    if ($cv['sku_id'] != 0) {
+                        $goods_attr = json_decode($cv['goods_attr'],true);
+                        foreach ($goods_attr as $ks=>$vs){
+                            $SttrName=Db::name('GoodsSttr')->where('id',$ks)->value('key');
+                            $SttrValName=Db::name('GoodsSttrval')->where('id',$vs)->value('sttr_value');
+                            $order_goods[$ck]['specification'] .=  $SttrName.':'.$SttrValName.' ';
+                        }
+                    }
+/*---chen*/
+
+                    // $order_goods[$ck]['specification'] = $cv['goods_attr'];
                     $order_goods[$ck]['addtime'] = time();
                     /*---chen*/
                     $order_goods[$ck]['sku_id'] = $cv['sku_id'];
