@@ -25,19 +25,26 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">有效开始时间</label>
                 <div class="layui-input-block">
-                    <input type="text"  name="begin_time" id="begin_time" required  lay-verify="required" autocomplete="off" class="layui-input" value="{$info['begin_time']}">
+                    <input type="text"  name="begin_time" id="begin_time" required  lay-verify="required" autocomplete="off" class="layui-input" value="{$info['begin_time']|date='Y-m-d',###}">
                 </div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">有效结束时间</label>
                 <div class="layui-input-block">
-                    <input type="text" name="end_time" id="end_time" required  lay-verify="required" autocomplete="off" class="layui-input" value="{$info['end_time']}">
+                    <input type="text" name="end_time" id="end_time" required  lay-verify="required" autocomplete="off" class="layui-input" value="{$info['end_time']|date='Y-m-d',###}">
                 </div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">数量</label>
                 <div class="layui-input-block">
                     <input type="text" name="total_count" required  lay-verify="number" autocomplete="off" placeholder="请输入数量" class="layui-input"  value="{$info['total_count']}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">与平台券公用</label>
+                <div class="layui-input-block">
+                    <input type="radio" name="is_public" title="共用" value="1" {if condition="$info['is_public'] eq 1"}checked{/if}>
+                    <input type="radio" name="is_public" title="不共用" value="0" {if condition="$info['is_public'] eq 0"}checked{/if}>
                 </div>
             </div>
             <div class="layui-form-item layui-form-text">

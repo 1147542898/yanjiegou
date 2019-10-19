@@ -1,6 +1,6 @@
 <?php
 namespace app\shop\controller;
-use app\shop\model\Couponlog;
+use app\common\model\Couponlog;
 use think\Db;
 use think\request;
 use app\shop\controller\Common;
@@ -39,8 +39,10 @@ class Coupon extends Common
     public function listdel()
     {
         $id = input('post.id');
+
         //删除之前，先清空关联的表
         $res2 = Couponlog::where('coupon_id','in',$id)->delete();
+
         $res = \app\admin\model\Coupon::destroy($id);
         if($res){
             $result['msg'] = '删除成功！';
