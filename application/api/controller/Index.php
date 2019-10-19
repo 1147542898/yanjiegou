@@ -72,14 +72,12 @@ class Index extends Base
             ];
 
             $goods = $goodsmodel->alias('g')
-                ->join('__SHOP__ s','s.id=g.shopid','LEFT')
-                ->order('g.readpoint desc,g.id asc')
+                ->join('__SHOP__ s','s.id=g.shopid','LEFT')               
                 ->where($where)
                 ->field('g.id,g.headimg,g.title,g.price,g.label,s.id as sid,s.name,s.shoplogo,s.longitude,s.latitude,GETDISTANCE(s.latitude,s.longitude,'.$lat.','.$lng.') as distance')
-                ->order('distance ASC')
+                ->order('distance asc')
                 ->page($p,$rows)
-                ->select();
-
+                ->select(); 
             foreach($goods as $k=>$v){
                 $headimg = explode(',',$v['headimg']);
                 $goods[$k]['headimg'] = $this->domain().$headimg[0];

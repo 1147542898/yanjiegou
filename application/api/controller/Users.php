@@ -11,6 +11,8 @@ use think\Db;
 use think\Request;
 use think\Session;
 use app\api\controller\Base;
+use think\Hook;
+
 class Users extends Base
 {
     //个人中心首页
@@ -1657,11 +1659,15 @@ class Users extends Base
                     $data['goods_attr'] = '';
                     if ($cv['sku_id'] != 0) {
                         $goods_attr = json_decode($cv['goods_attr'],true);
-                        foreach ($goods_attr as $ks=>$vs){
-                            $SttrName=Db::name('GoodsSttr')->where('id',$ks)->value('key');
-                            $SttrValName=Db::name('GoodsSttrval')->where('id',$vs)->value('sttr_value');
-                            $data['goods_attr'] .=  $SttrName.':'.$SttrValName.' ';
-                        }
+                        if(!empty($goods_attr)){
+                            foreach ($goods_attr as $ks=>$vs){
+                                $SttrName=Db::name('GoodsSttr')->where('id',$ks)->value('key');
+                                $SttrValName=Db::name('GoodsSttrval')->where('id',$vs)->value('sttr_value');
+                                $data['goods_attr'] .=  $SttrName.':'.$SttrValName.' ';
+                            } 
+                        }                          
+                        
+                        
                     }
                     /*--chen*/
                     $data['title'] = $cv['title'];
@@ -1697,8 +1703,9 @@ class Users extends Base
             $this->json_success($data,'获取经纬度成功');
         }
 
-
     }
+    
+    
     
 
 

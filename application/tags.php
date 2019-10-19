@@ -13,8 +13,8 @@
 return [
     // 应用初始化
     'app_init'     => [
-        'app\\index\\behavior\\CheckOrder',
-        '_overlay'=>true
+        // 'app\\index\\behavior\\CheckOrder',
+        // '_overlay'=>true
     ],
     // 应用开始
     'app_begin'    => [],
@@ -28,4 +28,7 @@ return [
     'log_write'    => [],
     // 应用结束
     'app_end'      => [],
+    'order'=>[
+        'app\\index\\behavior\\CheckOrder',
+    ]
 ];

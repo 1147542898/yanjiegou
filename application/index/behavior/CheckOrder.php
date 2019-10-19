@@ -2,8 +2,10 @@
 namespace app\index\behavior;
 use think\Db;
 class CheckOrder{
-    public function appInit(&$params)
+    public function run(&$params)
     {
+        var_dump($params);
+        exit;
         $time =strtotime("-10day");
         $where['status']=array('eq',3);
         $where['sendtime']=array('lt',$time);
