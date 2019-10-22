@@ -27,26 +27,28 @@ class Order extends Base
         $shop_ids = array_unique(array_column($carts,'shopid'));
         $shop_ids = implode(',',$shop_ids);
         //获取当前用户领取的商家优惠券
-        $coupons = Db::name('couponlog')->alias('clog')
-            ->join('coupon c','c.id=clog.coupon_id')
-            ->where(['clog.user_id'=>$user_id,'clog.is_use'=>0,'c.type_id'=>2,'c.is_expire'=>0])
-            ->field('clog.id as clogid,clog.user_id,clog.is_use,clog.receive_time,c.*')
-            ->order('clog.id desc')
-            ->select();
-        $time = time();
-        foreach($coupons as $cck=>$ccv){
-            if($time>$ccv['end_time']){
-                //说明过期了
-                Db::name('coupon')->where(['id'=>$ccv['id']])->update(['is_expire'=>1]);
-            }
-        }
+        // $coupons = Db::name('couponlog')->alias('clog')
+        //     ->join('coupon c','c.id=clog.coupon_id')
+        //     ->where(['clog.user_id'=>$user_id,'clog.is_use'=>0,'c.type_id'=>2,'c.is_expire'=>0])
+        //     ->field('clog.id as clogid,clog.user_id,clog.is_use,clog.receive_time,c.*')
+        //     ->order('clog.id desc')
+        //     ->select();
+        // $time = time();
+        // foreach($coupons as $cck=>$ccv){
+        //     if($time>$ccv['end_time']){
+        //         //说明过期了
+        //         Db::name('coupon')->where(['id'=>$ccv['id']])->update(['is_expire'=>1]);
+        //     }
+        // }
 
-
+    
 
         $shops = Db::name('shop')->where('id','in',$shop_ids)->field('id,name,shoplogo')->select();
         $data = [];
         $order_goods = [];
         $mycoupons = [];
+        //商家是否允许平台使用券
+        $is_public = 0;
         foreach($shops as $k=>$v){
             $shops[$k]['shoplogo'] = $this->domain().$v['shoplogo'];
             $cart_ids = [];
@@ -84,36 +86,132 @@ class Order extends Base
             $shops[$k]['remark_member'] = "";
             $shops[$k]['totalnum'] = $totalnum;
             $shops[$k]['totalprice'] = $totalprice;
-            foreach($coupons as $kk=>$vv){
-                if($v['id']==$vv['shop_id']){
 
-                    if($vv['min_price']<$shops[$k]['totalprice']){
-                        $mycoupons['clogid'] = $vv['clogid'];
-                        $mycoupons['user_id'] = $vv['user_id'];
-                        $mycoupons['is_use'] = $vv['is_use'];
-                        $mycoupons['receive_time'] = date('Y-m-d H:i:s',$vv['receive_time']);
-                        $mycoupons['id'] = $vv['id'];
-                        $mycoupons['type_id'] = $vv['type_id'];
-                        $mycoupons['name'] = $vv['name'];
-                        $mycoupons['min_price'] = $vv['min_price'];
-                        $mycoupons['sub_price'] = $vv['sub_price'];
-                        $mycoupons['begin_time'] = date('Y-m-d H:i:s',$vv['begin_time']);
-                        $mycoupons['end_time'] = date('Y-m-d H:i:s',$vv['end_time']);
-                        $mycoupons['add_time'] = date('Y-m-d H:i:s',$vv['add_time']);
-                        $mycoupons['total_count'] = $vv['total_count'];
-                        $mycoupons['sort'] = $vv['sort'];
-                        $mycoupons['is_expire'] = $vv['is_expire'];
-                        $mycoupons['shop_id'] = $vv['shop_id'];
-                        $mycoupons['shop_name'] = $vv['shop_name'];
-                        $mycoupons['special'] = $vv['special'];
-                        $shops[$k]['coupons'][] = $mycoupons;
+
+
+/*---chen*/
+// 可用——商家优惠券
+            $shop_coupon = Db::name('couponlog')
+                    ->alias('clog')
+                    ->join('coupon c','c.id = clog.coupon_id')
+                    ->field('clog.id as clogid,clog.user_id,clog.receive_time,c.*')
+                    ->where('clog.user_id', $user_id)
+                    ->where('clog.is_use', 0)
+                    ->where('c.type_id', 2)
+                    ->where('c.is_expire',0)
+                    ->where('c.shop_id',$v['id'])
+                    ->select();
+// 该商店花费总金额
+            $all_money = empty($data)?0:array_sum(array_column($shops,'totalprice'));
+            $can_coupon = [];
+            $shops[$k]['coupon_clogid'] = '';
+            $shops[$k]['coupon_price'] = '';
+            $shops[$k]['coupon_name'] = '';
+
+            if ($shop_coupon) {
+                foreach ($shop_coupon as $scKey => $scValue) {
+                    if(time() > $scValue['end_time']){
+                        // 标记过期
+                        Db::name('coupon')->where(['id'=>$scValue['id']])->update(['is_expire'=>1]);
+                        unset($shop_couponp[$scKey]);
                     }
-
+                    // 计算用哪一张优惠卷
+                    if ($scValue['min_price'] <= $all_money) {
+                        $can_coupon[] = [
+                            'clogid'    =>  $scValue['clogid'],
+                            'sub_price' =>  $scValue['sub_price'],
+                            'name'  =>  $scValue['name'],
+                            'is_public' =>  $scValue['is_public'],
+                        ];
+                    }
+                }
+    // 使用优惠券的id 还有减去金额 --加入这个shop
+                if (!empty($can_coupon)) {
+                    array_multisort(array_column($can_coupon,'sub_price'),SORT_DESC,$can_coupon);
+                    $shops[$k]['coupon_clogid'] = $can_coupon[0]['clogid'];
+                    $shops[$k]['coupon_price'] = $can_coupon[0]['sub_price'];
+                    $shops[$k]['coupon_name'] = $can_coupon[0]['name'];
+                    $shops[$k]['is_public'] = $can_coupon[0]['is_public'];
+                    if ($is_public == 0) {
+                        $is_public = $can_coupon[0]['is_public'];
+                    }
                 }
             }
+
+
+
+            // foreach($coupons as $kk=>$vv){
+            //     if($v['id']==$vv['shop_id']){
+            //         if($vv['min_price']<$shops[$k]['totalprice']){
+            //             $mycoupons['clogid'] = $vv['clogid'];
+            //             $mycoupons['user_id'] = $vv['user_id'];
+            //             $mycoupons['is_use'] = $vv['is_use'];
+            //             $mycoupons['receive_time'] = date('Y-m-d H:i:s',$vv['receive_time']);
+            //             $mycoupons['id'] = $vv['id'];
+            //             $mycoupons['type_id'] = $vv['type_id'];
+            //             $mycoupons['name'] = $vv['name'];
+            //             $mycoupons['min_price'] = $vv['min_price'];
+            //             $mycoupons['sub_price'] = $vv['sub_price'];
+            //             $mycoupons['begin_time'] = date('Y-m-d H:i:s',$vv['begin_time']);
+            //             $mycoupons['end_time'] = date('Y-m-d H:i:s',$vv['end_time']);
+            //             $mycoupons['add_time'] = date('Y-m-d H:i:s',$vv['add_time']);
+            //             $mycoupons['total_count'] = $vv['total_count'];
+            //             $mycoupons['sort'] = $vv['sort'];
+            //             $mycoupons['is_expire'] = $vv['is_expire'];
+            //             $mycoupons['shop_id'] = $vv['shop_id'];
+            //             $mycoupons['shop_name'] = $vv['shop_name'];
+            //             $mycoupons['special'] = $vv['special'];
+            //             $shops[$k]['coupons'][] = $mycoupons;
+            //         }
+
+            //     }
+            // }
+/*---chen*/
         }
 
 
+
+// 平台优惠券计算：
+        $coupon_one = [];
+        $coupon_arr = [];
+        $ping_coupon = Db::name('couponlog')
+                    ->alias('clog')
+                    ->join('coupon c','c.id = clog.coupon_id')
+                    ->field('clog.id as clogid,clog.user_id,clog.receive_time,c.*')
+                    ->where('clog.user_id', $user_id)
+                    ->where('clog.is_use', 0)
+                    ->where('c.type_id', 1)
+                    ->where('c.is_expire',0)
+                    ->select();
+        // 有1 说明有商家接受平台券
+        
+        if ($is_public == 1) {
+            if ($ping_coupon) {
+                $shopall_money = empty($shops)?0:array_sum(array_column($shops,'totalprice'));
+                foreach ($ping_coupon as $pcKey => $pcValue) {
+                    if(time() > $pcValue['end_time']){
+                        // 标记过期
+                        Db::name('coupon')->where(['id'=>$pcValue['id']])->update(['is_expire'=>1]);
+                        unset($ping_coupon[$pcKey]);
+                    }
+                    // 计算用哪一张优惠卷
+                    if ($pcValue['min_price'] <= $shopall_money) {
+                        $coupon_arr[]['clogid'] = $pcValue['clogid'];
+                        $coupon_arr[]['sub_price'] = $pcValue['sub_price']; // 减去金额
+                        $coupon_arr[]['name'] = $pcValue['name']; 
+                    }
+                }
+            }
+            // 使用优惠券的id 还有减去金额 --加入这个shop
+
+            if (!empty($coupon_arr)) {
+                array_multisort(array_column($coupon_arr,'sub_price'),SORT_DESC,$coupon_arr);
+                $coupon_one['clogid'] = $coupon_arr[0]['clogid'];
+                $coupon_one['price'] = $coupon_arr[0]['sub_price'];
+                $coupon_one['name'] = $coupon_arr[0]['name'];
+            }
+        }
+        
         //查看当前用户是否有默认的收货地址
         $recvaddr = Db::name('recvaddr')->where(['user_id'=>$user_id,'is_delete'=>0])->field('consignee,phone,province,city,area,address')->find();
 
@@ -125,11 +223,138 @@ class Order extends Base
 
         $info = [
             'recvaddr'=>$recvaddr,
-            'shop'=>$shops
+            'shop'=>$shops,
+            'ping_coupon'=>$coupon_one,
         ];
         $this->json_success($info);
     }
 
+
+// public function index()
+//     {
+//         $user_id = input('post.user_id');
+//         if(null===$user_id){
+//             $this->json_error('请传过来用户编号');
+//         }
+//         $cart_id = input('post.cart_id');
+//         if(null===$cart_id){
+//             $this->json_error('请传过来购物车编号');
+//         }
+//         $carts = Db::name('shopcart')->alias('c')
+//             ->join('goods g','g.id=c.goods_id','LEFT')
+//             ->whereIn('c.id',$cart_id)
+//             ->where(['user_id'=>$user_id])
+//             ->field('c.*,g.shopid,g.headimg,g.title,g.price')
+//             ->select();
+
+
+//         $shop_ids = array_unique(array_column($carts,'shopid'));
+//         $shop_ids = implode(',',$shop_ids);
+
+//         //获取当前用户领取的商家优惠券
+//         $coupons = Db::name('couponlog')->alias('clog')
+//             ->join('coupon c','c.id=clog.coupon_id')
+//             ->where(['clog.user_id'=>$user_id,'clog.is_use'=>0,'c.type_id'=>2,'c.is_expire'=>0])
+//             ->field('clog.id as clogid,clog.user_id,clog.is_use,clog.receive_time,c.*')
+//             ->order('clog.id desc')
+//             ->select();
+
+//         $time = time();
+//         foreach($coupons as $cck=>$ccv){
+//             if($time>$ccv['end_time']){
+//                 //说明过期了
+//                 Db::name('coupon')->where(['id'=>$ccv['id']])->update(['is_expire'=>1]);
+//             }
+//         }
+
+
+
+//         $shops = Db::name('shop')->where('id','in',$shop_ids)->field('id,name,shoplogo')->select();
+//         $data = [];
+//         $order_goods = [];
+//         $mycoupons = [];
+//         foreach($shops as $k=>$v){
+//             $shops[$k]['shoplogo'] = $this->domain().$v['shoplogo'];
+//             $cart_ids = [];
+//             $totalnum = 0;
+//             $totalprice = 0;
+//             foreach($carts as $ck=>$cv){
+//                 if($v['id']==$cv['shopid']){
+//                     array_push($cart_ids,$cv['id']);
+//                     $data['id'] = $cv['id'];
+//                     $data['goods_id'] = $cv['goods_id'];
+//                     $data['num'] = $cv['num'];
+//                     $totalnum+=$cv['num'];
+//                     $data['goods_attr'] = json_decode($cv['goods_attr'],true);
+//                     $data['goods_sku'] = $cv['sku_id'];
+//                     /*---chen*/
+//                     $data['goods_attr_val'] = '';
+//                     if (!empty($data['goods_attr'])) {
+//                         foreach ($data['goods_attr'] as $ks=>$vs){
+//                             $SttrName=Db::name('GoodsSttr')->where('id',$ks)->value('key');
+//                             $SttrValName=Db::name('GoodsSttrval')->where('id',$vs)->value('sttr_value');
+//                             $data['goods_attr_val'] .=  $SttrName.':'.$SttrValName.' ';
+//                         }
+//                     }
+//                     /*---chen*/
+//                     $data['title'] = $cv['title'];
+//                     $data['price'] = ($cv['sku_id']==0)?$cv['price']:(Db::name('GoodsSttrxsku')->where('id',$cv['sku_id'])->value('money'));
+//                     // $totalprice+=($cv['num']*$cv['price']);
+//                     $totalprice+=($cv['num']*$data['price']);
+//                     $headimgs = explode(',',$cv['headimg']);
+//                     $data['headimg'] = $this->domain().$headimgs[0];
+//                     $shops[$k]['goods'][] = $data;
+//                 }
+//             }
+//             $shops[$k]['cart_id'] = implode(',',$cart_ids);
+//             $shops[$k]['remark_member'] = "";
+//             $shops[$k]['totalnum'] = $totalnum;
+//             $shops[$k]['totalprice'] = $totalprice;
+//             foreach($coupons as $kk=>$vv){
+//                 if($v['id']==$vv['shop_id']){
+
+//                     if($vv['min_price']<$shops[$k]['totalprice']){
+//                         $mycoupons['clogid'] = $vv['clogid'];
+//                         $mycoupons['user_id'] = $vv['user_id'];
+//                         $mycoupons['is_use'] = $vv['is_use'];
+//                         $mycoupons['receive_time'] = date('Y-m-d H:i:s',$vv['receive_time']);
+//                         $mycoupons['id'] = $vv['id'];
+//                         $mycoupons['type_id'] = $vv['type_id'];
+//                         $mycoupons['name'] = $vv['name'];
+//                         $mycoupons['min_price'] = $vv['min_price'];
+//                         $mycoupons['sub_price'] = $vv['sub_price'];
+//                         $mycoupons['begin_time'] = date('Y-m-d H:i:s',$vv['begin_time']);
+//                         $mycoupons['end_time'] = date('Y-m-d H:i:s',$vv['end_time']);
+//                         $mycoupons['add_time'] = date('Y-m-d H:i:s',$vv['add_time']);
+//                         $mycoupons['total_count'] = $vv['total_count'];
+//                         $mycoupons['sort'] = $vv['sort'];
+//                         $mycoupons['is_expire'] = $vv['is_expire'];
+//                         $mycoupons['shop_id'] = $vv['shop_id'];
+//                         $mycoupons['shop_name'] = $vv['shop_name'];
+//                         $mycoupons['special'] = $vv['special'];
+//                         $shops[$k]['coupons'][] = $mycoupons;
+//                     }
+
+//                 }
+//             }
+//         }
+
+
+//         //查看当前用户是否有默认的收货地址
+//         $recvaddr = Db::name('recvaddr')->where(['user_id'=>$user_id,'is_delete'=>0])->field('consignee,phone,province,city,area,address')->find();
+
+//         if(null===$recvaddr){
+//             $myinfo['shop'] = $shops;
+//             $this->json_success($myinfo,'您还没有设置收货地址',-1);
+//             die;
+//         }
+
+//         $info = [
+//             'recvaddr'=>$recvaddr,
+//             'shop'=>$shops
+//         ];
+//         $this->json_success($info);
+//     }
     //立即购买
     public function ordernow()
     {
