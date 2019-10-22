@@ -217,6 +217,47 @@ class Shop extends Base
         }
 
     }
+    //商家信息
+    public function shopinfos(){
+        $shop_id=input("post.shop_id");
+        $shopInfo=Db::name("shop")
+                        ->field("shoplogo,name,intro,content,longitude,latitude,addtime,star,province,city,area,street,quality,service,address,yyzz,headimg,description,quality,service")
+                        ->where(['id'=>$shop_id])
+                        ->find();
+        $shopInfo['shop_fans']=ShopModel::get($shop_id)->shopFans()->count();
+        $shopInfo['shop_goods_num']=ShopModel::get($shop_id)->shopGoodsNum()->count();
+        $shopInfo['shoplogo'] = $this->domain().$shopInfo['shoplogo'];       
+        $shopInfo['sale_num']=ShopModel::shopOrderNum($shop_id);
+        $shopInfo['shop_address']=$shopInfo['province'].$shopInfo['city'].$shopInfo['street'].$shopInfo['address'];
+        if($shopInfo['yyzz']){
+            $yyzz=explode(',',$shopInfo['yyzz']);
+            for($i=0; $i<count($yyzz); $i++){
+                $yyzz[$i]=$this->domain().$yyzz[$i];
+            }
+            $shopInfo['yyzz']=$yyzz;
+        }
+        $count=Db::name('shop')->count();
+        $shops=Db::name('shop')->field("SUM(description) description,SUM(quality) quality,SUM(service) service")->find();
+        $description=$shops['description']/$count;//平均描述
+        $quality=$shops['quality']/$count;//平均质量
+        $service=$shops['service']/$count;//平均服务
+        $shopInfo['description']=array(
+            'description'=>$shopInfo['description'],
+            'rate'=>round((($shopInfo['description']-$description)/$description*100),2)."%",
+        );
+        $shopInfo['quality']=array(
+            'quality'=>$shopInfo['quality'],
+            'rate'=>round((($shopInfo['quality']-$quality)/$quality*100),2)."%",
+        );
+        $shopInfo['service']=array(
+            'service'=>$shopInfo['service'],
+            'rate'=>round((($shopInfo['service']-$service)/$service*100),2)."%",
+        );
+        $shop_order_count=Db::name('order')->where(['shop_id'=>$shop_id,''])->select();
+        var_dump($shopInfo);       
+        exit;
+    }
+    
     
 
 }
