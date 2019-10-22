@@ -12,11 +12,20 @@ class Bigshop extends Base
             $this->json_error('请传过来商圈编号');
         }
 
-
+        $lat=input('post.lat');//纬度
+        $lng=input('post.lng');//经度
+        if(empty($lat) &&empty($lng)){
+            $this->json_error("获取位置失败！");
+            die;
+        }
         $floor_id = empty(input('post.floor_id')) ?1:input('post.floor_id');
 
-        $bshop = db('bigshop')->where('id',$bshop_id)->field('id,name,bigshoplogo,intro,province,city,area,address')->find();
-
+        $bshop = db('bigshop')->where('id',$bshop_id)->field('id,name,bigshoplogo,intro,province,city,area,address,GETDISTANCE(latitude,longitude,'.$lat.','.$lng.') as distance')->find();
+        if($bshop['distance']>1000){
+            $bshop['distance']=round($bshop['distance']/1000,2)."km";
+        }else{
+            $bshop['distance']=round($bshop['distance'])."m";
+        }
 
         $bshop['bigshoplogo'] = $this->domain().$bshop['bigshoplogo'];
 
@@ -48,13 +57,8 @@ class Bigshop extends Base
             ->order('s.id','desc')
             ->field('s.id as sid,s.name as sname,s.bshopid,s.shoplogo,s.intro,s.province,s.city,s.area,s.floor_id,s.address')
             ->where(['s.bshopid'=>$bshop_id,'s.floor_id'=>$floor_id])
-
             ->page($p,$rows)
             ->select();
-
-
-
-
 
         foreach($shops as $sk=>$sv){
             $shops[$sk]['shoplogo'] = $this->domain().$sv['shoplogo'];
@@ -68,4 +72,5 @@ class Bigshop extends Base
 
         $this->json_success($data);
     }
+    
 }

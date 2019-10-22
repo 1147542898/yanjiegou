@@ -287,7 +287,7 @@ class Geohash {
         $s = 2 * asin(sqrt(pow(sin($a / 2), 2) + cos($radLat1) * cos($radLat2) * pow(sin($b / 2), 2))) * 6378.137;
         $s =$s*1000;
         if($s>1000){
-            $s =(round($s/1000,2))."公里";
+            $s =(round($s/1000,2))."km";
         }else{
             $s =roud($s,2)."米";
         }

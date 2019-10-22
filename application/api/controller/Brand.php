@@ -288,4 +288,5 @@ class Brand extends Base
             die;
         }
     }
+    
 }

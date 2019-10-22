@@ -880,6 +880,51 @@ class Order extends Base
     //         $this->json_error('请传过来用户编号');
     //     }
     // }
-   
+     //普通邮费
+    public function ptyf(){
+        $user_id=input('user_id');//会员id
+        $shop_id=input('shop_id');//商户id
+        $cart_id=input('cart_id');//购物车id
+        $dispatchprice=0;//邮费
+        //获取用户的地址
+        $address=DB::name('recvaddr')->where(['user_id'=>$user_id,'is_default'=>1])->find();
+        $province=rtrim($address['province'],'市');
+        $city=$address['city'];
+        $cityid=Db::name('area')->alias('a')
+               ->join('area b','a.id=b.parent_id',"LEFT")
+               ->where(['a.area_name'=>$province,'b.area_name'=>$city])
+               ->value('b.id');  
+        //取出商家地址邮费配置
+        $address_yf=Db::name('shop_postage')->where(['shop_id'=>$shop_id])->value('money');
+        $address_yf=json_decode($address_yf,true);
+        $cityprice=$address_yf[$cityid];
+        $goods_list=Db::name('shopcart')->alias("a")
+                    ->join("goods b","a.goods_id=b.id","LEFT")
+                    ->whereIn('a.id',$cart_id)
+                    ->field('b.issendfree,b.dispatchprice,b.ednum,b.edmoney,a.num,b.price')
+                    ->select();
+        foreach($goods_list as $key=>$val){
+            if($val['issendfree']==1){//包邮
+                $dispatchprice =0;
+                break;
+            }else{
+                if($val['ednum'] !=0 || $val['edmoney'] !=0){
+                    //都不符合条件
+                    if(($val['num'] < $val['ednum']) && ($val['num']*$val['price'] <$val['edmoney'])){
+                        $dispatchprice =$val['dispatchprice'];
+                        $dispatchprice =$cityprice ? $cityprice : $dispatchprice;
+                        break;                        
+                    }
+                    //有符合符合条件
+                    if(($val['num'] >= $val['ednum'] && $val['ednum'] !=0) || ($val['num']*$val['price'] >=$val['edmoney'] && $val['edmoney'] !=0)){
+                        $dispatchprice =0;
+                        break;
+                    }
+                }
+            }
+        }
+        $data['dispatchprice']=$dispatchprice;
+        $this->json_success($data);
+    }
 
 }
