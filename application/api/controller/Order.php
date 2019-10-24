@@ -487,12 +487,12 @@ class Order extends Base
      *
      *[user_id] => 17
      *[pay_type] => 1
-     *[myshop] => [{"shop_id":5,"cart_id":"245","remark_member":""}]
+     *[myshop] => [{"shop_id":5,"cart_id":"245","remark_member":"","send_type":"1","coupon_id":"11"}]
      *
      */
-    public function ordersub()
+    public function ordersub2()
     {
-        print_r(input());exit;
+       
         $user_id = input('post.user_id');
         if(null===$user_id){
             $this->json_error('请传过来用户编号');
@@ -715,6 +715,187 @@ class Order extends Base
             Db::rollback();
             $this->json_error('生成订单失败');
         }
+    }
+    //订单提交
+     /**
+     *
+     *[user_id] => 17
+     *[pay_type] => 1
+     *[myshop] => [{"shop_id":5,"cart_id":"245","remark_member":""}]
+     *
+     */
+    public function ordersub(){
+        
+        $user_id = input('post.user_id');
+        if(null===$user_id){
+            $this->json_error('请传过来用户编号');
+        }
+        
+        $myshop = input('post.myshop');
+        if(!is_json($myshop)){
+            $this->json_error('格式不对');
+            die;
+        }
+        $myshop = json_decode($myshop,true);
+        $cart_id = array_column($myshop,'cart_id');
+        if(null===$myshop){
+            $this->json_error('请传过来店铺编号和购物车id信息和备注信息');
+        }       
+        //pay_type支付方式   1支付宝  2微信  3银联
+        $pay_type = input('post.pay_type');
+        if(null===$pay_type){
+            $this->json_error('请传过来支付方式');
+        }
+        $ptype = [1,2,3];
+        if(!in_array($pay_type,$ptype)){
+            $this->json_error('支付方式有问题');
+        }
+        //获取用户地址
+         //查看当前用户是否有默认的收货地址
+         $recvaddr = Db::name('recvaddr')->where(['user_id'=>$user_id,'is_default'=>1,'is_delete'=>0])->field('consignee,phone,province,city,area,address')->find();
+         if(null===$recvaddr){
+             $this->json_error('您还没有设置收货地址');
+             die;
+         }
+         //循环myshop
+         $order_info=array();//订单信息
+         $order_goods=array();//订单商品
+         $order_sn=array();//订单号
+         $order_total_money=0;//订单总金额
+         foreach($myshop as $k=>$v){
+                $order['order_sn']=makeordersn();//订单号
+                $order_sn[]=$order['order_sn'];
+                $order['user_id']=$user_id;//用户id
+                $order['shop_id']=$v['shop_id'];//商户id
+                $order['pay_type']=$pay_type;//支付类型
+                $order['add_time']=time();//下单时间
+                $order['status']=1;//订单状态 1待支付
+                $order['remark_member']=$v['remark_member'];//备注信息
+                $order['getusername']=$recvaddr['consignee'];
+                $order['mobile']=$recvaddr['phone'];
+                $order['address']=$recvaddr['address'];
+                $order['province']=$recvaddr['province'];
+                $order['city']=$recvaddr['city'];
+                $order['area']=$recvaddr['area'];                  
+                // $order['send_type']=$v['send_type'];//配送类型    
+                // $order['freight']  =$v['freight']; //邮费     
+                //订单商品
+                $carts_goods=$this->getCartGoods($v['cart_id'],$user_id); 
+                $goods_total_price=0; //商品总价格
+                $num =0;         //商品总的数量
+                //组装商品
+                foreach($carts_goods as $key=>$val){
+                       $goods['order_sn']=$order['order_sn'];//订单号
+                       $goods['goodsid']=$val['goods_id'];//商品id
+                       $goods['price']=$val['price'];//商品价格
+                       $goods['num']=$val['num'];//商品数量
+                       $goods['addtime']=time();//添加时间
+                       $goods['sku_id']=$val['sku_id'];//skuid
+                       $specification='';
+                       if ($val['sku_id'] != 0) {
+                        $goods_attr = json_decode($val['goods_attr'],true);
+                        foreach ($goods_attr as $ks=>$vs){
+                            $SttrName=Db::name('GoodsSttr')->where('id',$ks)->value('key');
+                            $SttrValName=Db::name('GoodsSttrval')->where('id',$vs)->value('sttr_value');
+                            $specification .=  $SttrName.':'.$SttrValName.' ';
+                            }    
+                        $goods['price']=$val['sku_money'];                    
+                        }
+                        $goods['specification']= $specification;
+                        $order_goods[]=$goods;
+                        $goods_total_price +=$goods['price']*$val['num'];
+                        $num +=$val['num'];
+                }
+                //组装优惠券
+                $coupons_money=0;
+                if(isset($v['coupon_id'])){
+                    $coupons=$this->getCoupons($v['coupon_id']);                   
+                    if(!empty($coupons)){//不为空的话
+                        $coupons_money =$coupons['sub_price'];                   
+                    }
+                    $order['coupon_id']=$v['coupon_id'];
+                    $order['couponprice']=$coupons_money;
+                }               
+                //优惠券结束
+                // $totalprice =$goods_total_price -$coupons_money+$v['freight'];//商品总的价钱 商品总价-优惠券+邮费
+                $totalprice =$goods_total_price -$coupons_money;//商品总的价钱 商品总价-优惠券+邮费
+                if($totalprice<0){//小于零时候订单为零
+                    $totalprice =0;
+                }
+                $order['money']=$totalprice;
+                $order['oldmoney']=$totalprice;
+                $order['total_num']=$num;//订单总的数量
+                $order_info[]=$order;
+                $order_total_money +=$totalprice;//订单总金额
+                
+         }
+         //开启事务
+         Db::startTrans();
+         $order_result=Db::name('order')->insertAll($order_info);
+         $goods_result=Db::name('order_goods')->insertAll($order_goods);
+         $order_infos=Db::name('order')->whereIn('order_sn',$order_sn)->select();
+         //减库存
+         $this->decGoodsNum($order_goods);
+         //删除购物车
+         $this->delCartGoods($cart_id);
+         $myorder_ids  = implode(',',array_column($order_infos,'id'));
+         $coupon_ids  = implode(',',array_column($order_infos,'coupon_id'));
+         Db::name('couponlog')->whereIn('coupon_id',$coupon_ids)->where(['user_id'=>$user_id])->update(['is_use'=>1,'use_time'=>time()]);
+         $order_sns=implode(',',$order_sn);//分割订单号
+         $order_trades = [
+            'out_trade_no'=>makeordersn(),//支付日志编号
+            'order_sns'=>$order_sns,//订单编号
+            'order_ids'=>$myorder_ids,//订单id编号
+            'total_amount'=>$order_total_money//支付金额
+        ];
+        $trade_id = Db::name('order_trade')->insertGetId($order_trades);
+        if($trade_id && $order_result && $goods_result){
+            Db::commit();//事务提交
+            $info['recaddr']=$recvaddr;
+            $trandeinfo = Db::name('order_trade')->where('id',$trade_id)->field('out_trade_no,total_amount')->find();
+            $info['out_trade_no'] = $trandeinfo['out_trade_no'];
+            $info['total_amount'] = $trandeinfo['total_amount'];
+            $this->json_success($info,'生成订单成功');
+        }else{
+            Db::rollback();//事务回滚
+            $this->json_error('生成订单失败');
+        }         
+    }
+    //购物车商品
+    public function getCartGoods($cart_id,$user_id){   
+        $carts = Db::name('shopcart')->alias('c')
+                ->join('goods g','g.id=c.goods_id','LEFT')
+                ->join('goods_sttrxsku s','s.id =c.sku_id',"LEFT")
+                ->whereIn('c.id',$cart_id)
+                ->where(['user_id'=>$user_id])
+                ->field('c.*,g.shopid,g.headimg,g.title,g.price,s.money sku_money')
+                ->select();
+        return $carts;
+    }
+    //获取优惠劵
+    public function getCoupons($coupon_id){
+        $coupon=Db::name('coupon')->where('id',$coupon_id)->where(['is_expire'=>0])->find();
+        return $coupon;
+    }
+    //减库存
+    public function decGoodsNum($order_goods){
+        foreach($order_goods as $k=>$v){
+            //减总的库存
+            Db::name('goods')->where(['id'=>$v['goodsid']])->setDec('total',$v['num']);
+            //sku 库存
+            if($v['sku_id']!=0){
+                Db::name('goods_sttrxsku')
+                    ->where(['id'=>$v['sku_id']])
+                    ->setDec('number',$v['num']);
+                Db::name('goods_sttrxsku')
+                    ->where(['id'=>$v['sku_id']])
+                    ->setInc('volume',$v['num']);
+            }
+        }
+    }
+    //删除购物车
+    public function delCartGoods($cart_ids){
+        Db::name('shopcart')->whereIn('id',$cart_ids)->delete();
     }
     //申请退款
     public function refund()
