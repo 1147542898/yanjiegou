@@ -777,8 +777,8 @@ class Order extends Base
                 $order['province']=$recvaddr['province'];
                 $order['city']=$recvaddr['city'];
                 $order['area']=$recvaddr['area'];                  
-                // $order['send_type']=$v['send_type'];//配送类型    
-                // $order['freight']  =$v['freight']; //邮费     
+                $order['send_type']=$v['send_type'];//配送类型    
+                $order['freight']  =$v['freight']; //邮费     
                 //订单商品
                 $carts_goods=$this->getCartGoods($v['cart_id'],$user_id); 
                 $goods_total_price=0; //商品总价格
@@ -817,8 +817,8 @@ class Order extends Base
                     $order['couponprice']=$coupons_money;
                 }               
                 //优惠券结束
-                // $totalprice =$goods_total_price -$coupons_money+$v['freight'];//商品总的价钱 商品总价-优惠券+邮费
-                $totalprice =$goods_total_price -$coupons_money;//商品总的价钱 商品总价-优惠券+邮费
+                $totalprice =$goods_total_price -$coupons_money+$v['freight'];//商品总的价钱 商品总价-优惠券+邮费
+                // $totalprice =$goods_total_price -$coupons_money;//商品总的价钱 商品总价-优惠券+邮费
                 if($totalprice<0){//小于零时候订单为零
                     $totalprice =0;
                 }
