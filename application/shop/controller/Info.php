@@ -46,6 +46,9 @@ class Info extends Common{
     public function edit(){
         if(Request::instance()->isAjax()){
             $data = input('post.');
+            /*---chen*/
+            $data['tag'] = json_encode($data['tag']);
+            /*---chen*/
             unset($data['upfile']);
             $count = count($data['headimg']);//获取传过来有几张图片
             if($count){
@@ -74,6 +77,10 @@ class Info extends Common{
                     $info['src'][] = $v;
                 }
             }
+            if (!empty($info['tag'])) {
+                $info['tag'] = json_decode($info['tag'],true);
+            }
+            
             $this->assign('info',$info);
             $arealist = Area::where('parent_id',0)->select();
             $this->assign('arealist',$arealist);
