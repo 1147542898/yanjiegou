@@ -644,6 +644,7 @@ class Order extends Base
             'order_ids'=>$myorder_ids,
             'total_amount'=>$total_amount
         ];
+        
         $trade_id = Db::name('order_trade')->insertGetId($order_trades);
         //判断条件
         if($order && $trade_id && $order_ids){
@@ -1174,4 +1175,6 @@ class Order extends Base
         $data['dispatchprice']=$dispatchprice;
         $this->json_success($data);
     }
+    
+    
 }

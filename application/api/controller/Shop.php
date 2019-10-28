@@ -241,18 +241,42 @@ class Shop extends Base
         $description=$shops['description']/$count;//平均描述
         $quality=$shops['quality']/$count;//平均质量
         $service=$shops['service']/$count;//平均服务
-        $shopInfo['description']=array(
-            'description'=>$shopInfo['description'],
-            'rate'=>round((($shopInfo['description']-$description)/$description*100),2)."%",
-        );
-        $shopInfo['quality']=array(
-            'quality'=>$shopInfo['quality'],
-            'rate'=>round((($shopInfo['quality']-$quality)/$quality*100),2)."%",
-        );
-        $shopInfo['service']=array(
-            'service'=>$shopInfo['service'],
-            'rate'=>round((($shopInfo['service']-$service)/$service*100),2)."%",
-        );
+        if($description==0){
+            $shopinfo['description']=array(
+                'description'=>0,
+                'rate'=>0
+            );
+        }else{
+            $shopInfo['description']=array(
+                'description'=>$shopInfo['description'],
+                'rate'=>round((($shopInfo['description']-$description)/$description*100),2)."%",
+            );
+        }       
+        
+       
+        if($quality==0){
+            $shopInfo['quality']=array(
+                'quality'=>0,
+                'rate'=>0
+            );
+        }else{
+            $shopInfo['quality']=array(
+                'quality'=>$shopInfo['quality'],
+                'rate'=>round((($shopInfo['quality']-$quality)/$quality*100),2)."%",
+            );
+        }
+        if($service==0){
+            $shopInfo['quality']=array(
+                'quality'=>0,
+                'rate'=>0
+            );
+        }else{
+            $shopInfo['service']=array(
+                'service'=>$shopInfo['service'],
+                'rate'=>round((($shopInfo['service']-$service)/$service*100),2)."%",
+            );
+        }
+        
         $shop_order_count=Db::name('order')->where(['shop_id'=>$shop_id,''])->select();
         var_dump($shopInfo);       
         exit;

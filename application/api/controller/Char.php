@@ -93,6 +93,7 @@ class Index extends Base
 
 		$res = Db::name('chatLog')->insert($data);
 		return $res;
-    }
+	}
+	
     
 }

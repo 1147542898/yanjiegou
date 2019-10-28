@@ -289,4 +289,5 @@ class Brand extends Base
         }
     }
     
+    
 }
