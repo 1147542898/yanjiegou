@@ -22,12 +22,14 @@ class Goods extends Base
             ->join('__SHOP__ s', 's.id=g.shopid', 'LEFT')
             ->order('g.sorts asc,g.id desc')
             ->where('g.id', $goods_id)
-            ->field('g.id,g.headimg,g.title,g.price,g.original_price,g.cost_price,g.content,g.sold,g.parameter,s.id as sid,s.name,s.shoplogo,s.star,s.description,s.quality,s.service')
+            ->field('g.id,g.headimg,g.title,g.price,g.original_price,g.cost_price,g.content,g.sold,g.parameter,s.tag,s.id as sid,s.name,s.shoplogo,s.star,s.description,s.quality,s.service')
             ->find();
         if ($goods['parameter'] != '') {
             $goods['parameter'] = json_decode($goods['parameter'],true);
         }
-        
+        if (!empty($goods['tag'])) {
+            $goods['tag'] = json_decode($goods['tag'],true);
+        }
 
 
         $headimg = explode(',', $goods['headimg']);
