@@ -47,7 +47,11 @@ class Info extends Common{
         if(Request::instance()->isAjax()){
             $data = input('post.');
             /*---chen*/
-            $data['tag'] = json_encode($data['tag']);
+            if (array_key_exists('tag',$data)) {
+                $data['tag'] = json_encode($data['tag']);
+            }else{
+                $data['tag'] = '';
+            }
             /*---chen*/
             unset($data['upfile']);
             $count = count($data['headimg']);//获取传过来有几张图片
