@@ -22,6 +22,7 @@ return [
     'module'=>'模型',
 
     'user'=>'会员',
+    'chat'=>'聊天',
     'nickname'=>'昵称',
     'man'=>'男',
     'woman'=>'女',

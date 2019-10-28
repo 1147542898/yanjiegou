@@ -2,6 +2,7 @@
 namespace app\shop\controller;
 use think\request;
 use app\shop\controller\Common;
+use think\Db;
 class Users extends Common{
     public function _initialize(){
         parent::_initialize();
@@ -42,6 +43,27 @@ class Users extends Common{
         $result['url'] = url('index');
         return $result;
     }
+    public function onlinechat(){
+        $shopid = 'shop'.SHID;
+        $sel = Db::name('chat')
+                ->where('infouid',$shopid)
+                ->select();
+        foreach ($sel as $key => $value) {
+            $uid = str_replace('user','',$value['uid']);
+            $users = Db::name('users')->field('username,avatar')->where('id',$uid)->find();
+            $sel[$key]['username'] = $users['username'];
+            $sel[$key]['avatar'] = $users['avatar'];
+            $sel[$key]['log'] = Db::name('chatLog')
+                ->where("(`uid` = '".$value['uid']."' AND `infouid` = '".$value['infouid']."') OR (`uid` = '".$value['infouid']."' AND `infouid` = '".$value['uid']."')")
+                ->whereTime('add_time','-3 month')
+                ->select();
+        }
+        // print_r($sel);exit;
+        $shop = Db::name('shop')->field('id,shoplogo')->where("id",SHID)->find();
+        $this->assign('shop',$shop);
 
+        $this->assign('sel',$sel);
+        return $this->fetch();
+    }
     
 }
