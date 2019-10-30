@@ -196,7 +196,7 @@ class Order extends Base
         }
         
         //查看当前用户是否有默认的收货地址
-        $recvaddr = Db::name('recvaddr')->where(['user_id'=>$user_id,'is_delete'=>0])->field('consignee,phone,province,city,area,address')->find();
+        $recvaddr = Db::name('recvaddr')->where(['user_id'=>$user_id,'is_default'=>1,'is_delete'=>0])->field('consignee,phone,province,city,area,address')->find();
         if(null===$recvaddr){
             $myinfo['shop'] = $shops;
             $this->json_success($myinfo,'您还没有设置收货地址',-1);
@@ -728,7 +728,7 @@ class Order extends Base
     public function ordersub(){
         
         $user_id = input('post.user_id');
-        if(null===$user_id){
+        if(empty($user_id)){
             $this->json_error('请传过来用户编号');
         }
         
@@ -739,12 +739,12 @@ class Order extends Base
         }
         $myshop = json_decode($myshop,true);
         $cart_id = array_column($myshop,'cart_id');
-        if(null===$myshop){
+        if(empty($myshop)){
             $this->json_error('请传过来店铺编号和购物车id信息和备注信息');
         }       
         //pay_type支付方式   1支付宝  2微信  3银联
         $pay_type = input('post.pay_type');
-        if(null===$pay_type){
+        if(empty($pay_type)){
             $this->json_error('请传过来支付方式');
         }
         $ptype = [1,2,3];
@@ -754,7 +754,7 @@ class Order extends Base
         //获取用户地址
          //查看当前用户是否有默认的收货地址
          $recvaddr = Db::name('recvaddr')->where(['user_id'=>$user_id,'is_default'=>1,'is_delete'=>0])->field('consignee,phone,province,city,area,address')->find();
-         if(null===$recvaddr){
+         if(!$recvaddr){
              $this->json_error('您还没有设置收货地址');
              die;
          }
