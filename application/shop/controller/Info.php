@@ -30,7 +30,8 @@ class Info extends Common{
               ->field('a.*,b.name as bsname')
               ->where($map)
               ->find();
-        $info['imgs']= explode(',',$info['headimg']);      
+        $info['imgs']= explode(',',$info['headimg']);    
+        $info['yyzz']=explode(',',$info['yyzz']);  
         $info['myaddress'] = $info['province'].$info['city'].$info['area'].$info['street'].$info['address'];
         $this->assign('info',$info);
         return $this->fetch();
@@ -57,6 +58,11 @@ class Info extends Common{
             $count = count($data['headimg']);//获取传过来有几张图片
             if($count){
                 $data['headimg'] = implode(',',$data['headimg']);
+            }           
+            if(!empty($data['yyzz'])){
+                $data['yyzz']=implode(',',$data['yyzz']);
+            }else{
+                $data['yyzz']="";
             }
             $data['shortname']=GetShortName($data['name']);
             $msg = $this->validate($data,'Shop');
@@ -81,12 +87,15 @@ class Info extends Common{
                     $info['src'][] = $v;
                 }
             }
+              
+            if(!empty($info['yyzz'])){
+                $info['yyzz'] = explode(',',$info['yyzz']);
+            }
             if (!empty($info['tag'])) {
                 $info['tag'] = json_decode($info['tag'],true);
-            }else{
-                $info['tag'] = [];
             }
             
+          
             $this->assign('info',$info);
             $arealist = Area::where('parent_id',0)->select();
             $this->assign('arealist',$arealist);

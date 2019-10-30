@@ -160,6 +160,11 @@ class Shop extends Common
             if ($count) {
                 $data['headimg'] = implode(',', $data['headimg']);
             }
+            if(!empty($data['yyzz'])){
+                $data['yyzz'] = implode(',', $data['yyzz']);
+            }else{
+                $data['yyzz']="";
+            }
             $data['shortname'] = GetShortName($data['name']);
             $msg = $this->validate($data, 'Shop');
             if ($msg != 'true') {
@@ -186,6 +191,7 @@ class Shop extends Common
                     $info['src'][] = $v;
                 }
             }
+            $info['yyzz']=explode(',',$info['yyzz']);
             $this->assign('info', $info);
             $arealist = Base::provice();
             $this->assign('arealist', $arealist);

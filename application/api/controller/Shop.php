@@ -221,7 +221,7 @@ class Shop extends Base
     public function shopinfos(){
         $shop_id=input("post.shop_id");
         $shopInfo=Db::name("shop")
-                        ->field("shoplogo,name,intro,content,longitude,latitude,addtime,star,province,city,area,street,quality,service,address,yyzz,headimg,description,quality,service")
+                        ->field("shoplogo,name,intro,content,longitude,latitude,addtime,star,province,city,area,street,quality,service,address,yyzz,headimg,description,quality,service,tag")
                         ->where(['id'=>$shop_id])
                         ->find();
         $shopInfo['shop_fans']=ShopModel::get($shop_id)->shopFans()->count();
@@ -236,50 +236,51 @@ class Shop extends Base
             }
             $shopInfo['yyzz']=$yyzz;
         }
-        $count=Db::name('shop')->count();
-        $shops=Db::name('shop')->field("SUM(description) description,SUM(quality) quality,SUM(service) service")->find();
-        $description=$shops['description']/$count;//平均描述
-        $quality=$shops['quality']/$count;//平均质量
-        $service=$shops['service']/$count;//平均服务
-        if($description==0){
-            $shopinfo['description']=array(
-                'description'=>0,
-                'rate'=>0
-            );
-        }else{
-            $shopInfo['description']=array(
-                'description'=>$shopInfo['description'],
-                'rate'=>round((($shopInfo['description']-$description)/$description*100),2)."%",
-            );
-        }       
+          $shopInfo['tag']=json_decode($shopInfo['tag'],true);
+           
+        // $count=Db::name('shop')->count();
+        // $shops=Db::name('shop')->field("SUM(description) description,SUM(quality) quality,SUM(service) service")->find();
+        // $description=$shops['description']/$count;//平均描述
+        // $quality=$shops['quality']/$count;//平均质量
+        // $service=$shops['service']/$count;//平均服务
+        // if($description==0){
+        //     $shopinfo['description']=array(
+        //         'description'=>0,
+        //         'rate'=>0
+        //     );
+        // }else{
+        //     $shopInfo['description']=array(
+        //         'description'=>$shopInfo['description'],
+        //         'rate'=>round((($shopInfo['description']-$description)/$description*100),2)."%",
+        //     );
+        // }       
         
        
-        if($quality==0){
-            $shopInfo['quality']=array(
-                'quality'=>0,
-                'rate'=>0
-            );
-        }else{
-            $shopInfo['quality']=array(
-                'quality'=>$shopInfo['quality'],
-                'rate'=>round((($shopInfo['quality']-$quality)/$quality*100),2)."%",
-            );
-        }
-        if($service==0){
-            $shopInfo['quality']=array(
-                'quality'=>0,
-                'rate'=>0
-            );
-        }else{
-            $shopInfo['service']=array(
-                'service'=>$shopInfo['service'],
-                'rate'=>round((($shopInfo['service']-$service)/$service*100),2)."%",
-            );
-        }
+        // if($quality==0){
+        //     $shopInfo['quality']=array(
+        //         'quality'=>0,
+        //         'rate'=>0
+        //     );
+        // }else{
+        //     $shopInfo['quality']=array(
+        //         'quality'=>$shopInfo['quality'],
+        //         'rate'=>round((($shopInfo['quality']-$quality)/$quality*100),2)."%",
+        //     );
+        // }
+        // if($service==0){
+        //     $shopInfo['quality']=array(
+        //         'quality'=>0,
+        //         'rate'=>0
+        //     );
+        // }else{
+        //     $shopInfo['service']=array(
+        //         'service'=>$shopInfo['service'],
+        //         'rate'=>round((($shopInfo['service']-$service)/$service*100),2)."%",
+        //     );
+        // }
         
-        $shop_order_count=Db::name('order')->where(['shop_id'=>$shop_id,''])->select();
-        var_dump($shopInfo);       
-        exit;
+       $this->json_success($shopInfo,'获取数据成功！');
+        
     }
     
     
