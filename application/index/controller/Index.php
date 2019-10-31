@@ -16,8 +16,9 @@ class Index
     //注册申请
     public function apply()
     {
-        $appid = "wx4d7fa47003d86b9e";
-        $appsecret="3721c1001b3163f514fdcbe6fa748864";
+        
+        $appid=config("wchat.appid");
+        $appsecret=config("wchat.appsecret");       
         if(input('code')){
             $code=input('code');
             $oauth2Url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=".$appid."&secret=".$appsecret."&code=".$code."&grant_type=authorization_code";
