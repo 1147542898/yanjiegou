@@ -239,7 +239,7 @@ var logomoduleid = '{$logomoduleid}';
             $('#area').html('<option value="">请选择镇区</option>');
             $('#street').html('<option value="">请选择街道</option>');
             $.ajax( {
-                url:"{:url('admin/bigshop/getchildarea')}",
+                url:"{:url('shop/info/getchildarea')}",
                 data: {parent_id: dataid},
                 type:'POST',
                 dataType:'json',
@@ -258,7 +258,7 @@ var logomoduleid = '{$logomoduleid}';
             $('#area').html('<option value="">请选择镇区</option>');
             $('#street').html('<option value="">请选择街道</option>');
             $.ajax( {
-                url:"{:url('admin/bigshop/getchildarea')}",
+                url:"{:url('shop/info/getchildarea')}",
                 data: {parent_id: dataid},
                 type:'POST',
                 dataType:'json',
@@ -277,7 +277,7 @@ var logomoduleid = '{$logomoduleid}';
             var dataid = data.elem[indexGID].title;
             $('#street').html('<option value="">请选择街道</option>');
             $.ajax( {
-                url:"{:url('admin/bigshop/getchildarea')}",
+                url:"{:url('shop/info/getchildarea')}",
                 data: {parent_id: dataid},
                 type:'POST',
                 dataType:'json',

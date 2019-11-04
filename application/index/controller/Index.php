@@ -25,8 +25,7 @@ class Index
             $data=$this->httpUtil($oauth2Url);                
             $getInfo=json_decode($data,true);                     
             $access_token = $getInfo['access_token'];
-            $openid = $getInfo['openid'];  
-            var_dump($getInfo);
+            $openid = $getInfo['openid']; 
             $get_user_info_url = "https://api.weixin.qq.com/sns/userinfo?access_token=$access_token&openid=$openid&lang=zh_CN";
             $data=$this->httpUtil($get_user_info_url);
             var_dump($data);
@@ -40,6 +39,7 @@ class Index
         exit;
        
     }
+    
     public function httpUtil($url, $data = '', $method = 'GET')
     {
         try {
@@ -65,4 +65,8 @@ class Index
             return $tmpInfo; // 返回数据
         } catch (Exception $e) { }
     }
+    
+   
+    
+    
 }
