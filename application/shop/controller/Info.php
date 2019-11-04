@@ -1,6 +1,6 @@
 <?php
 namespace app\shop\Controller;
-use app\api\Controller\Base;
+use app\api\controller\Base;
 use app\api\model\Area;
 use think\Db;
 use think\Request;
