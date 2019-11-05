@@ -180,9 +180,11 @@ class Order extends Base
                     }
                     // 计算用哪一张优惠卷
                     if ($pcValue['min_price'] <= $shopall_money) {
-                        $coupon_arr[]['clogid'] = $pcValue['clogid'];
-                        $coupon_arr[]['sub_price'] = $pcValue['sub_price']; // 减去金额
-                        $coupon_arr[]['name'] = $pcValue['name']; 
+                        $coupon_arr[] = [
+                            'clogid'    =>  $pcValue['clogid'],
+                            'sub_price' =>  $pcValue['sub_price'],
+                            'name'      =>  $pcValue['name']
+                        ];
                     }
                 }
             }
@@ -196,15 +198,21 @@ class Order extends Base
         }
         
         //查看当前用户是否有默认的收货地址
-        $recvaddr = Db::name('recvaddr')->where(['user_id'=>$user_id,'is_default'=>1,'is_delete'=>0])->field('consignee,phone,province,city,area,address')->find();
-        if(null===$recvaddr){
+        $recvaddr = Db::name('recvaddr')->where(['user_id'=>$user_id,'is_default'=>1,'is_delete'=>0])->field('id,consignee,phone,province,city,area,address')->find();
+        if(!$recvaddr){
             $myinfo['shop'] = $shops;
             $this->json_success($myinfo,'您还没有设置收货地址',-1);
             die;
         }
+        if (!empty($shops) && count($shops) == 1) {
+            $shopaddr = Db::name('shop')->where(['id'=>$shops[0]['id']])->field('id,province,city,area,address')->find();
+        }else{
+            $shopaddr = [];
+        }
         $info = [
             'recvaddr'=>$recvaddr,
             'shop'=>$shops,
+            'shopaddr'=>$shopaddr,
             'ping_coupon'=>$coupon_one,
         ];
         $this->json_success($info);
