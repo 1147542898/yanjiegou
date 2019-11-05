@@ -186,6 +186,31 @@ class Coupon extends Base
             die;
         }
 
+
+        /*---chen*/
+        // 平台优惠券加
+        $shi_time = time();
+        $hd_coupon = Db::name('coupon')->where('type_id',1)->where('begin_time','elt',$shi_time)->where('end_time','gt',$shi_time)->select();
+        foreach ($hd_coupon as $hd_k => $hd_v) {
+            $find = Db::name('couponlog')->where('user_id',$user_id)->where('coupon_id',$hd_v['id'])->find();
+            if (!$find) {
+                $hd_log = [
+                    'user_id'   =>$user_id,
+                    'coupon_id' =>$hd_v['id'],
+                    'add_time'  =>time(),
+                    'receive_time'=>time()
+                ];
+                Db::name('couponlog')->insert($hd_log);
+            }
+        }
+        /*---chen*/
+
+
+
+
+
+
+
         $data = [];
 
         if($type_id==1){
