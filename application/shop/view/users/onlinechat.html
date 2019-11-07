@@ -220,7 +220,7 @@
 
 
     /*连接本地服务器*/
-    ws = new WebSocket("ws://47.110.9.93:8282");
+    ws = new WebSocket("ws://121.199.17.119:8282");
     // 服务端主动推送消息时会触发这里的onmessage
     ws.onmessage = function(e){
         var data = eval("("+e.data+")");
