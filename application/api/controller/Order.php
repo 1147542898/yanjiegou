@@ -99,6 +99,7 @@ class Order extends Base
             $shops[$k]['coupon_clogid'] = '';
             $shops[$k]['coupon_price'] = '';
             $shops[$k]['coupon_name'] = '';
+            $shops[$k]['is_public'] = 1;
             if ($shop_coupon) {
                 foreach ($shop_coupon as $scKey => $scValue) {
                     if(time() > $scValue['end_time']){
@@ -183,7 +184,8 @@ class Order extends Base
                         $coupon_arr[] = [
                             'clogid'    =>  $pcValue['clogid'],
                             'sub_price' =>  $pcValue['sub_price'],
-                            'name'      =>  $pcValue['name']
+                            'name'      =>  $pcValue['name'],
+                            'min_price' =>  $pcValue['min_price']
                         ];
                     }
                 }
@@ -194,6 +196,7 @@ class Order extends Base
                 $coupon_one['clogid'] = $coupon_arr[0]['clogid'];
                 $coupon_one['price'] = $coupon_arr[0]['sub_price'];
                 $coupon_one['name'] = $coupon_arr[0]['name'];
+                $coupon_one['min_price'] = $coupon_arr[0]['min_price'];
             }
         }
         
@@ -505,6 +508,7 @@ class Order extends Base
         $myshop = input('post.myshop');
         $pay_type = input('post.pay_type');
         $coupon_id = input('post.coupon_id');
+        $qtjs_money = input('post.money');
         
         $myshop = $this->checkoutSubParam($user_id, $myshop, $pay_type, $coupon_id); //参数检测，顺带[]myshop
         
@@ -513,7 +517,6 @@ class Order extends Base
         $coupons = $this->infoAllCoupon($myshop, $coupon_id); //所有优惠券
 
         $carts = $this->infoAllCart($myshop, $user_id); //所有商品
-
 
         // 拼装 myshop消息，优惠券
         $shop_ids = array_column($myshop,'shop_id');
@@ -578,6 +581,10 @@ class Order extends Base
                 'order_ids'=>$myorder_ids,
                 'total_amount'=>$info['total_amount'] - $info['coupon_amount'] - $ping_coupon
             ];
+            if($order_trades['total_amount'] == $qtjs_money){
+                throw new Exception("金额错误");
+            }
+
         //order_trade
             $trade_id = Db::name('order_trade')->insertGetId($order_trades);
             if (!$trade_id) {
@@ -739,8 +746,9 @@ class Order extends Base
                 'shop_id'   =>  $v['id'],
                 'order_sn'  =>  $ordersn, //订单号
                 'user_id'   =>  $user_id,
-                'money'     =>  $total - $v['coupon_price'], // 实际金额
+                'money'     =>  $total - $v['coupon_price'] + $v['freight'], // 金额-优惠卷+运费
                 'oldmoney'  =>  $total, // 原价
+                'coupon_id'=> $v['coupon_id'], //优惠券价格
                 'couponprice'=> $v['coupon_price'], //优惠券价格
                 'total_num' =>  $total_num, //总数量
                 'send_type' =>  $v['send_type'], //配送类型    
@@ -764,7 +772,7 @@ class Order extends Base
         }
         $data['order'] = $order;
         $data['order_goods'] = $order_goods;
-        $data['total_amount'] = $total_amount;
+        $data['total_amount'] = $total_amount + $v['freight']; //加运费
         $data['coupon_amount'] = $coupon_amount;
         return $data;
     }
