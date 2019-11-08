@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>商家申请</title>
+	<meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,maximum-scale=1,minimum-scale=1">
+	 <link rel="stylesheet" type="text/css" href="/static/index/css/reset.css">
+	<title>Document</title>
+</head>
+<body>
+	 <div class='homepage'>
+	 	<div class="title">
+			 <span class='el-icon-arrow-left'></span>
+			<a href=""><img src="/static/index/img/left.png" alt="" class='el-icon-arrow-left '></a>
+	 		<span class='name'>商家申请</span>
+	 	</div>
+	 	<div class="logo">
+             <span class='sj '>商家logo</span>            
+             <p class="round"></p>
+	 	</div>
+	 	<div class="info">
+	 		<p class='name'>
+	 			 <span class='bt'>商家名称</span>
+				  <input type="text" placeholder="沿街购" class='kr'>
+	 		</p>
+	 		<p class='name'>
+	 			<span>所在区域</span>
+	 			<span class='n2'>河南省</span>
+	 			<span class='n3'>郑州市</span>
+	 			<span class='n4'>中原区</span>
+	 			<img src="/static/index/img/right.png" alt="" class='el-icon-arrow-right'>
+	 		</p>
+	 		<p class='name'>
+	 			<span>详细地址</span>
+				 <input type="text" placeholder="河南省郑州市中原区中原中路171号" class='address'>
+	 		</p>
+	 		<p class='name'>
+	 			<span>定位</span>
+	 			<span class='n6'>定位成功</span>
+				 <img src="/static/index/img/map.png" alt="" class='map'>
+	 		</p>
+	 	</div>
+	 	<div class="concat">
+	 		<p class='person'>
+	 			<span class='name'>联系人</span>
+				<input type="text" placeholder="婚礼掌柜" class='new'>
+	 		</p>
+	 		<p class='phone'>
+	 			<span class='num'>联系电话</span>
+	 			<input type="text" placeholder="请输入联系电话">
+	 		</p>
+	 		<p class='phone'>
+	 			 <span class='num'>备用电话</span>
+				 <input type="text" placeholder="">
+				 <span class='n3'>选填</span>
+	 		</p>
+	 	</div>
+	 	<!-- 商家简介 -->
+	 	<div class="induce">
+	 		<p class='jianjie'>商家简介</p>
+			<textarea class='content'>简介的占位符简介的占位符简介的占位符简介的占位符的占位符简介的占位符 简介的占位符简介的占位符简介的占位符简介的占位符的占位符简介的占位符</textarea>
+	 	</div>
+	 	<!-- 营业执照 -->
+	 	<div class="zhizhao">
+	 		<div class="name">
+				 <span>营业执照</span>
+				 <div class='sc'>上传<input type="file" style="opacity: 0"></div>
+	 		</div>
+	 		<div class="pic">
+	 			<img src="/static/index/img/1.png" alt="">
+	 			<p><span>温馨提示:</span>&nbsp;&nbsp;提示内容占位符提示内容占位符提示内容占位符</p>
+	 		</div>
+	 	</div>
+	 	<!-- 身份证营业执照 -->
+	 	<div class="zhizhao">
+	 		<div class="name">
+	 			<span>身份证正反面照</span>
+	 			<div class='sc'>上传<input type="file" style="opacity: 0"></div>
+	 		</div>
+	 		<div class="imgs">
+	 			<img src="/static/index/img/2.jpg" alt="">
+	 			<img src="/static/index/img/3.jpg" alt="">
+	 		</div>
+	 		<div class="content">
+	 			<p>温馨提示:</p>
+	 			<p>1、拍摄正面照时，请保持姓名,证件号码等信息清晰可见</p>
+	 			<p>2、拍摄反面照时，请确保签发机关，有效期清晰可见</p>
+	 			<p>3、请上传经营者、法定代表人或相关负责人信息</p>
+	 		</div>
+	 	</div>
+	 	<div class="tijiao">
+	 	   <input type="submit" class='button' value='提交'>
+	 	</div>
+	 </div>
+	<script type="text/javascript" src="/static/index/js/bundle.js"></script>
+    <script type="text/javascript" src="/static/admin/lib/layui/layui.js"></script>
+    <script type="text/javascript">
+    var albummoduleid = '{$albummoduleid}';
+    var logomoduleid = '{$logomoduleid}';
+    var uploadApi ="{:url('upload/index/uploadimage')}";
+     layui.use(['form','upload','layedit','laydate','jquery','rate'], function () {
+        var form = layui.form,
+            upload = layui.upload,
+            layedit = layui.layedit,
+            laydate = layui.laydate,
+            $ = layui.jquery,
+            rate = layui.rate;
+                //商家logo
+        upload.render({
+            elem: '.upload-picture',
+            url: uploadApi,
+            data: {
+                moduleid: logomoduleid,
+                // attachmark: attachmark,
+                // identity: identity,
+            },
+            field: 'upfile',           
+            exts: 'jpg|png|jpeg',
+            before: function(obj) {
+                layer.msg('图片上传中...', {
+                    icon: 16,
+                    shade: 0.01,
+                    time: 0
+                })
+            },
+            done: function(res, index, upload){ //上传后的回调
+                layer.msg(res.message);
+                if( res.status == 'success' ){                    
+                        $('input[name=shoplogo]').val(res.uploadInfo.attachurl);
+                        $('img','.upload-picture').attr('src',res.uploadInfo.attachurl);
+                   
+                }
+            }
+        });
+     })
+    
+    </script>
+</body>
+</html>

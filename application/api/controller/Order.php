@@ -1181,6 +1181,7 @@ class Order extends Base
             }
         }
         $data['dispatchprice']=$dispatchprice;
+        $data['shop_id']=$shop_id;
         $this->json_success($data);
     }
    
