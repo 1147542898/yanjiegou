@@ -528,7 +528,7 @@ class Order extends Base
         {
             foreach ($myshop as $k => $v) 
             {
-                if ($myshop[$k]['shop_id'] = $shops[$key]['id']) 
+                if ($myshop[$k]['shop_id'] == $shops[$key]['id']) 
                 {
                     $shops[$key]['cart_id'] = $myshop[$k]['cart_id'];
                     $shops[$key]['remark_member'] = $myshop[$k]['remark_member'];
@@ -541,7 +541,7 @@ class Order extends Base
             $ping_coupon = 0; // 平台优惠券
             foreach ($coupons as $kc => $vc) 
             {
-                if ($shops[$key]['coupon_id'] = $coupons[$kc]['id']) 
+                if ($shops[$key]['coupon_id'] == $coupons[$kc]['couponlog_id']) 
                 {
                     $shops[$key]['coupon_price'] = $coupons[$kc]['sub_price'];
                 }
@@ -661,8 +661,11 @@ class Order extends Base
         if (!empty($coupon_id)) {
             $where[] = $coupon_id;
         }
-        $cwhere=Db::name('couponlog')->where('id',$where)->column('coupon_id');
-        $coupons = Db::name('coupon')->whereIn('id',$cwhere)->select();
+        $coupons=Db::name('couponlog')->alias('l')
+                ->field('c.*,l.id as couponlog_id')
+                ->join('shy_coupon c','c.id = l.coupon_id')
+                ->whereIn('l.id',$where)
+                ->select();
         $is_expire = array_column($coupons,'is_expire');
         if (in_array('1',$is_expire)) {
             $this->json_error('优惠券错误');

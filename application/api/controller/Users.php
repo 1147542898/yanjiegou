@@ -1589,7 +1589,7 @@ class Users extends Base
             $this->json_error('请传过来订单编号');
         }
 
-        $order = Db::name('order')->where(['user_id'=>$user_id,'id'=>$order_id])->field('id,order_sn,money,oldmoney,pay_type,freight,total_num,remark_shop,remark_member,add_time,status,getusername,mobile,province,city,area,address,shop_id,expresscom,expresssn')->find();
+        $order = Db::name('order')->where(['user_id'=>$user_id,'id'=>$order_id])->field('id,order_sn,money,oldmoney,pay_type,freight,total_num,remark_shop,remark_member,add_time,status,getusername,mobile,province,city,area,address,shop_id,expresscom,expresssn,takes_time,takes_mobile')->find();
 
         $oid = $order['id'];
 
@@ -1603,7 +1603,7 @@ class Users extends Base
         $order['out_trade_no'] = $order_trade['out_trade_no'];
 
         $shop_id = $order['shop_id'];
-        $shop = Db::name('shop')->where('id','=',$shop_id)->field('name,shoplogo')->find();
+        $shop = Db::name('shop')->where('id','=',$shop_id)->field('name,shoplogo,province,city,area,street,address')->find();
 
 
         $orders_goods = Db::name('order_goods')->alias('og')
@@ -1619,6 +1619,13 @@ class Users extends Base
 
         $order['sname'] = $shop['name'];
         $order['shoplogo'] = $this->domain().$shop['shoplogo'];
+        $order['shopaddr'] = [
+            'province'=>$shop['province'],
+            'city'=>$shop['city'],
+            'area'=>$shop['area'],
+            'street'=>$shop['street'],
+            'address'=>$shop['address'],
+        ];
 
         $order['goods'] = $orders_goods;
 
