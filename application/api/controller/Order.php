@@ -509,6 +509,9 @@ class Order extends Base
         $pay_type = input('post.pay_type');
         $coupon_id = input('post.coupon_id');
         $qtjs_money = input('post.money');
+
+        $takes_time = input('post.takes_time'); // 到店自取时间
+        $takes_mobile = input('post.takes_mobile'); // 自取手机号
         
         $myshop = $this->checkoutSubParam($user_id, $myshop, $pay_type, $coupon_id); //参数检测，顺带[]myshop
         
@@ -549,7 +552,7 @@ class Order extends Base
                 }
             }
         }
-        $info = $this->infoOrderAndGoods($shops, $user_id, $recvaddr, $carts, $pay_type); //order + order_goods
+        $info = $this->infoOrderAndGoods($shops, $user_id, $recvaddr, $carts, $pay_type, $takes_time, $takes_mobile); //order + order_goods
         
         Db::startTrans(); //开启事务
         try {
@@ -572,7 +575,7 @@ class Order extends Base
             $myorders = Db::name('order')->whereIn('id',$order_ids)->where(['user_id'=>$user_id])->field('id,order_sn')->select();
             $order_sns = json_encode(array_column($myorders,'order_sn'));
             $myorder_ids  = implode(',',array_column($myorders,'id'));
-            if($info['total_amount']<=0){
+            if($info['total_amount']<0){
                 throw new \Exception("金额不合法");
             }
             $order_trades = [
@@ -695,7 +698,7 @@ class Order extends Base
         }
         return $carts;
     }
-    public function infoOrderAndGoods($shops, $user_id, $recvaddr, $carts, $pay_type)
+    public function infoOrderAndGoods($shops, $user_id, $recvaddr, $carts, $pay_type, $takes_time, $takes_mobile)
     {
         $order = []; //订单表
         $order_goods = []; //订单商品表
@@ -763,6 +766,11 @@ class Order extends Base
                 'city'  => $recvaddr['city'],
                 'area'  => $recvaddr['area'],
             ];
+            if ($order['send_type'] == 2) {
+                $order['takes_time'] = $takes_time;
+                $order['takes_mobile'] = $takes_mobile;
+            }
+
         //---order End
             $total_amount = $total_amount + $total;
             $coupon_amount = $coupon_amount + $v['coupon_price'];
