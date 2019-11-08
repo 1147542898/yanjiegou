@@ -556,7 +556,7 @@ class Order extends Base
         //order
             $order = Db::name('order')->insertAll($info['order']); //order表添加
             if (!$order) {
-                throw new Exception("订单添加错误");
+                throw new \Exception("订单添加错误");
             }
             //获取order表添加id[];
             $order_id = Db::name('order')->getLastInsID();
@@ -567,13 +567,13 @@ class Order extends Base
         // order_goods
             $order_goods = Db::name('order_goods')->insertAll($info['order_goods']); //order_goods表添加
             if (!$order_goods) {
-                throw new Exception("订单商品添加错误");
+                throw new \Exception("订单商品添加错误");
             }
             $myorders = Db::name('order')->whereIn('id',$order_ids)->where(['user_id'=>$user_id])->field('id,order_sn')->select();
             $order_sns = json_encode(array_column($myorders,'order_sn'));
             $myorder_ids  = implode(',',array_column($myorders,'id'));
             if($info['total_amount']<=0){
-                throw new Exception("金额不合法");
+                throw new \Exception("金额不合法");
             }
             $order_trades = [
                 'out_trade_no'=>makeordersn(),
@@ -582,17 +582,15 @@ class Order extends Base
                 'total_amount'=>$info['total_amount'] - $info['coupon_amount'] - $ping_coupon
             ];
             if($order_trades['total_amount'] == $qtjs_money){
-                throw new Exception("金额错误");
+                throw new \Exception("金额错误");
             }
-
         //order_trade
             $trade_id = Db::name('order_trade')->insertGetId($order_trades);
             if (!$trade_id) {
-                throw new Exception("交易添加错误");
+                throw new \Exception("交易添加错误");
             }
             // 成功,提交事务
             Db::commit();
-
             $this->endFuncOrder($user_id, $coupons, $myshop, $carts);
 
 
@@ -605,7 +603,7 @@ class Order extends Base
             $data['out_trade_no'] = $trandeinfo['out_trade_no'];
             $data['total_amount'] = $trandeinfo['total_amount'];
             $this->json_success($data,'生成订单成功');
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             // echo $e->getMessage();
             //如果失败,回滚事务
             Db::rollback();
