@@ -5,19 +5,33 @@ namespace app\index\controller;
 use think\Request;
 use think\Db;
 use think\Controller;
+use think\Session;
+
 class Index extends Controller
 {
     public function index()
     {
         $this->assign('logomoduleid', 111);
         $this->assign('albummoduleid', 112);
+        if(!Session::get('openid')){
+            $openid=$this->getShopUserOpenid();
+            Session::set('openid',$openid);
+        }
+        $openid=Session::get('openid'); //获取openid
+        $shop_info=Db::name("shop")->where(['openid'=>$openid])->find();
+        if(!empty($info)){
+            $this->assign('is_apply',1);//已申请           
+        }else{
+            $this->assign('is_apply',0);
+        }
+        $this->assign('openid',$openid);      
         return view();
     }
 
 
 
-    //注册申请
-    public function apply()
+    //获取用户openid
+    public function getShopUserOpenid()
     {
         
         $appid=config("wchat.appid");
@@ -26,29 +40,15 @@ class Index extends Controller
             $code=input('code');
             $oauth2Url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=".$appid."&secret=".$appsecret."&code=".$code."&grant_type=authorization_code";
             $data=$this->httpUtil($oauth2Url);                
-            $getInfo=json_decode($data,true);                     
-            $access_token = $getInfo['access_token'];
-            $openid = $getInfo['openid']; 
-            $get_user_info_url = "https://api.weixin.qq.com/sns/userinfo?access_token=$access_token&openid=$openid&lang=zh_CN";
-            $data=$this->httpUtil($get_user_info_url);
-            $openid=$data['openid'];
-            $shopinfo=Db::name("shop")->where(['openid'=>$openid])->find();
-            if(empty($shopinfo)){
-
-            }else{
-                $this->ajax_error('已申请提交等待审核！');
-            }
-            $this->assign('openid',$openid);
-            var_dump($data);
-            exit;
+            $getInfo=json_decode($data,true);       
+            $openid = $getInfo['openid'];            
+            return $openid;
+          
         }else{
             $redirect_uri = urlencode('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
             $url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=" . $appid . "&redirect_uri=" . $redirect_uri . "&response_type=code&scope=snsapi_userinfo&state=STATE&connect_redirect=1#wechat_redirect";
             header("Location:" . $url);
         }
-        
-        exit;
-       
     }
     //提交申请
     public function addapply(){
@@ -70,7 +70,8 @@ class Index extends Controller
             'yyzz'=>$yyzz,//商家营业执照
             'shortname'=>GetShortName(input('name')),//商家短名字
             'status'=>1,//申请状态      
-            'openid'=>input('openid'),//商家openid      
+            'openid'=>input('openid'),//商家openid    
+            'bphone'=>input('bphone'),//备用电话  
             
         );
         $result=Db::name('shop')->insert($data);
