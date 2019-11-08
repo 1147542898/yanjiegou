@@ -44,7 +44,7 @@ return [
         //'debug'       => true,
         'debug'       => false,
         // 应用ID
-        'app_id'        =>  ' 2019100968222438',
+        'app_id'        =>  '2019100968222438',
         // 'app_id'      => '2019060265440176',
         // 支付宝公钥(1行填写)
         // 'public_key'  => 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmjqoop8XrvVoerunKekelURajbeP0IgFswgyjrBZXiAn98IgLlS1Tk525YXJ90s7m6vDeyyfGb/XrRoua/tcy37b+mK32k2Mb0jVausP+3sa1zudO3sSJ+KN3XwwptHQJ00NkqomOGOXv9x1G3cRi89YcRzFlASaYk8+f1+LkajRwiGnk+gEWmyS75l3UxbSAkN10gIEGGzv3RJ+9AoIY15jgUW2ubp5You6rBsapbftXnrcxqZ2oTT7xO/ilWgmgvcbuQew75UgSX26MAIQ91EnGKYtCyt9wWtcUleavNe6qsj4klMdpJDblWzcOI2a4S5dlo9Ihbl/KAE7YSVsCwIDAQAB',
