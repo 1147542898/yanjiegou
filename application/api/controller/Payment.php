@@ -31,25 +31,25 @@ class Payment extends Base
 
         //订单是否有优惠券
 
-        $order_ids = $order_trade['order_ids'];
+        // $order_ids = $order_trade['order_ids'];
 
-        $orders = Db::name('order')->whereIn('id',$order_ids)->select();
+        // $orders = Db::name('order')->whereIn('id',$order_ids)->select();
 
         $total_amount = $order_trade['total_amount'];
 
-        $couponids = array_column($orders,'couponid');
+        // $couponids = array_column($orders,'couponid');
 
-        $coupons = Db::name('coupon')->where(['is_expire'=>0])->whereIn('id',$couponids)->select();
+        // $coupons = Db::name('coupon')->where(['is_expire'=>0])->whereIn('id',$couponids)->select();
 
 
-        if($coupons!=null){
-            $price = 0;
-            foreach($coupons as $ck=>$cv){
-                $price+=$cv['sub_price'];
-            }
-            $total_amount = $total_amount-$price;
+        // if($coupons!=null){
+        //     $price = 0;
+        //     foreach($coupons as $ck=>$cv){
+        //         $price+=$cv['sub_price'];
+        //     }
+        //     $total_amount = $total_amount-$price;
 
-        }
+        // }
 
         if($total_amount<=0){
             $this->json_error('金额不合法');
