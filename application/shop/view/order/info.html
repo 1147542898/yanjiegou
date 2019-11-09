@@ -94,7 +94,15 @@ label{font-weight: bold;color:#009688;}
             </div>
             <div class="layui-col-md12">
              <label class="green">快递公司：</label>
-             {:config('system.express_company')[$info['expresscom']]['statusname']}
+             {php} 
+             $express_company=config('system.express_company');
+             if(!empty($info['expresscom'])){
+                if(array_key_exists($info['expresscom'],$express_company)){
+                    echo $express_company[$info['expresscom']]['statusname'];
+                }
+            }
+             {/php}
+             
 
           
             </div>

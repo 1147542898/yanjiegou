@@ -1493,7 +1493,7 @@ class Users extends Base
             ->join('goods g','g.id=og.goodsid')
             //->join('shop s','s.id=g.shopid','left')
             //->field('og.price as ogprice,og.num,og.specification,og.order_sn as ogorder_sn,og.id as ogid,g.id as gid,g.title as gtitle,g.headimg,s.id as sid,s.name as sname,s.shoplogo')
-            ->field('og.price as ogprice,og.num,og.specification,og.order_sn as ogorder_sn,og.id as ogid,g.id as gid,g.title as gtitle,g.headimg')
+            ->field('og.price as ogprice,og.num,og.specification,og.order_sn as ogorder_sn,og.id as ogid,og.sku_id,g.id as gid,g.title as gtitle,g.headimg')
             ->whereIn('og.order_sn',$order_sn)
             ->select();
         foreach($orders_goods as $gk=>$gv){
@@ -1521,6 +1521,22 @@ class Users extends Base
                     $data['num'] = $ov['num'];
                     $headimgs = explode(',', $ov['headimg']);
                     $data['headimg'] = $this->domain().$headimgs[0];
+            /*---chen*/
+                    $data['goods_attr'] = '';
+                    if ($ov['sku_id'] != 0) {
+                        $group_sku=Db::name('GoodsSttrxsku')->where('id',$ov['sku_id'])->value('group_sku');
+                        $goods_attr = json_decode($group_sku,true);
+                        if(!empty($goods_attr)){
+                            foreach ($goods_attr as $ks=>$vs){
+                                $SttrName=Db::name('GoodsSttr')->where('id',$ks)->value('key');
+                                $SttrValName=Db::name('GoodsSttrval')->where('id',$vs)->value('sttr_value');
+                                $data['goods_attr'] .=  $SttrName.':'.$SttrValName.' ';
+                            }
+                        }            
+                    }
+            /*---chen*/
+
+
                     $orders[$k]['goods'][] = $data;
                     $totalnum += $ov['num'];
                     $totalprice += $ov['num'] * $ov['ogprice'];
@@ -1589,7 +1605,7 @@ class Users extends Base
             $this->json_error('请传过来订单编号');
         }
 
-        $order = Db::name('order')->where(['user_id'=>$user_id,'id'=>$order_id])->field('id,order_sn,money,oldmoney,pay_type,freight,total_num,remark_shop,remark_member,add_time,status,getusername,mobile,province,city,area,address,shop_id,expresscom,expresssn,takes_time,takes_mobile')->find();
+        $order = Db::name('order')->where(['user_id'=>$user_id,'id'=>$order_id])->field('id,order_sn,money,oldmoney,pay_type,freight,total_num,remark_shop,remark_member,add_time,status,getusername,mobile,province,city,area,address,shop_id,expresscom,expresssn,takes_time,takes_mobile,couponprice,paytime')->find();
 
         $oid = $order['id'];
 
@@ -1598,6 +1614,7 @@ class Users extends Base
 
         $order['djs_time'] = $order['add_time']+86400;
         $order['add_time'] = date('Y-m-d H:i:s',$order['add_time']);
+        $order['paytime'] = date('Y-m-d H:i:s',$order['paytime']);
         
 
         $order['out_trade_no'] = $order_trade['out_trade_no'];
