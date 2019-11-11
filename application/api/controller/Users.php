@@ -1402,6 +1402,68 @@ class Users extends Base
         }
 
     }
+/**
+ * str = "你好，订单号：123456789提醒你发货";
+ */
+    public function sendremind()
+    {
+        $user_id = input('post.u_id');
+        $order_id = input('post.o_id');
+        $shop_id = input('post.s_id');
+        $order = Db::name('order')->alias('o')
+                ->join('shop s','s.id = o.shop_id')
+                ->field('o.order_sn,o.shop_id,s.phone')
+                ->where('o.user_id',$user_id)
+                ->where('o.order_sn',$order_id)
+                ->where('o.shop_id',$shop_id)
+                ->where('o.status',2)
+                ->find();
+        if(empty($user_id) || empty($order_id) || !$order){
+            $this->json_error('参数错误');
+        }
+        $find = Db::name('Remind')->whereTime('addtime', 'd')->select();
+        if ($find) {
+            $this->json_success('今天已经发送过');
+        }
+        $rule=[
+            'mobile'  => 'require|max:11|regex:/^1[3-8]{1}[0-9]{9}$/'
+        ];
+        $msg=[
+            'mobile.require'=>'手机号码不能为空',
+            'mobile.max'=>'手机号码不符合长度',
+            'mobile.regex'=>'手机号码格式不正确'
+        ];
+        $result=$this->validate(['mobile'=>$order['phone']],$rule,$msg);
+        if(true !== $result){
+            $this->json_error($result);
+        }
+
+        
+
+        //阿里大鱼短信
+        //短信签名
+        // $signName=config('sms.signName');
+        //短信模板ID
+        $templateCode=config('sms.templateCode2');
+        //短信模板变量
+        //$templateParam=array('code'=>$verifycode,'product'=>$signName);
+
+        $res = Sms::smsVerifyTwo($order['phone'],$order['order_sn'],$templateCode);
+        if($res['status'] == 1){
+            $data = [
+                'user_id'=>$user_id,
+                'shop_id'=>$shop_id,
+                'order_id'=>$order['order_sn'],
+                'addtime'=>$time
+            ];
+            Db::name('Remind')->insert($data);
+            $this->json_success([],'已发送给商家',200);
+        }else{
+            $this->json_error("发送失败，请联系客服");
+
+        }
+
+    }
 
     //问题反馈
     public function feedback()
