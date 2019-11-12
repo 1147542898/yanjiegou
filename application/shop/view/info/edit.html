@@ -453,9 +453,18 @@ var logomoduleid = '{$logomoduleid}';
     var lng = "{$franchisee.longitude|default='116.397428'}";
     map = new AMap.Map('g-map', {
         resizeEnable: true,
-        center: [lng,lat],
+        center: [{$info.longitude},{$info.latitude}],
         zoom:13,//级别
     });
+    var marker = new AMap.Marker({
+        position: new AMap.LngLat({$info.longitude},{$info.latitude}),   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+        title: '{$info.name}'
+    });
+    // 将创建的点标记添加到已有的地图实例：
+    map.add(marker);
+
+
+    
     //为地图注册click事件获取鼠标点击出的经纬度坐标
     var clickEventListener = map.on('click', function(e) {
         $("input[name='m_point']").val(e.lnglat.getLng() + ',' + e.lnglat.getLat());
