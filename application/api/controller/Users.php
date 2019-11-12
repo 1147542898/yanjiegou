@@ -1423,7 +1423,7 @@ class Users extends Base
         }
         $find = Db::name('Remind')->whereTime('addtime', 'd')->select();
         if ($find) {
-            $this->json_success('今天已经发送过');
+            $this->json_success('今天已经提醒过');
         }
         $rule=[
             'mobile'  => 'require|max:11|regex:/^1[3-8]{1}[0-9]{9}$/'
@@ -1452,7 +1452,7 @@ class Users extends Base
                 'user_id'=>$user_id,
                 'shop_id'=>$shop_id,
                 'order_id'=>$order['order_sn'],
-                'addtime'=>$time
+                'addtime'=>time()
             ];
             Db::name('Remind')->insert($data);
             $this->json_success([],'已发送给商家',200);

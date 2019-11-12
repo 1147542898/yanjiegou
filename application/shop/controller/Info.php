@@ -93,6 +93,8 @@ class Info extends Common{
             }
             if (!empty($info['tag'])) {
                 $info['tag'] = json_decode($info['tag'],true);
+            }else{
+                $info['tag'] = [];
             }
             
           

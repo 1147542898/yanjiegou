@@ -127,7 +127,7 @@ class Sms extends Base
 
                         'PhoneNumbers'      => $mobile,
 
-                        'SignName'          => config('sms.signName'),
+                        'SignName'          => config('sms.signName2'),
 
                         'TemplateCode'      => $tempId,
 
