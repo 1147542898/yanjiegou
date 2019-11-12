@@ -1441,8 +1441,6 @@ class Users extends Base
         
 
         //阿里大鱼短信
-        //短信签名
-        // $signName=config('sms.signName');
         //短信模板ID
         $templateCode=config('sms.templateCode2');
         //短信模板变量
