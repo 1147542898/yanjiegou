@@ -1402,6 +1402,66 @@ class Users extends Base
         }
 
     }
+/**
+ * str = "你好，订单号：123456789提醒你发货";
+ */
+    public function sendremind()
+    {
+        $user_id = input('post.u_id');
+        $order_id = input('post.o_id');
+        $shop_id = input('post.s_id');
+        $order = Db::name('order')->alias('o')
+                ->join('shop s','s.id = o.shop_id')
+                ->field('o.order_sn,o.shop_id,s.phone')
+                ->where('o.user_id',$user_id)
+                ->where('o.order_sn',$order_id)
+                ->where('o.shop_id',$shop_id)
+                ->where('o.status',2)
+                ->find();
+        if(empty($user_id) || empty($order_id) || !$order){
+            $this->json_error('参数错误');
+        }
+        $find = Db::name('Remind')->whereTime('addtime', 'd')->select();
+        if ($find) {
+            $this->json_success('今天已经提醒过');
+        }
+        $rule=[
+            'mobile'  => 'require|max:11|regex:/^1[3-8]{1}[0-9]{9}$/'
+        ];
+        $msg=[
+            'mobile.require'=>'手机号码不能为空',
+            'mobile.max'=>'手机号码不符合长度',
+            'mobile.regex'=>'手机号码格式不正确'
+        ];
+        $result=$this->validate(['mobile'=>$order['phone']],$rule,$msg);
+        if(true !== $result){
+            $this->json_error($result);
+        }
+
+        
+
+        //阿里大鱼短信
+        //短信模板ID
+        $templateCode=config('sms.templateCode2');
+        //短信模板变量
+        //$templateParam=array('code'=>$verifycode,'product'=>$signName);
+
+        $res = Sms::smsVerifyTwo($order['phone'],$order['order_sn'],$templateCode);
+        if($res['status'] == 1){
+            $data = [
+                'user_id'=>$user_id,
+                'shop_id'=>$shop_id,
+                'order_id'=>$order['order_sn'],
+                'addtime'=>time()
+            ];
+            Db::name('Remind')->insert($data);
+            $this->json_success([],'已发送给商家',200);
+        }else{
+            $this->json_error("发送失败，请联系客服");
+
+        }
+
+    }
 
     //问题反馈
     public function feedback()
@@ -1493,7 +1553,7 @@ class Users extends Base
             ->join('goods g','g.id=og.goodsid')
             //->join('shop s','s.id=g.shopid','left')
             //->field('og.price as ogprice,og.num,og.specification,og.order_sn as ogorder_sn,og.id as ogid,g.id as gid,g.title as gtitle,g.headimg,s.id as sid,s.name as sname,s.shoplogo')
-            ->field('og.price as ogprice,og.num,og.specification,og.order_sn as ogorder_sn,og.id as ogid,g.id as gid,g.title as gtitle,g.headimg')
+            ->field('og.price as ogprice,og.num,og.specification,og.order_sn as ogorder_sn,og.id as ogid,og.sku_id,g.id as gid,g.title as gtitle,g.headimg')
             ->whereIn('og.order_sn',$order_sn)
             ->select();
         foreach($orders_goods as $gk=>$gv){
@@ -1521,6 +1581,22 @@ class Users extends Base
                     $data['num'] = $ov['num'];
                     $headimgs = explode(',', $ov['headimg']);
                     $data['headimg'] = $this->domain().$headimgs[0];
+            /*---chen*/
+                    $data['goods_attr'] = '';
+                    if ($ov['sku_id'] != 0) {
+                        $group_sku=Db::name('GoodsSttrxsku')->where('id',$ov['sku_id'])->value('group_sku');
+                        $goods_attr = json_decode($group_sku,true);
+                        if(!empty($goods_attr)){
+                            foreach ($goods_attr as $ks=>$vs){
+                                $SttrName=Db::name('GoodsSttr')->where('id',$ks)->value('key');
+                                $SttrValName=Db::name('GoodsSttrval')->where('id',$vs)->value('sttr_value');
+                                $data['goods_attr'] .=  $SttrName.':'.$SttrValName.' ';
+                            }
+                        }            
+                    }
+            /*---chen*/
+
+
                     $orders[$k]['goods'][] = $data;
                     $totalnum += $ov['num'];
                     $totalprice += $ov['num'] * $ov['ogprice'];
@@ -1589,7 +1665,7 @@ class Users extends Base
             $this->json_error('请传过来订单编号');
         }
 
-        $order = Db::name('order')->where(['user_id'=>$user_id,'id'=>$order_id])->field('id,order_sn,money,oldmoney,pay_type,freight,total_num,remark_shop,remark_member,add_time,status,getusername,mobile,province,city,area,address,shop_id,expresscom,expresssn')->find();
+        $order = Db::name('order')->where(['user_id'=>$user_id,'id'=>$order_id])->field('id,order_sn,money,oldmoney,pay_type,freight,total_num,remark_shop,remark_member,add_time,status,getusername,mobile,province,city,area,address,shop_id,expresscom,expresssn,takes_time,takes_mobile,couponprice,paytime')->find();
 
         $oid = $order['id'];
 
@@ -1598,12 +1674,13 @@ class Users extends Base
 
         $order['djs_time'] = $order['add_time']+86400;
         $order['add_time'] = date('Y-m-d H:i:s',$order['add_time']);
+        $order['paytime'] = date('Y-m-d H:i:s',$order['paytime']);
         
 
         $order['out_trade_no'] = $order_trade['out_trade_no'];
 
         $shop_id = $order['shop_id'];
-        $shop = Db::name('shop')->where('id','=',$shop_id)->field('name,shoplogo')->find();
+        $shop = Db::name('shop')->where('id','=',$shop_id)->field('name,shoplogo,province,city,area,street,address')->find();
 
 
         $orders_goods = Db::name('order_goods')->alias('og')
@@ -1619,6 +1696,13 @@ class Users extends Base
 
         $order['sname'] = $shop['name'];
         $order['shoplogo'] = $this->domain().$shop['shoplogo'];
+        $order['shopaddr'] = [
+            'province'=>$shop['province'],
+            'city'=>$shop['city'],
+            'area'=>$shop['area'],
+            'street'=>$shop['street'],
+            'address'=>$shop['address'],
+        ];
 
         $order['goods'] = $orders_goods;
 
