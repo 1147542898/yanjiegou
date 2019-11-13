@@ -85,6 +85,8 @@ class Shop extends Common
             $this->assign('arealist', $arealist);
             $bshop = model('bigshop')->field('id,name')->select();
             $this->assign('bshop', $bshop);
+            $shopcategory=Db::name('shop_category')->select();
+            $this->assign('shopcategory',$shopcategory);
             return $this->fetch();
         }
     }
@@ -160,11 +162,6 @@ class Shop extends Common
             if ($count) {
                 $data['headimg'] = implode(',', $data['headimg']);
             }
-            if(!empty($data['yyzz'])){
-                $data['yyzz'] = implode(',', $data['yyzz']);
-            }else{
-                $data['yyzz']="";
-            }
             $data['shortname'] = GetShortName($data['name']);
             $msg = $this->validate($data, 'Shop');
             if ($msg != 'true') {
@@ -191,12 +188,19 @@ class Shop extends Common
                     $info['src'][] = $v;
                 }
             }
-            $info['yyzz']=explode(',',$info['yyzz']);
-            $this->assign('info', $info);
+            if(!empty($info['yyzz'])){
+                $info['yyzz'] = explode(',',$info['yyzz']);
+            }
+            if(!empty($info['identity_photo'])){
+                $info['identity_photo'] = explode(',',$info['identity_photo']);
+            }
+            $this->assign('info', $info);           
             $arealist = Base::provice();
             $this->assign('arealist', $arealist);
             $bshop = model('bigshop')->field('id,name')->select();
             $this->assign('bshop', $bshop);
+             $shopcategory=Db::name('shop_category')->select();
+            $this->assign('shopcategory',$shopcategory);
             return $this->fetch();
         }
     }
@@ -419,6 +423,71 @@ class Shop extends Common
             return $result;
         }
 
+    }
+    //商家分类
+    public function shopCategoryList(){
+        if (Request::instance()->isAjax()) {
+            $page = input('page') ? input('page') : 1;
+            $pageSize = input('limit') ? input('limit') : config('pageSize');                   
+            $list = Db::name('shop_category')                    
+                    ->paginate(array('list_rows' => $pageSize, 'page' => $page))                   
+                    ->toArray();
+            return ['code' => 0, 'msg' => "获取成功", 'data' => $list['data'], 'count' => $list['total'], 'rel' => 1];
+        } else {
+            return $this->fetch();
+        }
+    }
+    //添加商家分类
+    public function addShopCategory(){
+        if (Request::instance()->isAjax()) {
+            $data = input('post.');           
+            $res =Db::name('shopCategory')->insert($data);
+            if ($res) {
+                $result['code'] = 1;
+                $result['msg'] = '添加分类成功!';
+                $result['url'] = url('admin/shop/shopCategoryList');
+                return $result;
+            } else {
+                $result['code'] = 0;
+                $result['msg'] = '添加分类失败!';
+                $result['url'] = url('admin/shop/shopCategoryList');
+                return $result;
+            }
+        } else {           
+            return $this->fetch();
+        }
+    }
+   
+    //编辑商家分类
+    public function editShopCategory(){
+        if (Request::instance()->isAjax()) {
+            $data = input('post.');           
+            $res =Db::name('shopCategory')->update($data);
+            if ($res) {
+                $result['code'] = 1;
+                $result['msg'] = '编辑分类成功!';
+                $result['url'] = url('admin/shop/shopCategoryList');
+                return $result;
+            } else {
+                $result['code'] = 0;
+                $result['msg'] = '编辑分类失败!';
+                $result['url'] = url('admin/shop/shopCategoryList');
+                return $result;
+            }
+        } else {    
+            $id=input('id');//分类id
+            $shop_category_info=Db::name('shop_category')->where(['id'=>$id])->find();
+            $this->assign('shop_category_info',$shop_category_info);       
+            return $this->fetch();
+        }
+    }
+    //删除商家分类
+    public function delShopCategory(){
+        $id = input('post.id');
+        Db::name('shop_category')->where('id',$id)->delete();
+        $result['code'] = 1;
+        $result['msg'] = '删除成功！';
+        return $result;
     }
    
 }

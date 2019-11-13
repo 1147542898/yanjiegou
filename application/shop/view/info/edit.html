@@ -56,6 +56,18 @@
                 </div>
             </div>
             <div class="layui-form-item">
+                <label class="layui-form-label">商家类型</label>
+                <div class="layui-input-inline">
+                    <select name="type" id="type"  lay-verify="required"  >
+                        <option value="" title="0">请选择所属类型</option>
+                        {volist name="shopcategory" id="vo"}
+                        <option value="{$vo.id}"  {$info.type==$vo.id ? 'selected="selected"' : ''}>{$vo.shop_category}</option>
+                        {/volist}
+                    </select>
+                </div>
+                
+            </div>
+            <div class="layui-form-item">
                 <label class="layui-form-label">简介</label>
                 <div class="layui-input-block">
                     <input type="text" name="intro" lay-verify="required" autocomplete="off" placeholder="简介" class="layui-input" value="{$info.intro}">

@@ -96,6 +96,11 @@ class Fund extends Common
         } else {
             $banks = Db::name('shop_bank')->where(['shop_id' => SHID])->select();
             $this->assign('banks', $banks);
+            //获取行业佣金比
+            $shopid = SHID;
+            $type=Db::name("shop")->where(['id'=>$shopid])->value('type');
+            $yong=Db::name("shop_category")->where(['id'=>$type])->value('brokerage');
+            $this->assign('yong',$yong);
             return $this->fetch();
         }
     }

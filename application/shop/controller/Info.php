@@ -101,6 +101,8 @@ class Info extends Common{
             $this->assign('arealist',$arealist);
             $bshop=Db::name('bigshop')->field('id,name')->select();
             $this->assign('bshop',$bshop);
+            $shop_category=Db::name('shop_category')->select();
+            $this->assign('shopcategory',$shop_category);
             return $this->fetch();
         }
     }
