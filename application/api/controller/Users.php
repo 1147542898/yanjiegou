@@ -1780,6 +1780,7 @@ class Users extends Base
             $this->json_error('请传过来地区名称');
         }
         $map['area_name']  = ['like','%'.$area_name.'%'];
+        // $map['level']  = ['eq','3'];
         $data = Db::name('area')->where($map)->select();
         if($data==null){
             $this->json_error('没有数据');

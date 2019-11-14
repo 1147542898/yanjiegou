@@ -39,7 +39,7 @@ class Shop extends Common
                 ->paginate(array('list_rows' => $pageSize, 'page' => $page))
                 ->each(function ($row) {
                     $row['statusname'] = get_status($row['status'], 'check');
-                    $row['lock_name'] = get_status($row['is_lock'], 'shop_is_lock');
+                    // $row['lock_name'] = get_status($row['is_lock'], 'shop_is_lock');
                     $row['myaddress'] = $row['province'] . $row['city'] . $row['area'] . $row['street'] . $row['address'];
                 })
                 ->toArray();
@@ -245,6 +245,20 @@ class Shop extends Common
             return ['code' => 0, 'msg' => '删除失败！'];
         }
     }
+    public function lock(){
+        $id=input('post.id');
+        $is_lock=input('post.is_lock');
+        if($is_lock==1){
+            $res = $this->model->where('id', $id)->setField('is_lock',0);
+        }else{
+            $res = $this->model->where('id', $id)->setField('is_lock',1);
+        }
+        if ($res) {
+            return ['code' => 1, 'msg' => '设置成功！'];
+        } else {
+            return ['code' => 0, 'msg' => '设置失败！'];
+        }
+    }
     /*
      * 多个删除
      */
@@ -382,10 +396,21 @@ class Shop extends Common
             $map = [];           
             $list = model("settlements")->alias('a')
                     ->join("shop b", "a.shopId=b.id", "LEFT")
-                    ->field("a.*,b.name")
+                    ->join("shop_category d","d.id=b.type","LEFT")
+                    ->join("order c","c.settlementId=a.settlementId","LEFT")
+                    ->field("a.*,b.name,c.freight,c.send_type,d.shop_category,d.brokerage")
                     ->where($map)
                     ->paginate(array('list_rows' => $pageSize, 'page' => $page))                   
                     ->toArray();
+            foreach($list['data'] as &$v){
+                if($v['send_type']==0){
+                    $v['send_type']="普通配送";
+                }elseif($v['send_type']==1){
+                    $v['send_type']="跑腿";
+                }else{
+                    $v['send_type']="自取";
+                }
+            }
             return ['code' => 0, 'msg' => "获取成功", 'data' => $list['data'], 'count' => $list['total'], 'rel' => 1];
         } else {
             return $this->fetch();

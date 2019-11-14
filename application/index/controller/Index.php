@@ -104,16 +104,41 @@ class Index extends Controller
                 'yyzz'=>$yyzz,//商家营业执照
                 'shortname'=>GetShortName(input('post.name')),//商家短名字
                 'status'=>1,//申请状态      
+                'is_lock'=>1,//申请状态      
                 'openid'=>input('openid'),//商家openid    
                 'bphone'=>input('post.bphone'),//备用电话              
                 'type'=>input('post.type'),//备用电话              
         );   
-        $result=Db::name('shop')->insert($data);       
+        $result=Db::name('shop')->insertGetId($data);  
+             
         if($result){
+            $this->createAdmin($result,$data['phone']);
          return  $this->json_success('提交成功！');
         }else{
             return $this->json_error('提交失败！');
         }
+    }
+    //创建超级用户
+    public function createAdmin($shop_id,$user_name,$pwd="123456"){
+        $list=Db::name('ShopAuthRule')->where('type=2')->field('id')->column('id','id');
+	        $group_data=[
+	            'shopid'=>$shop_id,
+	            'is_super'=>1,
+	            'type'=>2,
+	            'addtime'=>time(),
+	            'rules'=>'0,'.implode(',',$list),
+	            'title'=>'超级管理员',    
+	     	];
+	     	$group_id=Db::name('ShopAuthGroup')->insertGetId($group_data);
+	     	$admin_data=[
+	            'type'=>2,
+	            'sid'=>$shop_id,
+	            'username'=>$user_name,
+	            'pwd'=>authcode($pwd),
+	            'group_id'=>$group_id,
+	            'is_open'=>1,
+	     	];
+	     	$adminres=Db::name('ShopAdmin')->insert($admin_data);
     }
     
     public function httpUtil($url, $data = '', $method = 'GET')

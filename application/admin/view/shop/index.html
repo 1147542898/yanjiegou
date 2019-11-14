@@ -42,7 +42,7 @@
                 {field: 'pastdue',  title: '服务到期时间', width: 120},
                 {field: 'sort', align: 'center', title: '{:lang("order")}', width: 120, templet: '#order'},
                 {field: 'statusname', align: 'center', title: '状态', width: 120 },
-                {field: 'lock_name', align: 'center', title: '锁定状态', width: 120},
+                {field: 'lock_name', align: 'center', title: '锁定状态', width: 120,templet: '#lock'},
                 {width: 300, align: 'center', toolbar: '#action',title:'操作'}
             ]],
             limit: 10
@@ -111,6 +111,21 @@
                     content: ['details.html','no']
                 });
             }
+            if(obj.event === 'lock'){
+                layer.confirm('您确定要操作吗？', function(index){
+                    var loading = layer.load(1, {shade: [0.1, '#fff']});
+                    $.post("{:url('lock')}",{id:data.id,is_lock:data.is_lock},function(res){
+                        layer.close(loading);
+                        if(res.code===1){
+                            layer.msg(res.msg,{time:1000,icon:1});
+                            tableIn.reload({where:{catid:'{:input("catid")}'}});
+                        }else{
+                            layer.msg('操作失败！',{time:1000,icon:2});
+                        }
+                    });
+                    layer.close(index);
+                });
+            }
         });
         $('body').on('click','#delAll',function() {
             layer.confirm('确认要删除选中的内容吗？', {icon: 3}, function(index) {
@@ -147,6 +162,13 @@
     <a href="{:url('admin/shop/edit')}?id={{d.id}}" class="layui-btn layui-btn-xs">编辑</a>
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
     <a href="{:url('admin/shop/admin')}?id={{d.id}}" class="layui-btn layui-btn-xs">商家管理员</a>
+</script>
+<script type="text/html" id="lock">
+    {{# if(d.is_lock==1){ }}
+    <span class="red" lay-event="lock">锁定</span>
+    {{# } else {}}
+    <span class="green" lay-event="lock">启用</span>
+    {{# }}}
 </script>
 <script type="text/html" id="myaddress">
     <p>{d.province}</p>

@@ -6,7 +6,7 @@ use think\Db;
 use think\Controller;
 use think\Cookie;
 use think\Session;
-
+use think\Cache as cache;
 class Wechat extends Controller
 {
    //获取票据
@@ -14,10 +14,15 @@ class Wechat extends Controller
         $appid=config("wchat.appid");
         $appsecret=config("wchat.appsecret");   
         $url= "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$appid."&secret=".$appsecret;
-        $data=$this->httpUtil($url);
-        $accesstoken=json_decode($data,true);//获取票据
-        var_dump($accesstoken);
-        exit;
+        if(cache::get('access_token')){
+            $accesstoken=cache::get('access_token');
+        }else{
+            $data=$this->httpUtil($url);
+            $data=json_decode($data,true);//获取票据
+            $accesstoken=$data['access_token'];
+            cache::set('access_token',$accesstoken,7200);
+        }        
+        return $accesstoken;
     }
 
 
@@ -47,6 +52,41 @@ class Wechat extends Controller
         } catch (Exception $e) { }
     }
 
-
+    //添加消息模板
+    public function sendMes($data){
+        $accesstoken=$this->getAccessToken();
+        $url="https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=".$accesstoken;
+        return $this->httpUtil($url,$data,"POST");
+    }
+    //组装消息参数
+    public function templateMessageSend($openid, $templateId, $url, $data, $remark){        
+        $arr=array(
+            'touser'=>$openid,
+            'template_id'=>$templateId
+        );
+        if($url && !empty($url)){
+            $arr['url']=$url;
+        }
+        $arr['topcolor']="#FF0000";
+        $keyword=array();
+        foreach($data as $k=>$v){
+            if($k==0){
+                $keyword['first']=array(
+                    'value'=>$v['value'],
+                    'color'=>$v['color'],
+                );
+            }else{
+                $keyword['keyword'.$k]=array(
+                    'value'=>$v['value'],
+                    'color'=>$v['color'],
+                );
+            }
+        }
+        if(empty($remark)){
+            $keyword['remark']=$remark;
+        }
+        $arr['data']=$keyword;
+        return json_encode($arr);
+    }
 }
 
