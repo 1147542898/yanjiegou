@@ -289,8 +289,9 @@ class Shop extends Common
             }
             $list = model('ShopFundNow')->alias('a')
                 ->join('shop s', 's.id = a.shopid', 'LEFT')
+                ->join('shop_category c','s.type =c.id',"LEFT")
                 ->join('admin ad', 'ad.admin_id = a.douid', 'LEFT')
-                ->field('a.*,s.name as shopname,ad.username as dousername')
+                ->field('a.*,s.name as shopname,ad.username as dousername,c.shop_category,c.brokerage')
                 ->where($map)
                 ->order("id desc")
                 ->paginate(array('list_rows' => $pageSize, 'page' => $page))
@@ -298,6 +299,7 @@ class Shop extends Common
                     $row['statusname'] = get_status($row['status'], 'check');
                     $row['addtime'] = date('Y-m-d H:i:s', $row['addtime']);
                     $row['dotime'] = $row['dotime'] ? date('Y-m-d H:i:s', $row['dotime']) : '-';
+                    $row['brokerage']=$row['brokerage']."%";
                 })->toArray();
             return ['code' => 0, 'msg' => "获取成功", 'data' => $list['data'], 'count' => $list['total'], 'rel' => 1];
         }
@@ -410,6 +412,7 @@ class Shop extends Common
                 }else{
                     $v['send_type']="自取";
                 }
+                $v['brokerage']=$v['brokerage']."%";
             }
             return ['code' => 0, 'msg' => "获取成功", 'data' => $list['data'], 'count' => $list['total'], 'rel' => 1];
         } else {
