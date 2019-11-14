@@ -96,6 +96,15 @@ class Order extends Common{
         if ($info['status'] == 7) {
             $info['shtime']=Db::name('orderrefund')->where(['order_id'=>$id])->value('add_time');
         }
+        if($info['send_type']==0){
+            $info['send_type']="配送";
+        }elseif($info['send_type']==1){
+            $info['send_type']="跑腿";
+        }else{
+            $info['send_type']="自取";
+        }
+        //地址
+        $info['address']=$info['province'].$info['city'].$info['area'].$info['address'];
         $info['pay_type']=get_status($info['pay_type'],'pay_type');
         $goods=Db::name('orderGoods')->alias('og')
               ->join('goods g','g.id = og.goodsid','left')
