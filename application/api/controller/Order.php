@@ -707,11 +707,16 @@ class Order extends Base
         $order_goods = []; //订单商品表
         $total_amount = 0; //订单原价
         $coupon_amount = 0; //商家优惠券总金额
+        $you_money = 0; //邮费
+        
         foreach($shops as $k=>$v)
         {
             $ordersn = makeordersn();
             $total = 0; //每个店家价格
             $total_num = 0; //每个店家数量
+            
+
+
             foreach ($carts as $key => $value) 
             {
                 //购物车中商品，所有该商家的商品做处理
@@ -777,11 +782,12 @@ class Order extends Base
         //---order End
             $total_amount = $total_amount + $total;
             $coupon_amount = $coupon_amount + $v['coupon_price'];
-
+            
+            $you_money = $you_money + $v['freight']; //总邮费
         }
         $data['order'] = $order;
         $data['order_goods'] = $order_goods;
-        $data['total_amount'] = $total_amount + $v['freight']; //加运费
+        $data['total_amount'] = $total_amount + $you_money; //加运费
         $data['coupon_amount'] = $coupon_amount;
         return $data;
     }
