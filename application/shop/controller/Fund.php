@@ -123,6 +123,7 @@ class Fund extends Common
                     } else {
                         $row['money'] = "+ ¥" . $row['money'];
                     }
+                    $row['yue'] = "¥" . $row['yue'];
                     $row['type'] = get_status($row['type'], 'shop_fund_log_type');
                 })->toArray();
             return ['code' => 0, 'msg' => "获取成功", 'data' => $list['data'], 'count' => $list['total'], 'rel' => 1];
@@ -174,6 +175,10 @@ class Fund extends Common
         $setOrder['settlementNo'] = "";
         $setOrder['settlementType'] = 1;
         $setOrder['shopId'] = $order_info['shop_id'];
+        if($order_info['send_type']==1){//跑腿
+            $order_info['money']=$order_info['money']-$order_info['freight'];//跑腿费用
+            $setOrder['remarks']="平台扣除跑腿费用：¥".$order_info['freight'];
+        }
         $setOrder['settlementMoney'] = $order_info['money'];
         $setOrder['createTime'] = date("Y-m-d H:i:s", time());       
         Db::startTrans();

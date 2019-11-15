@@ -203,7 +203,8 @@ class Order extends Common{
     public function Tmoney()
     {
         $id = input('id');
-        $list = Db::name('order_trade')->where('order_ids',$id)->field('out_trade_no,total_amount')->find();
+        $out_trade_no=Db::name("order")->where(['id'=>$id])->value('out_trade_no');
+        $list = Db::name('order_trade')->where('out_trade_no',$out_trade_no)->field('out_trade_no,total_amount')->find();
         if(!$list){
             return $this->resultmsg('等待审核通过',0);
         }
@@ -211,8 +212,9 @@ class Order extends Common{
         $order = [
             'out_trade_no' => $list['out_trade_no'],
             'refund_amount' => number_format($list['total_amount'],2,".",""),
+            'out_request_no'=>$list['out_trade_no'].round(1000,9999),//多次退款
         ];
-        $result = Pay::alipay($this->config)->refund($order);         
+        $result = Pay::alipay($this->config)->refund($order);        
 
         if($result['msg'] == 'Success'){
             $rel = Db::name('orderrefund')->where('order_id',$id)->update(['type'=>1]);

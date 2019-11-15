@@ -335,7 +335,7 @@ class Shop extends Common
                     $logs['shopid'] = $shopid;
                     $logs['money'] = $apply_info['money'];
                     $logs['addtime'] = time();
-                    $logs['note'] = "提现申请单" . $apply_info['id'] . "申请提现¥" . $apply_info['money'];
+                    $logs['note'] = "提现申请单号" . $apply_info['id'] . "申请提现¥" . $apply_info['money'];
                     $logs['type'] = 1;
                     $logs['yue'] = $shop->shop_money;
                     model('ShopFundLog')->insert($logs);
@@ -434,6 +434,13 @@ class Shop extends Common
             $shop = model('shop')->get($setInfo['shopId']);
             $shop->shop_money=$shop->shop_money+$setInfo['settlementMoney'];            
             if ($results && $shop->save()) {
+                $logs['shopid'] = $setInfo['shopId'];
+                $logs['money'] = $setInfo['settlementMoney'];
+                $logs['addtime'] = time();
+                $logs['note'] = "订单结算单号：" . $setInfo['settlementNo'] . "结算金额¥" . $setInfo['settlementMoney'];
+                $logs['type'] = 0;
+                $logs['yue'] = $shop->shop_money;
+                model('ShopFundLog')->insert($logs);
                 Db::commit();                
                 $result['code'] = 1;
                 $result['msg'] = '成功！';
