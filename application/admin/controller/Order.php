@@ -212,8 +212,7 @@ class Order extends Common{
             'out_trade_no' => $list['out_trade_no'],
             'refund_amount' => number_format($list['total_amount'],2,".",""),
         ];
-        $result = Pay::alipay($this->config)->refund($order); 
-        
+        $result = Pay::alipay($this->config)->refund($order);         
 
         if($result['msg'] == 'Success'){
             $rel = Db::name('orderrefund')->where('order_id',$id)->update(['type'=>1]);
