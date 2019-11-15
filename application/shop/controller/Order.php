@@ -92,6 +92,17 @@ class Order extends Common{
             $counts+=$goods[$k]['count'];
         }
         $info['counts']=$counts;
+        
+        if ($info['send_type'] == 0) {
+            $info['send_type'] = "快递配送";
+        }elseif ($info['send_type'] == 1) {
+            $info['send_type'] = "专业配送";
+        }elseif ($info['send_type'] == 2) {
+            $info['send_type'] = "到店自取";
+        }
+
+
+
         $this->assign('goods',$goods);
         $this->assign('info',$info);
         return $this->fetch();
