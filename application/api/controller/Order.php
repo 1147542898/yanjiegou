@@ -552,8 +552,25 @@ class Order extends Base
                 }
             }
         }
-        $info = $this->infoOrderAndGoods($shops, $user_id, $recvaddr, $carts, $pay_type, $takes_time, $takes_mobile); //order + order_goods
         
+
+        /*流水信息*/
+        $out_trade_no = makeordersn();
+
+
+        $info = $this->infoOrderAndGoods($shops, $user_id, $recvaddr, $carts, $pay_type, $takes_time, $takes_mobile, $out_trade_no); //order + order_goods
+        
+
+
+
+        
+
+
+
+
+
+
+
         Db::startTrans(); //开启事务
         try {
         //order
@@ -579,7 +596,7 @@ class Order extends Base
                 throw new \Exception("金额不合法");
             }
             $order_trades = [
-                'out_trade_no'=>makeordersn(),
+                'out_trade_no'=>$out_trade_no,
                 'order_sns'=>$order_sns,
                 'order_ids'=>$myorder_ids,
                 'total_amount'=>$info['total_amount'] - $info['coupon_amount'] - $ping_coupon
@@ -701,7 +718,7 @@ class Order extends Base
         }
         return $carts;
     }
-    public function infoOrderAndGoods($shops, $user_id, $recvaddr, $carts, $pay_type, $takes_time, $takes_mobile)
+    public function infoOrderAndGoods($shops, $user_id, $recvaddr, $carts, $pay_type, $takes_time, $takes_mobile, $out_trade_no)
     {
         $order = []; //订单表
         $order_goods = []; //订单商品表
@@ -753,6 +770,7 @@ class Order extends Base
         //---order
             $order[] = [
                 'shop_id'   =>  $v['id'],
+                'out_trade_no'=>$out_trade_no,
                 'order_sn'  =>  $ordersn, //订单号
                 'user_id'   =>  $user_id,
                 'money'     =>  $total - $v['coupon_price'] + $v['freight'], // 金额-优惠卷+运费
