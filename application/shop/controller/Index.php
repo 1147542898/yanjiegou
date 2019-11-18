@@ -54,6 +54,7 @@ class Index extends Common
         $pt_find = Db::name('order')
                 ->field('id,freight,money')
                 ->where('send_type',1)
+                ->where('shop_id',SHID)
                 ->whereTime('paytime', 'm')
                 ->whereIn('status',[2,3,4,5])
                 ->select();
