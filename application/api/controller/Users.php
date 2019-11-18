@@ -1421,9 +1421,15 @@ class Users extends Base
         if(empty($user_id) || empty($order_id) || !$order){
             $this->json_error('参数错误');
         }
-        $find = Db::name('Remind')->whereTime('addtime', 'd')->select();
+
+        $find = Db::name('Remind')
+                ->whereTime('addtime', 'd')
+                ->where('user_id',$user_id)
+                ->where('shop_id',$shop_id)
+                ->where('order_id',$order['order_sn'])
+                ->select();
         if ($find) {
-            $this->json_success('今天已经提醒过');
+            $this->json_error('今天已经提醒过',100);
         }
         $rule=[
             'mobile'  => 'require|max:11|regex:/^1[3-8]{1}[0-9]{9}$/'

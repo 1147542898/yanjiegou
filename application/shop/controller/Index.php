@@ -49,6 +49,24 @@ class Index extends Common
             $bottom[1]=[0];
             $bottom[2]=[0];
         }
+
+/*---chen*/
+        $pt_find = Db::name('order')
+                ->field('id,freight,money')
+                ->where('send_type',1)
+                ->whereTime('add_time', 'm')
+                ->whereIn('status',[2,3,4,5])
+                ->select();
+        $pt['o_num'] = count($pt_find);
+        $pt['money'] = empty($pt_find)?0:array_sum(array_column($pt_find,'freight'));
+        $pt['o_money'] = empty($pt_find)?0:array_sum(array_column($pt_find,'money'));
+        $this->assign('pt',$pt);        
+/*---chen*/
+
+
+
+
+
         $this->assign('top',implode(',',$top));
         $this->assign('bottom1',implode(',',$bottom[1]));
         $this->assign('bottom2',implode(',',$bottom[2]));
