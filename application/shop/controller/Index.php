@@ -54,7 +54,7 @@ class Index extends Common
         $pt_find = Db::name('order')
                 ->field('id,freight,money')
                 ->where('send_type',1)
-                ->whereTime('add_time', 'm')
+                ->whereTime('paytime', 'm')
                 ->whereIn('status',[2,3,4,5])
                 ->select();
         $pt['o_num'] = count($pt_find);
