@@ -8,6 +8,7 @@ use ensh\Leftnav;
 use app\api\controller\Base;
 use app\admin\controller\Common;
 use think\cache\driver\RedisPro;
+use app\index\controller\Wechat;
 class Shop extends Common
 {
     protected  $model;
@@ -167,8 +168,12 @@ class Shop extends Common
             if ($msg != 'true') {
                 return $result = ['code' => 0, 'msg' => $msg];
             }
+            
             $res = $this->model->save($data, ['id' => input('post.id')]);
             if ($res) {
+                if($data['status']==2){
+                    $this->sendMsd($data['id'],2);
+                }
                 $result['code'] = 1;
                 $result['msg'] = '修改商家成功!';
                 $result['url'] = url('admin/shop/index');
@@ -250,6 +255,7 @@ class Shop extends Common
         $is_lock=input('post.is_lock');
         if($is_lock==1){
             $res = $this->model->where('id', $id)->setField('is_lock',0);
+            $this->sendMsd($id,1);
         }else{
             $res = $this->model->where('id', $id)->setField('is_lock',1);
         }
@@ -259,6 +265,61 @@ class Shop extends Common
             return ['code' => 0, 'msg' => '设置失败！'];
         }
     }
+     //模板消息
+     public function sendMsd($shop_id,$type=1){   //1账号2审核     
+        $shop_info=Db::name('shop')->where(['id'=>$shop_id])->find();
+        $templateId1="XvLf3H2yxHLwljqO2VxKkXWECZ74aliaTLlQPamFgu4";
+        $templateId2="kpw3FN35YMW3IcPKqruC6cSY5EnAROeDLwp2sKh_WKo";
+        $openid=$shop_info['openid'];
+        $url="";
+        $data1=array(
+            array(
+                'value'=>"商家申请已审核成功！",
+                "color"=>"#173177"
+            ),
+            array(
+                'value'=>$shop_info['phone'],
+                "color"=>"#173177"
+            ),
+            array(
+                'value'=>"身份证后六位",
+                "color"=>"#173177"
+            ),
+        );
+        $remark1=array(
+            'value'=>"请妥善保管账号密码。",
+            "color"=>"#173177"
+        );
+        $data2=array(
+            array(
+                'value'=>"商家申请已审核成功！",
+                "color"=>"#173177"
+            ),
+            array(
+                'value'=>$shop_info['name'],
+                "color"=>"#173177"
+            ),
+            array(
+                'value'=>date("Y-m-d H:i:s"),
+                "color"=>"#173177"
+            ),
+        );
+        $remark2=array(
+            'value'=>"欢迎您的加盟！",
+            "color"=>"#173177"
+        );
+        if($type==1 && !empty($shop_info['openid'])){
+            $info =Wechat::templateMessageSend($openid, $templateId1, $url, $data1, $remark1);
+        }elseif($type==2  && !empty($shop_info['openid'])){
+            $info =Wechat::templateMessageSend($openid, $templateId2, $url, $data2, $remark2);
+        }
+        if(!empty($shop_info['openid'])){
+            $result=Wechat::sendMes($info);
+        }
+       
+        
+    }
+
     /*
      * 多个删除
      */

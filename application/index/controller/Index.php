@@ -7,7 +7,7 @@ use think\Db;
 use think\Controller;
 use think\Cookie;
 use think\Session;
-
+use app\index\controller\Wechat;
 class Index extends Controller
 {
     public function index()
@@ -21,7 +21,12 @@ class Index extends Controller
         $shop_info=Db::name("shop")->where(['openid'=>$openid])->find();
         if(empty($shop_info)){
             $this->assign('is_apply',0);      
-        }else{           
+        }else{       
+            if($shop_info['status']==1){
+                return view('shenhe',['status'=>1]);
+            }elseif($shop_info['status']==3){
+                return view('shenhe',['status'=>3,'verify_reason'=>$shop_info['verify_reason']]);
+            }    
             $this->assign('is_apply',1);//已申请
         }
         $this->assign('openid',$openid);       
@@ -31,7 +36,27 @@ class Index extends Controller
         $this->assign('shop_category',json_encode($shop_category));    
         return view();
     }
-
+     public function shenhe(){
+         return view();
+     } 
+     //重新审核
+     public function edit(){
+        if(!Session::get('openid')){
+            $openid=$this->getShopUserOpenid();
+            Session::set('openid',$openid);
+        }
+        $openid=Session::get('openid'); //获取openid
+        $shop_info=Db::name("shop")->alias("a")
+        ->join("shop_category b","a.type=b.id","LEFT")
+        ->field("a.*,b.shop_category")
+        ->where(['a.openid'=>$openid])->find();
+        $shop_info['identity_photo']=explode(",",$shop_info['identity_photo']);
+        $shop_category=Db::name("shop_category")->field('id,shop_category value')->select();
+        $this->assign('shop_category',json_encode($shop_category));  
+        $this->assign('shop_info',$shop_info);
+        $this->assign('openid',$openid);
+        return view();
+     }
 
 
     //获取商户openid
@@ -58,6 +83,10 @@ class Index extends Controller
     }
     //提交申请
     public function addapply(){ 
+        $shop_info=Db::name("shop")->where(['openid'=>input('openid')])->find();
+        if(!empty($shop_info)){
+            return $this->json_error('请勿重复提交申请！');
+        }
         if(empty(input('post.shoplogo'))){
             return $this->json_error('商家logo不能为空！');
         }          
@@ -83,10 +112,20 @@ class Index extends Controller
         if(empty(input('post.yyzz'))){
             return $this->json_error('营业执照不能为空！');
         }  
-             
-        
+        $identity_z=input('post.identity_photo/a')[0];
+        $identity_f=input('post.identity_photo/a')[1];
+        $identity_zurl='http://' . $_SERVER['HTTP_HOST'].$identity_z;
+        $identity_furl='http://' . $_SERVER['HTTP_HOST'].$identity_f;
+        $data=Wechat::idCard($identity_zurl);
+        $identityInfo=json_decode($data,true); 
+        if($identityInfo['errmsg']=="ok"){
+            $shenfenid=substr($identityInfo['id'],-6);
+        }else{
+            return $this->json_error('身份证证件有误！'); 
+        }
         $identity_photo=implode(',',input('post.identity_photo/a'));
         $yyzz=input('post.yyzz');
+       
         $data=array(
                 'name'=>input('post.name'),//商家名称
                 'phone'=>input('post.phone'),//联系电话
@@ -112,7 +151,82 @@ class Index extends Controller
         $result=Db::name('shop')->insertGetId($data);  
              
         if($result){
-            $this->createAdmin($result,$data['phone']);
+            $this->createAdmin($result,$data['phone'],$shenfenid);
+         return  $this->json_success('提交成功！');
+        }else{
+            return $this->json_error('提交失败！');
+        }
+    }
+     //提交申请
+     public function editapply(){ 
+       
+        if(empty(input('post.shoplogo'))){
+            return $this->json_error('商家logo不能为空！');
+        }          
+        if(empty(input('post.name'))){
+            return $this->json_error('商家名称不能为空！');
+        } 
+        if(empty(input('post.type'))){
+            return $this->json_error('所属行业不能为空！');
+        } 
+        if(empty(input('post.city'))){
+            return $this->json_error('地区不能为空！');
+        }  
+        if(empty(input('post.longitude')) && empty(input('post.latitude'))){
+            return $this->json_error('定位错误，请重新定位！');
+        }    
+        if(empty(input('post.phone'))){
+            return $this->json_error('手机号不能为空！');
+        }        
+        if(empty(input('post.identity_photo/a')) && count(input('post.identity_photo/a'))<2){
+            return $this->json_error('身份证正反面不能为空！');
+        }
+       
+        if(empty(input('post.yyzz'))){
+            return $this->json_error('营业执照不能为空！');
+        }  
+        $identity_z=input('post.identity_photo/a')[0];
+        $identity_f=input('post.identity_photo/a')[1];
+        $identity_zurl='http://' . $_SERVER['HTTP_HOST'].$identity_z;
+        $identity_furl='http://' . $_SERVER['HTTP_HOST'].$identity_f;
+        $data=Wechat::idCard($identity_zurl);
+        $identityInfo=json_decode($data,true); 
+        if($identityInfo['errmsg']=="ok"){
+            $shenfenid=substr($identityInfo['id'],-6);
+        }else{
+            return $this->json_error('身份证证件有误！'); 
+        }
+        $identity_photo=implode(',',input('post.identity_photo/a'));
+        $yyzz=input('post.yyzz');
+        $shop_id=input('id');
+        $data=array(
+                'name'=>input('post.name'),//商家名称
+                'phone'=>input('post.phone'),//联系电话
+                'linkmen'=>input('post.linkmen'),//联系人
+                'shoplogo'=>input('post.shoplogo'),//商家logo
+                'province'=>input('post.province'),//商家省份
+                'city'=>input('post.city'),//商家城市
+                'area'=>input('post.area'),//商家区域
+                'street'=>input('post.street'),//街道
+                'address'=>input('post.address'),//商家详细地址
+                'longitude'=>input('post.longitude'),//经度
+                'latitude'=>input('post.latitude'),//纬度
+                'intro'=>input('post.intro'),//商家简介
+                'identity_photo'=>$identity_photo,//商家身份证
+                'yyzz'=>$yyzz,//商家营业执照
+                'shortname'=>GetShortName(input('post.name')),//商家短名字
+                'status'=>1,//申请状态      
+                'is_lock'=>1,//申请状态      
+                'openid'=>input('openid'),//商家openid    
+                'bphone'=>input('post.bphone'),//备用电话              
+                'type'=>input('post.type'),//备用电话              
+        );   
+        $result=Db::name('shop')->where(['id'=>$shop_id])->update($data);  
+             
+        if($result){
+            Db::name('ShopAuthGroup')->where(['shopid'=>$shop_id])->delete();
+            Db::name('ShopAdmin')->where(['sid'=>$shop_id])->delete();
+            $this->createAdmin($shop_id,$data['phone'],$shenfenid);
          return  $this->json_success('提交成功！');
         }else{
             return $this->json_error('提交失败！');
@@ -221,6 +335,32 @@ class Index extends Controller
             $data = [];
         }
         exit(json_encode(['code' => $code, 'msg' => $msg, 'data' => $data], JSON_UNESCAPED_UNICODE));
+    }
+    //测试模板消息
+    public function sendMsd(){
+        $openid=$this->getShopUserOpenid();
+        $templateId="XvLf3H2yxHLwljqO2VxKkXWECZ74aliaTLlQPamFgu4";
+        $url="";
+        $data=array(
+            array(
+                'value'=>"沿街购测试",
+                "color"=>"#173177"
+            ),
+            array(
+                'value'=>"18224513696",
+                "color"=>"#173177"
+            ),
+            array(
+                'value'=>"3696",
+                "color"=>"#173177"
+            ),
+        );
+        $remark=array(
+            'value'=>"请妥善保管。",
+            "color"=>"#173177"
+        );
+        $data =Wechat::templateMessageSend($openid, $templateId, $url, $data, $remark);
+        $result=Wechat::sendMes($data);
     }
     
 }

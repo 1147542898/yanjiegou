@@ -26,33 +26,33 @@
 				<span class='sj'>商家logo</span>
 				<p class='round'>
 					<input type="file" style="display: none" accept="image/*" id="chooseImage" name="files">
-					<input type="hidden" name='shoplogo' value='' id='logopic'>
-					<img src="/static/index/img/adds.png" id="img" alt="" class='pics'>
+					<input type="hidden" name='shoplogo' value='{$shop_info.shoplogo}' id='logopic'>
+					<img src="{$shop_info.shoplogo}" id="img" alt="" class='pics'>
 				</p>
 			</div>
 			<div class="info"style="background: #fff;">
 				<p class='name'>
 					<span class='bt'>商家名称</span>
-					<input type="text" value="" class='kr' name='name' placeholder="沿街购" >
+					<input type="text" value="{$shop_info.name}" class='kr' name='name' placeholder="沿街购"  >
 				</p>
 				<p class='name'>
 					<span class='bt'>所属行业</span>
-					<span class='n5' id='content'>请选择行业</span>
-					<input type="hidden" value='' name='type' id='industry' lay-verify="type" >
+					<span class='n5' id='content'>{$shop_info.shop_category}</span>
+					<input type="hidden" value='{$shop_info.type}' name='type' id='industry' lay-verify="type" >
 					<img src="/static/index/img/right.png" alt="" class='el-icon-arrow-right' id="trigger5">
 				</p>
 				<p class='name'>
 					<span class='bt'>所在区域</span>
-					<span class='n5' id='newplace'>请选择区域</span>
-					<input type="hidden" value='' name='province' id='province'>	
-					<input type="hidden" value='' name='city' id='city'>
-					<input type="hidden" value='' name='area' id='area'>
-					<input type="hidden" value='' name='street' id='street'>
+					<span class='n5' id='newplace'>{$shop_info.province}{$shop_info.city}{$shop_info.area}</span>
+					<input type="hidden" value='{$shop_info.province}' name='province' id='province'>	
+					<input type="hidden" value='{$shop_info.city}' name='city' id='city'>
+					<input type="hidden" value='{$shop_info.area}' name='area' id='area'>
+					<input type="hidden" value='{$shop_info.street}' name='street' id='street'>
 					<img src="/static/index/img/right.png" alt="" class='el-icon-arrow-right' id="trigger4">
 				</p>
 				<p class='name'>
 					<span class='bt'>详细地址</span>
-					<input type="text" placeholder="请填写地址" class='address' id="address" name='address' value='' >
+					<input type="text" placeholder="请填写地址" class='address' id="address" name='address' value='{$shop_info.address}' >
 				</p>
 				<p class='name'>
 					<span class='bt'>定位</span>
@@ -63,22 +63,22 @@
 			<div class="concat "style="background: #fff;">
 				<p class='person'>
 					<span class='name'>联系人</span>					
-					<input type="text" value="" name="linkmen" class='new' name='contact' placeholder="请输入联系人">
+					<input type="text" value="{$shop_info.linkmen}" name="linkmen" class='new' name='contact' placeholder="请输入联系人">
 				</p>
 				<p class='phone'>
 					<span class='num'>联系电话</span>
-					<input type="number" placeholder="请输入联系电话" class='phonenumber' name='phone' value=''>
+					<input type="number" placeholder="请输入联系电话" class='phonenumber' name='phone' value='{$shop_info.phone}'>
 				</p>
 				<p class='phone'>
 					<span class='num'>备用电话</span>
-					<input type="number" placeholder="选填" class='newphone' name='bphone' value=''>
+					<input type="number" placeholder="选填" class='newphone' name='bphone' value='{$shop_info.bphone}'>
 				</p>
 			</div>
 			<!-- 商家简介 -->
 			<div class="induce "style="background: #fff;">
 				<p class='jianjie'>商家简介</p>
 				<textarea 
-					class='content' name="intro" placeholder="请输入商家简介"></textarea>
+					class='content' name="intro" placeholder="请输入商家简介">{$shop_info.intro}</textarea>
 			</div>
 			<!-- 营业执照 -->
 			<div class="zhizhao yyzz "style="background: #fff;">
@@ -88,8 +88,8 @@
 							name='zhizhao'></div>
 				</div>
 				<div class="pic">
-					<img src="/static/index/img/1.png" alt="" id='newpic'>
-					<input type="hidden" name='yyzz' id='picshow' value=''>
+					<img src="{$shop_info.yyzz}" alt="" id='newpic'>
+					<input type="hidden" name='yyzz' id='picshow' value='{$shop_info.yyzz}'>
 					<p><span>温馨提示:</span>&nbsp;&nbsp;提示内容占位符提示内容占位符提示内容占位符</p>
 				</div>
 			</div>
@@ -102,13 +102,13 @@
 				<div class="imgs">
 					<div class="firstidcard">
 						<input type="file" style="opacity: 0" accept="image/*" id='idcard' name='idpic'>
-						<input type="hidden" name='identity_photo[]' id='picturesid1' value=''>
-						<img src="/static/index/img/2.jpg" alt="" id='firstpic'>
+						<input type="hidden" name='identity_photo[]' id='picturesid1' value='{$shop_info.identity_photo[0]}'>
+						<img src="{$shop_info.identity_photo[0]}" alt="" id='firstpic'>
 					</div>
 					<div class="secondcard">
 						<input type="file" style="opacity: 0" accept="image/*" id='secondcard' name='secondcard'>
-						<input type="hidden" name='identity_photo[]' id='second' value=''>
-						<img src="/static/index/img/3.jpg" alt="" id='lastpic' class='lastpic'>
+						<input type="hidden" name='identity_photo[]' id='second' value='{$shop_info.identity_photo[1]}'>
+						<img src="{$shop_info.identity_photo[0]}" alt="" id='lastpic' class='lastpic'>
 					</div>
 				</div>
 				<div class="content">
@@ -118,18 +118,19 @@
 					<p>3、请上传经营者、法定代表人或相关负责人信息</p>
 				</div>
 			</div>
+			<input type="hidden" name="id" value="{$shop_info.id}">
 			<input type="hidden" name="openid" value="{$openid}">
 			<div class="tijiao">
-				<!-- {if condition="$is_apply eq 0"} -->
+				
 				<button  class='button' lay-submit lay-filter="submit" >提交</button>
-				<!-- {/if} -->
+				
 				
 			</div>
 			
 			<div class="addressmap" id='addressmap'>
 				<div class="lat">
-					<input name="latitude" id="lat" readonly="true" type="hidden" step=0.0001 value="" size="70" />
-					<input name="longitude" id="lon" readonly="true" type="hidden" step=0.0001 value="" size="70" />
+					<input name="latitude" id="lat" readonly="true" type="hidden" step=0.0001 value="{$shop_info.latitude}" size="70" />
+					<input name="longitude" id="lon" readonly="true" type="hidden" step=0.0001 value="{$shop_info.longitude}" size="70" />
 				</div>
 				<div id="Container" class='container' style='display:none'></div>
 				<div class="cancel" id='cancel' style='display: none'>确定</div>
@@ -144,7 +145,7 @@
 		//监听提交
 			form.on('submit(submit)', function(data){				
 			$.ajax({
-		            url:"{:url('index/addapply')}",
+		            url:"{:url('index/editapply')}",
 		            type:'post',
 		            data:data.field,
 		            dataType:"JSON",

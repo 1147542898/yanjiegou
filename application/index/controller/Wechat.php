@@ -10,14 +10,14 @@ use think\Cache as cache;
 class Wechat extends Controller
 {
    //获取票据
-    public function getAccessToken(){
+    public static function getAccessToken(){
         $appid=config("wchat.appid");
         $appsecret=config("wchat.appsecret");   
         $url= "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$appid."&secret=".$appsecret;
         if(cache::get('access_token')){
             $accesstoken=cache::get('access_token');
         }else{
-            $data=$this->httpUtil($url);
+            $data=self::httpUtil($url);
             $data=json_decode($data,true);//获取票据
             $accesstoken=$data['access_token'];
             cache::set('access_token',$accesstoken,7200);
@@ -26,10 +26,9 @@ class Wechat extends Controller
     }
 
 
-    public function httpUtil($url, $data = '', $method = 'GET')
+    public static function httpUtil($url, $data = '', $method = 'GET')
     {
         try {
-
             $curl = curl_init(); // 启动一个CURL会话
             curl_setopt($curl, CURLOPT_URL, $url); // 要访问的地址
             curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false); // 对认证证书来源的检查
@@ -53,13 +52,13 @@ class Wechat extends Controller
     }
 
     //添加消息模板
-    public function sendMes($data){
-        $accesstoken=$this->getAccessToken();
+    public static function sendMes($data){
+        $accesstoken=self::getAccessToken();
         $url="https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=".$accesstoken;
-        return $this->httpUtil($url,$data,"POST");
+        return self::httpUtil($url,$data,"POST");
     }
     //组装消息参数
-    public function templateMessageSend($openid, $templateId, $url, $data, $remark){        
+    public static function templateMessageSend($openid, $templateId, $url, $data, $remark){        
         $arr=array(
             'touser'=>$openid,
             'template_id'=>$templateId
@@ -73,20 +72,29 @@ class Wechat extends Controller
             if($k==0){
                 $keyword['first']=array(
                     'value'=>$v['value'],
-                    'color'=>$v['color'],
+                    "color"=>$v['color']
+                   
                 );
             }else{
                 $keyword['keyword'.$k]=array(
                     'value'=>$v['value'],
-                    'color'=>$v['color'],
+                    "color"=>$v['color']                   
                 );
             }
         }
-        if(empty($remark)){
+        if(!empty($remark)){
             $keyword['remark']=$remark;
         }
         $arr['data']=$keyword;
         return json_encode($arr);
+    }
+    //验证身份证
+    public  static function idCard($url){
+        $url=urlencode($url);
+        $AccessToken=self::getAccessToken();
+        $ocrUrl="https://api.weixin.qq.com/cv/ocr/idcard?img_url=".$url."&access_token=".$AccessToken;
+        $data=self::httpUtil($ocrUrl);
+        return $data;
     }
 }
 
