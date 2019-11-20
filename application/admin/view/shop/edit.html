@@ -182,7 +182,7 @@
                                 {foreach name="$info['src']" item="vo" key="k"}
                                 <li class="item_img">
                                     <div class="operate"><i class="toleft layui-icon"></i><i class="toright layui-icon"></i><i  class="close layui-icon"></i></div>
-                                    <img src="{$vo}" class="img" >
+                                    <img src="{$vo}" class="img"  >
                                     <input type="hidden" name="headimg[]" value="{$vo}" />
                                 </li>
                                 {/foreach}
@@ -201,8 +201,24 @@
                                     {foreach name="$info['yyzz']" item="vo" key="k"}
                                     <li class="item_img">
                                         <div class="operate"><i class="toleft layui-icon"></i><i class="toright layui-icon"></i><i  class="close layui-icon"></i></div>
-                                        <img src="{$vo}" class="img" >
+                                        <img src="{$vo}" class="img" onmouseover="layer.tips('<img width=600  src={$vo}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();" >
                                         <input type="hidden" name="yyzz[]" value="{$vo}" />
+                                    </li>
+                                    {/foreach}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item" id="pics">
+                    <div class="layui-form-label">身份证</div>
+                    <div class="layui-input-block" style="width: 70%;">
+                        <div class="layui-upload">                           
+                            <div class="pic-more">
+                                <ul class="pic-more-upload-list" id="slide-pc-yyzz">
+                                    {foreach name="$info['identity_photo']" item="vo" key="k"}
+                                    <li class="item_img">                                       
+                                        <img src="{$vo}" class="img" onmouseover="layer.tips('<img width=600  src={$vo}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();">                                      
                                     </li>
                                     {/foreach}
                                 </ul>

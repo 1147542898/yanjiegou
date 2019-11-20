@@ -3,6 +3,8 @@ namespace app\shop\controller;
 use think\Controller;
 use think\captcha\Captcha;
 use think\request;
+use think\Session;
+use think\Db;
 class Login extends Controller
 {
     private $system,$code;
@@ -31,5 +33,58 @@ class Login extends Controller
         ];
         $captcha = new Captcha($config);
         return $captcha->entry();
+    }
+    //忘记密码
+    public function forget(){
+        if(request()->isPost()){
+            $data=input('post.');
+            $phone=$data['phone'];//手机号
+            $vercode=$data['vercode'];//
+            $mscode=$data['mscode'];//短信验证码
+            if(!captcha_check($vercode)){
+                return ['code' => 0, 'msg' => '验证码错误'];
+            }
+            if(Session::get($phone.'code') !=$mscode){
+                return ['code' => 0, 'msg' => '短信验证码错误'];
+            }
+            $shop_info=Db::name('shop')->where(['phone'=>$phone])->find();
+            if(empty($shop_info)){
+                return ['code' => 0, 'msg' => '商家不存在请联系客服！'];
+            }else{
+                Session::set('shop_id',$shop_info['id']);
+                return ['code' => 1, 'msg' =>"验证成功！"];
+            }
+            
+        }else{
+            return view();
+        }
+       
+    }
+    //修改密码
+    public function changepwd(){  
+        if(request()->isPost()){
+            $data=input('post.');
+            $username=$data['username'];
+            $pwd1=$data['pwd1'];//
+            $pwd=$data['pwd'];
+            $shop_id=Session::get('shop_id');
+            if($pwd1 !=$pwd){
+                return ['code' => 0, 'msg' => '确认密码不一样'];
+            }
+            $info=array(
+                'username'=>$username,
+                'pwd'=>authcode($pwd)
+            );
+            $result=Db::name('ShopAdmin')->where(['sid'=>$shop_id])->update($info);
+            if($result){
+                return ['code' => 1, 'msg' => '重置账户密码成功！'];
+                Session::set('shop_id',null);
+            }else{               
+                return ['code' => 0, 'msg' =>"重置账户密码失败！"];
+            }
+            
+        }else{
+            return view();
+        }
     }
 }

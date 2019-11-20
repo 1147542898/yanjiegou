@@ -245,6 +245,8 @@ class Shop extends Common
         $id = input('post.id');
         $res = $this->model->where('id', $id)->delete();
         if ($res) {
+            Db::name('ShopAuthGroup')->where(['shopid'=>$id])->delete();
+            Db::name('ShopAdmin')->where(['sid'=>$id])->delete();
             return ['code' => 1, 'msg' => '删除成功！'];
         } else {
             return ['code' => 0, 'msg' => '删除失败！'];
@@ -255,7 +257,11 @@ class Shop extends Common
         $is_lock=input('post.is_lock');
         if($is_lock==1){
             $res = $this->model->where('id', $id)->setField('is_lock',0);
-            $this->sendMsd($id,1);
+            $lock_send=$this->model->where('id',$id)->value('lock_send');
+            if($lock_send==0){
+                $this->sendMsd($id,1);
+                $res = $this->model->where('id', $id)->setField('lock_send',1);
+            }            
         }else{
             $res = $this->model->where('id', $id)->setField('is_lock',1);
         }
@@ -287,7 +293,7 @@ class Shop extends Common
             ),
         );
         $remark1=array(
-            'value'=>"请妥善保管账号密码。",
+            'value'=>"请妥善保管账号密码,登陆商家网址修改初始密码(http://svn.yanjiegou.com/shop)",
             "color"=>"#173177"
         );
         $data2=array(
@@ -329,6 +335,8 @@ class Shop extends Common
         $id = implode(",", $id);
         $model = db('shop');
         $model->where("id in ($id)")->delete();
+        Db::name('ShopAuthGroup')->where("shopid in ($id)")->delete();
+        Db::name('ShopAdmin')->where("sid in ($id)")->delete();
         $result['code'] = 1;
         $result['msg'] = '删除成功！';
         return $result;

@@ -91,6 +91,9 @@ class Info extends Common{
             if(!empty($info['yyzz'])){
                 $info['yyzz'] = explode(',',$info['yyzz']);
             }
+            if(!empty($info['identity_photo'])){
+                $info['identity_photo'] = explode(',',$info['identity_photo']);
+            }
             if (!empty($info['tag'])) {
                 $info['tag'] = json_decode($info['tag'],true);
             }else{

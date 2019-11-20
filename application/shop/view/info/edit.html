@@ -202,6 +202,22 @@
                     </div>
                 </div>
             </div>
+            <div class="layui-form-item" id="pics">
+                <div class="layui-form-label">身份证</div>
+                <div class="layui-input-block" style="width: 70%;">
+                    <div class="layui-upload">                           
+                        <div class="pic-more">
+                            <ul class="pic-more-upload-list" id="slide-pc-yyzz">
+                                {foreach name="$info['identity_photo']" item="vo" key="k"}
+                                <li class="item_img">                                       
+                                    <img src="{$vo}" class="img" >                                      
+                                </li>
+                                {/foreach}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="layui-form-item">
                 <div class="layui-input-block">
                     <button type="button" class="layui-btn" lay-submit="" lay-filter="submit">{:lang('submit')}</button>

@@ -104,7 +104,10 @@ class Index extends Controller
         }    
         if(empty(input('post.phone'))){
             return $this->json_error('手机号不能为空！');
-        }        
+        }   
+        if(!preg_match("/^1[34578]{1}\d{9}$/",input('post.phone'))){
+            return $this->json_error('手机格式不正确！');
+        }      
         if(empty(input('post.identity_photo/a')) && count(input('post.identity_photo/a'))<2){
             return $this->json_error('身份证正反面不能为空！');
         }
@@ -177,6 +180,9 @@ class Index extends Controller
         }    
         if(empty(input('post.phone'))){
             return $this->json_error('手机号不能为空！');
+        }
+        if(!preg_match("/^1[34578]{1}\d{9}$/",input('post.phone'))){
+            return $this->json_error('手机格式不正确！');
         }        
         if(empty(input('post.identity_photo/a')) && count(input('post.identity_photo/a'))<2){
             return $this->json_error('身份证正反面不能为空！');
