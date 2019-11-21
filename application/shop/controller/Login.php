@@ -41,17 +41,21 @@ class Login extends Controller
             $phone=$data['phone'];//手机号
             $vercode=$data['vercode'];//
             $mscode=$data['mscode'];//短信验证码
+            $username=$data['username'];
             if(!captcha_check($vercode)){
                 return ['code' => 0, 'msg' => '验证码错误'];
             }
             if(Session::get($phone.'code') !=$mscode){
                 return ['code' => 0, 'msg' => '短信验证码错误'];
             }
-            $shop_info=Db::name('shop')->where(['phone'=>$phone])->find();
+            $shop_info=Db::name('shop')->alias("a")
+            ->join('shop_admin b',"a.id=b.sid","LEFT")
+            ->field("b.admin_id")
+            ->where(['a.phone'=>$phone,'b.username'=>$username])->find();           
             if(empty($shop_info)){
-                return ['code' => 0, 'msg' => '商家不存在请联系客服！'];
+                return ['code' => 0, 'msg' => '账户不存在请联系客服！'];
             }else{
-                Session::set('shop_id',$shop_info['id']);
+                Session::set('admin_id',$shop_info['admin_id']);
                 return ['code' => 1, 'msg' =>"验证成功！"];
             }
             
@@ -67,7 +71,10 @@ class Login extends Controller
             $username=$data['username'];
             $pwd1=$data['pwd1'];//
             $pwd=$data['pwd'];
-            $shop_id=Session::get('shop_id');
+            $admin_id=Session::get('admin_id');           
+            if($admin_id==NULL){
+                return ['code' => 0, 'msg' => '非法来源'];
+            }
             if($pwd1 !=$pwd){
                 return ['code' => 0, 'msg' => '确认密码不一样'];
             }
@@ -75,15 +82,19 @@ class Login extends Controller
                 'username'=>$username,
                 'pwd'=>authcode($pwd)
             );
-            $result=Db::name('ShopAdmin')->where(['sid'=>$shop_id])->update($info);
+            $user=Db::name('ShopAdmin')->where('username',$username)->where('admin_id','<>',$admin_id)->find();
+            if(!empty($user)){
+                return ['code' => 0, 'msg' => '用户名已存在请重新选择！'];
+            }
+            $result=Db::name('ShopAdmin')->where(['admin_id'=>$admin_id])->update($info);
             if($result){
-                return ['code' => 1, 'msg' => '重置账户密码成功！'];
-                Session::set('shop_id',null);
+                Session::set('admin_id',null);
+                return ['code' => 1, 'msg' => '重置账户密码成功！'];               
             }else{               
                 return ['code' => 0, 'msg' =>"重置账户密码失败！"];
             }
             
-        }else{
+        }else{            
             return view();
         }
     }
