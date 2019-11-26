@@ -104,14 +104,22 @@ class Index extends Controller
         }    
         if(empty(input('post.phone'))){
             return $this->json_error('手机号不能为空！');
-        }        
+        }   
+        if(!preg_match("/^1[34578]{1}\d{9}$/",input('post.phone'))){
+            return $this->json_error('手机格式不正确！');
+        }
+        $phone=input('post.phone');
+        $info=Db::name('shop')->where(['phone'=>$phone])->find();
+        if(!empty($info)){
+            return $this->json_error('手机号已存在！');
+        }      
         if(empty(input('post.identity_photo/a')) && count(input('post.identity_photo/a'))<2){
             return $this->json_error('身份证正反面不能为空！');
-        }
-       
+        }       
         if(empty(input('post.yyzz'))){
             return $this->json_error('营业执照不能为空！');
         }  
+       
         $identity_z=input('post.identity_photo/a')[0];
         $identity_f=input('post.identity_photo/a')[1];
         $identity_zurl='http://' . $_SERVER['HTTP_HOST'].$identity_z;
@@ -177,6 +185,9 @@ class Index extends Controller
         }    
         if(empty(input('post.phone'))){
             return $this->json_error('手机号不能为空！');
+        }
+        if(!preg_match("/^1[34578]{1}\d{9}$/",input('post.phone'))){
+            return $this->json_error('手机格式不正确！');
         }        
         if(empty(input('post.identity_photo/a')) && count(input('post.identity_photo/a'))<2){
             return $this->json_error('身份证正反面不能为空！');
@@ -221,8 +232,7 @@ class Index extends Controller
                 'bphone'=>input('post.bphone'),//备用电话              
                 'type'=>input('post.type'),//备用电话              
         );   
-        $result=Db::name('shop')->where(['id'=>$shop_id])->update($data);  
-             
+        $result=Db::name('shop')->where(['id'=>$shop_id])->update($data);               
         if($result){
             Db::name('ShopAuthGroup')->where(['shopid'=>$shop_id])->delete();
             Db::name('ShopAdmin')->where(['sid'=>$shop_id])->delete();

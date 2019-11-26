@@ -1781,14 +1781,19 @@ class Users extends Base
     //根据城市名称获取经纬度
     public function getlng()
     {
+        $city_name=input('post.qu_name');
         $area_name = input('post.area_name');
-        if(null===$area_name){
+        if(empty($area_name) || empty($city_name)){
             $this->json_error('请传过来地区名称');
         }
-        $map['area_name']  = ['like','%'.$area_name.'%'];
+        $map['a.area_name']  = ['like','%'.$city_name.'%'];
+        $map['b.area_name']  = ['like','%'.$area_name.'%'];
         // $map['level']  = ['eq','3'];
-        $data = Db::name('area')->where($map)->select();
-        if($data==null){
+        $data = Db::name('area')->alias('a')
+        ->join('area b','a.id=b.parent_id','LEFT')
+        ->field("b.*")
+        ->where($map)->find();
+        if(empty($data)){
             $this->json_error('没有数据');
         }else{
             $this->json_success($data,'获取经纬度成功');
