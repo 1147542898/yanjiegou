@@ -48,12 +48,14 @@
                 { field: 'brokerage', title: '佣金', width: 80 },
                 { field: 'addtime', title: '申请时间', width: 150 },
                 { field: 'money', title: '金额', width: 80 },
+                { field: 'tmoney', title: '实际到账', width: 80 },
                 { field: 'bank_name', title: '开户行', width: 100 },
                 { field: 'bank_number', title: '银行卡号', width: 100 },
                 { field: 'bank_user_name', title: '持卡人', width: 100 },
                 { field: 'bank_address', title: '开户地址', width: 200 },
                 { field: 'statusname', title: '状态', width: 80 },
                 { field: 'note', title: '申请备注', width: 120 },
+                { field: 'pzimg', title: '凭证', width: 120, templet: '#pzimg' },
                 { field: 'info', title: '处理备注', width: 120 },
                 { field: 'dotime', title: '处理时间', width: 150 },
                 { field: 'dousername', title: '处理人账号', width: 120 },
@@ -64,19 +66,20 @@
         table.on('tool(list)', function (obj) {
             var data = obj.data;
             if (obj.event === 'agree') {
-                layer.confirm('您确定同意该请求吗？', function (index) {
-                    var loading = layer.load(1, { shade: [0.1, '#fff'] });
-                    $.post("{:url('fundnowdo')}", { id: data.id, status: 2 }, function (res) {
-                        layer.close(loading);
-                        if (res.code === 1) {
-                            layer.msg(res.msg, { time: 1000, icon: 1 });
-                            tableIn.reload();
-                        } else {
-                            layer.msg(res.msg, { time: 1000, icon: 2 });
-                        }
-                    });
-                    layer.close(index);
-                });
+                // onclick="xadmin.open('添加申请','{:url('add')}',600,500)"
+                // layer.confirm('您确定同意该请求吗？', function (index) {
+                //     var loading = layer.load(1, { shade: [0.1, '#fff'] });
+                //     $.post("{:url('fundnowdo')}", { id: data.id, status: 2 }, function (res) {
+                //         layer.close(loading);
+                //         if (res.code === 1) {
+                //             layer.msg(res.msg, { time: 1000, icon: 1 });
+                //             tableIn.reload();
+                //         } else {
+                //             layer.msg(res.msg, { time: 1000, icon: 2 });
+                //         }
+                //     });
+                //     layer.close(index);
+                // });
             }
             if (obj.event === 'reject') {
                 layer.prompt({ title: '请输入原因', formType: 2 }, function (text, index) {
@@ -114,9 +117,12 @@
 </script>
 <script type="text/html" id="action">
 {{# if(d.status==0){ }}
-    <a class="layui-btn layui-btn-xs" lay-event="agree">同意</a>
+    <a class="layui-btn layui-btn-xs" onclick="xadmin.open('提现处理','{:url('shopFunAgree')}?id={{d.id}}',600,500)">同意</a>
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="reject">拒绝</a>
 {{# } }}    
+</script>
+<script type="text/html" id="pzimg">
+    {{# if(d.pzimg){ }}<img src="{{d.pzimg}}" onmouseover="layer.tips('<img width=600  src={{d.pzimg}}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();" >{{# } }}
 </script>
 <!-- <script type="text/html" id="topBtn">
     <a href="javascript:;" onclick="xadmin.open('添加申请','{:url('add')}',500,350)" style="height:30px; width:68px; " class="layui-btn layui-btn-danger layui-btn-sm" id="add" >添加申请</a>

@@ -46,6 +46,8 @@
                 {field: 'bank_user_name', title: '持卡人', width: 120},
                 {field: 'bank_address', title: '开户地址', width: 120},
                 {field: 'status', title: '状态', width: 100},
+                { field: 'tmoney', title: '实际到账', width: 80 },
+                {field: 'pzimg', title: '凭证', width: 100 ,templet: '#pzimg'},
                 {field: 'note', title: '申请备注', width: 150},
                 {field: 'dotime', title: '处理时间', width: 150},
                 {field: 'info', title: '处理备注', width: 150},
@@ -69,5 +71,8 @@
 
 <script type="text/html" id="topBtn">
     <a href="javascript:;" onclick="xadmin.open('添加申请','{:url('add')}',600,500)" style="height:30px; width:68px; " class="layui-btn layui-btn-danger layui-btn-sm" id="add" >添加申请</a>
+</script>
+<script type="text/html" id="pzimg">
+    {{# if(d.pzimg){ }}<img src="{{d.pzimg}}" onmouseover="layer.tips('<img width=600  src={{d.pzimg}}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();" >{{# } }}
 </script>
 {/block}

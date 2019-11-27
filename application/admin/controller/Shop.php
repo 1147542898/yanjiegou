@@ -365,7 +365,7 @@ class Shop extends Common
                 ->order("id desc")
                 ->paginate(array('list_rows' => $pageSize, 'page' => $page))
                 ->each(function ($row) {
-                    $row['statusname'] = get_status($row['status'], 'check');
+                    $row['statusname'] = get_status($row['status'], 'je');
                     $row['addtime'] = date('Y-m-d H:i:s', $row['addtime']);
                     $row['dotime'] = $row['dotime'] ? date('Y-m-d H:i:s', $row['dotime']) : '-';
                     $row['brokerage']=$row['brokerage']."%";
@@ -377,10 +377,12 @@ class Shop extends Common
     public function fundnowdo()
     {
         $data['id'] = input('post.id/d');
-        $data['status'] = input('post.status/d');
-        if ($data['status'] == 1) {
-            $data['info'] = input('post.info/s');
-        }
+        $data['status'] = input('post.status/d');        
+        $data['info'] = input('post.info/s');       
+       if($data['status']==2){
+        $data['pzimg'] = input('post.pzimg/s'); 
+        $data['tmoney'] = input('post.tmoney'); 
+       }
         //获取商户信息
         $apply_info = Db::name("shop_fund_now")->where(['id' => $data['id']])->find($data['id']);
         $shopid = $apply_info['shopid'];
@@ -395,7 +397,8 @@ class Shop extends Common
             $shop->shop_money = $shop->shop_money + $apply_info['money'];
         }
         $data['douid'] = session('seadmininfo')['aid'];
-        $data['dotime'] = time();
+        $data['dotime'] = time();    
+         
         Db::startTrans();
         try {
             if (model('ShopFundNow')->update($data) && $shop->save()) {
@@ -404,7 +407,7 @@ class Shop extends Common
                     $logs['shopid'] = $shopid;
                     $logs['money'] = $apply_info['money'];
                     $logs['addtime'] = time();
-                    $logs['note'] = "提现申请单号" . $apply_info['id'] . "申请提现¥" . $apply_info['money'];
+                    $logs['note'] = "提现申请单号" . $apply_info['id'] . "申请提现¥" . $apply_info['money']."提现到账：¥".$data['tmoney'];
                     $logs['type'] = 1;
                     $logs['yue'] = $shop->shop_money;
                     model('ShopFundLog')->insert($logs);
@@ -592,6 +595,13 @@ class Shop extends Common
         $result['code'] = 1;
         $result['msg'] = '删除成功！';
         return $result;
+    }
+    //商家提现处理
+    public function shopFunAgree(){
+        $id=input('id');
+        $fun_new=Db::name("shop_fund_now")->where(['id'=>$id])->find();
+        $this->assign('fun_new',$fun_new);
+        return $this->fetch();
     }
    
 }

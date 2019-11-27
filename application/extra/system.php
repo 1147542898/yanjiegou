@@ -2,6 +2,11 @@
 return [
     //通用配置
     'check'	=> [
+		'1'		=> ['status'=>0,'statusname'=>'待审核','color'=>'orange'],
+		'3'		=> ['status'=>1,'statusname'=>'未通过','color'=>'red'],
+		'2'		=> ['status'=>2,'statusname'=>'审核通过','color'=>'green'],
+	],
+	'je'	=> [
 		'0'		=> ['status'=>0,'statusname'=>'待审核','color'=>'orange'],
 		'1'		=> ['status'=>1,'statusname'=>'未通过','color'=>'red'],
 		'2'		=> ['status'=>2,'statusname'=>'审核通过','color'=>'green'],

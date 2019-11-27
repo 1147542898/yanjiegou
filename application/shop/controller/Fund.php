@@ -36,7 +36,7 @@ class Fund extends Common
                 ->order("id desc")
                 ->paginate(array('list_rows' => $pageSize, 'page' => $page))
                 ->each(function ($row) {
-                    $row['status'] = get_status($row['status'], 'check');
+                    $row['status'] = get_status($row['status'], 'je');
                     $row['addtime'] = date('Y-m-d H:i:s', $row['addtime']);
                     $row['dotime'] = $row['dotime'] ? date('Y-m-d H:i:s', $row['dotime']) : '-';
                 })->toArray();

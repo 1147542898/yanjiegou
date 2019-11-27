@@ -126,15 +126,15 @@
 				
 				
 			</div>
-			
-			<div class="addressmap" id='addressmap'>
+			<input name="latitude" id="lat" readonly="true" type="hidden" step=0.0001 value="{$shop_info.latitude}" size="70" />
+			<input name="longitude" id="lon" readonly="true" type="hidden" step=0.0001 value="{$shop_info.longitude}" size="70" />
+			<!-- <div class="addressmap" id='addressmap'>
 				<div class="lat">
-					<input name="latitude" id="lat" readonly="true" type="hidden" step=0.0001 value="{$shop_info.latitude}" size="70" />
-					<input name="longitude" id="lon" readonly="true" type="hidden" step=0.0001 value="{$shop_info.longitude}" size="70" />
+					
 				</div>
 				<div id="Container" class='container' style='display:none'></div>
 				<div class="cancel" id='cancel' style='display: none'>确定</div>
-			</div>
+			</div> -->
 		</div>
 	</form>
 	<!-- <script type="text/javascript" src="/static/index/js/bundle.js"></script> -->
@@ -331,50 +331,78 @@ chooseImage.onchange = function(e) {
 	   }
 	  }
 	  //实例化地图
- window.onload = function(){
-   var map = new AMap.Map('Container', {
-			 resizeEnable: true,
-		 zoom:11
-		 })
-	var marker = new AMap.Marker({
-			 position: map.getCenter(),
-		 //draggable: true,
-		 cursor: 'move',
-		 raiseOnDrag: true
-	 });
-   marker.setMap(map)
-	  var clickEventListener = map.on('click', function(e) {
-			 // console.log(e.lnglat.getLng(),e.lnglat.getLat())
-			 document.getElementById("lon").value = e.lnglat.getLng()
-			 document.getElementById("lat").value = e.lnglat.getLat()
-		 marker.setPosition([e.lnglat.getLng(), e.lnglat.getLat()])
-	});
-//缩放地图
-	 AMap.plugin('AMap.ToolBar',function(){
-	 var toolbar = new AMap.ToolBar();
-			map.addControl(toolbar);
-		  })
+//  window.onload = function(){
+//    var map = new AMap.Map('Container', {
+// 			 resizeEnable: true,
+// 		 zoom:11
+// 		 })
+// 	var marker = new AMap.Marker({
+// 			 position: map.getCenter(),
+// 		 //draggable: true,
+// 		 cursor: 'move',
+// 		 raiseOnDrag: true
+// 	 });
+//    marker.setMap(map)
+// 	  var clickEventListener = map.on('click', function(e) {
+// 			 // console.log(e.lnglat.getLng(),e.lnglat.getLat())
+// 			 document.getElementById("lon").value = e.lnglat.getLng()
+// 			 document.getElementById("lat").value = e.lnglat.getLat()
+// 		 marker.setPosition([e.lnglat.getLng(), e.lnglat.getLat()])
+// 	});
+// //缩放地图
+// 	 AMap.plugin('AMap.ToolBar',function(){
+// 	 var toolbar = new AMap.ToolBar();
+// 			map.addControl(toolbar);
+// 		  })
 	
-	 }
-mapimg.addEventListener('touchstart',function(e) {			
-			 //  e.preventDefault();
-			 Container.style.display = 'block'
-             let height = document.body.clientHeight
-		 cover.style.height = height + 'px'
-		 cover.style.display = 'block'
-		 cancel.style.display = 'block'
-		 document.getElementById('addressmap').style.display='block'
-	  })
+// 	 }
+// mapimg.addEventListener('touchstart',function(e) {			
+// 			 //  e.preventDefault();
+// 			 Container.style.display = 'block'
+//              let height = document.body.clientHeight
+// 		 cover.style.height = height + 'px'
+// 		 cover.style.display = 'block'
+// 		 cancel.style.display = 'block'
+// 		 document.getElementById('addressmap').style.display='block'
+// 	  })
 	  
-	  //取消地图
-cancel.addEventListener('touchstart',function() {
-			 Container.style.display = 'none'
-  			 cover.style.display = 'none'
-			 cancel.style.display = 'none'
-			 document.getElementById('addressmap').style.display='none'
+// 	  //取消地图
+// cancel.addEventListener('touchstart',function() {
+// 			 Container.style.display = 'none'
+//   			 cover.style.display = 'none'
+// 			 cancel.style.display = 'none'
+// 			 document.getElementById('addressmap').style.display='none'
 	   
-	     })
-	   
+// 	     })
+	   var map = new AMap.Map("container", {
+           resizeEnable: true
+       });
+       
+       AMap.plugin("AMap.Geocoder",function(){
+       			  geocoder = new AMap.Geocoder({
+       				city: "", //城市设为北京，默认：“全国”
+       			  });
+       })
+       var marker = new AMap.Marker();
+       
+       function geoCode() {
+           var address  = newplace.innerHTML+document.getElementsByClassName("address")[0].value;
+		   console.log(address)
+           geocoder.getLocation(address, function(status, result) {
+			   console.log(address,status,result)
+               if (status === 'complete'&&result.geocodes.length) {
+                   var lng = result.geocodes[0].location.lng
+                   var lat = result.geocodes[0].location.lat
+				   document.getElementById('lat').value=lat
+				   document.getElementById('lon').value=lng
+				    console.log(lng,lat)
+					document.getElementsByClassName("n6")[0].innerHTML="定位成功"
+               }else{
+                   log.error('根据地址查询位置失败');
+               }
+           });
+       }
+	mapimg.onclick=geoCode
 	    
 	   	</script>
 	<script type="text/javascript" src="/static/index/data/area.json"></script>
