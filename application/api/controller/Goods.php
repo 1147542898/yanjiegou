@@ -175,7 +175,7 @@ class Goods extends Base
         $comments = Db::name('comment')->alias('c')
             ->join('__USERS__ u', 'u.id=c.user_id')
             ->where('c.goods_id', $goods_id)
-            ->field('c.id as cid,c.content,c.imgsrc,c.video,c.add_time,u.avatar,u.username,u.mobile')
+            ->field('c.id as cid,c.order_gid,c.content,c.imgsrc,c.video,c.add_time,u.avatar,u.username,u.mobile')
             ->page($p, $rows)
             ->select();
 

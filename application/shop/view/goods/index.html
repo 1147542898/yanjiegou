@@ -38,7 +38,7 @@
    {{d.title}}{{# if(d.title){ }}<img src="/static/admin/images/image.gif" onmouseover="layer.tips('<img src={{d.thumb}}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();" >{{# } }}
 </script>
 <script type="text/html" id="action">
-    <a class="green" href="{{d.url}}" target="_blank"  title="预览">预览</a>
+    <!-- <a class="green" href="{{d.url}}" target="_blank"  title="预览">预览</a> -->
     <a class="green" href="{:url('edit')}?id={{d.id}}&catid={{d.catid}}" title="编辑">编辑</a>
     <a class="red" lay-event="del" title="删除">删除</a>
 </script>

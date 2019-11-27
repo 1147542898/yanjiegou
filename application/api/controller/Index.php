@@ -67,8 +67,8 @@ class Index extends Base
                 //status  0否1上架
                 'g.status'=>1,
                 //check_status   --审核状态  -1:违规 0:未审核 1:已审核
-                'g.check_status'=>1
-
+                'g.check_status'=>1,
+                's.is_lock' => 0 //商家锁定
             ];
 
             $goods = $goodsmodel->alias('g')
@@ -121,8 +121,8 @@ class Index extends Base
             $where = [               
                 'g.status'=>1,                
                 'g.check_status'=>1,
-                'g.isrecommand'=>1
-
+                'g.isrecommand'=>1,
+                's.is_lock'=>0 //商家锁定
             ];
             $goods = $goodsmodel->alias('g')
                 ->join('__SHOP__ s','s.id=g.shopid','LEFT')
