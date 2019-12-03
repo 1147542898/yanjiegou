@@ -6,10 +6,17 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayMobilePublicLabelDeleteRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * json串，<a href="https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7386797.0.0.1l7WMo&treeId=53&articleId=103507&docType=1">详情请见</a>
 	 **/
+=======
+{
+	/** 
+	 * json串，<a href="https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7386797.0.0.1l7WMo&treeId=53&articleId=103507&docType=1">详情请见</a>
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $bizContent;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class AlipayMobilePublicLabelDeleteRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setBizContent($bizContent)
 	{
@@ -31,6 +39,18 @@ class AlipayMobilePublicLabelDeleteRequest
 	public function getBizContent()
 	{
 		return $this->bizContent;
+=======
+	
+	public function setBizContent($bizContent)
+	{
+		$this->bizContent = $bizContent;
+		$this->apiParas["biz_content"] = $bizContent;
+	}
+
+	public function getBizContent()
+	{
+		return $this->bizContent;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

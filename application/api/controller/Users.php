@@ -1402,7 +1402,11 @@ class Users extends Base
         }
 
     }
+<<<<<<< HEAD
+    /**
+=======
 /**
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
  * str = "你好，订单号：123456789提醒你发货";
  */
     public function sendremind()
@@ -1421,7 +1425,10 @@ class Users extends Base
         if(empty($user_id) || empty($order_id) || !$order){
             $this->json_error('参数错误');
         }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         $find = Db::name('Remind')
                 ->whereTime('addtime', 'd')
                 ->where('user_id',$user_id)
@@ -1429,7 +1436,11 @@ class Users extends Base
                 ->where('order_id',$order['order_sn'])
                 ->select();
         if ($find) {
+<<<<<<< HEAD
+           $this->json_error('今天已经提醒过',100);
+=======
             $this->json_error('今天已经提醒过',100);
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         }
         $rule=[
             'mobile'  => 'require|max:11|regex:/^1[3-8]{1}[0-9]{9}$/'
@@ -1447,6 +1458,11 @@ class Users extends Base
         
 
         //阿里大鱼短信
+<<<<<<< HEAD
+        //短信签名
+        // $signName=config('sms.signName');
+=======
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         //短信模板ID
         $templateCode=config('sms.templateCode2');
         //短信模板变量
@@ -1559,7 +1575,11 @@ class Users extends Base
             ->join('goods g','g.id=og.goodsid')
             //->join('shop s','s.id=g.shopid','left')
             //->field('og.price as ogprice,og.num,og.specification,og.order_sn as ogorder_sn,og.id as ogid,g.id as gid,g.title as gtitle,g.headimg,s.id as sid,s.name as sname,s.shoplogo')
+<<<<<<< HEAD
+            ->field('og.price as ogprice,og.num,og.specification,og.order_sn as ogorder_sn,og.id as ogid,g.id as gid,og.sku_id,g.title as gtitle,g.headimg')
+=======
             ->field('og.price as ogprice,og.num,og.specification,og.order_sn as ogorder_sn,og.id as ogid,og.sku_id,g.id as gid,g.title as gtitle,g.headimg')
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
             ->whereIn('og.order_sn',$order_sn)
             ->select();
         foreach($orders_goods as $gk=>$gv){
@@ -1587,7 +1607,12 @@ class Users extends Base
                     $data['num'] = $ov['num'];
                     $headimgs = explode(',', $ov['headimg']);
                     $data['headimg'] = $this->domain().$headimgs[0];
+<<<<<<< HEAD
+                    
+                    /*---chen*/
+=======
             /*---chen*/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
                     $data['goods_attr'] = '';
                     if ($ov['sku_id'] != 0) {
                         $group_sku=Db::name('GoodsSttrxsku')->where('id',$ov['sku_id'])->value('group_sku');
@@ -1600,9 +1625,15 @@ class Users extends Base
                             }
                         }            
                     }
+<<<<<<< HEAD
+            		/*---chen*/
+            
+                    
+=======
             /*---chen*/
 
 
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
                     $orders[$k]['goods'][] = $data;
                     $totalnum += $ov['num'];
                     $totalprice += $ov['num'] * $ov['ogprice'];
@@ -1681,7 +1712,10 @@ class Users extends Base
         $order['djs_time'] = $order['add_time']+86400;
         $order['add_time'] = date('Y-m-d H:i:s',$order['add_time']);
         $order['paytime'] = date('Y-m-d H:i:s',$order['paytime']);
+<<<<<<< HEAD
+=======
         
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 
         $order['out_trade_no'] = $order_trade['out_trade_no'];
 
@@ -1699,17 +1733,27 @@ class Users extends Base
             $headimg = explode(',',$v['headimg']);
             $orders_goods[$k]['headimg'] = $this->domain().$headimg[0];
         }
+<<<<<<< HEAD
+		$order['origin_id'] = $this->randCode();
+        $order['sname'] = $shop['name'];
+        $order['shoplogo'] = $this->domain().$shop['shoplogo'];
+		$order['shopaddr'] = [
+=======
 
         $order['sname'] = $shop['name'];
         $order['shoplogo'] = $this->domain().$shop['shoplogo'];
         $order['shopaddr'] = [
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
             'province'=>$shop['province'],
             'city'=>$shop['city'],
             'area'=>$shop['area'],
             'street'=>$shop['street'],
             'address'=>$shop['address'],
         ];
+<<<<<<< HEAD
+=======
 
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         $order['goods'] = $orders_goods;
 
         $this->json_success($order);
@@ -1800,8 +1844,20 @@ class Users extends Base
         }
 
     }
+<<<<<<< HEAD
+    
+    
+    
+
+
+
+
+
+
+=======
 
     
     
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 
 }

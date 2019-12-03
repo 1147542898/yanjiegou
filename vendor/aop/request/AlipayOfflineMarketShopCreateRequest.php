@@ -6,10 +6,17 @@
  * @since 1.0, 2019-07-17 12:00:01
  */
 class AlipayOfflineMarketShopCreateRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 系统商需要通过该接口在口碑平台帮助商户创建门店信息。
 	 **/
+=======
+{
+	/** 
+	 * 系统商需要通过该接口在口碑平台帮助商户创建门店信息。
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $bizContent;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class AlipayOfflineMarketShopCreateRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setBizContent($bizContent)
 	{
@@ -31,6 +39,18 @@ class AlipayOfflineMarketShopCreateRequest
 	public function getBizContent()
 	{
 		return $this->bizContent;
+=======
+	
+	public function setBizContent($bizContent)
+	{
+		$this->bizContent = $bizContent;
+		$this->apiParas["biz_content"] = $bizContent;
+	}
+
+	public function getBizContent()
+	{
+		return $this->bizContent;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

@@ -1,6 +1,11 @@
 * {
 	margin: 0px;
+<<<<<<< HEAD
+	padding: 0px;
+	 box-sizing:border-box; 
+=======
 	padding: 0px
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 }
 
 input {
@@ -16,12 +21,21 @@ textarea {
 	resize: none;
 	border: none
 }
+<<<<<<< HEAD
+html,body{
+width: 100%;
+	overflow-x: hidden
+}
+
+
+=======
 
 body {
 	max-width: 100%;
 	overflow-x: hidden
 }
 
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 body .homepage {
 	background-color: #F8F8F8;
 	font-family: PingFangSC-Regular;
@@ -41,6 +55,12 @@ body .homepage #cover {
 	z-Index: 999
 }
 
+<<<<<<< HEAD
+
+body .homepage .logo {
+	background: #fff;
+	margin-top: 0.625rem;
+=======
 body .homepage .title {
 	height: 2.75rem;
 	font-size: 0.9375rem;
@@ -67,6 +87,7 @@ body .homepage .logo {
 	background: #fff;
 	margin-top: 0.625rem;
 	padding-left: 1.2rem;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	height: 5.25rem;
 	color: #333333;
 	line-height: 5.25rem;
@@ -78,7 +99,11 @@ body .homepage .logo {
 
 body .homepage .logo .sj {
 	font-size: 1rem;
+<<<<<<< HEAD
+	margin-left: 0.9375rem
+=======
 	padding-left: 0.9375rem
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 }
 
 body .homepage .logo .round {
@@ -98,8 +123,11 @@ body .homepage .logo .round .pics {
 }
 
 body .homepage .info {
+<<<<<<< HEAD
+=======
 	width: 100%;
 	background-color: #ffff;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	color: #333333;
 	font-weight: 400;
 	font-size: 1rem;
@@ -108,6 +136,15 @@ body .homepage .info {
 }
 
 body .homepage .info .name {
+<<<<<<< HEAD
+	position: relative;
+	top: 0;
+	display: flex;
+		margin-left: .9375rem;
+	height: 3.0625rem;
+	line-height: 3.0625rem;
+	border-bottom: 0.0625rem solid #F8F8F8;
+=======
 	padding-left: 1.2rem;
 	position: relative;
 	top: 0;
@@ -115,6 +152,7 @@ body .homepage .info .name {
 	height: 3.0625rem;
 	line-height: 3.0625rem;
 	border-bottom: 0.0625rem solid #F8F8F8
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 }
 
 body .homepage .info .name input {
@@ -136,7 +174,11 @@ body .homepage .info .name .n5 {
 body .homepage .info .name .n1 {
 	color: #777777;
 	margin-left: 0.8125rem;
+<<<<<<< HEAD
+	/*margin-left: 14.375rem*/
+=======
 	margin-left: 14.375rem
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 }
 
 body .homepage .info .name .n6 {
@@ -172,12 +214,18 @@ body .homepage .info .name .kr {
 }
 
 body .homepage .info .name .bt {
+<<<<<<< HEAD
+=======
 	margin-left: .625rem;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	
 }
 
 body .homepage .info .name .address {
+<<<<<<< HEAD
+=======
 	width: 16rem;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	    font-size: .875rem;
 	    height: 3.0625rem;
 	    text-align: right;
@@ -188,6 +236,17 @@ body .homepage .info .name .address {
 
 body .homepage .concat {
 	margin-top: .625rem;
+<<<<<<< HEAD
+	background: #fff;
+	color: #333333;
+	font-weight: 400;
+	font-size: 1rem;
+
+}
+
+body .homepage .concat .person {
+		margin-left: .9375rem;
+=======
 	background-color: #ffff;
 	color: #333333;
 	font-weight: 400;
@@ -197,6 +256,7 @@ body .homepage .concat {
 
 body .homepage .concat .person {
 	padding-left: 1.2rem;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	height: 3.0625rem;
 	line-height: 3.0625rem;
 	border-bottom: .0625rem solid #F8F8F8
@@ -209,7 +269,11 @@ body .homepage .concat .person .name {
 body .homepage .concat .person .special {
 	color: #777777;
 	font-size: .9375rem;
+<<<<<<< HEAD
+	/*margin-left: 14.6875rem*/
+=======
 	margin-left: 14.6875rem
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 }
 
 body .homepage .concat .person .new {
@@ -221,14 +285,21 @@ body .homepage .concat .person .new {
 }
 
 body .homepage .concat .phone {
+<<<<<<< HEAD
+	margin-left: .9375rem;
+=======
 	padding-left: 1.2rem;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	height: 3.0625rem;
 	line-height: 3.0625rem;
 	border-bottom: .0625rem solid #F8F8F8
 }
 
 body .homepage .concat .phone input {
+<<<<<<< HEAD
+=======
 	/* width: 10rem; */
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	position: absolute;
 	    right: 1.2rem;
 		text-align: right;
@@ -240,7 +311,11 @@ body .homepage .concat .phone input {
 }
 
 body .homepage .concat .phone .num {
+<<<<<<< HEAD
+	/*margin-right: 7.5rem*/
+=======
 	margin-right: 7.5rem
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 }
 
 body .homepage .concat .phone .n3 {
@@ -252,22 +327,37 @@ body .homepage .concat .phone .newphone {
 	width: 9rem
 }
 
+<<<<<<< HEAD
+/*body .homepage .concat .phone .choose {*/
+/*	margin-left: 15.625rem;*/
+/*	color: #777777;*/
+/*	font-size: .9375rem*/
+/*}*/
+=======
 body .homepage .concat .phone .choose {
 	margin-left: 15.625rem;
 	color: #777777;
 	font-size: .9375rem
 }
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 
 body .homepage .induce {
 	margin-top: .625rem;
 	height: 12.5rem;
+<<<<<<< HEAD
+	background: #fff;
+=======
 	background-color: #ffff;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	color: #333333;
 	font-weight: 400;
 	font-size: 1rem;
 	padding-left: .9375rem;
 	padding-right: 1.40625rem;
+<<<<<<< HEAD
+=======
 	/* width: 100%; */
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	margin-bottom: .625rem
 }
 
@@ -276,19 +366,30 @@ body .homepage .induce {
 }
 
 body .homepage .induce .jianjie {
+<<<<<<< HEAD
+	/*padding-left: 1.2rem;*/
+=======
 	padding-left: 1.2rem;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	height: 3.0625rem;
 	line-height: 3.0625rem;
 	border-bottom: .0625rem solid #F8F8F8
 }
 
 body .homepage .induce .content {
+<<<<<<< HEAD
+=======
 	padding-left: 1.2rem;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	margin-top: .9375rem;
 	color: #777777;
 	font-size: .8125rem;
 	line-height: 1.125rem;
+<<<<<<< HEAD
+	width: 90%;
+=======
 	width: 100%;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	height: 6.25rem
 }
 
@@ -303,7 +404,10 @@ body .homepage .zhizhao {
 
 body .homepage .zhizhao .name {
 	height: 3.0625rem;
+<<<<<<< HEAD
+=======
 	padding-left: 1.2rem;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	line-height: 3.0625rem;
 	border-bottom: .0625rem solid #F8F8F8;
 	position: relative
@@ -352,6 +456,16 @@ body .homepage .zhizhao .imgs {
 }
 
 body .homepage .zhizhao .imgs .firstidcard, .secondcard{
+<<<<<<< HEAD
+	padding: 0.8rem;
+	flex: 1;
+}
+#firstpic,#lastpic{
+	width: 95%;
+}
+
+body .homepage .zhizhao .content {
+=======
 	padding: 1rem;
 	flex: 1;
 }
@@ -361,6 +475,7 @@ body .homepage .zhizhao .imgs .firstidcard, .secondcard{
 
 body .homepage .zhizhao .content {
 	padding-left: 1.2rem;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	color: #777777;
 	font-size: .8125rem;
 	margin-top: .625rem;
@@ -420,4 +535,7 @@ body .homepage .addressmap .cancel {
 	background-color: white
 }
 
+<<<<<<< HEAD
+=======
 \n",
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3

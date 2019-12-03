@@ -6,10 +6,17 @@
  * @since 1.0, 2019-01-07 20:51:15
  */
 class AlipayAccountExrateRatequeryRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 对于部分签约境内当面付的商家，为了能够在境外进行推广，因此需要汇率进行币种之间的转换，本接口提供此业务场景下的汇率查询服务
 	 **/
+=======
+{
+	/** 
+	 * 对于部分签约境内当面付的商家，为了能够在境外进行推广，因此需要汇率进行币种之间的转换，本接口提供此业务场景下的汇率查询服务
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $bizContent;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class AlipayAccountExrateRatequeryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setBizContent($bizContent)
 	{
@@ -31,6 +39,18 @@ class AlipayAccountExrateRatequeryRequest
 	public function getBizContent()
 	{
 		return $this->bizContent;
+=======
+	
+	public function setBizContent($bizContent)
+	{
+		$this->bizContent = $bizContent;
+		$this->apiParas["biz_content"] = $bizContent;
+	}
+
+	public function getBizContent()
+	{
+		return $this->bizContent;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

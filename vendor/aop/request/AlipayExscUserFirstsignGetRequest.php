@@ -6,10 +6,17 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayExscUserFirstsignGetRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 支付宝 cif的accountNo 格式：支付宝userId+0156
 	 **/
+=======
+{
+	/** 
+	 * 支付宝 cif的accountNo 格式：支付宝userId+0156
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $alipayId;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class AlipayExscUserFirstsignGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setAlipayId($alipayId)
 	{
@@ -31,6 +39,18 @@ class AlipayExscUserFirstsignGetRequest
 	public function getAlipayId()
 	{
 		return $this->alipayId;
+=======
+	
+	public function setAlipayId($alipayId)
+	{
+		$this->alipayId = $alipayId;
+		$this->apiParas["alipay_id"] = $alipayId;
+	}
+
+	public function getAlipayId()
+	{
+		return $this->alipayId;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

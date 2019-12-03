@@ -6,6 +6,7 @@
  * @since 1.0, 2019-05-22 09:51:30
  */
 class AlipayMobileCodeCreateRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 业务关联ID。比如订单号,userId，业务连接等
@@ -51,6 +52,53 @@ class AlipayMobileCodeCreateRequest
 	/** 
 	 * 支付宝用户id
 	 **/
+=======
+{
+	/** 
+	 * 业务关联ID。比如订单号,userId，业务连接等
+	 **/
+	private $bizLinkedId;
+	
+	/** 
+	 * 类似产品名称，根据该值决定码存储类型；新接业务需要找码平台技术配置
+	 **/
+	private $bizType;
+	
+	/** 
+	 * 业务自定义,码平台不用理解。一定要传json字符串。
+	 **/
+	private $contextStr;
+	
+	/** 
+	 * 如果是true，则扫一扫下发跳转地址直接取自bizLinkedId
+否则，从路由信息里取跳转地址
+	 **/
+	private $isDirect;
+	
+	/** 
+	 * 备注信息字段
+	 **/
+	private $memo;
+	
+	/** 
+	 * 发码来源，业务自定
+	 **/
+	private $sourceId;
+	
+	/** 
+	 * 编码启动时间（yyy-MM-dd hh:mm:ss），为空表示立即启用
+	 **/
+	private $startDate;
+	
+	/** 
+	 * 超时时间,单位秒；若不传则为永久。发码超时时间需要找码平台技术评估
+	 **/
+	private $timeout;
+	
+	/** 
+	 * 支付宝用户id
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $userId;
 
 	private $apiParas = array();
@@ -62,6 +110,7 @@ class AlipayMobileCodeCreateRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setBizLinkedId($bizLinkedId)
 	{
@@ -160,6 +209,106 @@ class AlipayMobileCodeCreateRequest
 	public function getUserId()
 	{
 		return $this->userId;
+=======
+	
+	public function setBizLinkedId($bizLinkedId)
+	{
+		$this->bizLinkedId = $bizLinkedId;
+		$this->apiParas["biz_linked_id"] = $bizLinkedId;
+	}
+
+	public function getBizLinkedId()
+	{
+		return $this->bizLinkedId;
+	}
+
+	public function setBizType($bizType)
+	{
+		$this->bizType = $bizType;
+		$this->apiParas["biz_type"] = $bizType;
+	}
+
+	public function getBizType()
+	{
+		return $this->bizType;
+	}
+
+	public function setContextStr($contextStr)
+	{
+		$this->contextStr = $contextStr;
+		$this->apiParas["context_str"] = $contextStr;
+	}
+
+	public function getContextStr()
+	{
+		return $this->contextStr;
+	}
+
+	public function setIsDirect($isDirect)
+	{
+		$this->isDirect = $isDirect;
+		$this->apiParas["is_direct"] = $isDirect;
+	}
+
+	public function getIsDirect()
+	{
+		return $this->isDirect;
+	}
+
+	public function setMemo($memo)
+	{
+		$this->memo = $memo;
+		$this->apiParas["memo"] = $memo;
+	}
+
+	public function getMemo()
+	{
+		return $this->memo;
+	}
+
+	public function setSourceId($sourceId)
+	{
+		$this->sourceId = $sourceId;
+		$this->apiParas["source_id"] = $sourceId;
+	}
+
+	public function getSourceId()
+	{
+		return $this->sourceId;
+	}
+
+	public function setStartDate($startDate)
+	{
+		$this->startDate = $startDate;
+		$this->apiParas["start_date"] = $startDate;
+	}
+
+	public function getStartDate()
+	{
+		return $this->startDate;
+	}
+
+	public function setTimeout($timeout)
+	{
+		$this->timeout = $timeout;
+		$this->apiParas["timeout"] = $timeout;
+	}
+
+	public function getTimeout()
+	{
+		return $this->timeout;
+	}
+
+	public function setUserId($userId)
+	{
+		$this->userId = $userId;
+		$this->apiParas["user_id"] = $userId;
+	}
+
+	public function getUserId()
+	{
+		return $this->userId;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

@@ -275,10 +275,13 @@ class Activity extends Base
       
         $this->json_success($data);
     }
+<<<<<<< HEAD
+=======
 
     public function fund()
     {
         $aaa = 0.01;
         
     }   
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 }

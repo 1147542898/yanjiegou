@@ -6,10 +6,17 @@
  * @since 1.0, 2019-03-26 19:55:00
  */
 class KoubeiTradeOrderEnterpriseQueryRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 口碑对接饿了么企业订单查询接口
 	 **/
+=======
+{
+	/** 
+	 * 口碑对接饿了么企业订单查询接口
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $bizContent;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class KoubeiTradeOrderEnterpriseQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setBizContent($bizContent)
 	{
@@ -31,6 +39,18 @@ class KoubeiTradeOrderEnterpriseQueryRequest
 	public function getBizContent()
 	{
 		return $this->bizContent;
+=======
+	
+	public function setBizContent($bizContent)
+	{
+		$this->bizContent = $bizContent;
+		$this->apiParas["biz_content"] = $bizContent;
+	}
+
+	public function getBizContent()
+	{
+		return $this->bizContent;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

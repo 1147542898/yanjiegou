@@ -6,10 +6,17 @@
  * @since 1.0, 2019-07-08 15:18:47
  */
 class AlipayTradeFastpayRefundQueryRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 商户可使用该接口查询自已通过alipay.trade.refund提交的退款请求是否执行成功。
 	 **/
+=======
+{
+	/** 
+	 * 商户可使用该接口查询自已通过alipay.trade.refund提交的退款请求是否执行成功。
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $bizContent;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class AlipayTradeFastpayRefundQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setBizContent($bizContent)
 	{
@@ -31,6 +39,18 @@ class AlipayTradeFastpayRefundQueryRequest
 	public function getBizContent()
 	{
 		return $this->bizContent;
+=======
+	
+	public function setBizContent($bizContent)
+	{
+		$this->bizContent = $bizContent;
+		$this->apiParas["biz_content"] = $bizContent;
+	}
+
+	public function getBizContent()
+	{
+		return $this->bizContent;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

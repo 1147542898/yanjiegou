@@ -6,6 +6,7 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayTrustUserReportGetRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 指定该接口在商户端的使用场景。具体枚举值在样例代码中给出
@@ -15,6 +16,17 @@ class AlipayTrustUserReportGetRequest
 	/** 
 	 * FN_S（金融简版）
 	 **/
+=======
+{
+	/** 
+	 * 指定该接口在商户端的使用场景。具体枚举值在样例代码中给出
+	 **/
+	private $scene;
+	
+	/** 
+	 * FN_S（金融简版）
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $type;
 
 	private $apiParas = array();
@@ -26,6 +38,7 @@ class AlipayTrustUserReportGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setScene($scene)
 	{
@@ -47,6 +60,29 @@ class AlipayTrustUserReportGetRequest
 	public function getType()
 	{
 		return $this->type;
+=======
+	
+	public function setScene($scene)
+	{
+		$this->scene = $scene;
+		$this->apiParas["scene"] = $scene;
+	}
+
+	public function getScene()
+	{
+		return $this->scene;
+	}
+
+	public function setType($type)
+	{
+		$this->type = $type;
+		$this->apiParas["type"] = $type;
+	}
+
+	public function getType()
+	{
+		return $this->type;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

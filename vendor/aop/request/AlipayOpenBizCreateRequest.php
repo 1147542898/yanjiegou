@@ -6,6 +6,7 @@
  * @since 1.0, 2019-04-12 18:10:17
  */
 class AlipayOpenBizCreateRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 2121
@@ -25,6 +26,27 @@ class AlipayOpenBizCreateRequest
 	/** 
 	 * 1
 	 **/
+=======
+{
+	/** 
+	 * 2121
+	 **/
+	private $a;
+	
+	/** 
+	 * 1
+	 **/
+	private $b;
+	
+	/** 
+	 * 21
+	 **/
+	private $de;
+	
+	/** 
+	 * 1
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $stringbuff;
 
 	private $apiParas = array();
@@ -36,6 +58,7 @@ class AlipayOpenBizCreateRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setA($a)
 	{
@@ -79,6 +102,51 @@ class AlipayOpenBizCreateRequest
 	public function getStringbuff()
 	{
 		return $this->stringbuff;
+=======
+	
+	public function setA($a)
+	{
+		$this->a = $a;
+		$this->apiParas["a"] = $a;
+	}
+
+	public function getA()
+	{
+		return $this->a;
+	}
+
+	public function setB($b)
+	{
+		$this->b = $b;
+		$this->apiParas["b"] = $b;
+	}
+
+	public function getB()
+	{
+		return $this->b;
+	}
+
+	public function setDe($de)
+	{
+		$this->de = $de;
+		$this->apiParas["de"] = $de;
+	}
+
+	public function getDe()
+	{
+		return $this->de;
+	}
+
+	public function setStringbuff($stringbuff)
+	{
+		$this->stringbuff = $stringbuff;
+		$this->apiParas["stringbuff"] = $stringbuff;
+	}
+
+	public function getStringbuff()
+	{
+		return $this->stringbuff;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

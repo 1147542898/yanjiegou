@@ -177,4 +177,101 @@ class Order extends Common{
         $this->assign('info',$info);
         return $this->fetch();
     }
+<<<<<<< HEAD
+    
+     // 发布配送订单
+    public function pei()
+    {
+        $id = input('post.id');
+        $list = Db::name('order')->where('id',$id)->find();
+        $appKey ='c6832bdc4c4f4886b06df9f1043444dc';
+        $guid = str_replace('-', '', $this->guid());
+        $date = array(
+                'price_token' => $list['price_token'],
+                'order_price' => $list['order_price'],
+                'balance_paymoney' => $list['balance_paymoney'],
+                'receiver' => $list['getusername'],
+                'receiver_phone' => $list['mobile'],
+                'push_type' => 0,
+                'special_type' => 0,
+                'callme_withtake' => 0,
+                'nonce_str' => strtolower($guid),
+                'timestamp' => time(),
+                'openid' => '819d065e887e43c291601412c0b36586',
+                'appid' => '4a3f49278abc45f9bcbccf142d5ed481'
+            );
+        ksort($date);
+        //halt($appKey);
+        $date['sign'] = $this->sign($date, $appKey);
+        $url = "http://openapi.uupaotui.com/v2_0/addorder.ashx";
+        $res =  $this->request_post($url,$date);
+        $res = json_decode($res,true);
+        if($res['return_code'] == 'ok'){
+            $rel = Db::name('shy_order')->where('id',$id)->update(['ordercode' => $res['ordercode'],'origin_id' => $res['origin_id']]);
+            if($rel){
+                return $this->resultmsg('发布订单成功',1);
+            }else{
+                return $this->resultmsg('发布订单失败',0);
+            }
+        }
+    }
+
+    // 生成guid
+    function guid(){
+        if (function_exists('com_create_guid')){
+            return com_create_guid();
+        }else{
+            mt_srand((double)microtime()*10000);//optional for php 4.2.0 and up.
+            $charid = strtoupper(md5(uniqid(rand(), true)));
+            $hyphen = chr(45);// "-"
+            $uuid = substr($charid, 0, 8).$hyphen
+                    .substr($charid, 8, 4).$hyphen
+                    .substr($charid,12, 4).$hyphen
+                    .substr($charid,16, 4).$hyphen
+                    .substr($charid,20,12);                
+            return $uuid;
+        }
+    }
+
+     // 发起请求
+    function request_post($url = '', $post_data = array()) {
+        if (empty($url) || empty($post_data)) {
+            return false;
+        }
+        
+        $arr = [];
+        foreach ($post_data as $key => $value) {
+          $arr[] = $key.'='.$value;
+        }
+    
+        $curlPost = implode('&', $arr);
+    
+        $postUrl = $url;
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL,$postUrl);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $curlPost);
+        $data = curl_exec($ch);
+        curl_close($ch);
+        
+        return $data;
+    }
+    // 生成签名
+    function sign($data, $appKey) {
+      $arr = [];
+      foreach ($data as $key => $value) {
+        $arr[] = $key.'='.$value;
+      }
+    
+      $arr[] = 'key='.$appKey;
+      $str = strtoupper(implode('&', $arr));
+      //$str = http_build_query($arr, '&');
+      return strtoupper(md5($str));
+    }
+    
+    
+=======
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 }

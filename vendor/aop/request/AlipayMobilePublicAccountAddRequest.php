@@ -6,6 +6,7 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayMobilePublicAccountAddRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 协议号
@@ -35,6 +36,37 @@ class AlipayMobilePublicAccountAddRequest
 	/** 
 	 * 绑定账户的用户名
 	 **/
+=======
+{
+	/** 
+	 * 协议号
+	 **/
+	private $agreementId;
+	
+	/** 
+	 * 绑定账户
+	 **/
+	private $bindAccountNo;
+	
+	/** 
+	 * json
+	 **/
+	private $bizContent;
+	
+	/** 
+	 * 绑定账户的名
+	 **/
+	private $displayName;
+	
+	/** 
+	 * 关注者标识
+	 **/
+	private $fromUserId;
+	
+	/** 
+	 * 绑定账户的用户名
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $realName;
 
 	private $apiParas = array();
@@ -46,6 +78,7 @@ class AlipayMobilePublicAccountAddRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setAgreementId($agreementId)
 	{
@@ -111,6 +144,73 @@ class AlipayMobilePublicAccountAddRequest
 	public function getRealName()
 	{
 		return $this->realName;
+=======
+	
+	public function setAgreementId($agreementId)
+	{
+		$this->agreementId = $agreementId;
+		$this->apiParas["agreement_id"] = $agreementId;
+	}
+
+	public function getAgreementId()
+	{
+		return $this->agreementId;
+	}
+
+	public function setBindAccountNo($bindAccountNo)
+	{
+		$this->bindAccountNo = $bindAccountNo;
+		$this->apiParas["bind_account_no"] = $bindAccountNo;
+	}
+
+	public function getBindAccountNo()
+	{
+		return $this->bindAccountNo;
+	}
+
+	public function setBizContent($bizContent)
+	{
+		$this->bizContent = $bizContent;
+		$this->apiParas["biz_content"] = $bizContent;
+	}
+
+	public function getBizContent()
+	{
+		return $this->bizContent;
+	}
+
+	public function setDisplayName($displayName)
+	{
+		$this->displayName = $displayName;
+		$this->apiParas["display_name"] = $displayName;
+	}
+
+	public function getDisplayName()
+	{
+		return $this->displayName;
+	}
+
+	public function setFromUserId($fromUserId)
+	{
+		$this->fromUserId = $fromUserId;
+		$this->apiParas["from_user_id"] = $fromUserId;
+	}
+
+	public function getFromUserId()
+	{
+		return $this->fromUserId;
+	}
+
+	public function setRealName($realName)
+	{
+		$this->realName = $realName;
+		$this->apiParas["real_name"] = $realName;
+	}
+
+	public function getRealName()
+	{
+		return $this->realName;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

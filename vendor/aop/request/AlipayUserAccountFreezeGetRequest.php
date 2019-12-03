@@ -6,10 +6,17 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayUserAccountFreezeGetRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 冻结类型，多个用,分隔。不传返回所有类型的冻结金额。 DEPOSIT_FREEZE,充值冻结 WITHDRAW_FREEZE,提现冻结 PAYMENT_FREEZE,支付冻结 BAIL_FREEZE,保证金冻结 CHARGE_FREEZE,收费冻结 PRE_DEPOSIT_FREEZE,预存款冻结 LOAN_FREEZE,贷款冻结 OTHER_FREEZE,其它
 	 **/
+=======
+{
+	/** 
+	 * 冻结类型，多个用,分隔。不传返回所有类型的冻结金额。 DEPOSIT_FREEZE,充值冻结 WITHDRAW_FREEZE,提现冻结 PAYMENT_FREEZE,支付冻结 BAIL_FREEZE,保证金冻结 CHARGE_FREEZE,收费冻结 PRE_DEPOSIT_FREEZE,预存款冻结 LOAN_FREEZE,贷款冻结 OTHER_FREEZE,其它
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $freezeType;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class AlipayUserAccountFreezeGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setFreezeType($freezeType)
 	{
@@ -31,6 +39,18 @@ class AlipayUserAccountFreezeGetRequest
 	public function getFreezeType()
 	{
 		return $this->freezeType;
+=======
+	
+	public function setFreezeType($freezeType)
+	{
+		$this->freezeType = $freezeType;
+		$this->apiParas["freeze_type"] = $freezeType;
+	}
+
+	public function getFreezeType()
+	{
+		return $this->freezeType;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

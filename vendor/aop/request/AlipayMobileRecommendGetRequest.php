@@ -6,6 +6,7 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayMobileRecommendGetRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 请求上下文扩展信息，需要与接口负责人约定。格式为json对象。
@@ -30,6 +31,32 @@ class AlipayMobileRecommendGetRequest
 	/** 
 	 * 用户openid
 	 **/
+=======
+{
+	/** 
+	 * 请求上下文扩展信息，需要与接口负责人约定。格式为json对象。
+	 **/
+	private $extInfo;
+	
+	/** 
+	 * 期望获取的最多推荐数量, 默认获取一个推荐内容, 0表示获取所有推荐内容
+	 **/
+	private $limit;
+	
+	/** 
+	 * 所使用的场景id，请向接口负责人申请
+	 **/
+	private $sceneId;
+	
+	/** 
+	 * 获取推荐信息的开始位置, 默认从0开始
+	 **/
+	private $startIdx;
+	
+	/** 
+	 * 用户openid
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $userId;
 
 	private $apiParas = array();
@@ -41,6 +68,7 @@ class AlipayMobileRecommendGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setExtInfo($extInfo)
 	{
@@ -95,6 +123,62 @@ class AlipayMobileRecommendGetRequest
 	public function getUserId()
 	{
 		return $this->userId;
+=======
+	
+	public function setExtInfo($extInfo)
+	{
+		$this->extInfo = $extInfo;
+		$this->apiParas["ext_info"] = $extInfo;
+	}
+
+	public function getExtInfo()
+	{
+		return $this->extInfo;
+	}
+
+	public function setLimit($limit)
+	{
+		$this->limit = $limit;
+		$this->apiParas["limit"] = $limit;
+	}
+
+	public function getLimit()
+	{
+		return $this->limit;
+	}
+
+	public function setSceneId($sceneId)
+	{
+		$this->sceneId = $sceneId;
+		$this->apiParas["scene_id"] = $sceneId;
+	}
+
+	public function getSceneId()
+	{
+		return $this->sceneId;
+	}
+
+	public function setStartIdx($startIdx)
+	{
+		$this->startIdx = $startIdx;
+		$this->apiParas["start_idx"] = $startIdx;
+	}
+
+	public function getStartIdx()
+	{
+		return $this->startIdx;
+	}
+
+	public function setUserId($userId)
+	{
+		$this->userId = $userId;
+		$this->apiParas["user_id"] = $userId;
+	}
+
+	public function getUserId()
+	{
+		return $this->userId;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

@@ -6,6 +6,7 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayEbppBillSearchRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 账单流水
@@ -41,6 +42,43 @@ class AlipayEbppBillSearchRequest
 	/** 
 	 * 子业务类型
 	 **/
+=======
+{
+	/** 
+	 * 账单流水
+	 **/
+	private $billKey;
+	
+	/** 
+	 * 出账机构
+	 **/
+	private $chargeInst;
+	
+	/** 
+	 * 销账机构
+	 **/
+	private $chargeoffInst;
+	
+	/** 
+	 * 销账机构给出账机构分配的id
+	 **/
+	private $companyId;
+	
+	/** 
+	 * 必须以key value形式定义，转为json为格式：{"key1":"value1","key2":"value2","key3":"value3","key4":"value4"}
+ 后端会直接转换为MAP对象，转换异常会报参数格式错误
+	 **/
+	private $extend;
+	
+	/** 
+	 * 业务类型
+	 **/
+	private $orderType;
+	
+	/** 
+	 * 子业务类型
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $subOrderType;
 
 	private $apiParas = array();
@@ -52,6 +90,7 @@ class AlipayEbppBillSearchRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setBillKey($billKey)
 	{
@@ -128,6 +167,84 @@ class AlipayEbppBillSearchRequest
 	public function getSubOrderType()
 	{
 		return $this->subOrderType;
+=======
+	
+	public function setBillKey($billKey)
+	{
+		$this->billKey = $billKey;
+		$this->apiParas["bill_key"] = $billKey;
+	}
+
+	public function getBillKey()
+	{
+		return $this->billKey;
+	}
+
+	public function setChargeInst($chargeInst)
+	{
+		$this->chargeInst = $chargeInst;
+		$this->apiParas["charge_inst"] = $chargeInst;
+	}
+
+	public function getChargeInst()
+	{
+		return $this->chargeInst;
+	}
+
+	public function setChargeoffInst($chargeoffInst)
+	{
+		$this->chargeoffInst = $chargeoffInst;
+		$this->apiParas["chargeoff_inst"] = $chargeoffInst;
+	}
+
+	public function getChargeoffInst()
+	{
+		return $this->chargeoffInst;
+	}
+
+	public function setCompanyId($companyId)
+	{
+		$this->companyId = $companyId;
+		$this->apiParas["company_id"] = $companyId;
+	}
+
+	public function getCompanyId()
+	{
+		return $this->companyId;
+	}
+
+	public function setExtend($extend)
+	{
+		$this->extend = $extend;
+		$this->apiParas["extend"] = $extend;
+	}
+
+	public function getExtend()
+	{
+		return $this->extend;
+	}
+
+	public function setOrderType($orderType)
+	{
+		$this->orderType = $orderType;
+		$this->apiParas["order_type"] = $orderType;
+	}
+
+	public function getOrderType()
+	{
+		return $this->orderType;
+	}
+
+	public function setSubOrderType($subOrderType)
+	{
+		$this->subOrderType = $subOrderType;
+		$this->apiParas["sub_order_type"] = $subOrderType;
+	}
+
+	public function getSubOrderType()
+	{
+		return $this->subOrderType;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

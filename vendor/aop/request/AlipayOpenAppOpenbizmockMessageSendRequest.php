@@ -6,10 +6,17 @@
  * @since 1.0, 2019-01-11 18:35:00
  */
 class AlipayOpenAppOpenbizmockMessageSendRequest
+<<<<<<< HEAD
 {
 	/** 
 	 *  模拟业务系统上行消息接口
 	 **/
+=======
+{
+	/** 
+	 *  模拟业务系统上行消息接口
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $bizContent;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class AlipayOpenAppOpenbizmockMessageSendRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setBizContent($bizContent)
 	{
@@ -31,6 +39,18 @@ class AlipayOpenAppOpenbizmockMessageSendRequest
 	public function getBizContent()
 	{
 		return $this->bizContent;
+=======
+	
+	public function setBizContent($bizContent)
+	{
+		$this->bizContent = $bizContent;
+		$this->apiParas["biz_content"] = $bizContent;
+	}
+
+	public function getBizContent()
+	{
+		return $this->bizContent;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

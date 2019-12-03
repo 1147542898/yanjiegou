@@ -99,8 +99,11 @@ class Info extends Common{
             }else{
                 $info['tag'] = [];
             }
+<<<<<<< HEAD
+=======
             
           
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
             $this->assign('info',$info);
             $arealist = Area::where('parent_id',0)->select();
             $this->assign('arealist',$arealist);

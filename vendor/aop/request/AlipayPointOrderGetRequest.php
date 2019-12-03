@@ -6,6 +6,7 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayPointOrderGetRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * isv提供的发放号订单号，由数字和组成，最大长度为32为，需要保证每笔发放的唯一性，支付宝会对该参数做唯一性控制。如果使用同样的订单号，支付宝将返回订单号已经存在的错误
@@ -20,6 +21,22 @@ class AlipayPointOrderGetRequest
 	/** 
 	 * 用户标识符类型，现在支持ALIPAY_USER_ID:表示支付宝用户ID,ALIPAY_LOGON_ID:表示支付宝登陆号
 	 **/
+=======
+{
+	/** 
+	 * isv提供的发放号订单号，由数字和组成，最大长度为32为，需要保证每笔发放的唯一性，支付宝会对该参数做唯一性控制。如果使用同样的订单号，支付宝将返回订单号已经存在的错误
+	 **/
+	private $merchantOrderNo;
+	
+	/** 
+	 * 用户标识符，用于指定集分宝发放的用户，和user_symbol_type一起使用，确定一个唯一的支付宝用户
+	 **/
+	private $userSymbol;
+	
+	/** 
+	 * 用户标识符类型，现在支持ALIPAY_USER_ID:表示支付宝用户ID,ALIPAY_LOGON_ID:表示支付宝登陆号
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $userSymbolType;
 
 	private $apiParas = array();
@@ -31,6 +48,7 @@ class AlipayPointOrderGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setMerchantOrderNo($merchantOrderNo)
 	{
@@ -63,6 +81,40 @@ class AlipayPointOrderGetRequest
 	public function getUserSymbolType()
 	{
 		return $this->userSymbolType;
+=======
+	
+	public function setMerchantOrderNo($merchantOrderNo)
+	{
+		$this->merchantOrderNo = $merchantOrderNo;
+		$this->apiParas["merchant_order_no"] = $merchantOrderNo;
+	}
+
+	public function getMerchantOrderNo()
+	{
+		return $this->merchantOrderNo;
+	}
+
+	public function setUserSymbol($userSymbol)
+	{
+		$this->userSymbol = $userSymbol;
+		$this->apiParas["user_symbol"] = $userSymbol;
+	}
+
+	public function getUserSymbol()
+	{
+		return $this->userSymbol;
+	}
+
+	public function setUserSymbolType($userSymbolType)
+	{
+		$this->userSymbolType = $userSymbolType;
+		$this->apiParas["user_symbol_type"] = $userSymbolType;
+	}
+
+	public function getUserSymbolType()
+	{
+		return $this->userSymbolType;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

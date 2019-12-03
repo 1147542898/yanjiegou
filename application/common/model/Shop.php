@@ -50,6 +50,9 @@ class Shop extends Model{
             Db::rollback();
             return false;
      	}
+<<<<<<< HEAD
+     }
+=======
 	 }
 	 //资金流水变动
 	 public function moneyChange($shop_id,$money,$type,$note){
@@ -73,4 +76,5 @@ class Shop extends Model{
 			$shop->save();
 		}
 	 }
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 }

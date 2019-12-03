@@ -6,6 +6,7 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayAcquireCloseRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 卖家的操作员ID
@@ -22,6 +23,24 @@ class AlipayAcquireCloseRequest
 最短16位，最长64位。
 如果同时传了out_trade_no和trade_no，则以trade_no为准
 	 **/
+=======
+{
+	/** 
+	 * 卖家的操作员ID
+	 **/
+	private $operatorId;
+	
+	/** 
+	 * 支付宝合作商户网站唯一订单号
+	 **/
+	private $outTradeNo;
+	
+	/** 
+	 * 该交易在支付宝系统中的交易流水号。
+最短16位，最长64位。
+如果同时传了out_trade_no和trade_no，则以trade_no为准
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $tradeNo;
 
 	private $apiParas = array();
@@ -33,6 +52,7 @@ class AlipayAcquireCloseRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setOperatorId($operatorId)
 	{
@@ -65,6 +85,40 @@ class AlipayAcquireCloseRequest
 	public function getTradeNo()
 	{
 		return $this->tradeNo;
+=======
+	
+	public function setOperatorId($operatorId)
+	{
+		$this->operatorId = $operatorId;
+		$this->apiParas["operator_id"] = $operatorId;
+	}
+
+	public function getOperatorId()
+	{
+		return $this->operatorId;
+	}
+
+	public function setOutTradeNo($outTradeNo)
+	{
+		$this->outTradeNo = $outTradeNo;
+		$this->apiParas["out_trade_no"] = $outTradeNo;
+	}
+
+	public function getOutTradeNo()
+	{
+		return $this->outTradeNo;
+	}
+
+	public function setTradeNo($tradeNo)
+	{
+		$this->tradeNo = $tradeNo;
+		$this->apiParas["trade_no"] = $tradeNo;
+	}
+
+	public function getTradeNo()
+	{
+		return $this->tradeNo;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

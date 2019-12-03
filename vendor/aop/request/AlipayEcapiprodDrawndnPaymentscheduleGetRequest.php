@@ -6,6 +6,7 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayEcapiprodDrawndnPaymentscheduleGetRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 支用编号
@@ -30,6 +31,32 @@ class AlipayEcapiprodDrawndnPaymentscheduleGetRequest
 	/** 
 	 * 融资平台分配给小贷公司的机构编码
 	 **/
+=======
+{
+	/** 
+	 * 支用编号
+	 **/
+	private $drawndnNo;
+	
+	/** 
+	 * 身份证
+	 **/
+	private $entityCode;
+	
+	/** 
+	 * 客户姓名
+	 **/
+	private $entityName;
+	
+	/** 
+	 * 融资平台分配给ISV的编码
+	 **/
+	private $isvCode;
+	
+	/** 
+	 * 融资平台分配给小贷公司的机构编码
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $orgCode;
 
 	private $apiParas = array();
@@ -41,6 +68,7 @@ class AlipayEcapiprodDrawndnPaymentscheduleGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setDrawndnNo($drawndnNo)
 	{
@@ -95,6 +123,62 @@ class AlipayEcapiprodDrawndnPaymentscheduleGetRequest
 	public function getOrgCode()
 	{
 		return $this->orgCode;
+=======
+	
+	public function setDrawndnNo($drawndnNo)
+	{
+		$this->drawndnNo = $drawndnNo;
+		$this->apiParas["drawndn_no"] = $drawndnNo;
+	}
+
+	public function getDrawndnNo()
+	{
+		return $this->drawndnNo;
+	}
+
+	public function setEntityCode($entityCode)
+	{
+		$this->entityCode = $entityCode;
+		$this->apiParas["entity_code"] = $entityCode;
+	}
+
+	public function getEntityCode()
+	{
+		return $this->entityCode;
+	}
+
+	public function setEntityName($entityName)
+	{
+		$this->entityName = $entityName;
+		$this->apiParas["entity_name"] = $entityName;
+	}
+
+	public function getEntityName()
+	{
+		return $this->entityName;
+	}
+
+	public function setIsvCode($isvCode)
+	{
+		$this->isvCode = $isvCode;
+		$this->apiParas["isv_code"] = $isvCode;
+	}
+
+	public function getIsvCode()
+	{
+		return $this->isvCode;
+	}
+
+	public function setOrgCode($orgCode)
+	{
+		$this->orgCode = $orgCode;
+		$this->apiParas["org_code"] = $orgCode;
+	}
+
+	public function getOrgCode()
+	{
+		return $this->orgCode;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

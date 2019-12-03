@@ -6,6 +6,7 @@
  * @since 1.0, 2019-01-07 20:51:15
  */
 class AlipaySecurityProdSignatureFileUploadRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 业务唯一标识，由支付宝统一分配，无法自助获取
@@ -15,6 +16,17 @@ class AlipaySecurityProdSignatureFileUploadRequest
 	/** 
 	 * 传入上传的文件流
 	 **/
+=======
+{
+	/** 
+	 * 业务唯一标识，由支付宝统一分配，无法自助获取
+	 **/
+	private $bizProduct;
+	
+	/** 
+	 * 传入上传的文件流
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $fileContent;
 
 	private $apiParas = array();
@@ -26,6 +38,7 @@ class AlipaySecurityProdSignatureFileUploadRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setBizProduct($bizProduct)
 	{
@@ -47,6 +60,29 @@ class AlipaySecurityProdSignatureFileUploadRequest
 	public function getFileContent()
 	{
 		return $this->fileContent;
+=======
+	
+	public function setBizProduct($bizProduct)
+	{
+		$this->bizProduct = $bizProduct;
+		$this->apiParas["biz_product"] = $bizProduct;
+	}
+
+	public function getBizProduct()
+	{
+		return $this->bizProduct;
+	}
+
+	public function setFileContent($fileContent)
+	{
+		$this->fileContent = $fileContent;
+		$this->apiParas["file_content"] = $fileContent;
+	}
+
+	public function getFileContent()
+	{
+		return $this->fileContent;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

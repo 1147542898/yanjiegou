@@ -6,10 +6,17 @@
  * @since 1.0, 2019-03-07 21:01:17
  */
 class AlipayFundAuthOperationDetailQueryRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 资金预授权单笔操作明细查询接口
 	 **/
+=======
+{
+	/** 
+	 * 资金预授权单笔操作明细查询接口
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $bizContent;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class AlipayFundAuthOperationDetailQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setBizContent($bizContent)
 	{
@@ -31,6 +39,18 @@ class AlipayFundAuthOperationDetailQueryRequest
 	public function getBizContent()
 	{
 		return $this->bizContent;
+=======
+	
+	public function setBizContent($bizContent)
+	{
+		$this->bizContent = $bizContent;
+		$this->apiParas["biz_content"] = $bizContent;
+	}
+
+	public function getBizContent()
+	{
+		return $this->bizContent;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

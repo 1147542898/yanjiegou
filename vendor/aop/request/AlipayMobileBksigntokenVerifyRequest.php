@@ -6,6 +6,7 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayMobileBksigntokenVerifyRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 设备标识
@@ -20,6 +21,22 @@ class AlipayMobileBksigntokenVerifyRequest
 	/** 
 	 * 查询token
 	 **/
+=======
+{
+	/** 
+	 * 设备标识
+	 **/
+	private $deviceid;
+	
+	/** 
+	 * 调用来源
+	 **/
+	private $source;
+	
+	/** 
+	 * 查询token
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $token;
 
 	private $apiParas = array();
@@ -31,6 +48,7 @@ class AlipayMobileBksigntokenVerifyRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setDeviceid($deviceid)
 	{
@@ -63,6 +81,40 @@ class AlipayMobileBksigntokenVerifyRequest
 	public function getToken()
 	{
 		return $this->token;
+=======
+	
+	public function setDeviceid($deviceid)
+	{
+		$this->deviceid = $deviceid;
+		$this->apiParas["deviceid"] = $deviceid;
+	}
+
+	public function getDeviceid()
+	{
+		return $this->deviceid;
+	}
+
+	public function setSource($source)
+	{
+		$this->source = $source;
+		$this->apiParas["source"] = $source;
+	}
+
+	public function getSource()
+	{
+		return $this->source;
+	}
+
+	public function setToken($token)
+	{
+		$this->token = $token;
+		$this->apiParas["token"] = $token;
+	}
+
+	public function getToken()
+	{
+		return $this->token;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

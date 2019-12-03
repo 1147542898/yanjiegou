@@ -6,6 +6,7 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayPassCodeAddRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * alipass文件Base64编码后的内容。
@@ -29,6 +30,31 @@ class AlipayPassCodeAddRequest
 	/** 
 	 * 该pass的核销方式,如果为空，则默认为["wave","qrcode"]
 	 **/
+=======
+{
+	/** 
+	 * alipass文件Base64编码后的内容。
+	 **/
+	private $fileContent;
+	
+	/** 
+	 * 识别信息
+当 recognition_type=1时， recognition_info={“partner_id”:”2088102114633762”,“out_trade_no”:”1234567”}
+当recognition_type=2时， recognition_info={“user_id”:”2088102114633761“ }
+	 **/
+	private $recognitionInfo;
+	
+	/** 
+	 * 发放对象识别类型
+1-	订单信息
+2-	支付宝userId
+	 **/
+	private $recognitionType;
+	
+	/** 
+	 * 该pass的核销方式,如果为空，则默认为["wave","qrcode"]
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $verifyType;
 
 	private $apiParas = array();
@@ -40,6 +66,7 @@ class AlipayPassCodeAddRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setFileContent($fileContent)
 	{
@@ -83,6 +110,51 @@ class AlipayPassCodeAddRequest
 	public function getVerifyType()
 	{
 		return $this->verifyType;
+=======
+	
+	public function setFileContent($fileContent)
+	{
+		$this->fileContent = $fileContent;
+		$this->apiParas["file_content"] = $fileContent;
+	}
+
+	public function getFileContent()
+	{
+		return $this->fileContent;
+	}
+
+	public function setRecognitionInfo($recognitionInfo)
+	{
+		$this->recognitionInfo = $recognitionInfo;
+		$this->apiParas["recognition_info"] = $recognitionInfo;
+	}
+
+	public function getRecognitionInfo()
+	{
+		return $this->recognitionInfo;
+	}
+
+	public function setRecognitionType($recognitionType)
+	{
+		$this->recognitionType = $recognitionType;
+		$this->apiParas["recognition_type"] = $recognitionType;
+	}
+
+	public function getRecognitionType()
+	{
+		return $this->recognitionType;
+	}
+
+	public function setVerifyType($verifyType)
+	{
+		$this->verifyType = $verifyType;
+		$this->apiParas["verify_type"] = $verifyType;
+	}
+
+	public function getVerifyType()
+	{
+		return $this->verifyType;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

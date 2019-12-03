@@ -53,6 +53,10 @@ class Char extends Base
     	$uid = input('uid');
     	$infouid = input('infouid');
 		$msg = input('msg')?input('msg'):'';
+<<<<<<< HEAD
+		$type = input('type')?input('type'):0;
+=======
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
     	if (empty($infouid) || empty($uid)) {
     		Gateway::sendToUid($uid,json_encode(['code'=>100,'msg'=>'缺少条件','type'=>'message','data'=>['uid'=>$uid,'infouid'=>$infouid]]));
     		die();
@@ -84,7 +88,11 @@ class Char extends Base
             ];
         }
 // 聊天记录
+<<<<<<< HEAD
+        $info = $this->chat_log($uid,$infouid,$msg,$type);
+=======
         $info = $this->chat_log($uid,$infouid,$msg);
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         
         if ($info['chatlog_id']) {
             $arr['chat_id'] = $info['chat_id'];
@@ -100,13 +108,21 @@ class Char extends Base
 			return json(['code'=>0,'msg'=>'已发送']);
 		}
     }
+<<<<<<< HEAD
+    private function chat_log($uid,$infouid,$text,$type)
+=======
     private function chat_log($uid,$infouid,$text)
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
     {
         $data = [
             'uid'   =>  $uid, 
             'infouid'   =>  $infouid,
             'content'       =>  $text,
             'add_time'  =>  time(),
+<<<<<<< HEAD
+            'type'	=>	$type
+=======
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         ];
         $info['chatlog_id'] = Db::name('chatLog')->insertGetId($data);
         

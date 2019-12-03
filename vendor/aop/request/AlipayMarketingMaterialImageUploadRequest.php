@@ -6,10 +6,17 @@
  * @since 1.0, 2019-07-15 10:09:02
  */
 class AlipayMarketingMaterialImageUploadRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 图片的byte字节数组。图片大小限制为2M
 	 **/
+=======
+{
+	/** 
+	 * 图片的byte字节数组。图片大小限制为2M
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $fileContent;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class AlipayMarketingMaterialImageUploadRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setFileContent($fileContent)
 	{
@@ -31,6 +39,18 @@ class AlipayMarketingMaterialImageUploadRequest
 	public function getFileContent()
 	{
 		return $this->fileContent;
+=======
+	
+	public function setFileContent($fileContent)
+	{
+		$this->fileContent = $fileContent;
+		$this->apiParas["file_content"] = $fileContent;
+	}
+
+	public function getFileContent()
+	{
+		return $this->fileContent;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

@@ -6,6 +6,7 @@
  * @since 1.0, 2019-06-20 21:40:01
  */
 class AlipayMobileShakeUserQueryRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 动态ID
@@ -18,6 +19,20 @@ wave_code：声波
 qr_code：二维码
 bar_code：条码
 	 **/
+=======
+{
+	/** 
+	 * 动态ID
+	 **/
+	private $dynamicId;
+	
+	/** 
+	 * 动态ID类型：
+wave_code：声波
+qr_code：二维码
+bar_code：条码
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $dynamicIdType;
 
 	private $apiParas = array();
@@ -29,6 +44,7 @@ bar_code：条码
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setDynamicId($dynamicId)
 	{
@@ -50,6 +66,29 @@ bar_code：条码
 	public function getDynamicIdType()
 	{
 		return $this->dynamicIdType;
+=======
+	
+	public function setDynamicId($dynamicId)
+	{
+		$this->dynamicId = $dynamicId;
+		$this->apiParas["dynamic_id"] = $dynamicId;
+	}
+
+	public function getDynamicId()
+	{
+		return $this->dynamicId;
+	}
+
+	public function setDynamicIdType($dynamicIdType)
+	{
+		$this->dynamicIdType = $dynamicIdType;
+		$this->apiParas["dynamic_id_type"] = $dynamicIdType;
+	}
+
+	public function getDynamicIdType()
+	{
+		return $this->dynamicIdType;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

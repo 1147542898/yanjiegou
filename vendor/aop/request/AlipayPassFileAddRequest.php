@@ -6,6 +6,7 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayPassFileAddRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 支付宝pass文件二进制Base64加密字符串
@@ -23,6 +24,25 @@ class AlipayPassFileAddRequest
 	/** 
 	 * Alipass添加对象识别类型【1--订单信息；2--支付宝userId;3--支付宝绑定手机号】
 	 **/
+=======
+{
+	/** 
+	 * 支付宝pass文件二进制Base64加密字符串
+	 **/
+	private $fileContent;
+	
+	/** 
+	 * 支付宝用户识别信息：
+当 recognition_type=1时， recognition_info={“partner_id”:”2088102114633762”,“out_trade_no”:”1234567”}；
+当recognition_type=2时， recognition_info={“user_id”:”2088102114633761“}
+当recognition_type=3时，recognition_info={“mobile”:”136XXXXXXXX“}
+	 **/
+	private $recognitionInfo;
+	
+	/** 
+	 * Alipass添加对象识别类型【1--订单信息；2--支付宝userId;3--支付宝绑定手机号】
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $recognitionType;
 
 	private $apiParas = array();
@@ -34,6 +54,7 @@ class AlipayPassFileAddRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setFileContent($fileContent)
 	{
@@ -66,6 +87,40 @@ class AlipayPassFileAddRequest
 	public function getRecognitionType()
 	{
 		return $this->recognitionType;
+=======
+	
+	public function setFileContent($fileContent)
+	{
+		$this->fileContent = $fileContent;
+		$this->apiParas["file_content"] = $fileContent;
+	}
+
+	public function getFileContent()
+	{
+		return $this->fileContent;
+	}
+
+	public function setRecognitionInfo($recognitionInfo)
+	{
+		$this->recognitionInfo = $recognitionInfo;
+		$this->apiParas["recognition_info"] = $recognitionInfo;
+	}
+
+	public function getRecognitionInfo()
+	{
+		return $this->recognitionInfo;
+	}
+
+	public function setRecognitionType($recognitionType)
+	{
+		$this->recognitionType = $recognitionType;
+		$this->apiParas["recognition_type"] = $recognitionType;
+	}
+
+	public function getRecognitionType()
+	{
+		return $this->recognitionType;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

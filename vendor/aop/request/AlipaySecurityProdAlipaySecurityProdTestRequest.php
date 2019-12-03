@@ -6,10 +6,17 @@
  * @since 1.0, 2019-01-07 20:51:15
  */
 class AlipaySecurityProdAlipaySecurityProdTestRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 安全业务操作
 	 **/
+=======
+{
+	/** 
+	 * 安全业务操作
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $bizContent;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class AlipaySecurityProdAlipaySecurityProdTestRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setBizContent($bizContent)
 	{
@@ -31,6 +39,18 @@ class AlipaySecurityProdAlipaySecurityProdTestRequest
 	public function getBizContent()
 	{
 		return $this->bizContent;
+=======
+	
+	public function setBizContent($bizContent)
+	{
+		$this->bizContent = $bizContent;
+		$this->apiParas["biz_content"] = $bizContent;
+	}
+
+	public function getBizContent()
+	{
+		return $this->bizContent;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

@@ -6,10 +6,17 @@
  * @since 1.0, 2019-06-21 17:00:05
  */
 class AlipayEbppInvoiceTitleListGetRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 蚂蚁电子发票平台用户发票抬头列表获取
 	 **/
+=======
+{
+	/** 
+	 * 蚂蚁电子发票平台用户发票抬头列表获取
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $bizContent;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class AlipayEbppInvoiceTitleListGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setBizContent($bizContent)
 	{
@@ -31,6 +39,18 @@ class AlipayEbppInvoiceTitleListGetRequest
 	public function getBizContent()
 	{
 		return $this->bizContent;
+=======
+	
+	public function setBizContent($bizContent)
+	{
+		$this->bizContent = $bizContent;
+		$this->apiParas["biz_content"] = $bizContent;
+	}
+
+	public function getBizContent()
+	{
+		return $this->bizContent;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

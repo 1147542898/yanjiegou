@@ -186,8 +186,14 @@ class Coupon extends Base
             die;
         }
 
+<<<<<<< HEAD
+      
+      
+      	/*---chen*/
+=======
 
         /*---chen*/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         // 平台优惠券加
         $shi_time = time();
         $hd_coupon = Db::name('coupon')->where('type_id',1)->where('begin_time','elt',$shi_time)->where('end_time','gt',$shi_time)->select();
@@ -204,6 +210,12 @@ class Coupon extends Base
             }
         }
         /*---chen*/
+<<<<<<< HEAD
+      
+      
+      
+      
+=======
 
 
 
@@ -211,6 +223,7 @@ class Coupon extends Base
 
 
 
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         $data = [];
 
         if($type_id==1){

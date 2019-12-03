@@ -6,10 +6,17 @@
  * @since 1.0, 2019-01-09 19:25:00
  */
 class KoubeiCateringCrowdgroupConditionSetRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 口碑智慧餐厅精准营销用户人群分组操作接口
 	 **/
+=======
+{
+	/** 
+	 * 口碑智慧餐厅精准营销用户人群分组操作接口
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $bizContent;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class KoubeiCateringCrowdgroupConditionSetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setBizContent($bizContent)
 	{
@@ -31,6 +39,18 @@ class KoubeiCateringCrowdgroupConditionSetRequest
 	public function getBizContent()
 	{
 		return $this->bizContent;
+=======
+	
+	public function setBizContent($bizContent)
+	{
+		$this->bizContent = $bizContent;
+		$this->apiParas["biz_content"] = $bizContent;
+	}
+
+	public function getBizContent()
+	{
+		return $this->bizContent;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

@@ -92,9 +92,12 @@ class Sms extends Base
         }
 
     }
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
     public static function smsVerifyTwo($mobile, $order, $tempId)
 
     {

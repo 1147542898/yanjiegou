@@ -247,4 +247,12 @@ return [
         'key' => 'GYiNxVbi9770',
         'cus' => 'C88394A7FE0F193541949F2F5D71C7F1',
     ],
+<<<<<<< HEAD
+    
+    'uu'                   =>[
+        'appid' => '4a3f49278abc45f9bcbccf142d5ed481',
+        'appkey' => 'c6832bdc4c4f4886b06df9f1043444dc',
+    ],
+=======
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 ];

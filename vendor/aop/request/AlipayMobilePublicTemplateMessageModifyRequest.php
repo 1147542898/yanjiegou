@@ -6,6 +6,7 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayMobilePublicTemplateMessageModifyRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 模板id
@@ -15,6 +16,17 @@ class AlipayMobilePublicTemplateMessageModifyRequest
 	/** 
 	 * 行业设置
 	 **/
+=======
+{
+	/** 
+	 * 模板id
+	 **/
+	private $templateId;
+	
+	/** 
+	 * 行业设置
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $tradeSetting;
 
 	private $apiParas = array();
@@ -26,6 +38,7 @@ class AlipayMobilePublicTemplateMessageModifyRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setTemplateId($templateId)
 	{
@@ -47,6 +60,29 @@ class AlipayMobilePublicTemplateMessageModifyRequest
 	public function getTradeSetting()
 	{
 		return $this->tradeSetting;
+=======
+	
+	public function setTemplateId($templateId)
+	{
+		$this->templateId = $templateId;
+		$this->apiParas["template_id"] = $templateId;
+	}
+
+	public function getTemplateId()
+	{
+		return $this->templateId;
+	}
+
+	public function setTradeSetting($tradeSetting)
+	{
+		$this->tradeSetting = $tradeSetting;
+		$this->apiParas["trade_setting"] = $tradeSetting;
+	}
+
+	public function getTradeSetting()
+	{
+		return $this->tradeSetting;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

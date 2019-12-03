@@ -6,10 +6,17 @@
  * @since 1.0, 2019-09-09 11:16:24
  */
 class AlipayPcreditHuabeiDiscountSolutionModifyRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 更新花呗分期商家贴息方案
 	 **/
+=======
+{
+	/** 
+	 * 更新花呗分期商家贴息方案
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $bizContent;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class AlipayPcreditHuabeiDiscountSolutionModifyRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setBizContent($bizContent)
 	{
@@ -31,6 +39,18 @@ class AlipayPcreditHuabeiDiscountSolutionModifyRequest
 	public function getBizContent()
 	{
 		return $this->bizContent;
+=======
+	
+	public function setBizContent($bizContent)
+	{
+		$this->bizContent = $bizContent;
+		$this->apiParas["biz_content"] = $bizContent;
+	}
+
+	public function getBizContent()
+	{
+		return $this->bizContent;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

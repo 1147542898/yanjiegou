@@ -36,6 +36,10 @@ class Brand extends Base
             $list = Db::name('goodsBrand')->where(['jx' => 1])->select();
             foreach ($list as $k => $v) {
                 $list[$k]['pic'] = $this->domain() . $v['pic'];
+<<<<<<< HEAD
+                // $goods = Db::name('goods')->field('id,headimg,title,price,original_price,cost_price,zk_price')->where(['brandid' => $v['id']])->limit(3)->select();
+=======
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
                 $goods = Db::name('goods')->alias('g')
                         ->join('shy_shop s','s.id = g.shopid','LEFT') 
                         ->field('g.id,g.headimg,g.title,g.price,g.original_price,g.cost_price,g.zk_price')
@@ -84,8 +88,11 @@ class Brand extends Base
         $rows = empty(input('post.rows')) ? 10 : input('post.rows');
         $goodsmodel = new \app\api\model\Goods();
         $goods = $goodsmodel->alias('g')
+<<<<<<< HEAD
+=======
             ->join('shy_shop s','s.id = g.shopid','LEFT')
             ->where('s.is_lock', 0)
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
             ->where(['g.isqc' => 1])
             ->field('g.id,g.headimg,g.title,g.price,g.original_price')
             ->page($p, $rows)
@@ -110,11 +117,17 @@ class Brand extends Base
             $list = Db::name('goodsBrand')->page($p, $rows)->select();
             foreach ($list as $k => $v) {
                 $list[$k]['pic'] = $this->domain() . $v['pic'];
+<<<<<<< HEAD
+                $goods = Db::name('goods')
+                    ->where(['brandid' => $v['id'], 'isqc' => 1])
+                    ->field('id,headimg,title,price,original_price')
+=======
                 $goods = Db::name('goods')->alias('g')
                     ->join('shy_shop s','s.id = g.shopid','LEFT')
                     ->where('s.is_lock', 0)
                     ->where(['g.brandid' => $v['id'], 'g.isqc' => 1])
                     ->field('g.id,g.headimg,g.title,g.price,g.original_price')
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
                     ->limit(3)->select();
                 if(empty($goods)){
                         unset($list[$k]);
@@ -165,11 +178,17 @@ class Brand extends Base
             $list = Db::name('goodsBrand')->page($p, $rows)->select();
             foreach ($list as $k => $v) {
                 $list[$k]['pic'] = $this->domain() . $v['pic'];
+<<<<<<< HEAD
+                $goods = Db::name('goods')
+                    ->where(['brandid' => $v['id'], 'istj' => 1])
+                    ->field('id,headimg,title,price,original_price')
+=======
                 $goods = Db::name('goods')->alias('g')
                     ->join('shy_shop s','s.id = g.shopid','LEFT')
                     ->where('s.is_lock', 0)
                     ->where(['g.brandid' => $v['id'], 'g.istj' => 1])
                     ->field('g.id,g.headimg,g.title,g.price,g.original_price')
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
                     ->select();
                 if(empty($goods)){
                         unset($list[$k]);
@@ -221,11 +240,17 @@ class Brand extends Base
             $list = Db::name('goodsBrand')->page($p, $rows)->select();
             foreach ($list as $k => $v) {
                 $list[$k]['pic'] = $this->domain() . $v['pic'];
+<<<<<<< HEAD
+                $goods = Db::name('goods')
+                    ->where(['brandid' => $v['id'], 'iszk' => 1])
+                    ->field('id,headimg,title,price,original_price,zk_price')
+=======
                 $goods = Db::name('goods')->alias('g')
                     ->join('shy_shop s','s.id = g.shopid','LEFT')
                     ->where('s.is_lock', 0)
                     ->where(['g.brandid' => $v['id'], 'g.iszk' => 1])
                     ->field('g.id,g.headimg,g.title,g.price,g.original_price,g.zk_price')
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
                     ->select();
                 if(empty($goods)){
                         unset($list[$k]);
@@ -259,8 +284,11 @@ class Brand extends Base
             $rows = empty(input('post.rows')) ? 10 : input('post.rows');
             $goodsmodel = new \app\api\model\Goods();
             $goods = $goodsmodel->alias('g')
+<<<<<<< HEAD
+=======
                 ->join('shy_shop s','s.id = g.shopid','LEFT')
                 ->where('s.is_lock', 0)
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
                 ->field('g.id,g.headimg,g.title,g.price,g.original_price,zk_price,g.sold')
                 ->page($p, $rows)
                 ->order('sold desc')

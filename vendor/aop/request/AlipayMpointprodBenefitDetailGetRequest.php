@@ -6,6 +6,7 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayMpointprodBenefitDetailGetRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 消息体内容，JSON格式，不含换行、空格
@@ -14,6 +15,16 @@ userId: 支付用户ID, 可以直接传递openId
 benefitType: 权益类型,支持(MemberGrade:会员等级)
 benefitStatus: 状态只支持(VALID:生效、WAIT:待生效、INVALID:失效), 默认:全部
 	 **/
+=======
+{
+	/** 
+	 * 消息体内容，JSON格式，不含换行、空格
+参数:
+userId: 支付用户ID, 可以直接传递openId
+benefitType: 权益类型,支持(MemberGrade:会员等级)
+benefitStatus: 状态只支持(VALID:生效、WAIT:待生效、INVALID:失效), 默认:全部
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $bizContent;
 
 	private $apiParas = array();
@@ -25,6 +36,7 @@ benefitStatus: 状态只支持(VALID:生效、WAIT:待生效、INVALID:失效), 
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setBizContent($bizContent)
 	{
@@ -35,6 +47,18 @@ benefitStatus: 状态只支持(VALID:生效、WAIT:待生效、INVALID:失效), 
 	public function getBizContent()
 	{
 		return $this->bizContent;
+=======
+	
+	public function setBizContent($bizContent)
+	{
+		$this->bizContent = $bizContent;
+		$this->apiParas["biz_content"] = $bizContent;
+	}
+
+	public function getBizContent()
+	{
+		return $this->bizContent;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

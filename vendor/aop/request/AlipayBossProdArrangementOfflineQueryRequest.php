@@ -6,10 +6,17 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayBossProdArrangementOfflineQueryRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 签约销售方案的主站产品码，目前只支持ONLINE_TRADE_PAY（在线购买签约）和FACE_TO_FACE_PAYMENT（当面付）两个常量值，不允许传入其他值，否则报SYSTEM_ERROR异常。不传值时，默认查询FACE_TO_FACE_PAYM（当面付产品）。
 	 **/
+=======
+{
+	/** 
+	 * 签约销售方案的主站产品码，目前只支持ONLINE_TRADE_PAY（在线购买签约）和FACE_TO_FACE_PAYMENT（当面付）两个常量值，不允许传入其他值，否则报SYSTEM_ERROR异常。不传值时，默认查询FACE_TO_FACE_PAYM（当面付产品）。
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $productCode;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class AlipayBossProdArrangementOfflineQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setProductCode($productCode)
 	{
@@ -31,6 +39,18 @@ class AlipayBossProdArrangementOfflineQueryRequest
 	public function getProductCode()
 	{
 		return $this->productCode;
+=======
+	
+	public function setProductCode($productCode)
+	{
+		$this->productCode = $productCode;
+		$this->apiParas["product_code"] = $productCode;
+	}
+
+	public function getProductCode()
+	{
+		return $this->productCode;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

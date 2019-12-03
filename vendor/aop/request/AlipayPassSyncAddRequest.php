@@ -6,6 +6,7 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayPassSyncAddRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * alipass文件Base64编码后的内容。
@@ -25,6 +26,27 @@ class AlipayPassSyncAddRequest
 	/** 
 	 * 支付宝用户ID，即买家用户ID
 	 **/
+=======
+{
+	/** 
+	 * alipass文件Base64编码后的内容。
+	 **/
+	private $fileContent;
+	
+	/** 
+	 * 商户外部交易号，由商户生成并确保其唯一性
+	 **/
+	private $outTradeNo;
+	
+	/** 
+	 * 商户与支付宝签约时，分配的唯一ID。
+	 **/
+	private $partnerId;
+	
+	/** 
+	 * 支付宝用户ID，即买家用户ID
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $userId;
 
 	private $apiParas = array();
@@ -36,6 +58,7 @@ class AlipayPassSyncAddRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setFileContent($fileContent)
 	{
@@ -79,6 +102,51 @@ class AlipayPassSyncAddRequest
 	public function getUserId()
 	{
 		return $this->userId;
+=======
+	
+	public function setFileContent($fileContent)
+	{
+		$this->fileContent = $fileContent;
+		$this->apiParas["file_content"] = $fileContent;
+	}
+
+	public function getFileContent()
+	{
+		return $this->fileContent;
+	}
+
+	public function setOutTradeNo($outTradeNo)
+	{
+		$this->outTradeNo = $outTradeNo;
+		$this->apiParas["out_trade_no"] = $outTradeNo;
+	}
+
+	public function getOutTradeNo()
+	{
+		return $this->outTradeNo;
+	}
+
+	public function setPartnerId($partnerId)
+	{
+		$this->partnerId = $partnerId;
+		$this->apiParas["partner_id"] = $partnerId;
+	}
+
+	public function getPartnerId()
+	{
+		return $this->partnerId;
+	}
+
+	public function setUserId($userId)
+	{
+		$this->userId = $userId;
+		$this->apiParas["user_id"] = $userId;
+	}
+
+	public function getUserId()
+	{
+		return $this->userId;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()
