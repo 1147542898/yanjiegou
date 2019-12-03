@@ -6,10 +6,17 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayOfflineMaterialImageDownloadRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 图片id列表
 	 **/
+=======
+{
+	/** 
+	 * 图片id列表
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $imageIds;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class AlipayOfflineMaterialImageDownloadRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setImageIds($imageIds)
 	{
@@ -31,6 +39,18 @@ class AlipayOfflineMaterialImageDownloadRequest
 	public function getImageIds()
 	{
 		return $this->imageIds;
+=======
+	
+	public function setImageIds($imageIds)
+	{
+		$this->imageIds = $imageIds;
+		$this->apiParas["image_ids"] = $imageIds;
+	}
+
+	public function getImageIds()
+	{
+		return $this->imageIds;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

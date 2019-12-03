@@ -13,6 +13,7 @@ return [
     // 数据库类型
     'type'            => 'mysql',
     // 服务器地址+++++++++++++++++++++++++++++++++
+<<<<<<< HEAD
     'hostname'        => '121.199.17.119',
 //   'hostname'        => '127.0.0.1',
    // 数据库名
@@ -23,6 +24,18 @@ return [
    // 密码
     'password'        => 't73peKHAjEmifN65',
 //   'password'        => 'root',
+=======
+   'hostname'        => '121.199.17.119',
+//    'hostname'        => '127.0.0.1',
+   // 数据库名
+   'database'        => 'test_yulongyang_',
+   // 用户名
+   'username'        => 'test_yulongyang_',
+//    'username'        => 'root',
+   // 密码
+   'password'        => 't73peKHAjEmifN65',
+//    'password'        => 'root',
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
      // 'hostname'        => '47.110.9.93',
      // // 数据库名
      // 'database'        => 'test_yulongyang_',

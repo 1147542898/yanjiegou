@@ -6,10 +6,17 @@
  * @since 1.0, 2019-06-21 16:57:52
  */
 class AlipayEbppInvoiceInfoSendRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 发票信息回传接口（新版）
 	 **/
+=======
+{
+	/** 
+	 * 发票信息回传接口（新版）
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $bizContent;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class AlipayEbppInvoiceInfoSendRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setBizContent($bizContent)
 	{
@@ -31,6 +39,18 @@ class AlipayEbppInvoiceInfoSendRequest
 	public function getBizContent()
 	{
 		return $this->bizContent;
+=======
+	
+	public function setBizContent($bizContent)
+	{
+		$this->bizContent = $bizContent;
+		$this->apiParas["biz_content"] = $bizContent;
+	}
+
+	public function getBizContent()
+	{
+		return $this->bizContent;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

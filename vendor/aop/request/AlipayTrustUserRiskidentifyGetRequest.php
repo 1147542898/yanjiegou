@@ -6,10 +6,17 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayTrustUserRiskidentifyGetRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 行业关注名单类型，具体类型见对接文档或样例代码
 	 **/
+=======
+{
+	/** 
+	 * 行业关注名单类型，具体类型见对接文档或样例代码
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $type;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class AlipayTrustUserRiskidentifyGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setType($type)
 	{
@@ -31,6 +39,18 @@ class AlipayTrustUserRiskidentifyGetRequest
 	public function getType()
 	{
 		return $this->type;
+=======
+	
+	public function setType($type)
+	{
+		$this->type = $type;
+		$this->apiParas["type"] = $type;
+	}
+
+	public function getType()
+	{
+		return $this->type;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

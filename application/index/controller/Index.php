@@ -372,5 +372,9 @@ class Index extends Controller
         $data =Wechat::templateMessageSend($openid, $templateId, $url, $data, $remark);
         $result=Wechat::sendMes($data);
     }
+<<<<<<< HEAD
+=======
+   
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
     
 }

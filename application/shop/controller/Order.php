@@ -177,6 +177,7 @@ class Order extends Common{
         $this->assign('info',$info);
         return $this->fetch();
     }
+<<<<<<< HEAD
     
      // 发布配送订单
     public function pei()
@@ -271,4 +272,6 @@ class Order extends Common{
     }
     
     
+=======
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 }

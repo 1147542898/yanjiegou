@@ -6,6 +6,7 @@
  * @since 1.0, 2019-01-07 20:51:15
  */
 class AntMerchantExpandImageUploadRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 图片二进制字节流
@@ -15,6 +16,17 @@ class AntMerchantExpandImageUploadRequest
 	/** 
 	 * 图片格式
 	 **/
+=======
+{
+	/** 
+	 * 图片二进制字节流
+	 **/
+	private $imageContent;
+	
+	/** 
+	 * 图片格式
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $imageType;
 
 	private $apiParas = array();
@@ -26,6 +38,7 @@ class AntMerchantExpandImageUploadRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setImageContent($imageContent)
 	{
@@ -47,6 +60,29 @@ class AntMerchantExpandImageUploadRequest
 	public function getImageType()
 	{
 		return $this->imageType;
+=======
+	
+	public function setImageContent($imageContent)
+	{
+		$this->imageContent = $imageContent;
+		$this->apiParas["image_content"] = $imageContent;
+	}
+
+	public function getImageContent()
+	{
+		return $this->imageContent;
+	}
+
+	public function setImageType($imageType)
+	{
+		$this->imageType = $imageType;
+		$this->apiParas["image_type"] = $imageType;
+	}
+
+	public function getImageType()
+	{
+		return $this->imageType;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

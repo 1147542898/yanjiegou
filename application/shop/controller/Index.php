@@ -49,6 +49,10 @@ class Index extends Common
             $bottom[1]=[0];
             $bottom[2]=[0];
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 /*---chen*/
         $pt_find = Db::name('order')
                 ->field('id,freight,money')
@@ -62,10 +66,18 @@ class Index extends Common
         $pt['o_money'] = empty($pt_find)?0:array_sum(array_column($pt_find,'money'));
         $this->assign('pt',$pt);        
 /*---chen*/
+<<<<<<< HEAD
         
         
         
         
+=======
+
+
+
+
+
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         $this->assign('top',implode(',',$top));
         $this->assign('bottom1',implode(',',$bottom[1]));
         $this->assign('bottom2',implode(',',$bottom[2]));

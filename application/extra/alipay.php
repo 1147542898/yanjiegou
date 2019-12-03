@@ -41,7 +41,11 @@ return [
     // 支付宝支付参数
     'alipay' => [
         // 沙箱模式
+<<<<<<< HEAD
         // 'debug'       => true,
+=======
+        //'debug'       => true,
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         'debug'       => false,
         // 应用ID
         'app_id'        =>  '2019100968222438',

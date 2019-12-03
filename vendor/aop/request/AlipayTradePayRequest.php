@@ -6,11 +6,19 @@
  * @since 1.0, 2019-08-29 14:36:52
  */
 class AlipayTradePayRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 用于在线下场景交易一次创建并支付掉
 修改路由策略到R
 	 **/
+=======
+{
+	/** 
+	 * 用于在线下场景交易一次创建并支付掉
+修改路由策略到R
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $bizContent;
 
 	private $apiParas = array();
@@ -22,6 +30,7 @@ class AlipayTradePayRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setBizContent($bizContent)
 	{
@@ -32,6 +41,18 @@ class AlipayTradePayRequest
 	public function getBizContent()
 	{
 		return $this->bizContent;
+=======
+	
+	public function setBizContent($bizContent)
+	{
+		$this->bizContent = $bizContent;
+		$this->apiParas["biz_content"] = $bizContent;
+	}
+
+	public function getBizContent()
+	{
+		return $this->bizContent;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

@@ -4,8 +4,12 @@ use think\Db;
 class CheckOrder{
     public function run(&$params)
     {
+<<<<<<< HEAD
         var_dump($params);
         exit;
+=======
+       
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         $time =strtotime("-10day");
         $where['status']=array('eq',3);
         $where['sendtime']=array('lt',$time);

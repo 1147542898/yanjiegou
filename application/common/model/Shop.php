@@ -50,5 +50,31 @@ class Shop extends Model{
             Db::rollback();
             return false;
      	}
+<<<<<<< HEAD
      }
+=======
+	 }
+	 //资金流水变动
+	 public function moneyChange($shop_id,$money,$type,$note){
+		 $shop=self::get($shop_id);
+		 if($type==0){
+			$yue=$shop->shop_money+$money;
+		 }else{
+			$yue=$shop->shop_money-$money;
+		 }
+		//获取类型
+		$data=array(
+			'shopid'=>$shop_id,
+			'addtime'=>time(),
+			'money'=>$$money,
+			'note'=>$note,
+			'type'=>$type,
+			'yue'=>$yue
+		);
+		$result=Db::name('shop_fund_log')->insert($data);
+		if($result){
+			$shop->save();
+		}
+	 }
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 }

@@ -2,7 +2,10 @@
 namespace app\api\controller;
 use think\Db;
 use think\Request;
+<<<<<<< HEAD
 use think\Config;
+=======
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 class Order extends Base
 {
     ////确认订单第一步，还没有生成订单
@@ -39,7 +42,11 @@ class Order extends Base
         //     }
         // }
     
+<<<<<<< HEAD
         $shops = Db::name('shop')->where('id','in',$shop_ids)->field('id,name,shoplogo,province,city,area')->select();
+=======
+        $shops = Db::name('shop')->where('id','in',$shop_ids)->field('id,name,shoplogo')->select();
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         $data = [];
         $order_goods = [];
         $mycoupons = [];
@@ -120,7 +127,11 @@ class Order extends Base
                 }
     // 使用优惠券的id 还有减去金额 --加入这个shop
                 if (!empty($can_coupon)) {
+<<<<<<< HEAD
                   	array_multisort(array_column($can_coupon,'sub_price'),SORT_DESC,$can_coupon);
+=======
+                    array_multisort(array_column($can_coupon,'sub_price'),SORT_DESC,$can_coupon);
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
                     $shops[$k]['coupon_clogid'] = $can_coupon[0]['clogid'];
                     $shops[$k]['coupon_price'] = $can_coupon[0]['sub_price'];
                     $shops[$k]['coupon_name'] = $can_coupon[0]['name'];
@@ -202,13 +213,22 @@ class Order extends Base
         }
         
         //查看当前用户是否有默认的收货地址
+<<<<<<< HEAD
         $recvaddr = Db::name('recvaddr')->where(['user_id'=>$user_id,'is_delete'=>0])->field('consignee,phone,province,city,area,address')->find();
         if(null===$recvaddr){
+=======
+        $recvaddr = Db::name('recvaddr')->where(['user_id'=>$user_id,'is_default'=>1,'is_delete'=>0])->field('id,consignee,phone,province,city,area,address')->find();
+        if(!$recvaddr){
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
             $myinfo['shop'] = $shops;
             $this->json_success($myinfo,'您还没有设置收货地址',-1);
             die;
         }
+<<<<<<< HEAD
        if (!empty($shops) && count($shops) == 1) {
+=======
+        if (!empty($shops) && count($shops) == 1) {
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
             $shopaddr = Db::name('shop')->where(['id'=>$shops[0]['id']])->field('id,province,city,area,address')->find();
         }else{
             $shopaddr = [];
@@ -218,7 +238,10 @@ class Order extends Base
             'shop'=>$shops,
             'shopaddr'=>$shopaddr,
             'ping_coupon'=>$coupon_one,
+<<<<<<< HEAD
             'origin_id' => $this->randCode(),
+=======
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         ];
         $this->json_success($info);
     }
@@ -501,21 +524,34 @@ class Order extends Base
      *[user_id] => 17
      *[pay_type] => 1
      *[myshop] => [{"shop_id":5,"cart_id":"245","remark_member":"","send_type":"1","coupon_id":"11"}]
+<<<<<<< HEAD
      *
      */
      public function ordersub(){
      	
      	$post = input('post.');
      	
+=======
+     *[coupon_id]
+     *
+     */
+
+    public function ordersub(){
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         $user_id = input('post.user_id');
         $myshop = input('post.myshop');
         $pay_type = input('post.pay_type');
         $coupon_id = input('post.coupon_id');
         $qtjs_money = input('post.money');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         $takes_time = input('post.takes_time'); // 到店自取时间
         $takes_mobile = input('post.takes_mobile'); // 自取手机号
         
         $myshop = $this->checkoutSubParam($user_id, $myshop, $pay_type, $coupon_id); //参数检测，顺带[]myshop
+<<<<<<< HEAD
 		
         $recvaddr = $this->infoDefaultAddr($user_id); //默认收货地址
         
@@ -527,6 +563,18 @@ class Order extends Base
         $shop_ids = array_column($myshop,'shop_id');
         $shops = Db::name('shop')->whereIn('id',$shop_ids)->field('id,name,shoplogo')->select();
         
+=======
+        
+        $recvaddr = $this->infoDefaultAddr($user_id); //默认收货地址
+        
+        $coupons = $this->infoAllCoupon($myshop, $coupon_id); //所有优惠券
+
+        $carts = $this->infoAllCart($myshop, $user_id); //所有商品
+
+        // 拼装 myshop消息，优惠券
+        $shop_ids = array_column($myshop,'shop_id');
+        $shops = Db::name('shop')->whereIn('id',$shop_ids)->field('id,name,shoplogo')->select();
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         foreach ($shops as $key => $value) 
         {
             foreach ($myshop as $k => $v) 
@@ -538,6 +586,7 @@ class Order extends Base
                     $shops[$key]['send_type'] = $myshop[$k]['send_type'];
                     $shops[$key]['freight'] = $myshop[$k]['freight'];
                     $shops[$key]['coupon_id'] = $myshop[$k]['coupon_id'];
+<<<<<<< HEAD
                     if($v['send_type'] == 1){
                     	$shops[$key]['price_token'] = $myshop[$k]['price_token'];
                 		$shops[$key]['order_price'] = $myshop[$k]['order_price'];
@@ -548,6 +597,11 @@ class Order extends Base
                 }
             }
             $shops[$key]['coupon_price'] = 0; // 商家优惠券金额
+=======
+                }
+            }
+            $shops[$key]['coupon_price'] = 0; // 商家优惠券
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
             $ping_coupon = 0; // 平台优惠券
             foreach ($coupons as $kc => $vc) 
             {
@@ -555,6 +609,10 @@ class Order extends Base
                 {
                     $shops[$key]['coupon_price'] = $coupons[$kc]['sub_price'];
                 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
                 if ($coupons[$kc]['type_id'] == 1) 
                 {
                     $ping_coupon = $coupons[$kc]['sub_price'];
@@ -562,11 +620,30 @@ class Order extends Base
             }
         }
         
+<<<<<<< HEAD
         
         /*流水信息*/
         $out_trade_no = makeordersn();
         $info = $this->infoOrderAndGoods($shops, $user_id, $recvaddr, $carts, $pay_type, $takes_time, $takes_mobile, $out_trade_no); //order + order_goods
 		
+=======
+
+        /*流水信息*/
+        $out_trade_no = makeordersn();
+
+
+        $info = $this->infoOrderAndGoods($shops, $user_id, $recvaddr, $carts, $pay_type, $takes_time, $takes_mobile, $out_trade_no); //order + order_goods
+        
+
+
+
+        
+
+
+
+
+
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 
 
         Db::startTrans(); //开启事务
@@ -590,7 +667,11 @@ class Order extends Base
             $myorders = Db::name('order')->whereIn('id',$order_ids)->where(['user_id'=>$user_id])->field('id,order_sn')->select();
             $order_sns = json_encode(array_column($myorders,'order_sn'));
             $myorder_ids  = implode(',',array_column($myorders,'id'));
+<<<<<<< HEAD
             if($info['total_amount']<=0){
+=======
+            if($info['total_amount']<0){
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
                 throw new \Exception("金额不合法");
             }
             $order_trades = [
@@ -599,7 +680,11 @@ class Order extends Base
                 'order_ids'=>$myorder_ids,
                 'total_amount'=>$info['total_amount'] - $info['coupon_amount'] - $ping_coupon
             ];
+<<<<<<< HEAD
             if($order_trades['total_amount'] != $qtjs_money){
+=======
+            if($order_trades['total_amount'] == $qtjs_money){
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
                 throw new \Exception("金额错误");
             }
         //order_trade
@@ -610,12 +695,18 @@ class Order extends Base
             // 成功,提交事务
             Db::commit();
             $this->endFuncOrder($user_id, $coupons, $myshop, $carts);
+<<<<<<< HEAD
             
             
             
             
             
             
+=======
+
+
+
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
             $data = [
                 'recvaddr'=>$recvaddr,
                 'shop'=>$shops
@@ -679,8 +770,11 @@ class Order extends Base
         if (!empty($coupon_id)) {
             $where[] = $coupon_id;
         }
+<<<<<<< HEAD
         // $cwhere=Db::name('couponlog')->whereIn('id',$where)->column('coupon_id');
         // $coupons = Db::name('coupon')->whereIn('id',$cwhere)->select();
+=======
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         $coupons=Db::name('couponlog')->alias('l')
                 ->field('c.*,l.id as couponlog_id')
                 ->join('shy_coupon c','c.id = l.coupon_id')
@@ -727,17 +821,29 @@ class Order extends Base
         $order_goods = []; //订单商品表
         $total_amount = 0; //订单原价
         $coupon_amount = 0; //商家优惠券总金额
+<<<<<<< HEAD
         $you_money = 0;// 邮费
         // halt($shops);
         
         foreach($shops as $k=>$v)
         {
         	
+=======
+        $you_money = 0; //邮费
+        
+        foreach($shops as $k=>$v)
+        {
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
             $ordersn = makeordersn();
             $total = 0; //每个店家价格
             $total_num = 0; //每个店家数量
             
+<<<<<<< HEAD
             
+=======
+
+
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
             foreach ($carts as $key => $value) 
             {
                 //购物车中商品，所有该商家的商品做处理
@@ -768,6 +874,7 @@ class Order extends Base
                     ];
                 //---order_goods End
                 }
+<<<<<<< HEAD
             }
         //---order
 	        if($v['send_type'] != 2){
@@ -837,14 +944,54 @@ class Order extends Base
             }
             
             
+=======
+
+        
+            }
+        //---order
+            $order[] = [
+                'shop_id'   =>  $v['id'],
+                'out_trade_no'=>$out_trade_no,
+                'order_sn'  =>  $ordersn, //订单号
+                'user_id'   =>  $user_id,
+                'money'     =>  $total - $v['coupon_price'] + $v['freight'], // 金额-优惠卷+运费
+                'oldmoney'  =>  $total, // 原价
+                'coupon_id'=> $v['coupon_id'], //优惠券价格
+                'couponprice'=> $v['coupon_price'], //优惠券价格
+                'total_num' =>  $total_num, //总数量
+                'send_type' =>  $v['send_type'], //配送类型    
+                'freight'   =>  $v['freight'],   //邮费
+                'remark_member'=>$v['remark_member'],
+
+                'pay_type'  =>  $pay_type,
+                'status'    =>  1, //订单状态 1.待付款   2.待发货    3.已发货   4.待评价 5.已完成  6.已关闭 7售后
+                'add_time'  =>  time(),
+                'getusername'=> $recvaddr['consignee'], //收货人
+                'mobile'    =>  $recvaddr['phone'],
+                'address'   =>  $recvaddr['address'],
+                'province'  =>  $recvaddr['province'],
+                'city'  => $recvaddr['city'],
+                'area'  => $recvaddr['area'],
+            ];
+            if ($order['send_type'] == 2) {
+                $order['takes_time'] = $takes_time;
+                $order['takes_mobile'] = $takes_mobile;
+            }
+
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         //---order End
             $total_amount = $total_amount + $total;
             $coupon_amount = $coupon_amount + $v['coupon_price'];
             
+<<<<<<< HEAD
             $you_money = $you_money + $v['freight'];
 
         }
         
+=======
+            $you_money = $you_money + $v['freight']; //总邮费
+        }
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         $data['order'] = $order;
         $data['order_goods'] = $order_goods;
         $data['total_amount'] = $total_amount + $you_money; //加运费
@@ -864,7 +1011,11 @@ class Order extends Base
                 $good = Db::name('goods')->where(['id'=>$mv['goods_id']])->find();
                 if ($good['totalcnf'] == 0) 
                 {
+<<<<<<< HEAD
                     Db::name('GoodsSttrxsku')->where('id',$mv['sku_id'])->setDec('number',$mv['num']);
+=======
+                    Db::name('GoodsSttrxsku')->where(['id'=>$mv['sku_id'])->setDec('number',$mv['num']);
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
                 }
             }else
             {
@@ -880,12 +1031,16 @@ class Order extends Base
     }
 
     /*---------------------*/
+<<<<<<< HEAD
      
      
      
      
      
      
+=======
+
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
     public function ordersub2()
     {
        
@@ -963,8 +1118,12 @@ class Order extends Base
                     $order_goods[$ck]['order_sn'] = $ordersn;
                     $order_goods[$ck]['goodsid'] = $cv['goods_id'];
                     $order_goods[$ck]['price'] = $cv['price'];
+<<<<<<< HEAD
                     $order_goods[$ck]['num'] = $cv['num'];
                     
+=======
+                    $order_goods[$ck]['num'] = $cv['num'];            
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 /*---chen*/
                     $order_goods[$ck]['specification'] = '';
                     if ($cv['sku_id'] != 0) {
@@ -1124,7 +1283,11 @@ class Order extends Base
     public function ordersub3(){
         
         $user_id = input('post.user_id');
+<<<<<<< HEAD
         if(null===$user_id){
+=======
+        if(empty($user_id)){
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
             $this->json_error('请传过来用户编号');
         }
         
@@ -1135,12 +1298,20 @@ class Order extends Base
         }
         $myshop = json_decode($myshop,true);
         $cart_id = array_column($myshop,'cart_id');
+<<<<<<< HEAD
         if(null===$myshop){
+=======
+        if(empty($myshop)){
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
             $this->json_error('请传过来店铺编号和购物车id信息和备注信息');
         }       
         //pay_type支付方式   1支付宝  2微信  3银联
         $pay_type = input('post.pay_type');
+<<<<<<< HEAD
         if(null===$pay_type){
+=======
+        if(empty($pay_type)){
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
             $this->json_error('请传过来支付方式');
         }
         $ptype = [1,2,3];
@@ -1150,7 +1321,11 @@ class Order extends Base
         //获取用户地址
          //查看当前用户是否有默认的收货地址
          $recvaddr = Db::name('recvaddr')->where(['user_id'=>$user_id,'is_default'=>1,'is_delete'=>0])->field('consignee,phone,province,city,area,address')->find();
+<<<<<<< HEAD
          if(null===$recvaddr){
+=======
+         if(!$recvaddr){
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
              $this->json_error('您还没有设置收货地址');
              die;
          }
@@ -1245,9 +1420,13 @@ class Order extends Base
             'order_ids'=>$myorder_ids,//订单id编号
             'total_amount'=>$order_total_money//支付金额
         ];
+<<<<<<< HEAD
       
         $trade_id = Db::name('order_trade')->insertGetId($order_trades);
           
+=======
+        $trade_id = Db::name('order_trade')->insertGetId($order_trades);
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         if($trade_id && $order_result && $goods_result){
             Db::commit();//事务提交
             $info['recaddr']=$recvaddr;
@@ -1574,6 +1753,7 @@ class Order extends Base
         $data['shop_id']=$shop_id;
         $this->json_success($data);
     }
+<<<<<<< HEAD
     
     // 获取验证码
     public function openid()
@@ -1774,3 +1954,7 @@ class Order extends Base
         $this->json_success($res);
      }
 }
+=======
+   
+}
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3

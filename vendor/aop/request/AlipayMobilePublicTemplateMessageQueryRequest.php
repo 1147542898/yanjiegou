@@ -6,6 +6,7 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayMobilePublicTemplateMessageQueryRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 模板
@@ -15,6 +16,17 @@ class AlipayMobilePublicTemplateMessageQueryRequest
 	/** 
 	 * 模板id
 	 **/
+=======
+{
+	/** 
+	 * 模板
+	 **/
+	private $template;
+	
+	/** 
+	 * 模板id
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $templateId;
 
 	private $apiParas = array();
@@ -26,6 +38,7 @@ class AlipayMobilePublicTemplateMessageQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setTemplate($template)
 	{
@@ -47,6 +60,29 @@ class AlipayMobilePublicTemplateMessageQueryRequest
 	public function getTemplateId()
 	{
 		return $this->templateId;
+=======
+	
+	public function setTemplate($template)
+	{
+		$this->template = $template;
+		$this->apiParas["template"] = $template;
+	}
+
+	public function getTemplate()
+	{
+		return $this->template;
+	}
+
+	public function setTemplateId($templateId)
+	{
+		$this->templateId = $templateId;
+		$this->apiParas["template_id"] = $templateId;
+	}
+
+	public function getTemplateId()
+	{
+		return $this->templateId;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

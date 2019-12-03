@@ -6,6 +6,7 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayOfflineMaterialImageUploadRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 图片/视频二进制内容，图片/视频大小不能超过5M
@@ -25,6 +26,27 @@ class AlipayOfflineMaterialImageUploadRequest
 	/** 
 	 * 图片/视频格式
 	 **/
+=======
+{
+	/** 
+	 * 图片/视频二进制内容，图片/视频大小不能超过5M
+	 **/
+	private $imageContent;
+	
+	/** 
+	 * 图片/视频名称
+	 **/
+	private $imageName;
+	
+	/** 
+	 * 用于显示指定图片/视频所属的partnerId（支付宝内部使用，外部商户无需填写此字段）
+	 **/
+	private $imagePid;
+	
+	/** 
+	 * 图片/视频格式
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $imageType;
 
 	private $apiParas = array();
@@ -36,6 +58,7 @@ class AlipayOfflineMaterialImageUploadRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setImageContent($imageContent)
 	{
@@ -79,6 +102,51 @@ class AlipayOfflineMaterialImageUploadRequest
 	public function getImageType()
 	{
 		return $this->imageType;
+=======
+	
+	public function setImageContent($imageContent)
+	{
+		$this->imageContent = $imageContent;
+		$this->apiParas["image_content"] = $imageContent;
+	}
+
+	public function getImageContent()
+	{
+		return $this->imageContent;
+	}
+
+	public function setImageName($imageName)
+	{
+		$this->imageName = $imageName;
+		$this->apiParas["image_name"] = $imageName;
+	}
+
+	public function getImageName()
+	{
+		return $this->imageName;
+	}
+
+	public function setImagePid($imagePid)
+	{
+		$this->imagePid = $imagePid;
+		$this->apiParas["image_pid"] = $imagePid;
+	}
+
+	public function getImagePid()
+	{
+		return $this->imagePid;
+	}
+
+	public function setImageType($imageType)
+	{
+		$this->imageType = $imageType;
+		$this->apiParas["image_type"] = $imageType;
+	}
+
+	public function getImageType()
+	{
+		return $this->imageType;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

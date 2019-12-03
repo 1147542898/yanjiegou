@@ -6,10 +6,17 @@
  * @since 1.0, 2019-08-29 11:18:32
  */
 class AlipayEcoMycarPromoTicketSyncRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * ISV有新的卡券信息同步到车主服务平台
 	 **/
+=======
+{
+	/** 
+	 * ISV有新的卡券信息同步到车主服务平台
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $bizContent;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class AlipayEcoMycarPromoTicketSyncRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setBizContent($bizContent)
 	{
@@ -31,6 +39,18 @@ class AlipayEcoMycarPromoTicketSyncRequest
 	public function getBizContent()
 	{
 		return $this->bizContent;
+=======
+	
+	public function setBizContent($bizContent)
+	{
+		$this->bizContent = $bizContent;
+		$this->apiParas["biz_content"] = $bizContent;
+	}
+
+	public function getBizContent()
+	{
+		return $this->bizContent;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

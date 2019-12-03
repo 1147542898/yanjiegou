@@ -6,6 +6,7 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayEbppBillGetRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 输出机构的业务流水号，需要保证唯一性。
@@ -15,6 +16,17 @@ class AlipayEbppBillGetRequest
 	/** 
 	 * 支付宝订单类型。公共事业缴纳JF,信用卡还款HK
 	 **/
+=======
+{
+	/** 
+	 * 输出机构的业务流水号，需要保证唯一性。
+	 **/
+	private $merchantOrderNo;
+	
+	/** 
+	 * 支付宝订单类型。公共事业缴纳JF,信用卡还款HK
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $orderType;
 
 	private $apiParas = array();
@@ -26,6 +38,7 @@ class AlipayEbppBillGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setMerchantOrderNo($merchantOrderNo)
 	{
@@ -47,6 +60,29 @@ class AlipayEbppBillGetRequest
 	public function getOrderType()
 	{
 		return $this->orderType;
+=======
+	
+	public function setMerchantOrderNo($merchantOrderNo)
+	{
+		$this->merchantOrderNo = $merchantOrderNo;
+		$this->apiParas["merchant_order_no"] = $merchantOrderNo;
+	}
+
+	public function getMerchantOrderNo()
+	{
+		return $this->merchantOrderNo;
+	}
+
+	public function setOrderType($orderType)
+	{
+		$this->orderType = $orderType;
+		$this->apiParas["order_type"] = $orderType;
+	}
+
+	public function getOrderType()
+	{
+		return $this->orderType;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

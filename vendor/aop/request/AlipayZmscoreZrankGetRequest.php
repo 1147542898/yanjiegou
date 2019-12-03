@@ -6,10 +6,17 @@
  * @since 1.0, 2019-08-13 16:30:45
  */
 class AlipayZmscoreZrankGetRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 用户ID
 	 **/
+=======
+{
+	/** 
+	 * 用户ID
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $userId;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class AlipayZmscoreZrankGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setUserId($userId)
 	{
@@ -31,6 +39,18 @@ class AlipayZmscoreZrankGetRequest
 	public function getUserId()
 	{
 		return $this->userId;
+=======
+	
+	public function setUserId($userId)
+	{
+		$this->userId = $userId;
+		$this->apiParas["user_id"] = $userId;
+	}
+
+	public function getUserId()
+	{
+		return $this->userId;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

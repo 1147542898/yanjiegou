@@ -6,6 +6,7 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayMdataTagGetRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 所需标签列表.
@@ -15,6 +16,17 @@ class AlipayMdataTagGetRequest
 	/** 
 	 * 用户的支付宝Id
 	 **/
+=======
+{
+	/** 
+	 * 所需标签列表.
+	 **/
+	private $requiredTags;
+	
+	/** 
+	 * 用户的支付宝Id
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $userId;
 
 	private $apiParas = array();
@@ -26,6 +38,7 @@ class AlipayMdataTagGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setRequiredTags($requiredTags)
 	{
@@ -47,6 +60,29 @@ class AlipayMdataTagGetRequest
 	public function getUserId()
 	{
 		return $this->userId;
+=======
+	
+	public function setRequiredTags($requiredTags)
+	{
+		$this->requiredTags = $requiredTags;
+		$this->apiParas["required_tags"] = $requiredTags;
+	}
+
+	public function getRequiredTags()
+	{
+		return $this->requiredTags;
+	}
+
+	public function setUserId($userId)
+	{
+		$this->userId = $userId;
+		$this->apiParas["user_id"] = $userId;
+	}
+
+	public function getUserId()
+	{
+		return $this->userId;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

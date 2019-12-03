@@ -6,6 +6,7 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayEcardEduPublicBindRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 机构编码
@@ -35,6 +36,37 @@ class AlipayEcardEduPublicBindRequest
 	/** 
 	 * 公众账号id
 	 **/
+=======
+{
+	/** 
+	 * 机构编码
+	 **/
+	private $agentCode;
+	
+	/** 
+	 * 公众账号协议Id
+	 **/
+	private $agreementId;
+	
+	/** 
+	 * 支付宝userId
+	 **/
+	private $alipayUserId;
+	
+	/** 
+	 * 一卡通姓名
+	 **/
+	private $cardName;
+	
+	/** 
+	 * 一卡通卡号
+	 **/
+	private $cardNo;
+	
+	/** 
+	 * 公众账号id
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $publicId;
 
 	private $apiParas = array();
@@ -46,6 +78,7 @@ class AlipayEcardEduPublicBindRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setAgentCode($agentCode)
 	{
@@ -111,6 +144,73 @@ class AlipayEcardEduPublicBindRequest
 	public function getPublicId()
 	{
 		return $this->publicId;
+=======
+	
+	public function setAgentCode($agentCode)
+	{
+		$this->agentCode = $agentCode;
+		$this->apiParas["agent_code"] = $agentCode;
+	}
+
+	public function getAgentCode()
+	{
+		return $this->agentCode;
+	}
+
+	public function setAgreementId($agreementId)
+	{
+		$this->agreementId = $agreementId;
+		$this->apiParas["agreement_id"] = $agreementId;
+	}
+
+	public function getAgreementId()
+	{
+		return $this->agreementId;
+	}
+
+	public function setAlipayUserId($alipayUserId)
+	{
+		$this->alipayUserId = $alipayUserId;
+		$this->apiParas["alipay_user_id"] = $alipayUserId;
+	}
+
+	public function getAlipayUserId()
+	{
+		return $this->alipayUserId;
+	}
+
+	public function setCardName($cardName)
+	{
+		$this->cardName = $cardName;
+		$this->apiParas["card_name"] = $cardName;
+	}
+
+	public function getCardName()
+	{
+		return $this->cardName;
+	}
+
+	public function setCardNo($cardNo)
+	{
+		$this->cardNo = $cardNo;
+		$this->apiParas["card_no"] = $cardNo;
+	}
+
+	public function getCardNo()
+	{
+		return $this->cardNo;
+	}
+
+	public function setPublicId($publicId)
+	{
+		$this->publicId = $publicId;
+		$this->apiParas["public_id"] = $publicId;
+	}
+
+	public function getPublicId()
+	{
+		return $this->publicId;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

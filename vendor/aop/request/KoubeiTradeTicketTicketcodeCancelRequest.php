@@ -6,10 +6,17 @@
  * @since 1.0, 2019-07-29 17:13:58
  */
 class KoubeiTradeTicketTicketcodeCancelRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 口碑凭证码撤销核销
 	 **/
+=======
+{
+	/** 
+	 * 口碑凭证码撤销核销
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $bizContent;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class KoubeiTradeTicketTicketcodeCancelRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setBizContent($bizContent)
 	{
@@ -31,6 +39,18 @@ class KoubeiTradeTicketTicketcodeCancelRequest
 	public function getBizContent()
 	{
 		return $this->bizContent;
+=======
+	
+	public function setBizContent($bizContent)
+	{
+		$this->bizContent = $bizContent;
+		$this->apiParas["biz_content"] = $bizContent;
+	}
+
+	public function getBizContent()
+	{
+		return $this->bizContent;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

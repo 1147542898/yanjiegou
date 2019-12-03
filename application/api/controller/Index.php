@@ -68,8 +68,12 @@ class Index extends Base
                 'g.status'=>1,
                 //check_status   --审核状态  -1:违规 0:未审核 1:已审核
                 'g.check_status'=>1,
+<<<<<<< HEAD
                 's.is_lock'=>0 //商家锁定
 
+=======
+                's.is_lock' => 0 //商家锁定
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
             ];
 
             $goods = $goodsmodel->alias('g')
@@ -124,7 +128,10 @@ class Index extends Base
                 'g.check_status'=>1,
                 'g.isrecommand'=>1,
                 's.is_lock'=>0 //商家锁定
+<<<<<<< HEAD
 
+=======
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
             ];
             $goods = $goodsmodel->alias('g')
                 ->join('__SHOP__ s','s.id=g.shopid','LEFT')
@@ -154,6 +161,10 @@ class Index extends Base
         }
     }
     
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
    
     
 }

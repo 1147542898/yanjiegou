@@ -6,6 +6,7 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayPromorulecenterRuleAnalyzeRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 业务id
@@ -20,6 +21,22 @@ class AlipayPromorulecenterRuleAnalyzeRequest
 	/** 
 	 * 支付宝用户id
 	 **/
+=======
+{
+	/** 
+	 * 业务id
+	 **/
+	private $bizId;
+	
+	/** 
+	 * 规则id
+	 **/
+	private $ruleUuid;
+	
+	/** 
+	 * 支付宝用户id
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $userId;
 
 	private $apiParas = array();
@@ -31,6 +48,7 @@ class AlipayPromorulecenterRuleAnalyzeRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setBizId($bizId)
 	{
@@ -63,6 +81,40 @@ class AlipayPromorulecenterRuleAnalyzeRequest
 	public function getUserId()
 	{
 		return $this->userId;
+=======
+	
+	public function setBizId($bizId)
+	{
+		$this->bizId = $bizId;
+		$this->apiParas["biz_id"] = $bizId;
+	}
+
+	public function getBizId()
+	{
+		return $this->bizId;
+	}
+
+	public function setRuleUuid($ruleUuid)
+	{
+		$this->ruleUuid = $ruleUuid;
+		$this->apiParas["rule_uuid"] = $ruleUuid;
+	}
+
+	public function getRuleUuid()
+	{
+		return $this->ruleUuid;
+	}
+
+	public function setUserId($userId)
+	{
+		$this->userId = $userId;
+		$this->apiParas["user_id"] = $userId;
+	}
+
+	public function getUserId()
+	{
+		return $this->userId;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

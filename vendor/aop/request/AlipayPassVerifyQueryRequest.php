@@ -6,10 +6,17 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayPassVerifyQueryRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * Alipass对应的核销码串
 	 **/
+=======
+{
+	/** 
+	 * Alipass对应的核销码串
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $verifyCode;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class AlipayPassVerifyQueryRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setVerifyCode($verifyCode)
 	{
@@ -31,6 +39,18 @@ class AlipayPassVerifyQueryRequest
 	public function getVerifyCode()
 	{
 		return $this->verifyCode;
+=======
+	
+	public function setVerifyCode($verifyCode)
+	{
+		$this->verifyCode = $verifyCode;
+		$this->apiParas["verify_code"] = $verifyCode;
+	}
+
+	public function getVerifyCode()
+	{
+		return $this->verifyCode;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

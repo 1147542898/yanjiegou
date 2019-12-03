@@ -6,10 +6,17 @@
  * @since 1.0, 2019-03-26 17:00:00
  */
 class AlipayAppTokenGetRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 应用安全码
 	 **/
+=======
+{
+	/** 
+	 * 应用安全码
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $secret;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class AlipayAppTokenGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setSecret($secret)
 	{
@@ -31,6 +39,18 @@ class AlipayAppTokenGetRequest
 	public function getSecret()
 	{
 		return $this->secret;
+=======
+	
+	public function setSecret($secret)
+	{
+		$this->secret = $secret;
+		$this->apiParas["secret"] = $secret;
+	}
+
+	public function getSecret()
+	{
+		return $this->secret;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

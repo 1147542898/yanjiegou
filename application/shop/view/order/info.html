@@ -102,6 +102,10 @@ label{font-weight: bold;color:#009688;}
                 }
             }
              {/php}
+<<<<<<< HEAD
+=======
+             
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 
           
             </div>
@@ -147,12 +151,26 @@ label{font-weight: bold;color:#009688;}
            </tr>
            {/volist}
            <tr><td colspan="5" style="text-align: right">
+<<<<<<< HEAD
                 <label class="red bottom">商品总金额：</label><span class="bottoms">¥ {$info.counts}</span><br/>
                 <label class="red bottom">运费：</label><span class="bottoms">¥ 0.00</span><br/>
                 <label class="red bottom">应付总金额：</label><span class="bottoms">¥ {$info.counts}</span><br/>
                 <label class="red bottom">积分抵扣金额：</label><span class="bottoms">¥ -0.00</span><br/>
                 <label class="red bottom">实付总金额：</label><span class="bottoms">¥ {$info.counts}</span><br/>
                 <label class="red bottom">可获得积分：</label><span class="bottoms">0个</span>
+=======
+                <!-- <label class="red bottom">商品总金额：</label><span class="bottoms">¥ {$info.counts}</span><br/> -->
+                <!-- <label class="red bottom">运费：</label><span class="bottoms">¥ 0.00</span><br/> -->
+                <!-- <label class="red bottom">应付总金额：</label><span class="bottoms">¥ {$info.counts}</span><br/> -->
+                <!-- <label class="red bottom">积分抵扣金额：</label><span class="bottoms">¥ -0.00</span><br/> -->
+                <!-- <label class="red bottom">实付总金额：</label><span class="bottoms">¥ {$info.counts}</span><br/> -->
+                <!-- <label class="red bottom">可获得积分：</label><span class="bottoms">0个</span> -->
+
+                <label class="red bottom">商品金额：</label><span class="bottoms">¥ {$info.oldmoney}</span><br/>
+                <label class="red bottom">运费：</label><span class="bottoms">¥ {$info.freight}</span><br/>
+                <label class="red bottom">优惠券：</label><span class="bottoms"> - ¥ {$info.couponprice}</span><br/>
+                <label class="red bottom">订单总金额：</label><span class="bottoms">¥ {$info.money}</span><br/>
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
            </td></tr>
         </table>
     </div>

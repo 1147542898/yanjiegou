@@ -6,10 +6,17 @@
  * @since 1.0, 2019-05-07 10:06:24
  */
 class KoubeiMarketingCampaignItemMerchantactivityCloseRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 商户下架代金券
 	 **/
+=======
+{
+	/** 
+	 * 商户下架代金券
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $bizContent;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class KoubeiMarketingCampaignItemMerchantactivityCloseRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setBizContent($bizContent)
 	{
@@ -31,6 +39,18 @@ class KoubeiMarketingCampaignItemMerchantactivityCloseRequest
 	public function getBizContent()
 	{
 		return $this->bizContent;
+=======
+	
+	public function setBizContent($bizContent)
+	{
+		$this->bizContent = $bizContent;
+		$this->apiParas["biz_content"] = $bizContent;
+	}
+
+	public function getBizContent()
+	{
+		return $this->bizContent;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

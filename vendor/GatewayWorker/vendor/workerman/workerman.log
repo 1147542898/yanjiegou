@@ -151,6 +151,7 @@ Stack trace:
 2019-10-22 14:51:46 pid:18557 Workerman[start.php] stopping ...
 2019-10-22 14:51:46 pid:18557 Workerman[start.php] has been stopped
 2019-10-22 14:51:47 pid:18600 Workerman[start.php] start in DEBUG mode
+<<<<<<< HEAD
 2019-11-07 10:21:41 pid:12519 Workerman[start.php] start in DEBUG mode
 2019-11-07 10:29:35 pid:13318 Workerman[start.php] start in DEBUG mode
 2019-11-07 10:30:25 pid:13417 Workerman[start.php] start in DEBUG mode
@@ -163,3 +164,5 @@ Stack trace:
 2019-11-07 10:32:55 pid:13799 Workerman[start.php] stopping ...
 2019-11-07 10:32:55 pid:13799 Workerman[start.php] has been stopped
 2019-11-07 10:33:21 pid:14005 Workerman[start.php] start in DAEMON mode
+=======
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3

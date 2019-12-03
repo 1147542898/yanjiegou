@@ -6,10 +6,17 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayMicropayOrderGetRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 支付宝订单号，冻结流水号(创建冻结订单返回)
 	 **/
+=======
+{
+	/** 
+	 * 支付宝订单号，冻结流水号(创建冻结订单返回)
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $alipayOrderNo;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class AlipayMicropayOrderGetRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setAlipayOrderNo($alipayOrderNo)
 	{
@@ -31,6 +39,18 @@ class AlipayMicropayOrderGetRequest
 	public function getAlipayOrderNo()
 	{
 		return $this->alipayOrderNo;
+=======
+	
+	public function setAlipayOrderNo($alipayOrderNo)
+	{
+		$this->alipayOrderNo = $alipayOrderNo;
+		$this->apiParas["alipay_order_no"] = $alipayOrderNo;
+	}
+
+	public function getAlipayOrderNo()
+	{
+		return $this->alipayOrderNo;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

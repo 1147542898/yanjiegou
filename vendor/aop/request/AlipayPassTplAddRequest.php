@@ -6,6 +6,7 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayPassTplAddRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 支付宝pass模版内容【JSON格式】
@@ -16,6 +17,18 @@ class AlipayPassTplAddRequest
 	/** 
 	 * 模版外部唯一标识：商户用于控制模版的唯一性。
 	 **/
+=======
+{
+	/** 
+	 * 支付宝pass模版内容【JSON格式】
+具体格式可参考https://alipass.alipay.com中文档中心-格式说明
+	 **/
+	private $tplContent;
+	
+	/** 
+	 * 模版外部唯一标识：商户用于控制模版的唯一性。
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $uniqueId;
 
 	private $apiParas = array();
@@ -27,6 +40,7 @@ class AlipayPassTplAddRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setTplContent($tplContent)
 	{
@@ -48,6 +62,29 @@ class AlipayPassTplAddRequest
 	public function getUniqueId()
 	{
 		return $this->uniqueId;
+=======
+	
+	public function setTplContent($tplContent)
+	{
+		$this->tplContent = $tplContent;
+		$this->apiParas["tpl_content"] = $tplContent;
+	}
+
+	public function getTplContent()
+	{
+		return $this->tplContent;
+	}
+
+	public function setUniqueId($uniqueId)
+	{
+		$this->uniqueId = $uniqueId;
+		$this->apiParas["unique_id"] = $uniqueId;
+	}
+
+	public function getUniqueId()
+	{
+		return $this->uniqueId;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()

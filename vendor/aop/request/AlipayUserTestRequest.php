@@ -6,10 +6,17 @@
  * @since 1.0, 2019-03-08 15:29:11
  */
 class AlipayUserTestRequest
+<<<<<<< HEAD
 {
 	/** 
 	 * 顶顶顶
 	 **/
+=======
+{
+	/** 
+	 * 顶顶顶
+	 **/
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	private $userinfo;
 
 	private $apiParas = array();
@@ -21,6 +28,7 @@ class AlipayUserTestRequest
 	private $returnUrl;
     private $needEncrypt=false;
 
+<<<<<<< HEAD
 	
 	public function setUserinfo($userinfo)
 	{
@@ -31,6 +39,18 @@ class AlipayUserTestRequest
 	public function getUserinfo()
 	{
 		return $this->userinfo;
+=======
+	
+	public function setUserinfo($userinfo)
+	{
+		$this->userinfo = $userinfo;
+		$this->apiParas["userinfo"] = $userinfo;
+	}
+
+	public function getUserinfo()
+	{
+		return $this->userinfo;
+>>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
 	}
 
 	public function getApiMethodName()
