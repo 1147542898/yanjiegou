@@ -168,16 +168,9 @@ class Shop extends Common
             if ($msg != 'true') {
                 return $result = ['code' => 0, 'msg' => $msg];
             }
-<<<<<<< HEAD
             $res = $this->model->save($data, ['id' => input('post.id')]);
             if ($res) {
                  if($data['status']==2){
-=======
-            
-            $res = $this->model->save($data, ['id' => input('post.id')]);
-            if ($res) {
-                if($data['status']==2){
->>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
                     $this->sendMsd($data['id'],2);
                 }
                 $result['code'] = 1;
@@ -251,11 +244,7 @@ class Shop extends Common
         $id = input('post.id');
         $res = $this->model->where('id', $id)->delete();
         if ($res) {
-<<<<<<< HEAD
         	 Db::name('ShopAuthGroup')->where(['shopid'=>$id])->delete();
-=======
-            Db::name('ShopAuthGroup')->where(['shopid'=>$id])->delete();
->>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
             Db::name('ShopAdmin')->where(['sid'=>$id])->delete();
             return ['code' => 1, 'msg' => '删除成功！'];
         } else {
@@ -267,19 +256,11 @@ class Shop extends Common
         $is_lock=input('post.is_lock');
         if($is_lock==1){
             $res = $this->model->where('id', $id)->setField('is_lock',0);
-<<<<<<< HEAD
              $lock_send=$this->model->where('id',$id)->value('lock_send');
             if($lock_send==0){
                 $this->sendMsd($id,1);
                 $res = $this->model->where('id', $id)->setField('lock_send',1);
             }
-=======
-            $lock_send=$this->model->where('id',$id)->value('lock_send');
-            if($lock_send==0){
-                $this->sendMsd($id,1);
-                $res = $this->model->where('id', $id)->setField('lock_send',1);
-            }            
->>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         }else{
             $res = $this->model->where('id', $id)->setField('is_lock',1);
         }
@@ -289,11 +270,7 @@ class Shop extends Common
             return ['code' => 0, 'msg' => '设置失败！'];
         }
     }
-<<<<<<< HEAD
       //模板消息
-=======
-     //模板消息
->>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
      public function sendMsd($shop_id,$type=1){   //1账号2审核     
         $shop_info=Db::name('shop')->where(['id'=>$shop_id])->find();
         $templateId1="XvLf3H2yxHLwljqO2VxKkXWECZ74aliaTLlQPamFgu4";
@@ -315,11 +292,7 @@ class Shop extends Common
             ),
         );
         $remark1=array(
-<<<<<<< HEAD
             'value'=>"请妥善保管账号密码,商家登录网址：http://svn.yanjiegou.com/shop",
-=======
-            'value'=>"请妥善保管账号密码,登陆商家网址修改初始密码(http://svn.yanjiegou.com/shop)",
->>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
             "color"=>"#173177"
         );
         $data2=array(
@@ -348,14 +321,7 @@ class Shop extends Common
         if(!empty($shop_info['openid'])){
             $result=Wechat::sendMes($info);
         }
-<<<<<<< HEAD
     }
-=======
-       
-        
-    }
-
->>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
     /*
      * 多个删除
      */
@@ -365,11 +331,7 @@ class Shop extends Common
         $id = implode(",", $id);
         $model = db('shop');
         $model->where("id in ($id)")->delete();
-<<<<<<< HEAD
          Db::name('ShopAuthGroup')->where("shopid in ($id)")->delete();
-=======
-        Db::name('ShopAuthGroup')->where("shopid in ($id)")->delete();
->>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         Db::name('ShopAdmin')->where("sid in ($id)")->delete();
         $result['code'] = 1;
         $result['msg'] = '删除成功！';
@@ -410,11 +372,7 @@ class Shop extends Common
     }
     public function fundnowdo()
     {
-<<<<<<< HEAD
          $data['id'] = input('post.id/d');
-=======
-        $data['id'] = input('post.id/d');
->>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         $data['status'] = input('post.status/d');        
         $data['info'] = input('post.info/s');       
        if($data['status']==2){
@@ -634,10 +592,7 @@ class Shop extends Common
         $result['msg'] = '删除成功！';
         return $result;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
     //商家提现处理
     public function shopFunAgree(){
         $id=input('id');
