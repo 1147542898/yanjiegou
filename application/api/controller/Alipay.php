@@ -14,10 +14,7 @@ class Alipay
         $config = config('alipay');
         $pay = new \Pay\Pay($config);
         $data = input('post.');
-<<<<<<< HEAD
         
-=======
->>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
         // $data = json_encode($data);
         if ($pay->driver('alipay')->gateway('wap')->verify($data)) {
             file_put_contents('notify.txt', "收到来自支付宝的异步通知\r\n", FILE_APPEND);
@@ -43,28 +40,8 @@ class Alipay
                 $order_goods = Db::name('order_goods')->whereIn('order_sn',$order_sns)->select();
                 //--0拍下减库存   1付款减库存   2永不减库存
                 foreach($order_goods as $mk=>$mv){
-<<<<<<< HEAD
                     Db::name('goods')->where(['id'=>$mv['goodsid'],'totalcnf'=>1])->setDec('total',$mv['num']);
                 }
-=======
-                    if ($mv['sku_id'] != 0) 
-                    {
-                        $good = Db::name('goods')->where(['id'=>$mv['goods_id']])->find();
-                        if ($good['totalcnf'] == 1) 
-                        {
-                            Db::name('GoodsSttrxsku')->where(['id'=>$mv['sku_id'])->setDec('number',$mv['num']);
-                        }
-                    }else
-                    {
-                        Db::name('goods')->where(['id'=>$mv['goodsid'],'totalcnf'=>1])->setDec('total',$mv['num']);
-                    }
-                    
-                }
-                // foreach($order_goods as $mk=>$mv){
-                //     Db::name('goods')->where(['id'=>$mv['goodsid'],'totalcnf'=>1])->setDec('total',$mv['num']);
-                // }
-
->>>>>>> 71b458708778358bd6f4184a3f8a6f45ba5cd4c3
                 $res1 = Db::name('order_trade')->where(['id'=>$order_trade['id']])->update(['trade_status' => $data['trade_status'],'trade_no'=>$data['trade_no'],'gmt_create'=>$data['gmt_create'],'gmt_payment'=>$data['gmt_payment'],'notify_time'=>$data['notify_time']]);
                 //订单状态 1.待付款   2.待发货    3.已发货   4.待评价 5.已完成  6.已关闭 7.售后 8.取消订单
                 $res2 = Db::name('order')->whereIn('id',$order_ids)->update(['status'=>2,'paytime'=>time()]);
