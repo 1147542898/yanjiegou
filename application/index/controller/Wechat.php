@@ -1,4 +1,5 @@
 <?php
+
 namespace app\index\controller;
 
 use think\Request;
@@ -7,21 +8,23 @@ use think\Controller;
 use think\Cookie;
 use think\Session;
 use think\Cache as cache;
+
 class Wechat extends Controller
 {
-   //获取票据
-    public static function getAccessToken(){
-        $appid=config("wchat.appid");
-        $appsecret=config("wchat.appsecret");   
-        $url= "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$appid."&secret=".$appsecret;
-        if(cache::get('access_token')){
-            $accesstoken=cache::get('access_token');
-        }else{
-            $data=self::httpUtil($url);
-            $data=json_decode($data,true);//获取票据
-            $accesstoken=$data['access_token'];
-            cache::set('access_token',$accesstoken,7200);
-        }        
+    //获取票据
+    public static function getAccessToken()
+    {
+        $appid = config("wchat.appid");
+        $appsecret = config("wchat.appsecret");
+        $url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" . $appid . "&secret=" . $appsecret;
+        if (cache::get('access_token')) {
+            $accesstoken = cache::get('access_token');
+        } else {
+            $data = self::httpUtil($url);
+            $data = json_decode($data, true); //获取票据
+            $accesstoken = $data['access_token'];
+            cache::set('access_token', $accesstoken, 7200);
+        }
         return $accesstoken;
     }
 
@@ -52,49 +55,101 @@ class Wechat extends Controller
     }
 
     //添加消息模板
-    public static function sendMes($data){
-        $accesstoken=self::getAccessToken();
-        $url="https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=".$accesstoken;
-        return self::httpUtil($url,$data,"POST");
+    public static function sendMes($data)
+    {
+        $accesstoken = self::getAccessToken();
+        $url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=" . $accesstoken;
+        return self::httpUtil($url, $data, "POST");
     }
     //组装消息参数
-    public static function templateMessageSend($openid, $templateId, $url, $data, $remark){        
-        $arr=array(
-            'touser'=>$openid,
-            'template_id'=>$templateId
+    public static function templateMessageSend($openid, $templateId, $url, $data, $remark)
+    {
+        $arr = array(
+            'touser' => $openid,
+            'template_id' => $templateId
         );
-        if($url && !empty($url)){
-            $arr['url']=$url;
+        if ($url && !empty($url)) {
+            $arr['url'] = $url;
         }
-        $arr['topcolor']="#FF0000";
-        $keyword=array();
-        foreach($data as $k=>$v){
-            if($k==0){
-                $keyword['first']=array(
-                    'value'=>$v['value'],
-                    "color"=>$v['color']
-                   
+        $arr['topcolor'] = "#FF0000";
+        $keyword = array();
+        foreach ($data as $k => $v) {
+            if ($k == 0) {
+                $keyword['first'] = array(
+                    'value' => $v['value'],
+                    "color" => $v['color']
+
                 );
-            }else{
-                $keyword['keyword'.$k]=array(
-                    'value'=>$v['value'],
-                    "color"=>$v['color']                   
+            } else {
+                $keyword['keyword' . $k] = array(
+                    'value' => $v['value'],
+                    "color" => $v['color']
                 );
             }
         }
-        if(!empty($remark)){
-            $keyword['remark']=$remark;
+        if (!empty($remark)) {
+            $keyword['remark'] = $remark;
         }
-        $arr['data']=$keyword;
+        $arr['data'] = $keyword;
         return json_encode($arr);
     }
     //验证身份证
-    public  static function idCard($url){
-        $url=urlencode($url);
-        $AccessToken=self::getAccessToken();
-        $ocrUrl="https://api.weixin.qq.com/cv/ocr/idcard?img_url=".$url."&access_token=".$AccessToken;
-        $data=self::httpUtil($ocrUrl);
+    public  static function idCard($url)
+    {
+        $url = urlencode($url);
+        $AccessToken = self::getAccessToken();
+        $ocrUrl = "https://api.weixin.qq.com/cv/ocr/idcard?img_url=" . $url . "&access_token=" . $AccessToken;
+        $data = self::httpUtil($ocrUrl);
         return $data;
     }
-}
+    //获取字符串
+    public static function createNonceStr($length = 16)
+    {
 
+        $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        $str = "";
+        for ($i = 0; $i < $length; $i++) {
+            $str .= substr($chars, mt_rand(0, strlen($chars) - 1), 1);
+        }
+        return $str;
+    }
+
+    public static  function getJsApiTicket()
+    {
+        if (cache::get('ticket_token')) {
+            $ticket = cache::get('ticket_token');
+        } else {
+            $accessToken = self::getAccessToken();
+            $url = "https://api.weixin.qq.com/cgi-bin/ticket/getticket?type=jsapi&access_token=$accessToken";
+            $res = json_decode(self::httpUtil($url), true);
+            $data = self::httpUtil($url);
+            $data = json_decode($data, true); //获取票据
+            $ticket = $data['ticket'];
+            cache::set('ticket_token', $ticket, 7000);
+        }
+        return $ticket;
+    }
+    public static function getSignPackage($url="")
+    {
+        $jsapiTicket = self::getJsApiTicket();
+        // 注意 URL 一定要动态获取，不能 hardcode. 
+        if(empty($url)){
+            $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+            $url = "$protocol$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        }       
+        $timestamp = time();
+        $nonceStr = self::createNonceStr();
+        // 这里参数的顺序要按照 key 值 ASCII 码升序排序 
+        $string = "jsapi_ticket=$jsapiTicket&noncestr=$nonceStr&timestamp=$timestamp&url=$url";
+        $signature = sha1($string);
+        $signPackage = array(
+            "appId"     =>  config("wchat.appid"),
+            "nonceStr"  => $nonceStr,
+            "timestamp" => $timestamp,
+            "url"       => $url,
+            "signature" => $signature,
+            "rawString" => $string
+        );
+        return $signPackage;
+    }
+}
