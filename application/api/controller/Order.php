@@ -1711,7 +1711,7 @@ class Order extends Base
 	  //$str = http_build_query($arr, '&');
 	  return strtoupper(md5($str));
 	}
-	
+
 	// 获取订单详情
      public function detailsxq()
      {
